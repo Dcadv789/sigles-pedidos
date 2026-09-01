@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIGLES — Pedidos do contratante</title>
+  <style>
+    :root {
+      --bg: #f4f1ea;
+      --ink: #1c1916;
+      --muted: #5c564e;
+      --card: #fffdf8;
+      --line: #ddd6c8;
+      --alta: #1f6b3a;
+      --media: #8a5a12;
+      --baixa: #8a2b2b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Georgia, serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.45;
+    }
+    header {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 40px 24px 16px;
+    }
+    h1 { font-size: 28px; font-weight: 650; margin: 0 0 8px; }
+    .lead { color: var(--muted); margin: 0 0 20px; }
+    .stats { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 12px 16px;
+      min-width: 120px;
+    }
+    .stat b { display: block; font-size: 22px; }
+    .stat span { font-size: 12px; color: var(--muted); }
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 8px; }
+    button.f {
+      border: 1px solid var(--line);
+      background: transparent;
+      padding: 6px 12px;
+      cursor: pointer;
+      font: inherit;
+    }
+    button.f.on { background: var(--ink); color: var(--card); }
+    main { max-width: 880px; margin: 0 auto; padding: 0 24px 64px; }
+    article {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 16px 18px 14px;
+      margin: 12px 0;
+    }
+    article header { padding: 0; max-width: none; display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+    .tela { font-size: 13px; color: var(--muted); margin: 0; }
+    .titulo { font-size: 17px; margin: 6px 0 8px; }
+    label.check { display: flex; gap: 8px; align-items: flex-start; cursor: pointer; }
+    .meta { font-size: 12px; color: var(--muted); }
+    .viab { font-weight: 650; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; }
+    .viab.Alta { color: var(--alta); }
+    .viab.Média { color: var(--media); }
+    .viab.Baixa { color: var(--baixa); }
+    .paths { font-size: 12px; color: var(--muted); margin: 8px 0 0; white-space: pre-wrap; font-family: ui-monospace, Consolas, monospace; }
+    footer { max-width: 880px; margin: 0 auto; padding: 0 24px 48px; color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SIGLES — pedidos do contratante</h1>
+    <p class="lead">Quadro da Axory com o LES/ESALQ. Vídeo 1 e visita. Viabilidade avaliada no código atual. Marque o que já foi feito (fica neste navegador).</p>
+    <div class="stats" id="stats"></div>
+    <div class="filters" id="filters"></div>
+  </header>
+  <main id="lista"></main>
+  <footer>
+    Documento de acompanhamento. Não altera o sistema de produção. Atualizado em setembro de 2026.
+  </footer>
+  <script>
+    const ITEMS = [
+      {id:"V1-01",lote:"Vídeo 1",kind:"Bug",viab:"Alta",tela:"Cadastros → Materiais",titulo:"Apagar / inativar material",pedido:"Na listagem não dá para apagar. Colocar a função.",desc:"O inativar já existe no servidor. O botão na tela está com HTML quebrado — correção pequena.",paths:"templates/material/index.html.twig\nMaterialController.php"},
+      {id:"V1-02",lote:"Vídeo 1",kind:"Bug",viab:"Alta",tela:"Cadastros → Períodos",titulo:"Apagar / inativar período",pedido:"Não tem opção de apagar. Colocar a função.",desc:"Mesmo caso do material: backend pronto, botão quebrado na listagem.",paths:"templates/periodo_solicitacoes/index.html.twig\nPeriodoSolicitacoesController.php"},
+      {id:"V1-03",lote:"Vídeo 1",kind:"Bug",viab:"Alta",tela:"Cadastros → Períodos",titulo:"Erro ao ativar período",pedido:"Ao ativar um período dá erro. Arrumar.",desc:"A rota de ativar existe. A validação compara datas erradas e provavelmente impede o save.",paths:"PeriodoSolicitacoesController.php\nEntity PeriodoSolicitacoes (validate)"},
+      {id:"V1-04",lote:"Vídeo 1",kind:"Feature",viab:"Alta",tela:"Cadastros → Fornecedores",titulo:"Coluna de descrição dos serviços",pedido:"Nova coluna para descrever os serviços do fornecedor.",desc:"Campo novo no cadastro, na lista e no banco de teste. Padrão já usado no sistema.",paths:"Fornecedor.php\nFornecedorController.php\ntemplates/fornecedor/"},
+      {id:"V1-05",lote:"Vídeo 1",kind:"Bug",viab:"Média",tela:"Cadastros → Fornecedores",titulo:"Editar fornecedor não grava",pedido:"Ao editar e salvar, as informações não são salvas.",desc:"A ação de alterar existe. Precisa achar o campo ou a validação que impede o POST.",paths:"FornecedorController.php (alterar)\ntemplates/fornecedor/modal.html.twig"},
+      {id:"V1-06",lote:"Vídeo 1",kind:"Bug",viab:"Alta",tela:"Compras → Solicitações",titulo:"Solicitação não finaliza",pedido:"Toda solicitação fica em andamento. Precisa finalizar.",desc:"O botão diz finalizar, mas o PHP só alterna Aberto e Em andamento. Nunca vai para Realizada.",paths:"SolicitacaoController.php (handle-estagio)\ntemplates/solicitacao/index.html.twig"},
+      {id:"V1-07",lote:"Vídeo 1",kind:"Feature",viab:"Alta",tela:"Compras → Solicitações / Painel",titulo:"Data em toda solicitação",pedido:"A solicitação precisa ter data visível em todos os controles.",desc:"A data de criação já está no banco. Falta mostrar na lista e no painel.",paths:"Entity Solicitacao (dtCriado)\ntemplates/solicitacao e painel_solicitacoes"},
+      {id:"V1-08",lote:"Vídeo 1",kind:"Bug",viab:"Média",tela:"Compras → pedido na solicitação",titulo:"Alterar pedido depois de criado",pedido:"Feito o pedido, não dá para alterá-lo. Deve ser possível.",desc:"A rota de editar já existe. Falta o botão na tela ou o formulário não envia.",paths:"PedidoController.php (edit)\ntemplates/solicitacao/edit.html.twig"},
+      {id:"V1-09",lote:"Vídeo 1",kind:"Feature",viab:"Alta",tela:"Aulas e horários → Cronogramas",titulo:"Ordenar por horário",pedido:"A visualização não tem ordem clara. Filtro/ordem por horário.",desc:"A grade já é tabela com ordenação. Dá para fixar ordem pela coluna de horário.",paths:"templates/cronograma/cronograma.js"},
+      {id:"V1-10",lote:"Vídeo 1",kind:"Feature",viab:"Média",tela:"Cronogramas (nova turma)",titulo:"Ao escolher a matéria, puxar carga, tipo e créditos",pedido:"O sistema deve preencher sozinho esses campos da turma.",desc:"Viável depois de cadastrar esses dados na disciplina (item V1-11).",paths:"cronograma.js / modal\nDisciplinaTurmaController.php"},
+      {id:"V1-11",lote:"Vídeo 1",kind:"Feature",viab:"Média",tela:"Aulas e horários → Disciplinas",titulo:"Cadastro com carga, tipo de turma e créditos",pedido:"A matéria precisa ter esses dados para a turma puxar.",desc:"Crédito já existe. Faltam carga horária e tipo de turma no cadastro da disciplina.",paths:"Disciplina.php\nDisciplinaController.php\ntemplates/disciplina/"},
+      {id:"VS-01",lote:"Visita",kind:"Análise",viab:"Baixa",tela:"Escopo geral da visita",titulo:"Pacote contratual (bugs, UX, módulos, import/export, relatórios)",pedido:"Texto amplo do contrato. Não é uma tela só.",desc:"Fecha na medida em que os itens abaixo ganharem prazo. Não implementar como um único chamado.",paths:"—"},
+      {id:"VS-02",lote:"Visita",kind:"Bug",viab:"Alta",tela:"Dashboard (parabéns de aniversário)",titulo:"Parabéns só para o aniversariante",pedido:"O aviso grande aparece para todo mundo. Só o aniversariante deve ver.",desc:"A API manda todos os aniversariantes do dia e o popup abre para qualquer logado. Filtrar pelo usuário da sessão.",paths:"templates/dashboard/dashboard.js\nUsuarioController (aniversariantes-hoje)"},
+      {id:"VS-03",lote:"Visita",kind:"Feature",viab:"Média",tela:"Dashboard / Usuários → contatos",titulo:"Telefones e contatos",pedido:"Evoluir telefones e contatos de usuários e colaboradores.",desc:"Já há lista no dashboard e campos no cadastro. Evoluir busca/exportação quando o setor listar o que falta.",paths:"UsuarioController (contatos)\ndashboard + modal de usuário"},
+      {id:"VS-04",lote:"Visita",kind:"Feature",viab:"Média",tela:"Dashboard / Usuários → férias",titulo:"Férias",pedido:"Melhorar rotina de férias (cadastro, aviso e consulta).",desc:"Já existe no cadastro do usuário e no aviso do início. Sem módulo novo.",paths:"UsuarioController (contratos-ferias)\nmodal usuário / configurações"},
+      {id:"VS-05",lote:"Visita",kind:"Análise",viab:"Baixa",tela:"Usuários",titulo:"Informações gerais de usuários e colaboradores",pedido:"Avaliar o que o cadastro ainda não cobre.",desc:"Precisa da lista de campos do colaborador. Sem isso qualquer tela nova vira retrabalho.",paths:"Usuario.php / Docente.php / templates/usuario"},
+      {id:"VS-06",lote:"Visita",kind:"Análise",viab:"Média",tela:"Usuários / Perfis / Módulos",titulo:"Evoluir cadastro, perfis e permissões",pedido:"O módulo é quase só cadastro. Avaliar perfis e regras de acesso.",desc:"Perfis já existem. A permissão fica na sessão até o próximo login — evoluir dá, mas é estrutural.",paths:"PerfilController / PerfilModulo / BaseController / LoginController"},
+      {id:"VS-07",lote:"Visita",kind:"Análise",viab:"Alta",tela:"Cadastros → Tags",titulo:"Onde as tags são usadas",pedido:"Ver finalidade atual e se vale expandir.",desc:"No código a tag só existe em fornecedor. A análise em si já pode ser encerrada; expandir é outro pedido.",paths:"Tag.php / TagFornecedor / FornecedorController"},
+      {id:"VS-08",lote:"Visita",kind:"Análise",viab:"Baixa",tela:"Compras / Almoxarifado",titulo:"Separar Compras e Almoxarifado",pedido:"Dois módulos, fluxos e controles específicos.",desc:"Almoxarifado (estoque) não existe. Só depois de estabilizar o fluxo de compras atual.",paths:"Solicitacao / Pedido / Material"},
+      {id:"VS-09",lote:"Visita",kind:"Feature",viab:"Média",tela:"Compras",titulo:"Revisar o fluxo de compras",pedido:"Etapas, cadastros e rotina administrativa.",desc:"O fluxo existe. Primeiro os bugs do vídeo (finalizar, data, editar pedido).",paths:"SolicitacaoController / Painel / Períodos"},
+      {id:"VS-10",lote:"Visita",kind:"Feature",viab:"Média",tela:"Ordens de serviço",titulo:"Aprimorar OS",pedido:"Regras, etapas, cadastros e relatórios.",desc:"Chamado, histórico, anexo e orçamento já existem. Falta relatório gerencial e etapa mais clara.",paths:"OrdemServicoController / Orcamento / HistoricoOs"},
+      {id:"VS-11",lote:"Visita",kind:"Análise",viab:"Média",tela:"Cadastros → Fornecedores",titulo:"Fornecedores pouco usados",pedido:"Melhorar cadastro e ligar aos fluxos de compras.",desc:"Cadastro existe e entra no orçamento da OS, não na compra. Soma com V1-04 e V1-05.",paths:"FornecedorController / OrcamentoController"},
+      {id:"VS-12",lote:"Visita",kind:"Análise",viab:"Média",tela:"Conexão LES",titulo:"Comunicações para pessoas de fora da USP",pedido:"Regras de cadastro, destinatários, permissão e envio externo.",desc:"Já envia para fora (publicador e e-mail externo). A tela de publicação não checa permissão de módulo. Dá para endurecer regras.",paths:"PublicacaoController / CadastroPublicador / Configurações (e-mails externos)"},
+      {id:"VS-13",lote:"Visita",kind:"Feature",viab:"Média",tela:"Cronogramas → importar Excel",titulo:"Melhorar importação do cronograma",pedido:"Validar planilha, tratar erro, modelo padrão.",desc:"Importar já existe. Falta modelo para baixar e erro linha a linha, sem derrubar o arquivo inteiro.",paths:"CronogramaController (importar)\nmodal.importar.html.twig"},
+      {id:"VS-14",lote:"Visita",kind:"Análise",viab:"Média",tela:"Outras telas (lote)",titulo:"Importação em lote em outras funcionalidades",pedido:"Planilha com modelo e validação em outras telas.",desc:"Repetir o padrão do cronograma só depois do VS-13 estar redondo.",paths:"Cronograma (referência) / Usuario / Material"},
+      {id:"VS-15",lote:"Visita",kind:"Feature",viab:"Média",tela:"Aulas e horários → Cronogramas",titulo:"Reorganizar a página do cronograma",pedido:"Visual, filtros, espaço, fonte, legibilidade.",desc:"A página existe e é a mais pesada. Layout é viável; o JavaScript da grade é grande e fácil de quebrar.",paths:"cronograma/index.html.twig + cronograma.js"},
+      {id:"VS-16",lote:"Visita",kind:"Análise",viab:"Baixa",tela:"Aproveitamento de disciplinas (não existe)",titulo:"Novo módulo + Notebook LM",pedido:"Automatizar o que hoje é manual. Escopo depois. Avaliar Notebook LM.",desc:"Não há tela. Sem o fluxo acadêmico escrito, não dá para estimar. Notebook LM não aparece no código.",paths:"Disciplina / DisciplinaCurso (só referência)"},
+      {id:"VS-17",lote:"Visita",kind:"Feature",viab:"Média",tela:"Carga horária dos docentes",titulo:"Relatório de carga por departamento",pedido:"Filtros, consolidação, visualização e exportação.",desc:"O relatório já existe. Ampliar departamento e Excel/PDF é evolução de tela, não invenção.",paths:"RelatorioController / carga_docentes.html.twig"},
+      {id:"VS-18",lote:"Visita",kind:"Feature",viab:"Média",tela:"Agenda → Log / Relatório",titulo:"Relatórios de alteração de agenda",pedido:"Acompanhar mudanças e extrair informações.",desc:"Log e relatório de reserva já exportam Excel. Evoluir a consulta, não criar do zero.",paths:"AgendaLogController / Reserva (relatório)"},
+      {id:"VS-19",lote:"Visita",kind:"Análise",viab:"Baixa",tela:"Agenda → reserva para alunos e externos",titulo:"Solicitar sala no SIGLES (nº USP e pessoas de fora)",pedido:"Formulário, disponibilidade, aprovação, aluno e externo.",desc:"Hoje só usuário interno logado. Aluno e visitante exigem conta/aprovação novas — projeto à parte.",paths:"ReservaController / Agenda / security.yaml"}
+    ];
+
+    const FILTROS = ["Todos","Pendentes","Feitos","Vídeo 1","Visita","Alta","Média","Baixa"];
+    let filtro = "Todos";
+    const done = JSON.parse(localStorage.getItem("sigles-pedidos-done") || "{}");
+
+    function setDone(id, v) {
+      done[id] = v;
+      localStorage.setItem("sigles-pedidos-done", JSON.stringify(done));
+      render();
+    }
+
+    function visiveis() {
+      return ITEMS.filter(i => {
+        if (filtro === "Pendentes") return !done[i.id];
+        if (filtro === "Feitos") return !!done[i.id];
+        if (filtro === "Vídeo 1" || filtro === "Visita") return i.lote === filtro;
+        if (filtro === "Alta" || filtro === "Média" || filtro === "Baixa") return i.viab === filtro;
+        return true;
+      });
+    }
+
+    function render() {
+      const feitos = ITEMS.filter(i => done[i.id]).length;
+      const alta = ITEMS.filter(i => i.viab === "Alta").length;
+      document.getElementById("stats").innerHTML = `
+        <div class="stat"><b>${ITEMS.length}</b><span>Itens</span></div>
+        <div class="stat"><b>${feitos}</b><span>Feitos neste browser</span></div>
+        <div class="stat"><b>11 + 19</b><span>Vídeo + visita</span></div>
+        <div class="stat"><b>${alta}</b><span>Viabilidade alta</span></div>`;
+      document.getElementById("filters").innerHTML = FILTROS.map(f =>
+        `<button class="f${f===filtro?" on":""}" data-f="${f}">${f}</button>`
+      ).join("");
+      document.querySelectorAll("button.f").forEach(b => b.onclick = () => { filtro = b.dataset.f; render(); });
+      document.getElementById("lista").innerHTML = visiveis().map(i => `
+        <article>
+          <header>
+            <p class="tela">${i.tela}</p>
+            <div>
+              <span class="viab ${i.viab}">${i.viab}</span>
+              <span class="meta"> · ${i.lote} · ${i.id} · ${i.kind}</span>
+            </div>
+          </header>
+          <label class="check">
+            <input type="checkbox" ${done[i.id]?"checked":""} onchange="setDone('${i.id}', this.checked)">
+            <span class="titulo">${i.titulo}</span>
+          </label>
+          <p>${i.pedido}</p>
+          <p>${i.desc}</p>
+          <div class="paths">${i.paths}</div>
+        </article>`).join("");
+    }
+    render();
+  </script>
+</body>
+</html>
