@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SIGLES — Frentes de evolução</title>
+  <title>SIGLES — Cronograma de evolução</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
       --quiet: #5a635c;
       --rule: #d4d7ce;
       --leaf: #3d5c45;
-      --panel: #fffcf7;
+      --leaf-soft: #e7eee8;
     }
     * { box-sizing: border-box; }
     body {
@@ -25,7 +25,7 @@
       font-size: 16px;
       line-height: 1.55;
     }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 56px 24px 80px; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
     .kicker {
       font-size: 12px;
       letter-spacing: 0.14em;
@@ -35,31 +35,81 @@
     }
     h1 {
       font-family: Newsreader, Georgia, serif;
-      font-size: clamp(32px, 5vw, 42px);
+      font-size: clamp(30px, 5vw, 40px);
       font-weight: 600;
       line-height: 1.15;
       margin: 0 0 16px;
     }
-    .intro { color: var(--quiet); margin: 0 0 40px; max-width: 38em; }
+    .intro { color: var(--quiet); margin: 0 0 36px; max-width: 40em; }
+    .fases {
+      display: grid;
+      gap: 12px;
+      margin: 0 0 48px;
+    }
+    @media (min-width: 720px) {
+      .fases { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    .fase {
+      background: #fffcf7;
+      border: 1px solid var(--rule);
+      padding: 16px 16px 18px;
+    }
+    .fase strong {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--leaf);
+      margin-bottom: 6px;
+    }
+    .fase b { display: block; font-family: Newsreader, Georgia, serif; font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+    .fase p { margin: 0; font-size: 14px; color: var(--quiet); }
+    h2.sec {
+      font-family: Newsreader, Georgia, serif;
+      font-size: 22px;
+      margin: 0 0 8px;
+    }
+    .hint { color: var(--quiet); font-size: 14px; margin: 0 0 28px; }
     .mod {
       display: grid;
       grid-template-columns: 8px 1fr;
       gap: 0 20px;
-      margin: 0 0 28px;
-      padding: 0 0 28px;
+      margin: 0 0 32px;
+      padding: 0 0 32px;
       border-bottom: 1px solid var(--rule);
     }
-    .mod:last-of-type { border-bottom: 0; }
+    .mod:last-of-type { border-bottom: 0; padding-bottom: 0; }
     .bar { background: var(--leaf); }
-    h2 {
+    .top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px 16px;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+    h3 {
       font-family: Newsreader, Georgia, serif;
       font-size: 22px;
       font-weight: 600;
-      margin: 0 0 8px;
+      margin: 0;
     }
-    .mod p { margin: 0; color: var(--quiet); }
+    .prazo {
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--leaf);
+      background: var(--leaf-soft);
+      padding: 4px 8px;
+    }
+    .mod > div > p { margin: 0 0 10px; color: var(--quiet); }
+    ul {
+      margin: 0;
+      padding: 0 0 0 1.15em;
+      color: var(--ink);
+    }
+    li { margin: 0 0 6px; }
     footer {
-      margin-top: 48px;
+      margin-top: 40px;
       font-size: 13px;
       color: var(--quiet);
     }
@@ -68,97 +118,199 @@
 <body>
   <div class="wrap">
     <p class="kicker">SIGLES · LES / ESALQ</p>
-    <h1>Frentes de evolução do sistema</h1>
+    <h1>Cronograma de evolução</h1>
     <p class="intro">
-      Acompanhamento das frentes identificadas junto à equipe do departamento,
-      a partir do uso atual do SIGLES. O trabalho combina revisão das rotinas
-      já existentes e avaliação de evoluções que ampliem o uso pelos setores
-      envolvidos.
+      Proposta de encadeamento das frentes identificadas com o departamento.
+      A ordem segue do que pode entrar em uso mais cedo — rotinas já existentes —
+      para o que depende de alinhamento e passa a ampliar o alcance do sistema.
+      Os prazos são indicativos e podem ser redistribuídos conforme a prioridade de cada setor.
     </p>
 
+    <div class="fases">
+      <div class="fase">
+        <strong>Fase 1</strong>
+        <b>Setembro a outubro de 2026</b>
+        <p>Primeiras entregas nas rotinas de cadastro, pessoas e tramitação de compras.</p>
+      </div>
+      <div class="fase">
+        <strong>Fase 2</strong>
+        <b>Novembro de 2026 a fevereiro de 2027</b>
+        <p>Aprimoramento dos módulos em uso: OS, relatórios, agenda, Conexão LES e cronograma.</p>
+      </div>
+      <div class="fase">
+        <strong>Fase 3</strong>
+        <b>A partir de março de 2027</b>
+        <p>Novos fluxos e eventual ampliação de público, após definição conjunta de escopo.</p>
+      </div>
+    </div>
+
+    <h2 class="sec">Frentes, na ordem de execução</h2>
+    <p class="hint">Do que se apoia no que o sistema já faz ao que ainda precisa ser desenhado com o departamento.</p>
+
     <section class="mod">
       <div class="bar"></div>
       <div>
-        <h2>Cadastros</h2>
-        <p>Revisão das rotinas de cadastro utilizadas no dia a dia — materiais, períodos, fornecedores e classificações — com atenção à consistência das informações e à completude dos dados mantidos no sistema.</p>
+        <div class="top">
+          <h3>Cadastros</h3>
+          <span class="prazo">Fase 1 · set–out/2026</span>
+        </div>
+        <p>Revisão das bases usadas no dia a dia, para as informações ficarem completas e as rotinas de manutenção mais previsíveis.</p>
+        <ul>
+          <li>Materiais e períodos de solicitação: consistência das operações de manutenção dos registros.</li>
+          <li>Fornecedores: complementação do cadastro e regularização da gravação das alterações.</li>
+          <li>Classificações (tags): confirmação do uso atual e da necessidade de manter ou ampliar o recurso.</li>
+        </ul>
       </div>
     </section>
 
     <section class="mod">
       <div class="bar"></div>
       <div>
-        <h2>Compras</h2>
-        <p>Aprimoramento do fluxo de solicitações e pedidos, da tramitação entre etapas e da forma como as informações de compras são acompanhadas pelos setores.</p>
+        <div class="top">
+          <h3>Usuários e colaboradores</h3>
+          <span class="prazo">Fase 1 · set–out/2026</span>
+        </div>
+        <p>Ajustes nas informações e nas comunicações que já passam pelo cadastro de pessoas, com evolução gradual das regras de acesso.</p>
+        <ul>
+          <li>Comunicações internas ligadas a aniversários, de forma adequada a cada destinatário.</li>
+          <li>Contatos, telefones e férias: consulta e registro alinhados à rotina dos setores.</li>
+          <li>Na sequência: cadastro de colaboradores, perfis e permissões, sem alterar o modelo de acesso de uma só vez.</li>
+        </ul>
       </div>
     </section>
 
     <section class="mod">
       <div class="bar"></div>
       <div>
-        <h2>Almoxarifado</h2>
-        <p>Avaliação da estruturação de controles próprios de almoxarifado, em diálogo com o fluxo de compras, de modo a refletir melhor as atividades de cada área.</p>
+        <div class="top">
+          <h3>Compras</h3>
+          <span class="prazo">Fase 1 a 2 · set/2026–jan/2027</span>
+        </div>
+        <p>Estabilizar o que já está em uso e, em seguida, tornar o acompanhamento das solicitações mais aderente à rotina administrativa.</p>
+        <ul>
+          <li>Tramitação das solicitações: etapas, encerramento e registro de datas.</li>
+          <li>Possibilidade de ajustar pedidos já lançados.</li>
+          <li>Depois: revisão do fluxo como um todo (painel, períodos e consultas).</li>
+        </ul>
       </div>
     </section>
 
     <section class="mod">
       <div class="bar"></div>
       <div>
-        <h2>Ordens de serviço</h2>
-        <p>Aprimoramento das rotinas de chamados, dos cadastros associados e das consultas necessárias à gestão administrativa das ordens de serviço.</p>
+        <div class="top">
+          <h3>Relatórios</h3>
+          <span class="prazo">Fase 2 · nov/2026–jan/2027</span>
+        </div>
+        <p>Aproveitamento das consultas já existentes, com melhor recorte e extração para uso da administração.</p>
+        <ul>
+          <li>Carga horária docente, inclusive por departamento.</li>
+          <li>Filtros, consolidação e formatos de exportação.</li>
+          <li>Demais relatórios gerenciais identificados no uso cotidiano.</li>
+        </ul>
       </div>
     </section>
 
     <section class="mod">
       <div class="bar"></div>
       <div>
-        <h2>Usuários e colaboradores</h2>
-        <p>Evolução das informações de pessoas no sistema — cadastro, contatos, férias, comunicações internas e regras de acesso — alinhada aos perfis e às permissões já utilizados.</p>
+        <div class="top">
+          <h3>Conexão LES</h3>
+          <span class="prazo">Fase 2 · nov/2026–jan/2027</span>
+        </div>
+        <p>Revisão do envio de comunicações, inclusive a destinatários externos à Universidade.</p>
+        <ul>
+          <li>Cadastro e identificação de quem recebe as mensagens.</li>
+          <li>Regras de permissão para publicação e disparo.</li>
+          <li>Funcionamento das comunicações voltadas a públicos de fora do LES.</li>
+        </ul>
       </div>
     </section>
 
     <section class="mod">
       <div class="bar"></div>
       <div>
-        <h2>Aulas, horários e cronograma</h2>
-        <p>Reorganização da consulta ao cronograma, da alimentação de dados (inclusive por planilha) e dos cadastros acadêmicos que sustentam turmas, disciplinas e a visualização da grade.</p>
+        <div class="top">
+          <h3>Ordens de serviço</h3>
+          <span class="prazo">Fase 2 · nov/2026–fev/2027</span>
+        </div>
+        <p>Aprimoramento das rotinas de chamado já implantadas, dos cadastros associados e das consultas de gestão.</p>
+        <ul>
+          <li>Etapas e acompanhamento dos chamados.</li>
+          <li>Cadastros de apoio (categorias, recursos, fornecedores ligados ao chamado).</li>
+          <li>Relatórios e extração para a rotina administrativa.</li>
+        </ul>
       </div>
     </section>
 
     <section class="mod">
       <div class="bar"></div>
       <div>
-        <h2>Relatórios</h2>
-        <p>Ampliação e aperfeiçoamento dos relatórios gerenciais e acadêmicos, com melhorias de consulta, consolidação e extração das informações para uso administrativo.</p>
+        <div class="top">
+          <h3>Agenda e espaços</h3>
+          <span class="prazo">Fase 2 · dez/2026–fev/2027</span>
+        </div>
+        <p>Melhoria das consultas sobre reservas e alterações de agenda, sobre a base que o sistema já registra.</p>
+        <ul>
+          <li>Acompanhamento das alterações realizadas.</li>
+          <li>Relatórios e extração de informações.</li>
+          <li>A ampliação de público (alunos e pessoas externas) fica na fase 3, após desenho do fluxo.</li>
+        </ul>
       </div>
     </section>
 
     <section class="mod">
       <div class="bar"></div>
       <div>
-        <h2>Agenda e espaços</h2>
-        <p>Revisão das consultas e dos registros de reserva e de alteração de agenda, bem como avaliação de fluxos de solicitação de salas junto aos públicos do departamento.</p>
+        <div class="top">
+          <h3>Aulas, horários e cronograma</h3>
+          <span class="prazo">Fase 2 · dez/2026–fev/2027</span>
+        </div>
+        <p>Organização da grade e da alimentação dos dados acadêmicos, em cima das telas já utilizadas pela coordenação.</p>
+        <ul>
+          <li>Consulta: ordem, filtros, leitura e aproveitamento da tela.</li>
+          <li>Importação por planilha: consistência dos dados e tratamento das inconsistências.</li>
+          <li>Cadastro de disciplinas e preenchimento das turmas a partir dessas informações.</li>
+        </ul>
       </div>
     </section>
 
     <section class="mod">
       <div class="bar"></div>
       <div>
-        <h2>Conexão LES</h2>
-        <p>Revisão das comunicações e da identificação de destinatários, inclusive quando o envio envolve pessoas externas à Universidade.</p>
+        <div class="top">
+          <h3>Almoxarifado</h3>
+          <span class="prazo">Fase 3 · a partir de mar/2027</span>
+        </div>
+        <p>Avaliação de controles específicos de estoque, em separado do fluxo de compras, depois que as solicitações atuais estiverem mais estáveis.</p>
+        <ul>
+          <li>Definição, com o departamento, do que é compra e do que é almoxarifado.</li>
+          <li>Eventual estruturação de rotinas próprias, se confirmada a necessidade.</li>
+        </ul>
       </div>
     </section>
 
     <section class="mod">
       <div class="bar"></div>
       <div>
-        <h2>Novos fluxos</h2>
-        <p>Avaliação de rotinas hoje realizadas fora do SIGLES — entre elas o aproveitamento de disciplinas e a solicitação de espaços por públicos adicionais — quanto à conveniência de incorporá-las ao sistema.</p>
+        <div class="top">
+          <h3>Novos fluxos</h3>
+          <span class="prazo">Fase 3 · a partir de mar/2027</span>
+        </div>
+        <p>Rotinas hoje feitas fora do SIGLES. Entram no sistema somente após levantamento do fluxo atual e das regras do departamento.</p>
+        <ul>
+          <li>Aproveitamento de disciplinas e demais atividades acadêmicas ainda manuais.</li>
+          <li>Solicitação de salas por alunos (identificação institucional) e, se couber, por pessoas externas.</li>
+          <li>Ferramentas auxiliares de apoio à análise de documentos, se houver encaixe na rotina.</li>
+        </ul>
       </div>
     </section>
 
     <footer>
-      Documento de acompanhamento do projeto. As frentes podem ser detalhadas
-      e priorizadas ao longo da execução, conforme a rotina de cada setor.
+      Cronograma proposto em setembro de 2026. As datas são de referência para
+      planejamento conjunto e podem ser antecipadas ou deslocadas sem prejuízo
+      do encadeamento: primeiro as rotinas em uso, depois os módulos a aprimorar,
+      por último o que ainda não existe no sistema.
     </footer>
   </div>
 </body>
