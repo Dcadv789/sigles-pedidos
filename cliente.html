@@ -1,317 +1,863 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
+<!-- saved from url=(0054)https://dcadv789.github.io/sigles-pedidos/cliente.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SIGLES — Cronograma de evolução</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./SIGLES — Cronograma de evolução_files/css2" rel="stylesheet">
   <style>
     :root {
-      --paper: #f6f5f1;
-      --ink: #1e2a22;
-      --quiet: #5a635c;
-      --rule: #d4d7ce;
-      --leaf: #3d5c45;
-      --leaf-soft: #e7eee8;
+      --bg: #0a0f0c;
+      --bg-2: #10160f;
+      --ink: #f2f4ef;
+      --quiet: #99a69b;
+      --rule: #24302a;
+      --leaf: #5fae74;
+      --leaf-dim: #2c4634;
+      --leaf-soft: rgba(95, 174, 116, 0.14);
     }
     * { box-sizing: border-box; }
-    body {
+    html, body {
+      height: 100%;
       margin: 0;
-      background: var(--paper);
+      overflow: hidden;
+      background: var(--bg);
       color: var(--ink);
       font-family: "Libre Franklin", system-ui, sans-serif;
-      font-size: 16px;
-      line-height: 1.55;
     }
-    .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
+    .deck {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 9vh 9vw;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+      background:
+        radial-gradient(circle at 85% 12%, rgba(95, 174, 116, 0.08), transparent 45%),
+        var(--bg);
+    }
+    .slide.active {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    .content { max-width: 900px; }
     .kicker {
-      font-size: 12px;
-      letter-spacing: 0.14em;
+      font-size: 13px;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--leaf);
-      margin: 0 0 12px;
+      margin: 0 0 18px;
     }
     h1 {
       font-family: Newsreader, Georgia, serif;
-      font-size: clamp(30px, 5vw, 40px);
+      font-size: clamp(38px, 6.4vw, 84px);
       font-weight: 600;
-      line-height: 1.15;
-      margin: 0 0 16px;
+      line-height: 1.08;
+      margin: 0 0 22px;
     }
-    .intro { color: var(--quiet); margin: 0 0 36px; max-width: 40em; }
-    .fases {
-      display: grid;
-      gap: 12px;
-      margin: 0 0 48px;
+    .lead {
+      color: var(--quiet);
+      font-size: clamp(16px, 1.6vw, 20px);
+      line-height: 1.65;
+      max-width: 42em;
+      margin: 0;
     }
-    @media (min-width: 720px) {
-      .fases { grid-template-columns: 1fr 1fr 1fr; }
-    }
-    .fase {
-      background: #fffcf7;
-      border: 1px solid var(--rule);
-      padding: 16px 16px 18px;
-    }
-    .fase strong {
-      display: block;
+    .hint-nav {
+      position: absolute;
+      bottom: 6vh;
+      left: 9vw;
       font-size: 12px;
+      letter-spacing: 0.06em;
+      color: var(--quiet);
+      opacity: 0.7;
+    }
+    .brand {
+      position: fixed;
+      top: 5vh;
+      left: 9vw;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--quiet);
+      opacity: 0.5;
+      z-index: 2;
+    }
+
+    /* Timeline de entrega */
+    .timeline-lead {
+      color: var(--quiet);
+      font-size: clamp(14px, 1.2vw, 17px);
+      max-width: 46em;
+      line-height: 1.55;
+      margin: 0 0 18px;
+    }
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 8px;
+      width: 100%;
+    }
+    .week-card {
+      background: var(--bg-2);
+      border: 1px solid var(--rule);
+      border-top: 3px solid var(--leaf);
+      padding: 10px 12px 12px;
+    }
+    .week-card .wk-num {
+      font-family: Newsreader, Georgia, serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 0 0 2px;
+    }
+    .week-card .wk-mod {
+      font-size: 10px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--leaf);
+      margin: 0 0 8px;
+    }
+    .week-card ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .week-card li {
+      position: relative;
+      padding-left: 12px;
+      font-size: 11.5px;
+      line-height: 1.4;
+      color: var(--quiet);
+      margin: 0 0 10px;
+    }
+    .week-card li:last-child { margin-bottom: 0; }
+    .week-card li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: var(--leaf-dim);
+    }
+    .ruler { margin: 4px 0 26px; }
+    .ruler-months {
+      display: flex;
+      margin-bottom: 8px;
+    }
+    .ruler-months span {
+      flex: 1;
+      text-align: center;
+      font-size: 11px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--leaf);
-      margin-bottom: 6px;
+      padding-left: 8px;
+      border-left: 1px solid var(--rule);
     }
-    .fase b { display: block; font-family: Newsreader, Georgia, serif; font-size: 18px; font-weight: 600; margin-bottom: 8px; }
-    .fase p { margin: 0; font-size: 14px; color: var(--quiet); }
-    h2.sec {
+    .ruler-months span:first-child { border-left: none; padding-left: 0; }
+    .ruler-line {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+    }
+    .ruler-line::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--rule);
+    }
+    .ruler-line .pt {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .ruler-line .pt .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--leaf);
+    }
+    .ruler-line .pt .n {
+      font-size: 11px;
+      color: var(--quiet);
+    }
+    .ruler-line .pt .lbl {
+      font-size: 9.5px;
+      letter-spacing: 0.02em;
+      color: var(--quiet);
+      text-align: center;
+      line-height: 1.25;
+      max-width: 92px;
+    }
+
+    /* Section divider */
+    .sec-title {
       font-family: Newsreader, Georgia, serif;
-      font-size: 22px;
-      margin: 0 0 8px;
+      font-size: clamp(34px, 5.6vw, 64px);
+      font-weight: 600;
+      margin: 0 0 16px;
     }
-    .hint { color: var(--quiet); font-size: 14px; margin: 0 0 28px; }
-    .mod {
-      display: grid;
-      grid-template-columns: 8px 1fr;
-      gap: 0 20px;
-      margin: 0 0 32px;
-      padding: 0 0 32px;
-      border-bottom: 1px solid var(--rule);
+
+    /* Module slides */
+    .mod-num {
+      position: absolute;
+      right: 6vw;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: Newsreader, Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(140px, 24vw, 280px);
+      line-height: 1;
+      color: rgba(255, 255, 255, 0.05);
+      pointer-events: none;
+      user-select: none;
     }
-    .mod:last-of-type { border-bottom: 0; padding-bottom: 0; }
-    .bar { background: var(--leaf); }
-    .top {
+    .mod-top {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 8px 16px;
       align-items: baseline;
-      margin-bottom: 8px;
+      gap: 12px 18px;
+      margin-bottom: 14px;
     }
-    h3 {
+    h2.mod-title {
       font-family: Newsreader, Georgia, serif;
-      font-size: 22px;
+      font-size: clamp(30px, 4.4vw, 50px);
       font-weight: 600;
       margin: 0;
     }
     .prazo {
       font-size: 12px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
       color: var(--leaf);
       background: var(--leaf-soft);
-      padding: 4px 8px;
+      border: 1px solid var(--leaf-dim);
+      padding: 5px 10px;
+      white-space: nowrap;
     }
-    .mod > div > p { margin: 0 0 10px; color: var(--quiet); }
-    ul {
+    .mod-desc {
+      color: var(--quiet);
+      font-size: clamp(15px, 1.3vw, 18px);
+      max-width: 34em;
+      line-height: 1.6;
+      margin: 0 0 18px;
+    }
+    ul.mod-list {
       margin: 0;
-      padding: 0 0 0 1.15em;
-      color: var(--ink);
+      padding: 0;
+      list-style: none;
+      max-width: 40em;
     }
-    li { margin: 0 0 6px; }
-    footer {
-      margin-top: 40px;
-      font-size: 13px;
+    ul.mod-list li {
+      position: relative;
+      padding-left: 22px;
+      margin: 0 0 10px;
+      font-size: clamp(14px, 1.15vw, 17px);
+      line-height: 1.5;
       color: var(--quiet);
     }
+    ul.mod-list li .item-t {
+      color: var(--ink);
+      font-weight: 600;
+    }
+    ul.mod-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 8px;
+      height: 1px;
+      background: var(--leaf);
+    }
+
+    /* Ritmo de entregas */
+    .ciclo {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 0;
+      margin-top: 12px;
+    }
+    .etapa {
+      flex: 1 1 200px;
+      background: var(--bg-2);
+      border: 1px solid var(--rule);
+      border-top: 3px solid var(--leaf);
+      padding: 22px 20px 24px;
+    }
+    .etapa strong {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--leaf);
+      margin-bottom: 8px;
+    }
+    .etapa b {
+      display: block;
+      font-family: Newsreader, Georgia, serif;
+      font-size: clamp(18px, 1.8vw, 22px);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .etapa p { margin: 0; font-size: 14px; color: var(--quiet); line-height: 1.5; }
+    .arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      color: var(--leaf-dim);
+      font-size: 20px;
+      flex: 0 0 auto;
+    }
+    @media (max-width: 760px) {
+      .arrow { display: none; }
+    }
+
+    /* Exemplo de mensagem */
+    .exemplo-msg {
+      background: var(--bg-2);
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--leaf);
+      padding: 26px 28px 28px;
+      max-width: 34em;
+      margin-top: 12px;
+    }
+    .exemplo-titulo {
+      font-family: Newsreader, Georgia, serif;
+      font-size: clamp(19px, 1.9vw, 24px);
+      font-weight: 600;
+      margin: 0 0 16px;
+      color: var(--ink);
+    }
+    .exemplo-label {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--leaf);
+      margin: 0 0 8px;
+    }
+    .exemplo-msg ul { margin: 0; padding: 0 0 0 1.1em; color: var(--ink); }
+    .exemplo-msg li { margin: 0 0 6px; font-size: 15px; }
+
+    /* Escopo: dentro x fora dos 3 meses */
+    .split-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 8px;
+    }
+    @media (max-width: 760px) {
+      .split-grid { grid-template-columns: 1fr; }
+    }
+    .split-col {
+      padding: 22px 24px 24px;
+      border: 1px solid var(--rule);
+    }
+    .split-col.in {
+      border-top: 3px solid var(--leaf);
+      background: var(--leaf-soft);
+    }
+    .split-col.bonus {
+      border-top: 3px solid #b9a15a;
+      background: rgba(185, 161, 90, 0.10);
+    }
+    .split-col.out {
+      border-top: 3px solid var(--rule);
+      background: var(--bg-2);
+    }
+    .split-col h3 {
+      font-family: Newsreader, Georgia, serif;
+      font-size: clamp(19px, 1.9vw, 24px);
+      font-weight: 600;
+      margin: 0 0 4px;
+      color: var(--ink);
+    }
+    .split-col .split-sub {
+      font-size: 12px;
+      color: var(--quiet);
+      margin: 0 0 18px;
+    }
+    .split-col ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .split-col li {
+      position: relative;
+      padding-left: 20px;
+      margin: 0 0 12px;
+      font-size: 14.5px;
+      line-height: 1.4;
+    }
+    .split-col.in li { color: var(--ink); }
+    .split-col.in li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--leaf);
+      font-size: 12px;
+    }
+    .split-col.bonus li::before {
+      content: "+";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #b9a15a;
+      font-size: 14px;
+    }
+    .split-col.out li { color: var(--quiet); }
+    .split-col.out li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: var(--quiet);
+    }
+    .split-col .wk {
+      display: block;
+      font-size: 11px;
+      color: var(--leaf);
+      margin-top: 2px;
+    }
+    .split-col.out .tag {
+      display: block;
+      font-size: 11px;
+      color: var(--quiet);
+      font-style: italic;
+      margin-top: 2px;
+    }
+
+    .mod-note {
+      margin: 16px 0 0;
+      font-size: 12.5px;
+      color: var(--leaf);
+      border-left: 2px solid var(--leaf-dim);
+      padding-left: 10px;
+      max-width: 34em;
+      line-height: 1.5;
+    }
+
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <p class="kicker">SIGLES · LES / ESALQ</p>
-    <h1>Cronograma de evolução</h1>
-    <p class="intro">
-      Proposta de encadeamento das frentes identificadas com o departamento.
-      A ordem segue do que pode entrar em uso mais cedo — rotinas já existentes —
-      para o que depende de alinhamento e passa a ampliar o alcance do sistema.
-      Os prazos são indicativos e podem ser redistribuídos conforme a prioridade de cada setor.
-    </p>
+  <div class="brand">SIGLES · LES / ESALQ</div>
+  <div class="deck">
 
-    <div class="fases">
-      <div class="fase">
-        <strong>Fase 1</strong>
-        <b>Setembro a outubro de 2026</b>
-        <p>Primeiras entregas nas rotinas de cadastro, pessoas e tramitação de compras.</p>
+    <section class="slide active">
+      <div class="content">
+        <p class="kicker">SIGLES · LES / ESALQ</p>
+        <h1>Roadmap — SIGLES</h1>
       </div>
-      <div class="fase">
-        <strong>Fase 2</strong>
-        <b>Novembro de 2026 a fevereiro de 2027</b>
-        <p>Aprimoramento dos módulos em uso: OS, relatórios, agenda, Conexão LES e cronograma.</p>
-      </div>
-      <div class="fase">
-        <strong>Fase 3</strong>
-        <b>A partir de março de 2027</b>
-        <p>Novos fluxos e eventual ampliação de público, após definição conjunta de escopo.</p>
-      </div>
-    </div>
+      <p class="hint-nav">use ← → para navegar</p>
+    </section>
 
-    <h2 class="sec">Frentes, na ordem de execução</h2>
-    <p class="hint">Do que se apoia no que o sistema já faz ao que ainda precisa ser desenhado com o departamento.</p>
-
-    <section class="mod">
-      <div class="bar"></div>
-      <div>
-        <div class="top">
-          <h3>Cadastros</h3>
-          <span class="prazo">Fase 1 · set–out/2026</span>
+    <section class="slide">
+      <div class="content">
+        <p class="kicker">Ritmo de entregas</p>
+        <h2 class="sec-title">Entregas semanais, toda segunda-feira</h2>
+        <p class="lead" style="margin-bottom: 8px;">A próxima versão já está em desenvolvimento enquanto a anterior é validada.</p>
+        <div class="ciclo">
+          <div class="etapa">
+            <strong>Etapa 1</strong>
+            <b>Segunda-feira, 10h</b>
+            <p>Mensagem avisando que a nova versão está disponível no ambiente de teste.</p>
+          </div>
+          <div class="arrow">→</div>
+          <div class="etapa">
+            <strong>Etapa 2</strong>
+            <b>Ambiente de teste</b>
+            <p>Departamento avalia as alterações na prática, sem impacto no que está em produção.</p>
+          </div>
+          <div class="arrow">→</div>
+          <div class="etapa">
+            <strong>Etapa 3</strong>
+            <b>Validação</b>
+            <p>Após aprovação do departamento, a versão segue para produção.</p>
+          </div>
+          <div class="arrow">→</div>
+          <div class="etapa">
+            <strong>Etapa 4</strong>
+            <b>Produção</b>
+            <p>Enquanto isso, a próxima versão já está sendo desenvolvida.</p>
+          </div>
         </div>
-        <p>Revisão das bases usadas no dia a dia, para as informações ficarem completas e as rotinas de manutenção mais previsíveis.</p>
-        <ul>
-          <li>Materiais e períodos de solicitação: consistência das operações de manutenção dos registros.</li>
-          <li>Fornecedores: complementação do cadastro e regularização da gravação das alterações.</li>
-          <li>Classificações (tags): confirmação do uso atual e da necessidade de manter ou ampliar o recurso.</li>
-        </ul>
       </div>
     </section>
 
-    <section class="mod">
-      <div class="bar"></div>
-      <div>
-        <div class="top">
-          <h3>Usuários e colaboradores</h3>
-          <span class="prazo">Fase 1 · set–out/2026</span>
+    <section class="slide">
+      <div class="content">
+        <p class="kicker">Ritmo de entregas</p>
+        <h2 class="sec-title">Modelo da mensagem</h2>
+        <p class="lead" style="margin-bottom: 8px;">Enviada a cada entrega, toda segunda-feira às 10h.</p>
+        <div class="exemplo-msg">
+          <p class="exemplo-titulo">Versão 1.1.0 disponível no ambiente de teste</p>
+          <p class="exemplo-label">Alterações:</p>
+          <ul>
+            <li>corrige o botão de apagar/inativar material, que estava quebrado na listagem</li>
+            <li>adiciona a coluna de descrição de serviços no cadastro de fornecedores</li>
+          </ul>
         </div>
-        <p>Ajustes nas informações e nas comunicações que já passam pelo cadastro de pessoas, com evolução gradual das regras de acesso.</p>
-        <ul>
-          <li>Comunicações internas ligadas a aniversários, de forma adequada a cada destinatário.</li>
-          <li>Contatos, telefones e férias: consulta e registro alinhados à rotina dos setores.</li>
-          <li>Na sequência: cadastro de colaboradores, perfis e permissões, sem alterar o modelo de acesso de uma só vez.</li>
-        </ul>
       </div>
     </section>
 
-    <section class="mod">
-      <div class="bar"></div>
-      <div>
-        <div class="top">
-          <h3>Compras</h3>
-          <span class="prazo">Fase 1 a 2 · set/2026–jan/2027</span>
+    <section class="slide">
+      <div class="content" style="max-width: 1400px;">
+        <p class="kicker">Timeline de entrega</p>
+        <h2 class="sec-title">12 semanas · 3 meses</h2>
+        <p class="timeline-lead">O contrato cobre as rotinas apresentadas no vídeo. Há três semanas de bônus e uma semana de validação entre entregas. Relatórios, Conexão LES, Agenda e novos módulos seguem como adicionais, com orçamento próprio.</p>
+        <div class="ruler">
+          <div class="ruler-months">
+            <span>Mês 1</span>
+            <span>Mês 2</span>
+            <span>Mês 3</span>
+          </div>
+          <div class="ruler-line">
+            <span class="pt"><span class="dot"></span><span class="n">1</span><span class="lbl">Cadastros</span></span>
+            <span class="pt"><span class="dot"></span><span class="n">2</span><span class="lbl">Cadastros</span></span>
+            <span class="pt"><span class="dot"></span><span class="n">3</span><span class="lbl">Bônus · Usuários</span></span>
+            <span class="pt"><span class="dot"></span><span class="n">4</span><span class="lbl">Validação</span></span>
+            <span class="pt"><span class="dot"></span><span class="n">5</span><span class="lbl">Compras</span></span>
+            <span class="pt"><span class="dot"></span><span class="n">6</span><span class="lbl">Compras</span></span>
+            <span class="pt"><span class="dot"></span><span class="n">7</span><span class="lbl">Bônus · Fluxos</span></span>
+            <span class="pt"><span class="dot"></span><span class="n">8</span><span class="lbl">Bônus · OS</span></span>
+            <span class="pt"><span class="dot"></span><span class="n">9</span><span class="lbl">Aulas</span></span>
+            <span class="pt"><span class="dot"></span><span class="n">10</span><span class="lbl">Aulas</span></span>
+            <span class="pt"><span class="dot"></span><span class="n">11</span><span class="lbl">Aulas</span></span>
+            <span class="pt"><span class="dot"></span><span class="n">12</span><span class="lbl">Aulas</span></span>
+          </div>
         </div>
-        <p>Estabilizar o que já está em uso e, em seguida, tornar o acompanhamento das solicitações mais aderente à rotina administrativa.</p>
-        <ul>
-          <li>Tramitação das solicitações: etapas, encerramento e registro de datas.</li>
-          <li>Possibilidade de ajustar pedidos já lançados.</li>
-          <li>Depois: revisão do fluxo como um todo (painel, períodos e consultas).</li>
-        </ul>
+        <div class="timeline-grid">
+          <div class="week-card">
+            <p class="wk-num">Semana 1</p>
+            <p class="wk-mod">Cadastros</p>
+            <ul>
+              <li>Apagar/inativar material</li>
+              <li>Apagar/inativar período</li>
+              <li>Erro ao ativar período</li>
+              <li>Descrição de serviços do fornecedor</li>
+              <li>Uso das tags (análise)</li>
+            </ul>
+          </div>
+          <div class="week-card">
+            <p class="wk-num">Semana 2</p>
+            <p class="wk-mod">Cadastros</p>
+            <ul>
+              <li>Edição de fornecedor não salva</li>
+              <li>Fornecedores pouco usados (análise)</li>
+            </ul>
+          </div>
+          <div class="week-card">
+            <p class="wk-num">Semana 3</p>
+            <p class="wk-mod">Bônus · Usuários e colaboradores</p>
+            <ul>
+              <li>Aviso de aniversário só p/ aniversariante</li>
+              <li>Ajustes pontuais em contatos e férias</li>
+              <li>Revisão dos campos do cadastro atual</li>
+            </ul>
+          </div>
+          <div class="week-card">
+            <p class="wk-num">Semana 4</p>
+            <p class="wk-mod">Validação</p>
+            <ul>
+              <li>Validação das entregas iniciais no ambiente de teste</li>
+              <li>Ajustes de correção aprovados pelo departamento</li>
+            </ul>
+          </div>
+          <div class="week-card">
+            <p class="wk-num">Semana 5</p>
+            <p class="wk-mod">Compras</p>
+            <ul>
+              <li>Solicitação não finaliza</li>
+              <li>Data em toda solicitação</li>
+              <li>Alterar pedido depois de criado</li>
+            </ul>
+          </div>
+          <div class="week-card">
+            <p class="wk-num">Semana 6</p>
+            <p class="wk-mod">Compras</p>
+            <ul>
+              <li>Revisão do fluxo de compras</li>
+              <li>Etapas, cadastros e rotina administrativa</li>
+            </ul>
+          </div>
+          <div class="week-card">
+            <p class="wk-num">Semana 7</p>
+            <p class="wk-mod">Bônus · Organização dos fluxos</p>
+            <ul>
+              <li>Separar claramente Compras, Almoxarifado e OS</li>
+              <li>Definir o papel de cada fluxo no sistema</li>
+            </ul>
+          </div>
+          <div class="week-card">
+            <p class="wk-num">Semana 8</p>
+            <p class="wk-mod">Bônus · Compras, Almoxarifado e OS</p>
+            <ul>
+              <li>Ajustar etapas e funcionamento dos fluxos existentes</li>
+              <li>Ordens de serviço: acompanhamento e cadastros de apoio</li>
+            </ul>
+          </div>
+          <div class="week-card">
+            <p class="wk-num">Semana 9</p>
+            <p class="wk-mod">Aulas e cronograma</p>
+            <ul>
+              <li>Ordenar cronograma por horário</li>
+              <li>Cadastro de disciplinas (carga/tipo)</li>
+            </ul>
+          </div>
+          <div class="week-card">
+            <p class="wk-num">Semana 10</p>
+            <p class="wk-mod">Aulas, horários e cronograma</p>
+            <ul>
+              <li>Puxar carga/tipo/créditos na turma</li>
+            </ul>
+          </div>
+          <div class="week-card">
+            <p class="wk-num">Semana 11</p>
+            <p class="wk-mod">Aulas, horários e cronograma</p>
+            <ul>
+              <li>Melhorar importação por planilha</li>
+            </ul>
+          </div>
+          <div class="week-card">
+            <p class="wk-num">Semana 12</p>
+            <p class="wk-mod">Aulas, horários e cronograma</p>
+            <ul>
+              <li>Reorganizar a página do cronograma</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="mod">
-      <div class="bar"></div>
-      <div>
-        <div class="top">
-          <h3>Relatórios</h3>
-          <span class="prazo">Fase 2 · nov/2026–jan/2027</span>
+    <section class="slide">
+      <div class="content">
+        <div class="mod-top">
+          <h2 class="mod-title">Cadastros</h2>
+          <span class="prazo">Semanas 1–2 · set/2026</span>
         </div>
-        <p>Aproveitamento das consultas já existentes, com melhor recorte e extração para uso da administração.</p>
-        <ul>
-          <li>Carga horária docente, inclusive por departamento.</li>
-          <li>Filtros, consolidação e formatos de exportação.</li>
-          <li>Demais relatórios gerenciais identificados no uso cotidiano.</li>
+        <p class="mod-desc">A maior parte é correção em telas que já existem — travas de gravação e opções de apagar que ainda faltam.</p>
+        <ul class="mod-list">
+          <li><span class="item-t">Apagar ou inativar material</span> — hoje não é possível remover da lista.</li>
+          <li><span class="item-t">Apagar ou inativar período de solicitação</span> — falta essa opção na tela.</li>
+          <li><span class="item-t">Erro ao ativar período</span> — a ativação está apresentando erro.</li>
+          <li><span class="item-t">Coluna de descrição dos serviços do fornecedor</span> — novo campo no cadastro.</li>
+          <li><span class="item-t">Edição de fornecedor não salva</span> — as alterações no cadastro não são gravadas.</li>
+          <li><span class="item-t">Fornecedores pouco usados</span> — melhorar o cadastro e a ligação com o fluxo de compras.</li>
+          <li><span class="item-t">Uso das classificações (tags)</span> — levantar onde são usadas hoje e se vale ampliar.</li>
         </ul>
+      </div>
+      <p class="mod-num">01</p>
+    </section>
+
+    <section class="slide">
+      <div class="content">
+        <div class="mod-top">
+          <h2 class="mod-title">Bônus · Usuários e colaboradores</h2>
+          <span class="prazo">Semana 3 · sem cobrança adicional</span>
+        </div>
+        <p class="mod-desc">Uma semana de melhorias pontuais no cadastro de pessoas, incluída como bônus no cronograma.</p>
+        <ul class="mod-list">
+          <li><span class="item-t">Aviso de aniversário só para quem faz aniversário</span> — hoje aparece para todo mundo.</li>
+          <li><span class="item-t">Contatos e férias</span> — ajustes pontuais no que já está cadastrado.</li>
+          <li><span class="item-t">Campos atuais do cadastro</span> — revisão breve com o departamento.</li>
+        </ul>
+      </div>
+      <p class="mod-num">02</p>
+    </section>
+
+    <section class="slide">
+      <div class="content">
+        <div class="mod-top">
+          <h2 class="mod-title">Compras</h2>
+          <span class="prazo">Semanas 5–6 · out/2026</span>
+        </div>
+        <p class="mod-desc">Primeiro os pontos que travam o fluxo atual — finalizar solicitação, editar pedido — depois a revisão do processo como um todo.</p>
+        <ul class="mod-list">
+          <li><span class="item-t">Solicitação não finaliza</span> — fica sempre "em andamento", precisa fechar corretamente.</li>
+          <li><span class="item-t">Data em toda solicitação</span> — mostrar em todas as telas e no painel.</li>
+          <li><span class="item-t">Alterar pedido depois de criado</span> — hoje não é possível editar.</li>
+          <li><span class="item-t">Revisão do fluxo de compras</span> — etapas, cadastros e rotina administrativa, depois dos itens acima.</li>
+        </ul>
+      </div>
+      <p class="mod-num">03</p>
+    </section>
+
+    <section class="slide">
+      <div class="content">
+        <div class="mod-top">
+          <h2 class="mod-title">Bônus · Organização dos fluxos</h2>
+          <span class="prazo">Semana 7 · sem cobrança adicional</span>
+        </div>
+        <p class="mod-desc">Alinhar claramente o que é Compra, Almoxarifado e Ordem de Serviço, para cada fluxo ter seu objetivo e suas etapas definidos.</p>
+        <ul class="mod-list">
+          <li><span class="item-t">Compras</span> — solicitações e pedidos voltados à aquisição.</li>
+          <li><span class="item-t">Almoxarifado</span> — delimitar o que pertence ao controle de materiais e estoque.</li>
+          <li><span class="item-t">Ordens de serviço</span> — chamados, execução e acompanhamento.</li>
+        </ul>
+      </div>
+      <p class="mod-num">04</p>
+    </section>
+
+    <section class="slide">
+      <div class="content">
+        <div class="mod-top">
+          <h2 class="mod-title">Bônus · Compras, Almoxarifado e OS</h2>
+          <span class="prazo">Semana 8 · sem cobrança adicional</span>
+        </div>
+        <p class="mod-desc">Aplicar os ajustes necessários para os fluxos existentes funcionarem de forma coerente depois da separação.</p>
+        <ul class="mod-list">
+          <li>Etapas mais claras nos fluxos atuais de compra e ordem de serviço.</li>
+          <li>Cadastros de apoio e vínculos necessários ao funcionamento.</li>
+          <li><span class="item-t">Controle completo de estoque e relatórios gerenciais</span> — ficam para orçamento adicional.</li>
+        </ul>
+      </div>
+      <p class="mod-num">05</p>
+    </section>
+
+    <section class="slide">
+      <div class="content">
+        <div class="mod-top">
+          <h2 class="mod-title">Aulas, horários e cronograma</h2>
+          <span class="prazo">Semanas 9–12 · nov/2026</span>
+        </div>
+        <p class="mod-desc">A frente com mais pedidos de melhoria: grade, importação por planilha e cadastro de disciplinas.</p>
+        <ul class="mod-list">
+          <li><span class="item-t">Ordenar por horário</span> — dar ordem clara à visualização da grade.</li>
+          <li><span class="item-t">Reorganizar a página do cronograma</span> — visual, filtros, espaço e legibilidade.</li>
+          <li><span class="item-t">Puxar carga, tipo e créditos ao escolher a matéria</span> — preenchimento automático na turma.</li>
+          <li><span class="item-t">Cadastro de disciplinas com carga e tipo de turma</span> — completar os dados que faltam.</li>
+          <li><span class="item-t">Melhorar a importação por planilha</span> — modelo padrão e tratamento de erro linha a linha.</li>
+        </ul>
+      </div>
+      <p class="mod-num">08</p>
+    </section>
+
+    <section class="slide">
+      <div class="content" style="max-width: 1200px;">
+        <p class="kicker">Escopo</p>
+        <h2 class="sec-title">Contrato, bônus e adicionais</h2>
+        <p class="timeline-lead">O vídeo define o escopo contratado. Os bônus são entregas incluídas nesta etapa sem cobrança adicional. O restante é viável, mas será detalhado e orçado separadamente.</p>
+        <div class="split-grid">
+          <div class="split-col in">
+            <h3>Contratado</h3>
+            <p class="split-sub">Escopo do vídeo · 8 semanas de desenvolvimento</p>
+            <ul>
+              <li>Cadastros<span class="wk">Semanas 1–2</span></li>
+              <li>Compras<span class="wk">Semanas 5–6</span></li>
+              <li>Aulas, horários e cronograma<span class="wk">Semanas 9–12</span></li>
+            </ul>
+          </div>
+          <div class="split-col bonus">
+            <h3>Bônus</h3>
+            <p class="split-sub">Incluído sem cobrança adicional · 3 semanas</p>
+            <ul>
+              <li>Usuários e colaboradores<span class="wk">Semana 3</span></li>
+              <li>Separação de Compras, Almoxarifado e OS<span class="wk">Semana 7</span></li>
+              <li>Ajustes nos fluxos existentes<span class="wk">Semana 8</span></li>
+            </ul>
+          </div>
+          <div class="split-col out">
+            <h3>Adicionais viáveis</h3>
+            <p class="split-sub">Escopo, prazo e valor a definir em orçamento</p>
+            <ul>
+              <li>Relatórios e Conexão LES<span class="tag">Evoluções de módulos existentes</span></li>
+              <li>Agenda e espaços<span class="tag">Evolução e novos públicos</span></li>
+              <li>Aproveitamento de disciplinas<span class="tag">Novo módulo</span></li>
+              <li>Novo fluxo de solicitação de salas<span class="tag">Novo fluxo</span></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="mod">
-      <div class="bar"></div>
-      <div>
-        <div class="top">
-          <h3>Conexão LES</h3>
-          <span class="prazo">Fase 2 · nov/2026–jan/2027</span>
+    <section class="slide">
+      <div class="content">
+        <div class="mod-top">
+          <h2 class="mod-title">Adicionais · evoluções de módulos</h2>
+          <span class="prazo">Viáveis · orçamento adicional</span>
         </div>
-        <p>Revisão do envio de comunicações, inclusive a destinatários externos à Universidade.</p>
-        <ul>
-          <li>Cadastro e identificação de quem recebe as mensagens.</li>
-          <li>Regras de permissão para publicação e disparo.</li>
-          <li>Funcionamento das comunicações voltadas a públicos de fora do LES.</li>
+        <p class="mod-desc">Frentes que podem ser desenvolvidas sobre funcionalidades já existentes, após definição de escopo, prazo e valor.</p>
+        <ul class="mod-list">
+          <li><span class="item-t">Relatórios</span> — carga horária, consultas gerenciais, filtros e exportação.</li>
+          <li><span class="item-t">Conexão LES</span> — regras de publicação e comunicações externas.</li>
+          <li><span class="item-t">Agenda e espaços</span> — consultas, alterações e melhorias da reserva interna.</li>
+          <li><span class="item-t">Importação em lote em outras telas</span> — a definir por funcionalidade.</li>
         </ul>
+        <p class="mod-note">Cada frente terá escopo, prazo e valor estimados antes do desenvolvimento.</p>
       </div>
+      <p class="mod-num">06</p>
     </section>
 
-    <section class="mod">
-      <div class="bar"></div>
-      <div>
-        <div class="top">
-          <h3>Ordens de serviço</h3>
-          <span class="prazo">Fase 2 · nov/2026–fev/2027</span>
+    <section class="slide">
+      <div class="content">
+        <div class="mod-top">
+          <h2 class="mod-title">Adicionais · novos fluxos</h2>
+          <span class="prazo">Viáveis · orçamento adicional</span>
         </div>
-        <p>Aprimoramento das rotinas de chamado já implantadas, dos cadastros associados e das consultas de gestão.</p>
-        <ul>
-          <li>Etapas e acompanhamento dos chamados.</li>
-          <li>Cadastros de apoio (categorias, recursos, fornecedores ligados ao chamado).</li>
-          <li>Relatórios e extração para a rotina administrativa.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="mod">
-      <div class="bar"></div>
-      <div>
-        <div class="top">
-          <h3>Agenda e espaços</h3>
-          <span class="prazo">Fase 2 · dez/2026–fev/2027</span>
-        </div>
-        <p>Melhoria das consultas sobre reservas e alterações de agenda, sobre a base que o sistema já registra.</p>
-        <ul>
-          <li>Acompanhamento das alterações realizadas.</li>
-          <li>Relatórios e extração de informações.</li>
-          <li>A ampliação de público (alunos e pessoas externas) fica na fase 3, após desenho do fluxo.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="mod">
-      <div class="bar"></div>
-      <div>
-        <div class="top">
-          <h3>Aulas, horários e cronograma</h3>
-          <span class="prazo">Fase 2 · dez/2026–fev/2027</span>
-        </div>
-        <p>Organização da grade e da alimentação dos dados acadêmicos, em cima das telas já utilizadas pela coordenação.</p>
-        <ul>
-          <li>Consulta: ordem, filtros, leitura e aproveitamento da tela.</li>
-          <li>Importação por planilha: consistência dos dados e tratamento das inconsistências.</li>
-          <li>Cadastro de disciplinas e preenchimento das turmas a partir dessas informações.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="mod">
-      <div class="bar"></div>
-      <div>
-        <div class="top">
-          <h3>Almoxarifado</h3>
-          <span class="prazo">Fase 3 · a partir de mar/2027</span>
-        </div>
-        <p>Avaliação de controles específicos de estoque, em separado do fluxo de compras, depois que as solicitações atuais estiverem mais estáveis.</p>
-        <ul>
-          <li>Definição, com o departamento, do que é compra e do que é almoxarifado.</li>
-          <li>Eventual estruturação de rotinas próprias, se confirmada a necessidade.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="mod">
-      <div class="bar"></div>
-      <div>
-        <div class="top">
-          <h3>Novos fluxos</h3>
-          <span class="prazo">Fase 3 · a partir de mar/2027</span>
-        </div>
-        <p>Rotinas hoje feitas fora do SIGLES. Entram no sistema somente após levantamento do fluxo atual e das regras do departamento.</p>
-        <ul>
-          <li>Aproveitamento de disciplinas e demais atividades acadêmicas ainda manuais.</li>
-          <li>Solicitação de salas por alunos (identificação institucional) e, se couber, por pessoas externas.</li>
+        <p class="mod-desc">Funcionalidades que ainda não existem no SIGLES. São viáveis, mas precisam de levantamento de regras, responsáveis e aprovações antes de serem orçadas.</p>
+        <ul class="mod-list">
+          <li><span class="item-t">Aproveitamento de disciplinas</span> — automatizar atividades acadêmicas hoje manuais.</li>
+          <li><span class="item-t">Solicitação de salas pelo SIGLES</span> — novo fluxo com disponibilidade, aprovação e identificação do solicitante.</li>
+          <li><span class="item-t">Reservas por alunos e pessoas externas</span> — evolução posterior do novo fluxo, conforme as regras do departamento.</li>
           <li>Ferramentas auxiliares de apoio à análise de documentos, se houver encaixe na rotina.</li>
         </ul>
+        <p class="mod-note">Prazo e valor estimados depois que o escopo for definido com o departamento.</p>
       </div>
+      <p class="mod-num">07</p>
     </section>
 
-    <footer>
-      Cronograma proposto em setembro de 2026. As datas são de referência para
-      planejamento conjunto e podem ser antecipadas ou deslocadas sem prejuízo
-      do encadeamento: primeiro as rotinas em uso, depois os módulos a aprimorar,
-      por último o que ainda não existe no sistema.
-    </footer>
   </div>
-</body>
-</html>
+
+  <script>
+    (function () {
+      var slides = document.querySelectorAll('.slide');
+      var idx = 0;
+
+      function show(next) {
+        idx = Math.max(0, Math.min(slides.length - 1, next));
+        slides.forEach(function (s, n) {
+          s.classList.toggle('active', n === idx);
+        });
+      }
+
+      window.addEventListener('keydown', function (e) {
+        switch (e.key) {
+          case 'ArrowRight':
+          case ' ':
+            e.preventDefault();
+            show(idx + 1);
+            break;
+          case 'ArrowLeft':
+          case 'Backspace':
+            e.preventDefault();
+            show(idx - 1);
+            break;
+          case 'Home':
+            e.preventDefault();
+            show(0);
+            break;
+          case 'End':
+            e.preventDefault();
+            show(slides.length - 1);
+            break;
+        }
+      });
+    })();
+  </script>
+</body></html>
