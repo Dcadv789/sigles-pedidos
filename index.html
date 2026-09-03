@@ -71,7 +71,7 @@
 <body>
   <header>
     <h1>SIGLES — pedidos do contratante</h1>
-    <p class="lead">Quadro da Axory com o LES/ESALQ. Vídeo 1 e visita. Viabilidade avaliada no código atual. Marque o que já foi feito (fica neste navegador).</p>
+    <p class="lead">Quadro interno da Axory com o LES/ESALQ. Itens separados pela fonte: Word inicial, vídeo e Word final da visita. Viabilidade avaliada no código atual. Marque o que já foi feito (fica neste navegador).</p>
     <div class="stats" id="stats"></div>
     <div class="filters" id="filters"></div>
   </header>
@@ -110,12 +110,41 @@
       {id:"VS-16",lote:"Visita",kind:"Análise",viab:"Baixa",tela:"Aproveitamento de disciplinas (não existe)",titulo:"Novo módulo + Notebook LM",pedido:"Automatizar o que hoje é manual. Escopo depois. Avaliar Notebook LM.",desc:"Não há tela. Sem o fluxo acadêmico escrito, não dá para estimar. Notebook LM não aparece no código.",paths:"Disciplina / DisciplinaCurso (só referência)"},
       {id:"VS-17",lote:"Visita",kind:"Feature",viab:"Média",tela:"Carga horária dos docentes",titulo:"Relatório de carga por departamento",pedido:"Filtros, consolidação, visualização e exportação.",desc:"O relatório já existe. Ampliar departamento e Excel/PDF é evolução de tela, não invenção.",paths:"RelatorioController / carga_docentes.html.twig"},
       {id:"VS-18",lote:"Visita",kind:"Feature",viab:"Média",tela:"Agenda → Log / Relatório",titulo:"Relatórios de alteração de agenda",pedido:"Acompanhar mudanças e extrair informações.",desc:"Log e relatório de reserva já exportam Excel. Evoluir a consulta, não criar do zero.",paths:"AgendaLogController / Reserva (relatório)"},
-      {id:"VS-19",lote:"Visita",kind:"Análise",viab:"Baixa",tela:"Agenda → reserva para alunos e externos",titulo:"Solicitar sala no SIGLES (nº USP e pessoas de fora)",pedido:"Formulário, disponibilidade, aprovação, aluno e externo.",desc:"Hoje só usuário interno logado. Aluno e visitante exigem conta/aprovação novas — projeto à parte.",paths:"ReservaController / Agenda / security.yaml"}
+      {id:"VS-19",lote:"Visita",kind:"Análise",viab:"Baixa",tela:"Agenda → reserva para alunos e externos",titulo:"Solicitar sala no SIGLES (nº USP e pessoas de fora)",pedido:"Formulário, disponibilidade, aprovação, aluno e externo.",desc:"Hoje só usuário interno logado. Aluno e visitante exigem conta/aprovação novas — projeto à parte.",paths:"ReservaController / Agenda / security.yaml"},
+
+      {id:"WI-01",lote:"Word inicial",kind:"Bug",viab:"Alta",tela:"Cronogramas",titulo:"Criação e importação do cronograma do 2º semestre de 2026",pedido:"O documento marca erro ao importar ou criar o cronograma, com indicação posterior de FEITO.",desc:"Tratar como pendência de validação no teste, não como entrega nova confirmada. Não consta no vídeo.",paths:"CronogramaController.php\ntemplates/cronograma/"},
+      {id:"WI-02",lote:"Word inicial",kind:"Bug",viab:"Alta",tela:"Cronogramas → nova turma",titulo:"Duplicação de turmas e alteração compartilhada entre dias",pedido:"A criação triplica o cadastro; alterações de carga/créditos em um dia afetam o outro. Marcado como FEITO no documento.",desc:"Exige teste de regressão antes de considerar encerrado. Não consta no vídeo.",paths:"CronogramaController.php\nDisciplinaTurmaController.php\ntemplates/cronograma/"},
+      {id:"WI-03",lote:"Word inicial",kind:"Bug",viab:"Alta",tela:"Agenda → eventos recorrentes",titulo:"Alterar eventos recorrentes",pedido:"Alterações em eventos recorrentes continuam sem funcionar; o documento marca como urgente.",desc:"Correção em funcionalidade existente. Não consta no vídeo.",paths:"AgendaController.php\nReservaController.php\ntemplates/agenda/"},
+      {id:"WI-04",lote:"Word inicial",kind:"Bug",viab:"Média",tela:"Usuários / Cronogramas",titulo:"Docente sênior não aparece no cronograma",pedido:"Perfil de docente sênior não é apresentado, apenas docente.",desc:"Verificar filtro de perfil e dados do docente. Não consta no vídeo.",paths:"DocenteController.php\nCronogramaController.php\ntemplates/cronograma/"},
+      {id:"WI-05",lote:"Word inicial",kind:"Feature",viab:"Média",tela:"Dashboard",titulo:"Revisar cartões, atalhos e informações iniciais",pedido:"Trocar cartões, adicionar calendário, férias, contratos e links institucionais.",desc:"Conjunto de melhorias de interface; precisa dividir em entregas menores. Não consta no vídeo.",paths:"DashboardController.php\ntemplates/dashboard/\ntemplates/admin.html.twig"},
+      {id:"WI-06",lote:"Word inicial",kind:"Bug",viab:"Alta",tela:"Dashboard → Ordens de serviço",titulo:"Exibir OS conforme perfil e status",pedido:"ADM pode ver todas ou próprias; demais usuários só as próprias; mostrar apenas abertas ou em andamento.",desc:"Regra de consulta e permissão. Não consta no vídeo.",paths:"DashboardController.php\nOrdemServicoController.php\ntemplates/dashboard/"},
+      {id:"WI-07",lote:"Word inicial",kind:"Bug",viab:"Alta",tela:"Usuários → contratos e CERT",titulo:"Salvar data da CERT e corrigir aviso de vencimento",pedido:"Data da CERT informa sucesso sem gravar; cartão de contratos deve tratar CERT corretamente.",desc:"Bug de persistência + ajuste do dashboard. Marcado como urgente no documento.",paths:"UsuarioController.php\nContratoDocenteController.php\ntemplates/usuario/\ntemplates/dashboard/"},
+      {id:"WI-08",lote:"Word inicial",kind:"Feature",viab:"Média",tela:"Usuários",titulo:"Ordenação, exclusão e comportamento das abas",pedido:"Ordenar alfabeticamente, permitir excluir cadastro e manter a aba aberta após salvar.",desc:"A exclusão deve continuar como inativação (soft-delete), padrão do SIGLES. Não consta no vídeo.",paths:"UsuarioController.php\ntemplates/usuario/"},
+      {id:"WI-09",lote:"Word inicial",kind:"Feature",viab:"Média",tela:"Usuários → estagiários",titulo:"Aviso de vencimento de contrato de estagiário",pedido:"Avisar ADM e estagiário com 45 dias de antecedência.",desc:"Fluxo de notificação a definir. Não consta no vídeo.",paths:"UsuarioController.php\nConfiguracoesController.php\ntemplates/usuario/"},
+      {id:"WI-10",lote:"Word inicial",kind:"Bug",viab:"Alta",tela:"Ordens de serviço",titulo:"Responsável e seguidores não persistem corretamente",pedido:"Responsável aparece aleatório; seguidores voltam para nomes fixos após reabrir.",desc:"Bugs de relacionamento/persistência. Não constam no vídeo.",paths:"OrdemServicoController.php\nHistoricoOs.php\ntemplates/ordem_servico/"},
+      {id:"WI-11",lote:"Word inicial",kind:"Feature",viab:"Média",tela:"Ordens de serviço → orçamento",titulo:"Anexos e orçamento na criação da OS",pedido:"Aceitar mais tipos de arquivo e anexar orçamento já ao criar a ordem.",desc:"Evolução de upload e do fluxo do modal. Não consta no vídeo.",paths:"OrdemServicoController.php\nAnexoOs.php\ntemplates/ordem_servico/"},
+      {id:"WI-12",lote:"Word inicial",kind:"Feature",viab:"Média",tela:"Ordens de serviço",titulo:"Filtros e responsáveis por categoria",pedido:"Filtrar por solicitante e indicar responsável por categoria/subcategoria.",desc:"Novas regras de consulta e configuração. Não consta no vídeo.",paths:"OrdemServicoController.php\nCategoriaOsController.php\nSubcategoriaOsController.php\nConfiguracoesController.php"},
+      {id:"WI-13",lote:"Word inicial",kind:"Feature",viab:"Média",tela:"Cronogramas",titulo:"Exportação, filtros e importação entre semestres",pedido:"Exportar cursos, ocultar docentes inativos, filtrar salas e informar início/fim ao importar.",desc:"Evolução do cronograma além dos itens do vídeo.",paths:"CronogramaController.php\ntemplates/cronograma/"},
+      {id:"WI-14",lote:"Word inicial",kind:"Feature",viab:"Média",tela:"Disciplinas",titulo:"Carga horária, crédito, responsável, exportação e relatórios",pedido:"Completar cadastro e permitir consulta/exportação de disciplinas e docentes.",desc:"Sobrepõe parcialmente V1-11: o vídeo também pede carga e créditos, mas não relatórios/exportação.",paths:"Disciplina.php\nDisciplinaController.php\nRelatorioController.php\ntemplates/disciplina/"},
+      {id:"WI-15",lote:"Word inicial",kind:"Feature",viab:"Média",tela:"Quadro de aula / docentes",titulo:"Ordenar aulas e consolidar carga horária docente",pedido:"Ordenar horários e somar carga dos semestres e da pós-graduação.",desc:"A ordenação sobrepõe V1-09; a consolidação é relatório adicional.",paths:"RelatorioController.php\nDisciplinaTurmaController.php\ntemplates/relatorios/"},
+      {id:"WI-16",lote:"Word inicial",kind:"Feature",viab:"Média",tela:"Cadastros → materiais e recursos",titulo:"Subcategoria Compras/Almoxarifado e descrição FUSP",pedido:"Criar subcategoria para materiais e nova descrição para recursos de OS.",desc:"Evolução de cadastro. Não consta no vídeo.",paths:"MaterialController.php\nCategoriaMaterialController.php\nContaController.php\ntemplates/material/\ntemplates/conta/"},
+      {id:"WI-17",lote:"Word inicial",kind:"Feature",viab:"Média",tela:"Espaços / Salas",titulo:"Remover salas duplicadas e ajustar exibição na agenda",pedido:"Importar arquivo para remover duplicidades; mostrar nome abreviado no cadastro da agenda.",desc:"Exige validação da planilha antes da alteração de dados. Não consta no vídeo.",paths:"SalaController.php\nAgendaController.php\ntemplates/sala/\ntemplates/agenda/"},
+      {id:"WI-18",lote:"Word inicial",kind:"Bug",viab:"Alta",tela:"Agenda",titulo:"Recorrência, disponibilidade e alteração de uma ocorrência",pedido:"Corrigir data final da recorrência, listar apenas salas disponíveis e permitir alterar/excluir apenas um dia.",desc:"Conjunto de regras de agenda; inclui o item urgente de recorrência.",paths:"AgendaController.php\nReservaController.php\ntemplates/agenda/\ntemplates/reserva/"},
+      {id:"WI-19",lote:"Word inicial",kind:"Feature",viab:"Média",tela:"Tipos de reserva",titulo:"Dados do solicitante nos tipos de reserva",pedido:"Incluir e-mail e nome do discente/solicitante, mantendo grupo de extensão obrigatório.",desc:"Mudança de dados e validação no fluxo existente.",paths:"TipoReservaController.php\nReservaController.php\ntemplates/tipo_reserva/\ntemplates/reserva/"},
+      {id:"WI-20",lote:"Word inicial",kind:"Feature",viab:"Média",tela:"Compras → períodos e painel",titulo:"Arquivamento automático, painel e layout de pedidos",pedido:"Manter período vigente, arquivar após encerramento, rever abas/status e expandir a tela de pedidos.",desc:"Ampliação do fluxo de compras além dos bugs do vídeo.",paths:"PeriodoSolicitacoesController.php\nPainelSolicitacoesController.php\nSolicitacaoController.php\ntemplates/painel_solicitacoes/"},
+      {id:"WI-21",lote:"Word inicial",kind:"Feature",viab:"Baixa",tela:"Novos módulos → comissões",titulo:"Graduação, Pós-Graduação, Pesquisa e Extensão",pedido:"Representantes, atas/relatórios de reunião, datas e arquivos.",desc:"Novos módulos sem base atual no SIGLES; escopo e orçamento próprios.",paths:"Novo módulo — sem controller ou entidade existente"},
+      {id:"WI-22",lote:"Word inicial",kind:"Análise",viab:"Média",tela:"Itens marcados como FEITO",titulo:"Validar os itens já declarados resolvidos",pedido:"Cronograma e bloqueio de dias estão sinalizados como FEITO no Word.",desc:"Confirmar no ambiente de teste antes de marcar como concluído no quadro.",paths:"CronogramaController.php\nAgendaController.php\nReservaController.php"}
     ];
 
-    const FILTROS = ["Todos","Pendentes","Feitos","Vídeo 1","Visita","Alta","Média","Baixa"];
+    const FILTROS = ["Todos","Pendentes","Feitos","Vídeo","Word inicial","Word final","Alta","Média","Baixa"];
     let filtro = "Todos";
     const done = JSON.parse(localStorage.getItem("sigles-pedidos-done") || "{}");
+
+    function fonte(item) {
+      if (item.lote === "Vídeo 1") return "Vídeo";
+      if (item.lote === "Visita") return "Word final";
+      return item.lote;
+    }
 
     function setDone(id, v) {
       done[id] = v;
@@ -127,7 +156,7 @@
       return ITEMS.filter(i => {
         if (filtro === "Pendentes") return !done[i.id];
         if (filtro === "Feitos") return !!done[i.id];
-        if (filtro === "Vídeo 1" || filtro === "Visita") return i.lote === filtro;
+        if (filtro === "Vídeo" || filtro === "Word inicial" || filtro === "Word final") return fonte(i) === filtro;
         if (filtro === "Alta" || filtro === "Média" || filtro === "Baixa") return i.viab === filtro;
         return true;
       });
@@ -136,10 +165,13 @@
     function render() {
       const feitos = ITEMS.filter(i => done[i.id]).length;
       const alta = ITEMS.filter(i => i.viab === "Alta").length;
+      const video = ITEMS.filter(i => fonte(i) === "Vídeo").length;
+      const wordInicial = ITEMS.filter(i => fonte(i) === "Word inicial").length;
+      const wordFinal = ITEMS.filter(i => fonte(i) === "Word final").length;
       document.getElementById("stats").innerHTML = `
         <div class="stat"><b>${ITEMS.length}</b><span>Itens</span></div>
         <div class="stat"><b>${feitos}</b><span>Feitos neste browser</span></div>
-        <div class="stat"><b>11 + 19</b><span>Vídeo + visita</span></div>
+        <div class="stat"><b>${video} · ${wordInicial} · ${wordFinal}</b><span>Vídeo · Word inicial · Word final</span></div>
         <div class="stat"><b>${alta}</b><span>Viabilidade alta</span></div>`;
       document.getElementById("filters").innerHTML = FILTROS.map(f =>
         `<button class="f${f===filtro?" on":""}" data-f="${f}">${f}</button>`
@@ -151,7 +183,7 @@
             <p class="tela">${i.tela}</p>
             <div>
               <span class="viab ${i.viab}">${i.viab}</span>
-              <span class="meta"> · ${i.lote} · ${i.id} · ${i.kind}</span>
+              <span class="meta"> · ${fonte(i)} · ${i.id} · ${i.kind}</span>
             </div>
           </header>
           <label class="check">
