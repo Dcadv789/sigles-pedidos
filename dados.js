@@ -1,4 +1,4 @@
-/* Conferência em 15/10/2026. Cobrança é recomendação para negociação, sem aprovação implícita. */
+/* Atualização de 15/10/2026. Origem Adicional classificada integralmente como Aditivo por orientação do usuário. */
 window.SIGLES_BOARD = {
   "atualizado": "15/10/2026",
   "itens": [
@@ -1138,6 +1138,1360 @@ window.SIGLES_BOARD = {
           "situacao": "Pendente",
           "cobranca": "Aditivo",
           "motivoCobranca": "Recomendação condicionada: automação específica não descrita no relatório original. Antes de orçar, esclarecer a anotação FEITO e confirmar que não foi entregue ou paga anteriormente. A correção de um bloqueio já contratado continua no pedido inicial."
+        }
+      ]
+    },
+    {
+      "id": "AD-01",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Disciplinas",
+      "titulo": "Docente responsável no cadastro da disciplina",
+      "pedido": "Seguem demais ajustes a serem efetivados no SIGLES:\n\nAlém das alterações e inclusões constantes no Relatório da Visita Técnica, realizada no dia 20/08/2026, solicito a inclusão das seguintes adições de funcionalidades no SIGLES:\n\n- No cadastro das disciplinas, opção para cadastrar o nome do(s) docente(s) responsável (eis);",
+      "status": "Parcial",
+      "resumo": "O responsável por ano/semestre já existe na entrega 2. Confirmar se o novo pedido exige vários responsáveis simultâneos.",
+      "referencias": [
+        {
+          "paragrafo": 1,
+          "texto": "Seguem demais ajustes a serem efetivados no SIGLES:"
+        },
+        {
+          "paragrafo": 3,
+          "texto": "Além das alterações e inclusões constantes no Relatório da Visita Técnica, realizada no dia 20/08/2026, solicito a inclusão das seguintes adições de funcionalidades no SIGLES:"
+        },
+        {
+          "paragrafo": 5,
+          "texto": "- No cadastro das disciplinas, opção para cadastrar o nome do(s) docente(s) responsável (eis);"
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Cadastro do responsável por ano e semestre já implementado.",
+          "entrega": 2,
+          "situacao": "Entregue",
+          "cobranca": "Aditivo"
+        },
+        {
+          "texto": "Definir e implementar, se necessário, vários responsáveis simultâneos. Parte já entregue não exige refazer o mesmo recurso.",
+          "entrega": null,
+          "situacao": "Definir",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-02",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Disciplinas",
+      "titulo": "Responsável na listagem principal",
+      "pedido": "- Na tela inicial da lista de disciplinas, aparecer o nome do docente responsável, independente do docente constante no cronograma.",
+      "status": "Pendente",
+      "resumo": "Exibir o responsável na lista de disciplinas, independentemente de quem ministra as turmas. Sobrepõe parte de WI-14: acompanhar como um único desenvolvimento.",
+      "referencias": [
+        {
+          "paragrafo": 6,
+          "texto": "- Na tela inicial da lista de disciplinas, aparecer o nome do docente responsável, independente do docente constante no cronograma."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Exibir o responsável na lista de disciplinas, independentemente de quem ministra as turmas. Sobrepõe parte de WI-14: acompanhar como um único desenvolvimento.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-03",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Planos de ensino",
+      "titulo": "Plano de ensino editável no sistema",
+      "pedido": "NA ABA DISCIPLINAS:\n\nNovo item: Planos de Ensino\n\nSeria possível que o plano de ensino fosse uma página editável do próprio sistema, no modelo do plano de ensino, em que o docente possa consultar, realizar a alterações e que possamos imprimir os formulários alterados individualmente ou filtrar apenas pelos que foram alterados (o sistema identificaria quais foram alterados, uma vez que para isso, o docente deverá fazer uma “cópia” da página atual, criando uma nova página, nos moldes do cronograma inserindo obrigatoriamente o ano para o qual a alteração está sendo feita). \n\nModelo de Plano de Ensino: \n\nhttps://docs.google.com/document/d/1zwPWGK8jlGyrBVcIQMlZQaBrSdGY_tpF/edit?usp=sharing&ouid=107240220449817109273&rtpof=true&sd=true",
+      "status": "Pendente",
+      "resumo": "Criar uma página editável conforme o modelo indicado, para consulta e atualização pelo docente. O cadastro atual de anexos não equivale a esse editor. Os campos do modelo externo precisam ser conferidos.",
+      "referencias": [
+        {
+          "paragrafo": 8,
+          "texto": "NA ABA DISCIPLINAS:"
+        },
+        {
+          "paragrafo": 9,
+          "texto": "Novo item: Planos de Ensino"
+        },
+        {
+          "paragrafo": 10,
+          "texto": "Seria possível que o plano de ensino fosse uma página editável do próprio sistema, no modelo do plano de ensino, em que o docente possa consultar, realizar a alterações e que possamos imprimir os formulários alterados individualmente ou filtrar apenas pelos que foram alterados (o sistema identificaria quais foram alterados, uma vez que para isso, o docente deverá fazer uma “cópia” da página atual, criando uma nova página, nos moldes do cronograma inserindo obrigatoriamente o ano para o qual a alteração está sendo feita). "
+        },
+        {
+          "paragrafo": 11,
+          "texto": "Modelo de Plano de Ensino: "
+        },
+        {
+          "paragrafo": 12,
+          "texto": "https://docs.google.com/document/d/1zwPWGK8jlGyrBVcIQMlZQaBrSdGY_tpF/edit?usp=sharing&ouid=107240220449817109273&rtpof=true&sd=true"
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Criar uma página editável conforme o modelo indicado, para consulta e atualização pelo docente. O cadastro atual de anexos não equivale a esse editor. Os campos do modelo externo precisam ser conferidos.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-04",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Planos de ensino",
+      "titulo": "Cópia do plano para um novo ano",
+      "pedido": "Seria possível que o plano de ensino fosse uma página editável do próprio sistema, no modelo do plano de ensino, em que o docente possa consultar, realizar a alterações e que possamos imprimir os formulários alterados individualmente ou filtrar apenas pelos que foram alterados (o sistema identificaria quais foram alterados, uma vez que para isso, o docente deverá fazer uma “cópia” da página atual, criando uma nova página, nos moldes do cronograma inserindo obrigatoriamente o ano para o qual a alteração está sendo feita). ",
+      "status": "Pendente",
+      "resumo": "Permitir copiar o plano atual para criar uma nova versão, exigindo o ano a que a alteração se destina.",
+      "referencias": [
+        {
+          "paragrafo": 10,
+          "texto": "Seria possível que o plano de ensino fosse uma página editável do próprio sistema, no modelo do plano de ensino, em que o docente possa consultar, realizar a alterações e que possamos imprimir os formulários alterados individualmente ou filtrar apenas pelos que foram alterados (o sistema identificaria quais foram alterados, uma vez que para isso, o docente deverá fazer uma “cópia” da página atual, criando uma nova página, nos moldes do cronograma inserindo obrigatoriamente o ano para o qual a alteração está sendo feita). "
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Permitir copiar o plano atual para criar uma nova versão, exigindo o ano a que a alteração se destina.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-05",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Planos de ensino",
+      "titulo": "Filtro e impressão dos planos alterados",
+      "pedido": "Seria possível que o plano de ensino fosse uma página editável do próprio sistema, no modelo do plano de ensino, em que o docente possa consultar, realizar a alterações e que possamos imprimir os formulários alterados individualmente ou filtrar apenas pelos que foram alterados (o sistema identificaria quais foram alterados, uma vez que para isso, o docente deverá fazer uma “cópia” da página atual, criando uma nova página, nos moldes do cronograma inserindo obrigatoriamente o ano para o qual a alteração está sendo feita). ",
+      "status": "Pendente",
+      "resumo": "Identificar os planos alterados, filtrar somente eles e imprimir os formulários individualmente.",
+      "referencias": [
+        {
+          "paragrafo": 10,
+          "texto": "Seria possível que o plano de ensino fosse uma página editável do próprio sistema, no modelo do plano de ensino, em que o docente possa consultar, realizar a alterações e que possamos imprimir os formulários alterados individualmente ou filtrar apenas pelos que foram alterados (o sistema identificaria quais foram alterados, uma vez que para isso, o docente deverá fazer uma “cópia” da página atual, criando uma nova página, nos moldes do cronograma inserindo obrigatoriamente o ano para o qual a alteração está sendo feita). "
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Identificar os planos alterados, filtrar somente eles e imprimir os formulários individualmente.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-06",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Planos de ensino",
+      "titulo": "Ano de referência",
+      "pedido": "- Na tela de adição do plano de ensino, trocar data de referência por ano de referência, para facilitar o filtro. ",
+      "status": "Pendente",
+      "resumo": "Substituir a data de referência pelo ano e adequar os filtros.",
+      "referencias": [
+        {
+          "paragrafo": 14,
+          "texto": "- Na tela de adição do plano de ensino, trocar data de referência por ano de referência, para facilitar o filtro. "
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Substituir a data de referência pelo ano e adequar os filtros.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-07",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Planos de ensino",
+      "titulo": "Período de atualização e autorização de exceções",
+      "pedido": "- Findado o período de atualizações, os docentes somente visualizarão, TANTO eles, quanto demais usuários somente poderão alterar, se autorizado pelo ADM.\n\n- Os planos de anos futuros poderão ser alterados quantas vezes for necessário, dentro do período que estipularmos.",
+      "status": "Pendente",
+      "resumo": "Permitir alterações repetidas nos planos futuros durante o período definido; encerrado o prazo, liberar alteração apenas com autorização do administrador.",
+      "referencias": [
+        {
+          "paragrafo": 15,
+          "texto": "- Findado o período de atualizações, os docentes somente visualizarão, TANTO eles, quanto demais usuários somente poderão alterar, se autorizado pelo ADM."
+        },
+        {
+          "paragrafo": 18,
+          "texto": "- Os planos de anos futuros poderão ser alterados quantas vezes for necessário, dentro do período que estipularmos."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Permitir alterações repetidas nos planos futuros durante o período definido; encerrado o prazo, liberar alteração apenas com autorização do administrador.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-08",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Planos de ensino",
+      "titulo": "Consulta aos planos de outras disciplinas",
+      "pedido": "- Os docentes poderão visualizar os planos de outras disciplinas que não estejam sob sua responsabilidade.",
+      "status": "Pendente",
+      "resumo": "Permitir que docentes consultem planos de disciplinas das quais não sejam responsáveis.",
+      "referencias": [
+        {
+          "paragrafo": 16,
+          "texto": "- Os docentes poderão visualizar os planos de outras disciplinas que não estejam sob sua responsabilidade."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Permitir que docentes consultem planos de disciplinas das quais não sejam responsáveis.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-09",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Planos de ensino",
+      "titulo": "Alteração somente de anos futuros",
+      "pedido": "- Só poderão alterar os planos para anos futuros, de anos anteriores, apenas visualizar.",
+      "status": "Pendente",
+      "resumo": "Para usuários comuns, permitir edição somente de planos de anos futuros e manter anos anteriores para consulta.",
+      "referencias": [
+        {
+          "paragrafo": 17,
+          "texto": "- Só poderão alterar os planos para anos futuros, de anos anteriores, apenas visualizar."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Para usuários comuns, permitir edição somente de planos de anos futuros e manter anos anteriores para consulta.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-10",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Planos de ensino",
+      "titulo": "Edição irrestrita pelo administrador",
+      "pedido": "- Os ADMs podem alterar tudo, quantas vezes for necessário.",
+      "status": "Pendente",
+      "resumo": "Permitir ao administrador alterar planos de qualquer ano, quantas vezes forem necessárias.",
+      "referencias": [
+        {
+          "paragrafo": 19,
+          "texto": "- Os ADMs podem alterar tudo, quantas vezes for necessário."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Permitir ao administrador alterar planos de qualquer ano, quantas vezes forem necessárias.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-11",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Planos de ensino",
+      "titulo": "Relatórios anuais de alterações e justificativas",
+      "pedido": "- Poder imprimir relatórios, principalmente das alterações realizadas por ano, onde constem todas as alterações, conforme relatório da CG, e suas respectivas justificativas, individualmente; ",
+      "status": "Pendente",
+      "resumo": "Gerar e imprimir, individualmente, relatórios por ano com todas as alterações e justificativas, no formato do relatório da CG. O log da entrega 2 é uma base parcial, não o relatório novo completo.",
+      "referencias": [
+        {
+          "paragrafo": 20,
+          "texto": "- Poder imprimir relatórios, principalmente das alterações realizadas por ano, onde constem todas as alterações, conforme relatório da CG, e suas respectivas justificativas, individualmente; "
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Gerar e imprimir, individualmente, relatórios por ano com todas as alterações e justificativas, no formato do relatório da CG. O log da entrega 2 é uma base parcial, não o relatório novo completo.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-12",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Planos de ensino",
+      "titulo": "Arquivo histórico dos planos",
+      "pedido": "- Sistema deve manter arquivadas para visualizações, os PLEs de anos anteriores, podendo gerar relatórios e imprimir o plano.",
+      "status": "Pendente",
+      "resumo": "Manter versões de anos anteriores disponíveis para visualização, geração de relatórios e impressão.",
+      "referencias": [
+        {
+          "paragrafo": 21,
+          "texto": "- Sistema deve manter arquivadas para visualizações, os PLEs de anos anteriores, podendo gerar relatórios e imprimir o plano."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Manter versões de anos anteriores disponíveis para visualização, geração de relatórios e impressão.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-13",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "Acesso e cadastro de alunos externos",
+      "pedido": "NOVA ABA – APROVEITAMENTO DE ESTUDOS – Alunos não usuários do Sistema:\n\n- O aluno deverá acessar o sistema para cadastrar (já temos um link de acesso para externos, para solicitar publicações, verificar se pode ser este mesmo acesso para as solicitações de aproveitamento de estudos;",
+      "status": "Pendente",
+      "resumo": "Criar o acesso de alunos não usuários para solicitar aproveitamento; avaliar o reaproveitamento do acesso externo de publicações.",
+      "referencias": [
+        {
+          "paragrafo": 23,
+          "texto": "NOVA ABA – APROVEITAMENTO DE ESTUDOS – Alunos não usuários do Sistema:"
+        },
+        {
+          "paragrafo": 24,
+          "texto": "- O aluno deverá acessar o sistema para cadastrar (já temos um link de acesso para externos, para solicitar publicações, verificar se pode ser este mesmo acesso para as solicitações de aproveitamento de estudos;"
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Criar o acesso de alunos não usuários para solicitar aproveitamento; avaliar o reaproveitamento do acesso externo de publicações.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-14",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "Seleção da disciplina por código e nome",
+      "pedido": "- Deve haver campos para indicar a disciplina para à qual o aluno solicita o aproveitamento de estudos, como o código e nome da disciplina, que poderá ser puxado da aba Disciplinas, para facilitar e agilizar, não precisa citar o semestre;",
+      "status": "Pendente",
+      "resumo": "Consultar a base de Disciplinas e preencher código e nome da disciplina pretendida, sem exigir semestre.",
+      "referencias": [
+        {
+          "paragrafo": 25,
+          "texto": "- Deve haver campos para indicar a disciplina para à qual o aluno solicita o aproveitamento de estudos, como o código e nome da disciplina, que poderá ser puxado da aba Disciplinas, para facilitar e agilizar, não precisa citar o semestre;"
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Consultar a base de Disciplinas e preencher código e nome da disciplina pretendida, sem exigir semestre.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-15",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "Identificação do docente no ano corrente",
+      "pedido": "- O sistema deverá puxar do cronograma atual, o nome do docente responsável pela disciplina, por meio do código dela, independentemente do semestre, porém, do ano corrente. (Muitas vezes ocorre divisão das turmas onde 2 ou mais docentes ministram aula, ou também pode acontecer de outro docente, diferente daquele citado na ementa, esteja ministrando a disciplina.",
+      "status": "Definir",
+      "resumo": "Definir qual docente recebe o pedido quando há vários docentes ou turmas no ano; buscar pelo código da disciplina no cronograma corrente, independentemente do semestre.",
+      "referencias": [
+        {
+          "paragrafo": 26,
+          "texto": "- O sistema deverá puxar do cronograma atual, o nome do docente responsável pela disciplina, por meio do código dela, independentemente do semestre, porém, do ano corrente. (Muitas vezes ocorre divisão das turmas onde 2 ou mais docentes ministram aula, ou também pode acontecer de outro docente, diferente daquele citado na ementa, esteja ministrando a disciplina."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Definir qual docente recebe o pedido quando há vários docentes ou turmas no ano; buscar pelo código da disciplina no cronograma corrente, independentemente do semestre.",
+          "entrega": null,
+          "situacao": "Definir",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-16",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "Documentação PDF e validação de envio",
+      "pedido": "- O aluno deve inserir os documentos solicitados em PDF, clicando nos ícones, formulário de requerimento, histórico da(s) disciplina(s) cursada(s), ementa(s) da(s) disciplina(s) cursada(s), pois pode ser mais que uma, ou inserir todos os documentos em um único arquivo, clicando no ícone com o mesmo nome.\n\n- O sistema somente deixará salvar a solicitação, após o aluno inserir todos os documentos individualizados ou em um arquivo único.",
+      "status": "Pendente",
+      "resumo": "Aceitar requerimento, históricos e ementas em PDFs separados ou em um arquivo único; impedir salvar sem a documentação exigida.",
+      "referencias": [
+        {
+          "paragrafo": 27,
+          "texto": "- O aluno deve inserir os documentos solicitados em PDF, clicando nos ícones, formulário de requerimento, histórico da(s) disciplina(s) cursada(s), ementa(s) da(s) disciplina(s) cursada(s), pois pode ser mais que uma, ou inserir todos os documentos em um único arquivo, clicando no ícone com o mesmo nome."
+        },
+        {
+          "paragrafo": 28,
+          "texto": "- O sistema somente deixará salvar a solicitação, após o aluno inserir todos os documentos individualizados ou em um arquivo único."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Aceitar requerimento, históricos e ementas em PDFs separados ou em um arquivo único; impedir salvar sem a documentação exigida.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-17",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "Várias solicitações independentes por aluno",
+      "pedido": "- O aluno pode inserir quantas solicitações quiser, clicando no botão “+”\n\nUm mesmo aluno pode inserir várias solicitações de aproveitamento, para um ou para vários docentes diferentes, espera-se que o sistema envie os pedidos em separados, da forma que foi cadastrado.",
+      "status": "Pendente",
+      "resumo": "Disponibilizar botão + para criar várias solicitações e encaminhá-las separadamente, inclusive para docentes diferentes.",
+      "referencias": [
+        {
+          "paragrafo": 29,
+          "texto": "- O aluno pode inserir quantas solicitações quiser, clicando no botão “+”"
+        },
+        {
+          "paragrafo": 30,
+          "texto": "Um mesmo aluno pode inserir várias solicitações de aproveitamento, para um ou para vários docentes diferentes, espera-se que o sistema envie os pedidos em separados, da forma que foi cadastrado."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Disponibilizar botão + para criar várias solicitações e encaminhá-las separadamente, inclusive para docentes diferentes.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-18",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "Aviso e consulta na triagem",
+      "pedido": "- Após envio pelo aluno, o sistema me notifica de que existe solicitação de aproveitamento aguardando análise. Pode-se apenas visualizar os documentos dentro do sistema ou em uma aba separada, do mesmo modo que o plano de ensino.",
+      "status": "Pendente",
+      "resumo": "Notificar a secretaria sobre novos pedidos e permitir visualizar os documentos dentro do sistema ou em outra aba.",
+      "referencias": [
+        {
+          "paragrafo": 31,
+          "texto": "- Após envio pelo aluno, o sistema me notifica de que existe solicitação de aproveitamento aguardando análise. Pode-se apenas visualizar os documentos dentro do sistema ou em uma aba separada, do mesmo modo que o plano de ensino."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Notificar a secretaria sobre novos pedidos e permitir visualizar os documentos dentro do sistema ou em outra aba.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-19",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "Triagem com devolução justificada",
+      "pedido": "- Após constatar se os arquivos estão ou não estão completos, deve haver duas possibilidades para meu encaminhamento: Devolver ao aluno para ajustes ou enviar para a análise do docente.\n\n- Deve haver um campo para eu explicar ao aluno o motivo da devolução.",
+      "status": "Pendente",
+      "resumo": "Permitir à secretaria devolver ao aluno ou encaminhar ao docente, com campo para explicar o motivo da devolução.",
+      "referencias": [
+        {
+          "paragrafo": 32,
+          "texto": "- Após constatar se os arquivos estão ou não estão completos, deve haver duas possibilidades para meu encaminhamento: Devolver ao aluno para ajustes ou enviar para a análise do docente."
+        },
+        {
+          "paragrafo": 33,
+          "texto": "- Deve haver um campo para eu explicar ao aluno o motivo da devolução."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Permitir à secretaria devolver ao aluno ou encaminhar ao docente, com campo para explicar o motivo da devolução.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-20",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "E-mail ao aluno sobre devolução",
+      "pedido": "- O sistema envia notificação ao solicitante de que há uma solicitação de aproveitamento de estudos devolvida para ajustes. Essa notificação deverá ocorrer no mesmo e-mail registrado pelo solicitante, no momento que acessou o sistema.",
+      "status": "Pendente",
+      "resumo": "Notificar a devolução para o e-mail informado pelo aluno no cadastro.",
+      "referencias": [
+        {
+          "paragrafo": 34,
+          "texto": "- O sistema envia notificação ao solicitante de que há uma solicitação de aproveitamento de estudos devolvida para ajustes. Essa notificação deverá ocorrer no mesmo e-mail registrado pelo solicitante, no momento que acessou o sistema."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Notificar a devolução para o e-mail informado pelo aluno no cadastro.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-21",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "Reenvio após ajustes",
+      "pedido": "- Feitos os ajustes, o aluno reenvia a solicitação.\n\n- O sistema me notifica que a solicitação retornou para minha análise. ",
+      "status": "Pendente",
+      "resumo": "Permitir ao aluno corrigir e reenviar o pedido; notificar a secretaria de que ele voltou à análise.",
+      "referencias": [
+        {
+          "paragrafo": 35,
+          "texto": "- Feitos os ajustes, o aluno reenvia a solicitação."
+        },
+        {
+          "paragrafo": 36,
+          "texto": "- O sistema me notifica que a solicitação retornou para minha análise. "
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Permitir ao aluno corrigir e reenviar o pedido; notificar a secretaria de que ele voltou à análise.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-22",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "Encaminhamento e notificação ao docente",
+      "pedido": "- Estando tudo certinho, eu clico no botão “enviar p/ análise”.\n\n- O docente recebe a notificação de que há solicitação de aproveitamento de estudos aguardando a análise e manifestação dele.",
+      "status": "Pendente",
+      "resumo": "Criar a ação Enviar para análise e avisar o docente de que existe pedido aguardando parecer.",
+      "referencias": [
+        {
+          "paragrafo": 37,
+          "texto": "- Estando tudo certinho, eu clico no botão “enviar p/ análise”."
+        },
+        {
+          "paragrafo": 38,
+          "texto": "- O docente recebe a notificação de que há solicitação de aproveitamento de estudos aguardando a análise e manifestação dele."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Criar a ação Enviar para análise e avisar o docente de que existe pedido aguardando parecer.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-23",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "Visualização e impressão dos documentos pelo docente",
+      "pedido": "- O docente pode visualizar os arquivos, em aba separada e também imprimir, caso prefira.",
+      "status": "Pendente",
+      "resumo": "Permitir ao docente abrir os documentos em outra aba e imprimir.",
+      "referencias": [
+        {
+          "paragrafo": 39,
+          "texto": "- O docente pode visualizar os arquivos, em aba separada e também imprimir, caso prefira."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Permitir ao docente abrir os documentos em outra aba e imprimir.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-24",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "Parecer por deferimento ou indeferimento",
+      "pedido": "Deve haver 5 opções para que o docente emita seu parecer: \n\n- Deve haver um botão para que o docente possa apenas clicar  deferir ou não deferir a solicitação, após isso, “salvar e enviar”, para que o sistema possa encaminhar ao Serviço de Graduação. O sistema de me informar desse encaminhamento.",
+      "status": "Pendente",
+      "resumo": "Oferecer a primeira das cinco opções de parecer: deferir ou não deferir, salvar e enviar ao Serviço de Graduação, avisando a secretaria.",
+      "referencias": [
+        {
+          "paragrafo": 40,
+          "texto": "Deve haver 5 opções para que o docente emita seu parecer: "
+        },
+        {
+          "paragrafo": 41,
+          "texto": "- Deve haver um botão para que o docente possa apenas clicar  deferir ou não deferir a solicitação, após isso, “salvar e enviar”, para que o sistema possa encaminhar ao Serviço de Graduação. O sistema de me informar desse encaminhamento."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Oferecer a primeira das cinco opções de parecer: deferir ou não deferir, salvar e enviar ao Serviço de Graduação, avisando a secretaria.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-25",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "Parecer no formulário impresso",
+      "pedido": "- O docente visualiza e/ou baixa os documentos, podendo escrever o parecer no próprio formulário impresso, inserindo-o novamente no sistema (deve haver um botão para a inserção) e clicando no botão “salvar e enviar”. ",
+      "status": "Pendente",
+      "resumo": "Permitir baixar ou imprimir o formulário, inserir o documento preenchido e usar Salvar e enviar.",
+      "referencias": [
+        {
+          "paragrafo": 42,
+          "texto": "- O docente visualiza e/ou baixa os documentos, podendo escrever o parecer no próprio formulário impresso, inserindo-o novamente no sistema (deve haver um botão para a inserção) e clicando no botão “salvar e enviar”. "
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Permitir baixar ou imprimir o formulário, inserir o documento preenchido e usar Salvar e enviar.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-26",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "Envio de arquivo de parecer",
+      "pedido": "- Caso o docente visualize os arquivos e queira somente inserir o arquivo com o parecer, deve haver o botão de inserção, e após, “salvar e enviar”",
+      "status": "Pendente",
+      "resumo": "Oferecer inserção de um arquivo próprio de parecer após a consulta dos documentos, com Salvar e enviar. Compartilha o mecanismo de anexos com AD-25.",
+      "referencias": [
+        {
+          "paragrafo": 43,
+          "texto": "- Caso o docente visualize os arquivos e queira somente inserir o arquivo com o parecer, deve haver o botão de inserção, e após, “salvar e enviar”"
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Oferecer inserção de um arquivo próprio de parecer após a consulta dos documentos, com Salvar e enviar. Compartilha o mecanismo de anexos com AD-25.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-27",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "Parecer digitado na tela",
+      "pedido": "- Deve haver espaço para que o docente escreva sua decisão – com pelo menos 250 letras, na própria tela inicial (após visualizar os arquivos), depois, “salvar e enviar”",
+      "status": "Pendente",
+      "resumo": "Disponibilizar campo que comporte pelo menos 250 caracteres para a decisão do docente e a ação Salvar e enviar.",
+      "referencias": [
+        {
+          "paragrafo": 44,
+          "texto": "- Deve haver espaço para que o docente escreva sua decisão – com pelo menos 250 letras, na própria tela inicial (após visualizar os arquivos), depois, “salvar e enviar”"
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Disponibilizar campo que comporte pelo menos 250 caracteres para a decisão do docente e a ação Salvar e enviar.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-28",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "Devolução pelo docente e prova",
+      "pedido": "- Deve ser possível ao docente devolver a solicitação para ajustes, inserção de documentos, ou para que o aluno possa realizar uma prova para comprovação dos estudos. Nesse caso, o sistema envia a notificação com o despacho do docente para o solicitante, com cópia para mim.",
+      "status": "Pendente",
+      "resumo": "Permitir devolução para ajustes, documentos ou realização de prova; enviar o despacho ao aluno com cópia para a secretaria.",
+      "referencias": [
+        {
+          "paragrafo": 45,
+          "texto": "- Deve ser possível ao docente devolver a solicitação para ajustes, inserção de documentos, ou para que o aluno possa realizar uma prova para comprovação dos estudos. Nesse caso, o sistema envia a notificação com o despacho do docente para o solicitante, com cópia para mim."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Permitir devolução para ajustes, documentos ou realização de prova; enviar o despacho ao aluno com cópia para a secretaria.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-29",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "Acesso do Serviço de Graduação por link",
+      "pedido": "- Se possível, o Serviço de Graduação não precisar se cadastrar no sistema para acessar esses documentos, apenas abrindo o link do informe enviado pelo sistema, o Serviço vai diretamente na solicitação finalizada pelo docente, onde poderá baixar os arquivos, ou apenas visualizar. ",
+      "status": "Definir",
+      "resumo": "Avaliar e definir o acesso por link, sem cadastro, à solicitação finalizada, para consulta e download de arquivos. É uma possibilidade condicionada no documento.",
+      "referencias": [
+        {
+          "paragrafo": 46,
+          "texto": "- Se possível, o Serviço de Graduação não precisar se cadastrar no sistema para acessar esses documentos, apenas abrindo o link do informe enviado pelo sistema, o Serviço vai diretamente na solicitação finalizada pelo docente, onde poderá baixar os arquivos, ou apenas visualizar. "
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Avaliar e definir o acesso por link, sem cadastro, à solicitação finalizada, para consulta e download de arquivos. É uma possibilidade condicionada no documento.",
+          "entrega": null,
+          "situacao": "Definir",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-30",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "Conclusão ao acessar os documentos",
+      "pedido": "- O processo será considerado concluído quando o SVG clicar no link para acessar os documentos da solicitação, que deve aparecer como deferida ou não deferida (tudo deve ser o mais prático possível para o SVG e para o Departamento).",
+      "status": "Pendente",
+      "resumo": "Registrar o acesso do Serviço de Graduação ao link e concluir o processo com a indicação deferida ou não deferida.",
+      "referencias": [
+        {
+          "paragrafo": 47,
+          "texto": "- O processo será considerado concluído quando o SVG clicar no link para acessar os documentos da solicitação, que deve aparecer como deferida ou não deferida (tudo deve ser o mais prático possível para o SVG e para o Departamento)."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Registrar o acesso do Serviço de Graduação ao link e concluir o processo com a indicação deferida ou não deferida.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-31",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "Guarda dos documentos por dois anos",
+      "pedido": " Todos os documentos devem ficar guardados, por pelo menos 2 anos.",
+      "status": "Pendente",
+      "resumo": "Manter todos os documentos do processo guardados por pelo menos dois anos.",
+      "referencias": [
+        {
+          "paragrafo": 48,
+          "texto": " Todos os documentos devem ficar guardados, por pelo menos 2 anos."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Manter todos os documentos do processo guardados por pelo menos dois anos.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-32",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "Aviso de conclusão",
+      "pedido": "Na conclusão do processo, o sistema deve enviar notificação de conclusão da solicitação para o mim, com cópia para o solicitante.",
+      "status": "Pendente",
+      "resumo": "Notificar a secretaria da conclusão e enviar cópia ao solicitante.",
+      "referencias": [
+        {
+          "paragrafo": 49,
+          "texto": "Na conclusão do processo, o sistema deve enviar notificação de conclusão da solicitação para o mim, com cópia para o solicitante."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Notificar a secretaria da conclusão e enviar cópia ao solicitante.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-33",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Aproveitamento de estudos",
+      "titulo": "Relatórios e exportação Excel",
+      "pedido": "- Poder filtrar e emitir relatórios com as informações que desejar: nome do aluno, nome do docente responsável, código da disciplina para à qual foi solicitado o aproveitamento, datas, deferidos e não deferidos; Baixar em excel.",
+      "status": "Pendente",
+      "resumo": "Filtrar e exportar aluno, docente responsável, código da disciplina, datas e resultado deferido/não deferido.",
+      "referencias": [
+        {
+          "paragrafo": 50,
+          "texto": "- Poder filtrar e emitir relatórios com as informações que desejar: nome do aluno, nome do docente responsável, código da disciplina para à qual foi solicitado o aproveitamento, datas, deferidos e não deferidos; Baixar em excel."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Filtrar e exportar aluno, docente responsável, código da disciplina, datas e resultado deferido/não deferido.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-34",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Atas de defesa",
+      "titulo": "Formulários de defesa dentro do sistema",
+      "pedido": "Nova Aba - Atas de defesas:  Se conseguir fazer novos itens com os formulários específicos para cada tipo de defesa: TCC, Monografia, Estágios, e depois salvar em PDF editável.\n\nCaso seja possível incluir as atas como páginas do sistema, para baixar ou imprimir PDF, ficaria da seguinte forma:",
+      "status": "Definir",
+      "resumo": "Definir a solução preferencial: formulários próprios para TCC, Monografia e Estágios, com impressão/download e PDF editável. O fluxo de anexos AD-38 a AD-41 é a alternativa se os formulários não forem adotados.",
+      "referencias": [
+        {
+          "paragrafo": 51,
+          "texto": "Nova Aba - Atas de defesas:  Se conseguir fazer novos itens com os formulários específicos para cada tipo de defesa: TCC, Monografia, Estágios, e depois salvar em PDF editável."
+        },
+        {
+          "paragrafo": 52,
+          "texto": "Caso seja possível incluir as atas como páginas do sistema, para baixar ou imprimir PDF, ficaria da seguinte forma:"
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Definir a solução preferencial: formulários próprios para TCC, Monografia e Estágios, com impressão/download e PDF editável. O fluxo de anexos AD-38 a AD-41 é a alternativa se os formulários não forem adotados.",
+          "entrega": null,
+          "situacao": "Definir",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-35",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Atas de defesa",
+      "titulo": "Preenchimento por aluno ou orientador e composição da banca",
+      "pedido": "- Aluno (externo ao departamento) ou orientador acessa a página e escolhe o tipo de defesa que fará. Preenche os dados, com possibilidade de escrever ou selecionar do sistema os membros da banca (na maioria das vezes apenas o orientador é do departamento, os demais membros, são externos. ",
+      "status": "Pendente",
+      "resumo": "No fluxo com formulários, permitir ao aluno externo ou orientador escolher o tipo de defesa e cadastrar ou selecionar os membros internos e externos da banca.",
+      "referencias": [
+        {
+          "paragrafo": 53,
+          "texto": "- Aluno (externo ao departamento) ou orientador acessa a página e escolhe o tipo de defesa que fará. Preenche os dados, com possibilidade de escrever ou selecionar do sistema os membros da banca (na maioria das vezes apenas o orientador é do departamento, os demais membros, são externos. "
+        }
+      ],
+      "partes": [
+        {
+          "texto": "No fluxo com formulários, permitir ao aluno externo ou orientador escolher o tipo de defesa e cadastrar ou selecionar os membros internos e externos da banca.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-36",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Atas de defesa",
+      "titulo": "Impressão, inclusão e finalização da ata",
+      "pedido": "Ao final da defesa, a ata pode ser impressa para que os membros externos assinem pessoalmente ou eletronicamente. De todo modo, a Ata final, deve ficar gravada no sistema, que também deve ter botão de “Inserir” e  de “Finalizar”. ",
+      "status": "Pendente",
+      "resumo": "Imprimir a ata para assinatura presencial ou eletrônica, guardar a versão final e disponibilizar Inserir e Finalizar. O texto não especifica uma integração de assinatura eletrônica.",
+      "referencias": [
+        {
+          "paragrafo": 54,
+          "texto": "Ao final da defesa, a ata pode ser impressa para que os membros externos assinem pessoalmente ou eletronicamente. De todo modo, a Ata final, deve ficar gravada no sistema, que também deve ter botão de “Inserir” e  de “Finalizar”. "
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Imprimir a ata para assinatura presencial ou eletrônica, guardar a versão final e disponibilizar Inserir e Finalizar. O texto não especifica uma integração de assinatura eletrônica.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-37",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Atas de defesa",
+      "titulo": "Relatórios das atas",
+      "pedido": "Poder emitir relatório das atas por: ano, mês, orientador (docente responsável), nome do aluno, curso do aluno.\n\n- Poder emitir relatório das atas por: ano, mês, orientador (docente responsável), nome do aluno, curso do aluno.",
+      "status": "Pendente",
+      "resumo": "Filtrar e emitir relatórios por ano, mês, orientador, aluno e curso. É o mesmo relatório nos dois caminhos de cadastro.",
+      "referencias": [
+        {
+          "paragrafo": 55,
+          "texto": "Poder emitir relatório das atas por: ano, mês, orientador (docente responsável), nome do aluno, curso do aluno."
+        },
+        {
+          "paragrafo": 67,
+          "texto": "- Poder emitir relatório das atas por: ano, mês, orientador (docente responsável), nome do aluno, curso do aluno."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Filtrar e emitir relatórios por ano, mês, orientador, aluno e curso. É o mesmo relatório nos dois caminhos de cadastro.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-38",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Atas de defesa",
+      "titulo": "Alternativa de cadastro por envio de arquivo",
+      "pedido": "Esse encaminhamento abaixo ocorrerá no caso de não conseguir fazer os formulários no próprio sistema.\n\nNa página inicial deve haver o botão “incluir nova Ata”.\n\nEsta inclusão pode ser feita pelo docente/orientador, pelo aluno (Externo ao LES) ou pela secretaria (exceção).\n\nAbrindo a tela para que sejam inseridas as informações:",
+      "status": "Definir",
+      "resumo": "Se não houver formulários no sistema, oferecer Incluir nova Ata para docente/orientador, aluno externo ao LES e secretaria em exceção. Alternativa ao editor de AD-34, não uma segunda implementação obrigatória.",
+      "referencias": [
+        {
+          "paragrafo": 56,
+          "texto": "Esse encaminhamento abaixo ocorrerá no caso de não conseguir fazer os formulários no próprio sistema."
+        },
+        {
+          "paragrafo": 57,
+          "texto": "Na página inicial deve haver o botão “incluir nova Ata”."
+        },
+        {
+          "paragrafo": 58,
+          "texto": "Esta inclusão pode ser feita pelo docente/orientador, pelo aluno (Externo ao LES) ou pela secretaria (exceção)."
+        },
+        {
+          "paragrafo": 59,
+          "texto": "Abrindo a tela para que sejam inseridas as informações:"
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Se não houver formulários no sistema, oferecer Incluir nova Ata para docente/orientador, aluno externo ao LES e secretaria em exceção. Alternativa ao editor de AD-34, não uma segunda implementação obrigatória.",
+          "entrega": null,
+          "situacao": "Definir",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-39",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Atas de defesa",
+      "titulo": "Dados do cadastro alternativo",
+      "pedido": "- Docente e número USP (puxado do cronograma), ou deixando opção de digitação\n\n- Nome do aluno: Opção de digitar, \n\n- Número USP do aluno\n\n- Curso do aluno: (puxado da disciplina ou digitado)\n\n- Data, hora e local da realização (tem a lista de salas no sistema).",
+      "status": "Pendente",
+      "resumo": "No caminho de anexação, registrar docente e número USP, nome e número USP do aluno, curso, data, hora e local; consultar cronograma, disciplinas e salas, com digitação onde prevista.",
+      "referencias": [
+        {
+          "paragrafo": 60,
+          "texto": "- Docente e número USP (puxado do cronograma), ou deixando opção de digitação"
+        },
+        {
+          "paragrafo": 61,
+          "texto": "- Nome do aluno: Opção de digitar, "
+        },
+        {
+          "paragrafo": 62,
+          "texto": "- Número USP do aluno"
+        },
+        {
+          "paragrafo": 63,
+          "texto": "- Curso do aluno: (puxado da disciplina ou digitado)"
+        },
+        {
+          "paragrafo": 64,
+          "texto": "- Data, hora e local da realização (tem a lista de salas no sistema)."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "No caminho de anexação, registrar docente e número USP, nome e número USP do aluno, curso, data, hora e local; consultar cronograma, disciplinas e salas, com digitação onde prevista.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-40",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Atas de defesa",
+      "titulo": "Upload da ata no cadastro alternativo",
+      "pedido": "O docente ou aluno inclui o arquivo da ATA e salva. ",
+      "status": "Pendente",
+      "resumo": "Permitir ao docente ou aluno anexar o arquivo da ata e salvar no fluxo alternativo.",
+      "referencias": [
+        {
+          "paragrafo": 65,
+          "texto": "O docente ou aluno inclui o arquivo da ATA e salva. "
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Permitir ao docente ou aluno anexar o arquivo da ata e salvar no fluxo alternativo.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-41",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Atas de defesa",
+      "titulo": "Quantidade, prazo e permissões após inclusão",
+      "pedido": "Não há prazos nem limitações para a inclusão das atas, o docente pode incluir quantas precisar. Após a inserção, somente ADMs conseguem alterar, excluir.",
+      "status": "Pendente",
+      "resumo": "Permitir inclusões sem limite de quantidade ou prazo; após inserir, somente administradores podem alterar ou excluir.",
+      "referencias": [
+        {
+          "paragrafo": 66,
+          "texto": "Não há prazos nem limitações para a inclusão das atas, o docente pode incluir quantas precisar. Após a inserção, somente ADMs conseguem alterar, excluir."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Permitir inclusões sem limite de quantidade ou prazo; após inserir, somente administradores podem alterar ou excluir.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-42",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Atas de defesa",
+      "titulo": "Modelos por curso e formulários para download",
+      "pedido": "ATAS DE DEFESAS \n\nTCC - ADM\n\nhttps://www.esalq.usp.br/graduacao/wp-content/uploads/2026/08/Form_Aval__ADM_2026.pdf\n\nTCC – Ciências Biológicas \n\nhttps://www.esalq.usp.br/graduacao/wp-content/uploads/2026/08/ANEXO_II_form_aval_TCC_CB_maio_23.pdf\n\nTCC – Ciências dos Alimentos\n\nhttps://www.esalq.usp.br/graduacao/wp-content/uploads/2026/08/formulario_avaliacao_TCC_2025_new.pdf\n\nTCC – Engenharia Agronômica\n\nhttps://www.esalq.usp.br/graduacao/sites/default/files/tcc_form_aval_agron_nov21.pdf\n\nTCC – Engenharia Florestal\n\nhttps://www.esalq.usp.br/graduacao/sites/default/files/tcc_form_aval_flor_nov21.pdf\n\nTCC – Gestão Ambiental\n\nhttps://www.esalq.usp.br/graduacao/sites/default/files/tcc_form_aval_gestao_nov21.pdf\n\nMonografia - Ciências Econômicas\n\nhttps://www.esalq.usp.br/graduacao/wp-content/uploads/2026/08/Form_Aval_C_ECON_2026.pdf\n\nFormulários de Avaliações de Estágios\n\nEstágio Profissionalizante – Ciências dos Alimentos \n\nhttps://docs.google.com/document/d/1HNyzQgJyt7NtBpNou9C11UZjPiGIB8MR/edit?usp=sharing&ouid=107240220449817109273&rtpof=true&sd=true\n\nEstágio Profissionalizante demais cursos\n\nhttps://docs.google.com/document/d/1H0i0Hgr_7UngqDx7cNK1c6ZDuqSISrO8/edit?usp=sharing&ouid=107240220449817109273&rtpof=true&sd=true\n\n Estágio Vivencial \n\nhttps://docs.google.com/document/d/1yihy2PXIPgFJ0D-gW8UUy862ODSS6K27/edit?usp=sharing&ouid=107240220449817109273&rtpof=true&sd=true\n\nTodos os formulários poderão ser impressos ou baixados para edição, caso o docente prefira não digitar diretamente no Sistema.",
+      "status": "Pendente",
+      "resumo": "Usar os dez modelos de TCC, Monografia e Estágios referenciados no documento. Permitir imprimir ou baixar para edição externa, conforme a preferência do docente. Os links originais estão nas referências.",
+      "referencias": [
+        {
+          "paragrafo": 70,
+          "texto": "ATAS DE DEFESAS "
+        },
+        {
+          "paragrafo": 72,
+          "texto": "TCC - ADM"
+        },
+        {
+          "paragrafo": 73,
+          "texto": "https://www.esalq.usp.br/graduacao/wp-content/uploads/2026/08/Form_Aval__ADM_2026.pdf"
+        },
+        {
+          "paragrafo": 75,
+          "texto": "TCC – Ciências Biológicas "
+        },
+        {
+          "paragrafo": 76,
+          "texto": "https://www.esalq.usp.br/graduacao/wp-content/uploads/2026/08/ANEXO_II_form_aval_TCC_CB_maio_23.pdf"
+        },
+        {
+          "paragrafo": 77,
+          "texto": "TCC – Ciências dos Alimentos"
+        },
+        {
+          "paragrafo": 78,
+          "texto": "https://www.esalq.usp.br/graduacao/wp-content/uploads/2026/08/formulario_avaliacao_TCC_2025_new.pdf"
+        },
+        {
+          "paragrafo": 80,
+          "texto": "TCC – Engenharia Agronômica"
+        },
+        {
+          "paragrafo": 81,
+          "texto": "https://www.esalq.usp.br/graduacao/sites/default/files/tcc_form_aval_agron_nov21.pdf"
+        },
+        {
+          "paragrafo": 83,
+          "texto": "TCC – Engenharia Florestal"
+        },
+        {
+          "paragrafo": 84,
+          "texto": "https://www.esalq.usp.br/graduacao/sites/default/files/tcc_form_aval_flor_nov21.pdf"
+        },
+        {
+          "paragrafo": 86,
+          "texto": "TCC – Gestão Ambiental"
+        },
+        {
+          "paragrafo": 87,
+          "texto": "https://www.esalq.usp.br/graduacao/sites/default/files/tcc_form_aval_gestao_nov21.pdf"
+        },
+        {
+          "paragrafo": 89,
+          "texto": "Monografia - Ciências Econômicas"
+        },
+        {
+          "paragrafo": 90,
+          "texto": "https://www.esalq.usp.br/graduacao/wp-content/uploads/2026/08/Form_Aval_C_ECON_2026.pdf"
+        },
+        {
+          "paragrafo": 92,
+          "texto": "Formulários de Avaliações de Estágios"
+        },
+        {
+          "paragrafo": 93,
+          "texto": "Estágio Profissionalizante – Ciências dos Alimentos "
+        },
+        {
+          "paragrafo": 94,
+          "texto": "https://docs.google.com/document/d/1HNyzQgJyt7NtBpNou9C11UZjPiGIB8MR/edit?usp=sharing&ouid=107240220449817109273&rtpof=true&sd=true"
+        },
+        {
+          "paragrafo": 95,
+          "texto": "Estágio Profissionalizante demais cursos"
+        },
+        {
+          "paragrafo": 96,
+          "texto": "https://docs.google.com/document/d/1H0i0Hgr_7UngqDx7cNK1c6ZDuqSISrO8/edit?usp=sharing&ouid=107240220449817109273&rtpof=true&sd=true"
+        },
+        {
+          "paragrafo": 97,
+          "texto": " Estágio Vivencial "
+        },
+        {
+          "paragrafo": 98,
+          "texto": "https://docs.google.com/document/d/1yihy2PXIPgFJ0D-gW8UUy862ODSS6K27/edit?usp=sharing&ouid=107240220449817109273&rtpof=true&sd=true"
+        },
+        {
+          "paragrafo": 100,
+          "texto": "Todos os formulários poderão ser impressos ou baixados para edição, caso o docente prefira não digitar diretamente no Sistema."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Usar os dez modelos de TCC, Monografia e Estágios referenciados no documento. Permitir imprimir ou baixar para edição externa, conforme a preferência do docente. Os links originais estão nas referências.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-43",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Viagens didáticas",
+      "titulo": "Nova aba baseada no formulário atual",
+      "pedido": "Nova Aba - Viagens Didáticas \n\n- Criar a aba com base no formulário existente;\n\n- Demais itens, conforme o formulário - https://forms.gle/VqCjaG8mJW9dBAX39",
+      "status": "Pendente",
+      "resumo": "Criar a tela de solicitações conforme o formulário indicado no documento. Os demais campos do formulário externo precisam ser conferidos antes da implementação.",
+      "referencias": [
+        {
+          "paragrafo": 102,
+          "texto": "Nova Aba - Viagens Didáticas "
+        },
+        {
+          "paragrafo": 103,
+          "texto": "- Criar a aba com base no formulário existente;"
+        },
+        {
+          "paragrafo": 108,
+          "texto": "- Demais itens, conforme o formulário - https://forms.gle/VqCjaG8mJW9dBAX39"
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Criar a tela de solicitações conforme o formulário indicado no documento. Os demais campos do formulário externo precisam ser conferidos antes da implementação.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-44",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Viagens didáticas",
+      "titulo": "Período para inclusão das solicitações",
+      "pedido": "- Item com datas para que eu possa cadastrar o período das inserções;",
+      "status": "Pendente",
+      "resumo": "Permitir à secretaria cadastrar as datas que delimitam o período de inserção.",
+      "referencias": [
+        {
+          "paragrafo": 104,
+          "texto": "- Item com datas para que eu possa cadastrar o período das inserções;"
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Permitir à secretaria cadastrar as datas que delimitam o período de inserção.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-45",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Viagens didáticas",
+      "titulo": "Docente, disciplina e contato",
+      "pedido": "- Solicitante pode selecionar do sistema o docente responsável (solicitante), \n\n- Código e nome da disciplina. \n\n- Telefone de contato.",
+      "status": "Pendente",
+      "resumo": "Selecionar o docente responsável/solicitante e registrar código e nome da disciplina e telefone de contato.",
+      "referencias": [
+        {
+          "paragrafo": 105,
+          "texto": "- Solicitante pode selecionar do sistema o docente responsável (solicitante), "
+        },
+        {
+          "paragrafo": 106,
+          "texto": "- Código e nome da disciplina. "
+        },
+        {
+          "paragrafo": 107,
+          "texto": "- Telefone de contato."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Selecionar o docente responsável/solicitante e registrar código e nome da disciplina e telefone de contato.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-46",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Viagens didáticas",
+      "titulo": "Notificação de cada solicitação",
+      "pedido": "- Sistema deve me notificar todas as solicitações que chegarem;",
+      "status": "Pendente",
+      "resumo": "Notificar a secretaria sobre todas as novas solicitações recebidas.",
+      "referencias": [
+        {
+          "paragrafo": 109,
+          "texto": "- Sistema deve me notificar todas as solicitações que chegarem;"
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Notificar a secretaria sobre todas as novas solicitações recebidas.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-47",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Viagens didáticas",
+      "titulo": "Relatórios por período e docente",
+      "pedido": "- Poder baixar relatórios por períodos e por docentes (solicitante). ",
+      "status": "Pendente",
+      "resumo": "Filtrar e baixar relatórios por período e por docente solicitante.",
+      "referencias": [
+        {
+          "paragrafo": 110,
+          "texto": "- Poder baixar relatórios por períodos e por docentes (solicitante). "
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Filtrar e baixar relatórios por período e por docente solicitante.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
+        }
+      ]
+    },
+    {
+      "id": "AD-48",
+      "fonte": "Adicional",
+      "documento": "Adiçoes do SIGLES.docx",
+      "tela": "Viagens didáticas",
+      "titulo": "Download da solicitação completa",
+      "pedido": "- Poder baixar a solicitação completa, isoladamente ou todas do período.",
+      "status": "Pendente",
+      "resumo": "Baixar uma solicitação completa individualmente ou todas as solicitações de um período.",
+      "referencias": [
+        {
+          "paragrafo": 111,
+          "texto": "- Poder baixar a solicitação completa, isoladamente ou todas do período."
+        }
+      ],
+      "partes": [
+        {
+          "texto": "Baixar uma solicitação completa individualmente ou todas as solicitações de um período.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo"
         }
       ]
     }

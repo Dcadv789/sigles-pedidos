@@ -26,3 +26,9 @@ Os status ficam publicados em `dados.js` e são iguais para todos os visitantes.
 O filtro oferece **Pedido inicial** e **Aditivo**, com classificação por parte do pedido. Pedidos mistos aparecem nos dois filtros. A recomendação atual marca como aditivo a gestão de comissões (WI-21), o envio automático dos avisos de contratos (parte de WI-09) e o bloqueio automático de feriados (parte de WI-22).
 
 A antecedência no Dashboard já entregue, a configuração de 45 dias, a validação do bloqueio manual e as correções das funções existentes permanecem no pedido inicial. A classificação não representa cobrança aceita: feriados e avisos exigem conferir aprovações, entregas e pagamentos anteriores. Aproveitamento de disciplinas, avaliação do NotebookLM e reservas de alunos/externos já aparecem no relatório original; não foram tratados automaticamente como adicionais. Uma implementação ampliada deve ser delimitada antes de reclassificar.
+
+## Documento adicional
+
+Em 15/10/2026 foram acrescentados 48 pedidos de **Adiçoes do SIGLES.docx**, com IDs AD-01 a AD-48, origem **Adicional** e cobrança **Aditivo** em todas as partes, conforme instrução expressa do usuário. Os 95 parágrafos não vazios foram associados às referências, incluindo títulos, contexto e links dos modelos. O quadro passa a 100 pedidos.
+
+A classificação comercial não altera o status de implementação. AD-01 registra o responsável já existente na entrega 2 e a definição de vários responsáveis; AD-02 se sobrepõe à coluna pendente de WI-14. Os caminhos de formulário e de anexação das atas são alternativas, sem presumir duas implementações obrigatórias. Os modelos externos são referências para conferência, sem presumir seus campos não extraídos.
