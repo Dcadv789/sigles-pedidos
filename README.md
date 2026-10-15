@@ -20,3 +20,9 @@ Os status ficam publicados em `dados.js` e são iguais para todos os visitantes.
 `index.html` contém a apresentação e os filtros; `dados.js` reúne o conteúdo conferido por pedido. A página funciona sem compilação, inclusive abrindo o HTML localmente com os dois arquivos na mesma pasta. O GitHub Pages publica a raiz da branch `main`.
 
 `cliente.html` preserva a apresentação de cronograma anterior e não recebeu esta revisão de status. Para o acompanhamento atual, use o quadro principal.
+
+## Cobrança adicional
+
+O filtro oferece **Pedido inicial** e **Aditivo**, com classificação por parte do pedido. Pedidos mistos aparecem nos dois filtros. A recomendação atual marca como aditivo a gestão de comissões (WI-21), o envio automático dos avisos de contratos (parte de WI-09) e o bloqueio automático de feriados (parte de WI-22).
+
+A antecedência no Dashboard já entregue, a configuração de 45 dias, a validação do bloqueio manual e as correções das funções existentes permanecem no pedido inicial. A classificação não representa cobrança aceita: feriados e avisos exigem conferir aprovações, entregas e pagamentos anteriores. Aproveitamento de disciplinas, avaliação do NotebookLM e reservas de alunos/externos já aparecem no relatório original; não foram tratados automaticamente como adicionais. Uma implementação ampliada deve ser delimitada antes de reclassificar.

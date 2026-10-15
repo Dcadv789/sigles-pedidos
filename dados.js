@@ -1,4 +1,4 @@
-/* Conferência em 15/10/2026. Status compartilhados, sem dependência de localStorage. */
+/* Conferência em 15/10/2026. Cobrança é recomendação para negociação, sem aprovação implícita. */
 window.SIGLES_BOARD = {
   "atualizado": "15/10/2026",
   "itens": [
@@ -14,7 +14,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Excluir material inativo sem pedidos vinculados; ativar e inativar continuam disponíveis.",
           "entrega": 1,
-          "situacao": "Entregue"
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -30,7 +31,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Exclusão definitiva com validação de vínculos e manutenção da ativação/inativação.",
           "entrega": 1,
-          "situacao": "Entregue"
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -46,7 +48,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Testar a ativação com as datas e condições do caso original.",
           "entrega": null,
-          "situacao": "Validar"
+          "situacao": "Validar",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -62,7 +65,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Adicionar o campo ao cadastro, à edição e à listagem de fornecedores.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -78,7 +82,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Reproduzir com os campos e dados que não eram gravados.",
           "entrega": null,
-          "situacao": "Validar"
+          "situacao": "Validar",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -94,7 +99,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Finalizar pelo painel e impedir alterações nos estágios encerrados.",
           "entrega": 1,
-          "situacao": "Entregue"
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -110,12 +116,14 @@ window.SIGLES_BOARD = {
         {
           "texto": "Histórico de criação e alterações da solicitação.",
           "entrega": 1,
-          "situacao": "Entregue"
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Mostrar a data nas listagens de Minhas solicitações e do Painel, além do período.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -131,7 +139,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Incluir, alterar e retirar pedidos quando permitido; preservar o recebimento da secretaria.",
           "entrega": 1,
-          "situacao": "Entregue"
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -147,7 +156,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Confirmar a ordenação por horário na tela de Cronogramas do vídeo, sem confundir com Quadro de aulas.",
           "entrega": null,
-          "situacao": "Validar"
+          "situacao": "Validar",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -163,7 +173,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Preencher carga horária, tipo e créditos ao escolher a disciplina na criação da turma.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -179,7 +190,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Campos e identificação do tipo de disciplina, graduação ou pós-graduação.",
           "entrega": 2,
-          "situacao": "Entregue"
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -195,27 +207,32 @@ window.SIGLES_BOARD = {
         {
           "texto": "Cadastros, usuários e compras.",
           "entrega": 1,
-          "situacao": "Entregue"
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Disciplinas, relatórios e login.",
           "entrega": 2,
-          "situacao": "Entregue"
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Ordens de serviço e aniversariantes.",
           "entrega": 3,
-          "situacao": "Homologação"
+          "situacao": "Homologação",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Evolução de cronogramas.",
           "entrega": 4,
-          "situacao": "Na PR"
+          "situacao": "Na PR",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Concluir os pedidos específicos ainda pendentes; este item não representa uma funcionalidade única.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -231,7 +248,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Demais usuários continuam vendo os aniversariantes na lista do mês.",
           "entrega": 3,
-          "situacao": "Homologação"
+          "situacao": "Homologação",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -247,12 +265,14 @@ window.SIGLES_BOARD = {
         {
           "texto": "Consulta de telefones e contatos no Dashboard.",
           "entrega": null,
-          "situacao": "Já existente"
+          "situacao": "Já existente",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Detalhar campos, busca e exportações desejados.",
           "entrega": null,
-          "situacao": "Definir"
+          "situacao": "Definir",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -268,12 +288,14 @@ window.SIGLES_BOARD = {
         {
           "texto": "Exibição de férias e contratos com tratamento de datas ausentes.",
           "entrega": 1,
-          "situacao": "Entregue"
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Definir outras mudanças além do cadastro e dos avisos existentes.",
           "entrega": null,
-          "situacao": "Definir"
+          "situacao": "Definir",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -289,7 +311,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Especificar o que falta nas informações de usuários e colaboradores.",
           "entrega": null,
-          "situacao": "Definir"
+          "situacao": "Definir",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -305,7 +328,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Definir as mudanças pretendidas por perfil, módulo e ação.",
           "entrega": null,
-          "situacao": "Definir"
+          "situacao": "Definir",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -321,7 +345,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Levantamento documentado antes da entrega 1; eventual expansão precisa de novo detalhamento.",
           "entrega": null,
-          "situacao": "Já existente"
+          "situacao": "Já existente",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -337,12 +362,14 @@ window.SIGLES_BOARD = {
         {
           "texto": "Tipo Compras ou Almoxarifado e filtro dos materiais de compras.",
           "entrega": 1,
-          "situacao": "Entregue"
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Definir o fluxo próprio de Almoxarifado, entradas, saídas e estoque.",
           "entrega": null,
-          "situacao": "Definir"
+          "situacao": "Definir",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -358,12 +385,14 @@ window.SIGLES_BOARD = {
         {
           "texto": "Envio, reabertura, recebimento, realização/cancelamento, consulta dos períodos encerrados e lista para compras.",
           "entrega": 1,
-          "situacao": "Entregue"
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Completar a data visível em todas as listagens e definir as demais melhorias da rotina administrativa.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -379,12 +408,14 @@ window.SIGLES_BOARD = {
         {
           "texto": "Responsável, orçamento na criação, anexos, filtros, estágios e histórico.",
           "entrega": 3,
-          "situacao": "Homologação"
+          "situacao": "Homologação",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Validar persistência dos seguidores e definir os relatórios gerenciais restantes.",
           "entrega": null,
-          "situacao": "Validar"
+          "situacao": "Validar",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -400,7 +431,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Definir a integração pretendida e tratar os pedidos V1-04 e V1-05.",
           "entrega": null,
-          "situacao": "Definir"
+          "situacao": "Definir",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -416,7 +448,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Revisar cadastros, destinatários, permissões e endereços de teste/produção da Conexão LES.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -432,17 +465,20 @@ window.SIGLES_BOARD = {
         {
           "texto": "Fluxo unificado de Novo cronograma e arquivo modelo CSV.",
           "entrega": 4,
-          "situacao": "Na PR"
+          "situacao": "Na PR",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Testar o arquivo original do cliente e o tratamento dos erros por linha.",
           "entrega": null,
-          "situacao": "Validar"
+          "situacao": "Validar",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Confirmar necessidade de XLSX; o formato implementado é CSV.",
           "entrega": null,
-          "situacao": "Definir"
+          "situacao": "Definir",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -458,7 +494,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Escolher cadastros, colunas, formatos, validações e regras de duplicidade.",
           "entrega": null,
-          "situacao": "Definir"
+          "situacao": "Definir",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -474,7 +511,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Implementado no PR 9; depende de integração e homologação.",
           "entrega": 4,
-          "situacao": "Na PR"
+          "situacao": "Na PR",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -490,12 +528,14 @@ window.SIGLES_BOARD = {
         {
           "texto": "Levantar o fluxo acadêmico e detalhar o módulo.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Avaliar o uso do NotebookLM e registrar o resultado.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -511,12 +551,14 @@ window.SIGLES_BOARD = {
         {
           "texto": "Filtros, responsável por semestre e visualização das disciplinas docentes.",
           "entrega": 2,
-          "situacao": "Entregue"
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Consolidar a carga por departamento com filtros e exportação próprios.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -532,12 +574,14 @@ window.SIGLES_BOARD = {
         {
           "texto": "Consulta de alterações e exportação existentes antes da entrega 1.",
           "entrega": null,
-          "situacao": "Já existente"
+          "situacao": "Já existente",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Definir novos campos e filtros; validar os problemas da agenda.",
           "entrega": null,
-          "situacao": "Definir"
+          "situacao": "Definir",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -553,12 +597,14 @@ window.SIGLES_BOARD = {
         {
           "texto": "Solicitação pelo aluno, validação do número USP, acompanhamento e acesso externo.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Definir responsáveis e regras de aprovação de reservas.",
           "entrega": null,
-          "situacao": "Definir"
+          "situacao": "Definir",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -574,12 +620,14 @@ window.SIGLES_BOARD = {
         {
           "texto": "Criação com ano/semestre e modelo de importação.",
           "entrega": 4,
-          "situacao": "Na PR"
+          "situacao": "Na PR",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "O arquivo que originou o erro ainda precisa de teste de aceite.",
           "entrega": null,
-          "situacao": "Validar"
+          "situacao": "Validar",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -595,12 +643,14 @@ window.SIGLES_BOARD = {
         {
           "texto": "Reproduzir a criação que triplicava turmas e a alteração de carga entre dias.",
           "entrega": null,
-          "situacao": "Validar"
+          "situacao": "Validar",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Definir se o crédito deve pertencer à disciplina, turma ou dia.",
           "entrega": null,
-          "situacao": "Definir"
+          "situacao": "Definir",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -616,12 +666,14 @@ window.SIGLES_BOARD = {
         {
           "texto": "Testar alteração da série e de uma ocorrência, preservação da sala e conflitos.",
           "entrega": null,
-          "situacao": "Validar"
+          "situacao": "Validar",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Corrigir a diferença entre os campos de data usados na checagem de conflito e na gravação.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -637,7 +689,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Conferir o cadastro e os filtros com o docente do caso original.",
           "entrega": null,
-          "situacao": "Validar"
+          "situacao": "Validar",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -653,22 +706,26 @@ window.SIGLES_BOARD = {
         {
           "texto": "Calendário, retirada de anotações e link Conexão LES.",
           "entrega": null,
-          "situacao": "Já existente"
+          "situacao": "Já existente",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "CERT, férias e contratos, com tratamento de datas ausentes.",
           "entrega": 1,
-          "situacao": "Entregue"
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Acrescentar atalhos diretos para LES, MarteWeb e Júpiter Web.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Confirmar se a imagem deve ser plano de fundo ou imagem na página.",
           "entrega": null,
-          "situacao": "Definir"
+          "situacao": "Definir",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -684,12 +741,14 @@ window.SIGLES_BOARD = {
         {
           "texto": "Alternância da visão do administrador e OS abertas/em andamento.",
           "entrega": null,
-          "situacao": "Já existente"
+          "situacao": "Já existente",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Confirmar se a visão ampliada deve abranger todos os departamentos; hoje é departamental.",
           "entrega": null,
-          "situacao": "Definir"
+          "situacao": "Definir",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -705,7 +764,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Datas da CERT e separação das informações no Dashboard.",
           "entrega": 1,
-          "situacao": "Entregue"
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -721,12 +781,14 @@ window.SIGLES_BOARD = {
         {
           "texto": "Excluir usuário inativo sem vínculos e manter o formulário/aba após salvar.",
           "entrega": 1,
-          "situacao": "Entregue"
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Reproduzir a desconfiguração relatada ao ordenar nomes.",
           "entrega": null,
-          "situacao": "Validar"
+          "situacao": "Validar",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -742,17 +804,21 @@ window.SIGLES_BOARD = {
         {
           "texto": "Parâmetro de antecedência por perfil.",
           "entrega": 1,
-          "situacao": "Entregue"
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Conferir a configuração de 45 dias para estagiários.",
           "entrega": null,
-          "situacao": "Validar"
+          "situacao": "Validar",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Enviar automaticamente o aviso ao administrador e ao estagiário.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Aditivo",
+          "motivoCobranca": "Recomendação: orçar o novo envio automático ao administrador e ao estagiário. O parâmetro de antecedência e sua configuração para 45 dias continuam no pedido inicial. Conferir eventual aprovação ou pagamento anterior da automação."
         }
       ]
     },
@@ -768,17 +834,20 @@ window.SIGLES_BOARD = {
         {
           "texto": "Responsável sugerido pela categoria e possibilidade de troca antes de salvar.",
           "entrega": 3,
-          "situacao": "Homologação"
+          "situacao": "Homologação",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Verificar se os seguidores escolhidos permanecem após salvar e reabrir.",
           "entrega": null,
-          "situacao": "Validar"
+          "situacao": "Validar",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Confirmar a regra do responsável inicial solicitada pelo cliente.",
           "entrega": null,
-          "situacao": "Definir"
+          "situacao": "Definir",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -794,7 +863,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Orçamento com anexo já na criação e lista ampliada de formatos suportados.",
           "entrega": 3,
-          "situacao": "Homologação"
+          "situacao": "Homologação",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -810,12 +880,14 @@ window.SIGLES_BOARD = {
         {
           "texto": "Filtro Aberto por e responsável por categoria.",
           "entrega": 3,
-          "situacao": "Homologação"
+          "situacao": "Homologação",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Definir se a subcategoria terá responsável próprio; hoje herda da categoria.",
           "entrega": null,
-          "situacao": "Definir"
+          "situacao": "Definir",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -831,22 +903,26 @@ window.SIGLES_BOARD = {
         {
           "texto": "Copiar entre semestres, com início/fim e seleção Graduação, Pós-graduação ou Ambas.",
           "entrega": 4,
-          "situacao": "Na PR"
+          "situacao": "Na PR",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Exportar todos os cursos da disciplina: o servidor ainda retorna só o curso da turma.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Aplicar no servidor o filtro das salas elegíveis.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Confirmar a seleção de docentes inativos no caso relatado.",
           "entrega": null,
-          "situacao": "Validar"
+          "situacao": "Validar",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -862,17 +938,20 @@ window.SIGLES_BOARD = {
         {
           "texto": "Carga horária, crédito, responsável por ano/semestre, histórico do plano e filtros dos relatórios.",
           "entrega": 2,
-          "situacao": "Entregue"
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Exportar a listagem principal e mostrar nela o docente responsável.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Incluir crédito na exportação do relatório Disciplinas docente.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -888,12 +967,14 @@ window.SIGLES_BOARD = {
         {
           "texto": "Ordenação cronológica dentro de cada dia no Quadro de aulas.",
           "entrega": 2,
-          "situacao": "Entregue"
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Consolidar primeiro/segundo semestre e pós-graduação no total anual por docente.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -909,12 +990,14 @@ window.SIGLES_BOARD = {
         {
           "texto": "Separação por tipo de material e detalhe/observação no recurso da OS.",
           "entrega": 1,
-          "situacao": "Entregue"
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Uma hierarquia extra de subcategorias só será necessária se essa for a intenção do cliente.",
           "entrega": null,
-          "situacao": "Definir"
+          "situacao": "Definir",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -930,12 +1013,14 @@ window.SIGLES_BOARD = {
         {
           "texto": "Conferir a planilha e remover duplicidades com validação dos vínculos.",
           "entrega": null,
-          "situacao": "Validar"
+          "situacao": "Validar",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Usar o nome abreviado na apresentação da sala na agenda.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -951,17 +1036,20 @@ window.SIGLES_BOARD = {
         {
           "texto": "Consulta de salas disponíveis por intervalo.",
           "entrega": null,
-          "situacao": "Já existente"
+          "situacao": "Já existente",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Selecionar a sala na consulta e retornar ao evento com ela preenchida.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Validar última data, exclusão e troca de sala de uma ocorrência.",
           "entrega": null,
-          "situacao": "Validar"
+          "situacao": "Validar",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -977,7 +1065,8 @@ window.SIGLES_BOARD = {
         {
           "texto": "Exibir os campos em todos os tipos e exigir preenchimento somente em Grupo de extensão.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -993,12 +1082,14 @@ window.SIGLES_BOARD = {
         {
           "texto": "Período vigente, encerramento, consulta dos anteriores, estágios e apresentação dos pedidos.",
           "entrega": 1,
-          "situacao": "Entregue"
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial"
         },
         {
           "texto": "Confirmar se Mostrar períodos encerrados atende a Arquivados e o que seria a nova aba Compras.",
           "entrega": null,
-          "situacao": "Definir"
+          "situacao": "Definir",
+          "cobranca": "Pedido inicial"
         }
       ]
     },
@@ -1014,7 +1105,9 @@ window.SIGLES_BOARD = {
         {
           "texto": "Comissões de Graduação, Pós-Graduação, Pesquisa e Extensão, com titular/suplente e reuniões com data, texto e anexos.",
           "entrega": null,
-          "situacao": "Pendente"
+          "situacao": "Pendente",
+          "cobranca": "Aditivo",
+          "motivoCobranca": "Novo processo de gestão de comissões, representantes e reuniões, não descrito no relatório original de visita. Recomenda-se um pacote único para as quatro comissões."
         }
       ]
     },
@@ -1025,17 +1118,26 @@ window.SIGLES_BOARD = {
       "titulo": "Validar os itens já declarados resolvidos",
       "pedido": "Cronograma e bloqueio de dias estão sinalizados como FEITO no Word.",
       "status": "Validar",
-      "resumo": "A anotação FEITO no Word não foi tomada como aceite técnico.",
+      "resumo": "Cronograma na entrega 4; bloqueio manual a validar. A automação de feriados é recomendada como aditivo, após conferir a anotação FEITO.",
       "partes": [
         {
           "texto": "Criação e importação do cronograma implementadas no PR 9.",
           "entrega": 4,
-          "situacao": "Na PR"
+          "situacao": "Na PR",
+          "cobranca": "Pedido inicial"
         },
         {
-          "texto": "Confirmar o bloqueio manual indicado como FEITO; bloqueio automático de feriados não foi localizado.",
+          "texto": "Confirmar o bloqueio manual indicado como FEITO e o que foi efetivamente realizado.",
           "entrega": null,
-          "situacao": "Validar"
+          "situacao": "Validar",
+          "cobranca": "Pedido inicial"
+        },
+        {
+          "texto": "Implementar calendário e bloqueio automático de feriados integrado à disponibilidade e às reservas recorrentes.",
+          "entrega": null,
+          "situacao": "Pendente",
+          "cobranca": "Aditivo",
+          "motivoCobranca": "Recomendação condicionada: automação específica não descrita no relatório original. Antes de orçar, esclarecer a anotação FEITO e confirmar que não foi entregue ou paga anteriormente. A correção de um bloqueio já contratado continua no pedido inicial."
         }
       ]
     }
