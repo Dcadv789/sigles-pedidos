@@ -1,5 +1,7 @@
 # SIGLES — Planejamento funcional das entregas 5 a 8
 
+> Atualização técnica de 16/10/2026: primeiro fechar as entregas 1 a 4. Consulte os [oito planos técnicos](https://dcadv789.github.io/sigles-pedidos/tecnico/). Partes antecipadas não serão implementadas novamente em 5 a 8; os percentuais originais devem ser conferidos depois desses fechamentos.
+
 **Data:** 16/10/2026. **Situação:** proposta de divisão funcional; nenhuma implementação atribuída às novas entregas.
 
 Consideramos **Pedido inicial** como o escopo pago, conforme orientação do usuário. A classificação comercial do quadro é a base. Incluímos as partes pendentes dos pedidos parcialmente atendidos e excluímos todas as partes classificadas como **Aditivo**, inclusive os 48 pedidos da origem **Adicional**.

@@ -1,0 +1,3789 @@
+{
+  "data": "16/10/2026",
+  "status": "Planejamento completo para revisão — nenhuma correção funcional executada",
+  "refs": {
+    "dev": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+    "pr4": "13f5075b4685f7a26008e63810d38bd8516f558f"
+  },
+  "entregas": [
+    {
+      "numero": 1,
+      "titulo": "Cadastros, usuários e compras",
+      "etapa": "Fechamento de entrega existente",
+      "ordem": [
+        "E1-05",
+        "E1-03",
+        "E1-01",
+        "E1-04",
+        "E1-02",
+        "E1-99"
+      ],
+      "markdown": "entrega-01.md",
+      "pagina": "entrega-1.html",
+      "pesoReferencia": null
+    },
+    {
+      "numero": 2,
+      "titulo": "Disciplinas, relatórios, planos e login",
+      "etapa": "Fechamento de entrega existente",
+      "ordem": [
+        "E2-03",
+        "E2-01",
+        "E2-02",
+        "E2-99"
+      ],
+      "markdown": "entrega-02.md",
+      "pagina": "entrega-2.html",
+      "pesoReferencia": null
+    },
+    {
+      "numero": 3,
+      "titulo": "Ordens de serviço, orçamentos e aniversários",
+      "etapa": "Fechamento e homologação",
+      "ordem": [
+        "E3-01",
+        "E3-02",
+        "E3-03",
+        "E3-04",
+        "E3-99"
+      ],
+      "markdown": "entrega-03.md",
+      "pagina": "entrega-3.html",
+      "pesoReferencia": null
+    },
+    {
+      "numero": 4,
+      "titulo": "Integração e conclusão dos cronogramas",
+      "etapa": "Integração da PR 9 e homologação",
+      "ordem": [
+        "E4-01",
+        "E4-06",
+        "E4-02",
+        "E4-03",
+        "E4-04",
+        "E4-05",
+        "E4-99"
+      ],
+      "markdown": "entrega-04.md",
+      "pagina": "entrega-4.html",
+      "pesoReferencia": null
+    },
+    {
+      "numero": 5,
+      "titulo": "Usabilidade, cadastros e acesso",
+      "etapa": "Escopo inicial restante",
+      "ordem": [
+        "E5-01",
+        "E5-02",
+        "E5-03",
+        "E5-04"
+      ],
+      "markdown": "entrega-05.md",
+      "pagina": "entrega-5.html",
+      "pesoReferencia": 15
+    },
+    {
+      "numero": 6,
+      "titulo": "Fornecedores e operação administrativa",
+      "etapa": "Escopo inicial restante",
+      "ordem": [
+        "E6-01",
+        "E6-02",
+        "E6-03",
+        "E6-04"
+      ],
+      "markdown": "entrega-06.md",
+      "pagina": "entrega-6.html",
+      "pesoReferencia": 15
+    },
+    {
+      "numero": 7,
+      "titulo": "Complementos acadêmicos e consolidações",
+      "etapa": "Escopo inicial restante",
+      "ordem": [
+        "E7-01",
+        "E7-02",
+        "E7-03",
+        "E7-04"
+      ],
+      "markdown": "entrega-07.md",
+      "pagina": "entrega-7.html",
+      "pesoReferencia": 20
+    },
+    {
+      "numero": 8,
+      "titulo": "Agenda, reservas externas, integrações e estudos",
+      "etapa": "Escopo inicial restante",
+      "ordem": [
+        "E8-01",
+        "E8-02",
+        "E8-03",
+        "E8-04",
+        "E8-05",
+        "E8-06",
+        "E8-07",
+        "E8-08"
+      ],
+      "markdown": "entrega-08.md",
+      "pagina": "entrega-8.html",
+      "pesoReferencia": 50
+    }
+  ],
+  "tarefas": [
+    {
+      "id": "E1-01",
+      "entrega": 1,
+      "titulo": "Ordenação e persistência da tela de Usuários",
+      "diagnostico": "A consulta e a DataTable já existem; a desconfiguração relatada ainda precisa de reprodução. Não atribuir a falha à ordenação do servidor sem conferir o JSON e o estado salvo no navegador.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/UsuarioController.php",
+          "busca": "public function list",
+          "base": "dev",
+          "linha": 63,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/UsuarioController.php#L63"
+        },
+        {
+          "arquivo": "templates/usuario/index.html.twig",
+          "busca": "DataTable",
+          "base": "dev",
+          "linha": 336,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/usuario/index.html.twig#L336"
+        },
+        {
+          "arquivo": "templates/usuario/modal.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/usuario/modal.html.twig#L1"
+        }
+      ],
+      "passos": [
+        "Registrar o cenário com nomes acentuados, usuários ativos/inativos e filtros, incluindo o estado salvo da DataTable.",
+        "Conferir se a coluna Nome usa texto estável para sort e se os índices das colunas continuam corretos após filtros e mudanças visuais. Corrigir somente o caminho que reproduzir o defeito.",
+        "Reabrir a mesma aba e formulário após salvar; preservar a exclusão definitiva e os bloqueios de vínculos já implementados."
+      ],
+      "dados": "Sem alteração prevista de esquema. Usar usuários sintéticos no banco de teste e manter ACL GAU.",
+      "aceite": [
+        "Ordenar A→Z e Z→A com acentos não desloca ações nem valores de outras colunas.",
+        "Filtrar e editar um usuário mantém a tabela e a aba coerentes; usuário sem permissão recebe o erro padrão.",
+        "Se o defeito não se reproduzir, registrar evidência e encerrar como validado, sem inventar uma mudança."
+      ],
+      "decisoes": [],
+      "dep": [],
+      "status": "Planejado",
+      "referenciasQuadro": [
+        {
+          "chave": "WI-08:2",
+          "id": "WI-08",
+          "parte": 2,
+          "texto": "Reproduzir a desconfiguração relatada ao ordenar nomes.",
+          "situacao": "Validar",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "US02",
+          "pedido": "Ordenação alfabética sem desconfigurar a tela.",
+          "situacao": "**Validar** — existe ordenação pelo nome, mas ela já existia antes; falta reproduzir a desconfiguração informada."
+        }
+      ]
+    },
+    {
+      "id": "E1-02",
+      "entrega": 1,
+      "titulo": "Data de criação em Minhas solicitações e Painel",
+      "diagnostico": "As consultas de solicitações retornam nome, estágio e período, mas as listagens não apresentam a data de criação solicitada. O histórico de alterações não substitui essa coluna.",
+      "arquivos": [
+        {
+          "arquivo": "src/Repository/SolicitacaoRepository.php",
+          "busca": "public function listar(",
+          "base": "dev",
+          "linha": 29,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Repository/SolicitacaoRepository.php#L29"
+        },
+        {
+          "arquivo": "src/Entity/Solicitacao.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/Solicitacao.php#L1"
+        },
+        {
+          "arquivo": "templates/solicitacao/index.html.twig",
+          "busca": "columns:",
+          "base": "dev",
+          "linha": 175,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/solicitacao/index.html.twig#L175"
+        },
+        {
+          "arquivo": "templates/painel_solicitacoes/index.html.twig",
+          "busca": "DataTable",
+          "base": "dev",
+          "linha": 374,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/painel_solicitacoes/index.html.twig#L374"
+        }
+      ],
+      "passos": [
+        "Acrescentar dt_criado ao resultado das consultas de solicitações e de gestão/pendentes do Painel, usando o campo dtCriado existente. Não confundir com a data do período ou a data de finalização.",
+        "Exibir DD/MM/AAAA HH:mm e usar valor ISO ou numérico para ordenar. Manter um único critério de fuso entre resposta e tela.",
+        "Na lista agregada por material, definir uma apresentação por solicitação ou o detalhamento de origem; não fabricar uma data única para compras de solicitações diferentes.",
+        "Ajustar os cabeçalhos, os índices da DataTable e as exportações que usam essas colunas."
+      ],
+      "dados": "Campo já existe; não criar uma nova data nem preencher o histórico com datas atuais. Consultas parametrizadas e sem multiplicar pedidos nos agrupamentos.",
+      "aceite": [
+        "Duas solicitações de períodos diferentes mostram sua própria data de criação.",
+        "31/12 e 01/01 ordenam cronologicamente, inclusive após exportar ou alternar as abas.",
+        "O total por material/departamento permanece igual; a data agregada não sugere uma origem inexistente."
+      ],
+      "decisoes": [
+        "Fechar a apresentação da data na lista consolidada por material; recomendação: abrir as solicitações de origem, mantendo datas individuais."
+      ],
+      "dep": [],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "V1-07:2",
+          "id": "V1-07",
+          "parte": 2,
+          "texto": "Mostrar a data nas listagens de Minhas solicitações e do Painel, além do período.",
+          "situacao": "Pendente",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": []
+    },
+    {
+      "id": "E1-03",
+      "entrega": 1,
+      "titulo": "Ativar e inativar períodos sem erro",
+      "diagnostico": "handleStatus alterna active e faz flush; a falha do vídeo não foi comprovada. O formulário de períodos usa a estrutura já existente no projeto.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/PeriodoSolicitacoesController.php",
+          "busca": "public function handleStatus",
+          "base": "dev",
+          "linha": 165,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/PeriodoSolicitacoesController.php#L165"
+        },
+        {
+          "arquivo": "src/Entity/PeriodoSolicitacoes.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/PeriodoSolicitacoes.php#L1"
+        },
+        {
+          "arquivo": "src/Form/PeriodoSolicitacoesType.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Form/PeriodoSolicitacoesType.php#L1"
+        },
+        {
+          "arquivo": "templates/periodo_solicitacoes/index.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/periodo_solicitacoes/index.html.twig#L1"
+        }
+      ],
+      "passos": [
+        "Reproduzir a ativação com período futuro, vigente, vencido e já encerrado, separando falha de validação de resposta AJAX ou permissão.",
+        "Corrigir a causa encontrada, mantendo a rota e o toast padrão. Não criar Symfony Form novo nem alterar a definição de vigência para mascarar a falha.",
+        "Conferir novamente os bloqueios de exclusão de período com solicitações."
+      ],
+      "dados": "Sem migração prevista. Qualquer ajuste de registros de teste deve preservar os vínculos e ser documentado.",
+      "aceite": [
+        "Ativar/inativar responde com sucesso ou validação legível, sem HTTP 500.",
+        "Período encerrado não volta a permitir compras apenas por ficar ativo.",
+        "A exclusão de um período vinculado continua bloqueada."
+      ],
+      "decisoes": [],
+      "dep": [],
+      "status": "Planejado",
+      "referenciasQuadro": [
+        {
+          "chave": "V1-03:1",
+          "id": "V1-03",
+          "parte": 1,
+          "texto": "Testar a ativação com as datas e condições do caso original.",
+          "situacao": "Validar",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": []
+    },
+    {
+      "id": "E1-04",
+      "entrega": 1,
+      "titulo": "Regra de antecedência de contratos por perfil",
+      "diagnostico": "Perfil possui getDiasAvisoContrato, mas contrato_ferias usa +30 days e restringe perfis a [4,9]. Portanto, mudar apenas o parâmetro para 45 dias não comprova o atendimento ao estagiário.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/UsuarioController.php",
+          "busca": "public function contrato_ferias",
+          "base": "dev",
+          "linha": 1093,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/UsuarioController.php#L1093"
+        },
+        {
+          "arquivo": "src/Entity/Perfil.php",
+          "busca": "getDiasAvisoContrato",
+          "base": "dev",
+          "linha": 78,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/Perfil.php#L78"
+        },
+        {
+          "arquivo": "src/Controller/PerfilController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/PerfilController.php#L1"
+        },
+        {
+          "arquivo": "templates/dashboard/dashboard.js",
+          "busca": "app_contratos_ferias",
+          "base": "dev",
+          "linha": 380,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/dashboard/dashboard.js#L380"
+        }
+      ],
+      "passos": [
+        "Identificar no teste o perfil real de estagiário e a fonte correta da data final do contrato; não presumir ID fixo.",
+        "Aplicar a antecedência configurada por perfil à consulta e à apresentação dos contratos. Separar essa janela da regra de férias, se forem negócios distintos.",
+        "Conferir os outros caminhos de aviso de CERT/contrato que já usam getDiasAvisoContrato para evitar resultados contraditórios.",
+        "Validar a exibição para o administrador conforme as permissões acordadas."
+      ],
+      "dados": "Reutilizar diasAvisoContrato existente. Eventual alteração de configuração só em esalq_sistema_des nesta operação; sem disparo de e-mails novo.",
+      "aceite": [
+        "Contrato com término a 45 dias aparece no limite acordado; a 46 dias não aparece para o perfil configurado com 45.",
+        "Perfil diferente mantém sua própria antecedência e datas ausentes não causam erro.",
+        "Não há envio automático ao estagiário: essa automação permanece Aditivo."
+      ],
+      "decisoes": [
+        "Confirmar perfil abrangido, inclusão do dia limite e quem visualiza o aviso."
+      ],
+      "dep": [],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "WI-09:1",
+          "id": "WI-09",
+          "parte": 1,
+          "texto": "Parâmetro de antecedência por perfil.",
+          "situacao": "Entregue",
+          "entregaAtual": 1
+        },
+        {
+          "chave": "WI-09:2",
+          "id": "WI-09",
+          "parte": 2,
+          "texto": "Conferir a configuração de 45 dias para estagiários.",
+          "situacao": "Validar",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "US05.1",
+          "pedido": "Aplicar especificamente 45 dias ao perfil de estagiários.",
+          "situacao": "**Validar** — confirmar o perfil e a configuração em produção. A parametrização existe, mas a regra específica não foi comprovada."
+        }
+      ]
+    },
+    {
+      "id": "E1-05",
+      "entrega": 1,
+      "titulo": "Conciliar encerramento do período com os estágios combinados",
+      "diagnostico": "O texto inicial prevê Em aberto→Expirada e Em andamento→Realizada no encerramento manual. O código atual do controller e do encerramento automático expira todos os estágios não encerrados. É uma divergência de regra a resolver antes de mudar dados.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/PeriodoSolicitacoesController.php",
+          "busca": "$solicitacoesPorPeriodo",
+          "base": "dev",
+          "linha": 242,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/PeriodoSolicitacoesController.php#L242"
+        },
+        {
+          "arquivo": "src/Repository/PeriodoSolicitacoesRepository.php",
+          "busca": "public function encerrarPeriodosVencidos",
+          "base": "dev",
+          "linha": 156,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Repository/PeriodoSolicitacoesRepository.php#L156"
+        },
+        {
+          "arquivo": "src/Controller/PainelSolicitacoesController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/PainelSolicitacoesController.php#L1"
+        },
+        {
+          "arquivo": "src/Repository/HistoricoSolicitacaoRepository.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Repository/HistoricoSolicitacaoRepository.php#L1"
+        }
+      ],
+      "passos": [
+        "Montar uma matriz de transições para encerramento manual, automático, recebimento, realização e cancelamento. Usar o descritivo e as alterações posteriores como evidências, sem presumir qual prevalece.",
+        "Depois de fechar a matriz, alinhar controller, repository e histórico no mesmo comportamento; validar as entradas antes de alterar as entidades.",
+        "Preservar Realizada/Cancelada/Expirada já encerradas e não reclassificar solicitações históricas automaticamente.",
+        "Registrar a mudança de regra no histórico e no descritivo da entrega."
+      ],
+      "dados": "Sem migração estrutural prevista. Não corrigir em lote registros existentes enquanto a regra e os registros afetados não forem aprovados para o teste.",
+      "aceite": [
+        "Cada estágio de origem produz exatamente a saída da matriz nos dois tipos de encerramento.",
+        "Uma entrada inválida não deixa alterações parciais no período ou nas solicitações.",
+        "Repetir o encerramento não duplica histórico nem altera estágios finais."
+      ],
+      "decisoes": [
+        "Qual regra é válida hoje para solicitações Em andamento e se manual e automático devem ser diferentes."
+      ],
+      "dep": [],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "V1-06:1",
+          "id": "V1-06",
+          "parte": 1,
+          "texto": "Finalizar pelo painel e impedir alterações nos estágios encerrados.",
+          "situacao": "Entregue",
+          "entregaAtual": 1
+        },
+        {
+          "chave": "WI-20:1",
+          "id": "WI-20",
+          "parte": 1,
+          "texto": "Período vigente, encerramento, consulta dos anteriores, estágios e apresentação dos pedidos.",
+          "situacao": "Entregue",
+          "entregaAtual": 1
+        }
+      ],
+      "referenciasDetalhadas": []
+    },
+    {
+      "id": "E1-99",
+      "entrega": 1,
+      "titulo": "Aceite integrado do fechamento da entrega 1",
+      "diagnostico": "Cadastros e compras já estão em produção. O fechamento é uma correção incremental sobre a dev atual, não o retorno à tag antiga.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/MaterialController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/MaterialController.php#L1"
+        },
+        {
+          "arquivo": "src/Controller/UsuarioController.php",
+          "busca": "public function remover",
+          "base": "dev",
+          "linha": 707,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/UsuarioController.php#L707"
+        },
+        {
+          "arquivo": "src/Controller/PredioController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/PredioController.php#L1"
+        },
+        {
+          "arquivo": "src/Controller/SalaController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/SalaController.php#L1"
+        },
+        {
+          "arquivo": "src/Controller/PedidoController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/PedidoController.php#L1"
+        }
+      ],
+      "passos": [
+        "Executar os cenários afetados por E1-01 a E1-05 no teste.",
+        "Conferir exclusão de usuários/materiais/categorias/prédios/salas com e sem vínculos e impedir exclusão do próprio usuário conectado.",
+        "Conferir envio, recebimento, edição, cópia de solicitação e consulta de períodos encerrados. Registrar evidência por pedido antes de alterar o status no quadro."
+      ],
+      "dados": "Usar massa sintética de teste; não remover registros reais para provar a exclusão.",
+      "aceite": [
+        "Bloqueios de vínculos continuam funcionando e os totais de compras não mudam por regressão.",
+        "Usuário sem a permissão da ação recebe 406 e toast.",
+        "Casos corrigidos têm evidência de homologação; os demais permanecem como Validar/Definir."
+      ],
+      "decisoes": [],
+      "dep": [
+        "E1-01",
+        "E1-02",
+        "E1-03",
+        "E1-04",
+        "E1-05"
+      ],
+      "status": "Planejado",
+      "referenciasQuadro": [
+        {
+          "chave": "V1-01:1",
+          "id": "V1-01",
+          "parte": 1,
+          "texto": "Excluir material inativo sem pedidos vinculados; ativar e inativar continuam disponíveis.",
+          "situacao": "Entregue",
+          "entregaAtual": 1
+        },
+        {
+          "chave": "V1-02:1",
+          "id": "V1-02",
+          "parte": 1,
+          "texto": "Exclusão definitiva com validação de vínculos e manutenção da ativação/inativação.",
+          "situacao": "Entregue",
+          "entregaAtual": 1
+        },
+        {
+          "chave": "V1-06:1",
+          "id": "V1-06",
+          "parte": 1,
+          "texto": "Finalizar pelo painel e impedir alterações nos estágios encerrados.",
+          "situacao": "Entregue",
+          "entregaAtual": 1
+        },
+        {
+          "chave": "V1-07:1",
+          "id": "V1-07",
+          "parte": 1,
+          "texto": "Histórico de criação e alterações da solicitação.",
+          "situacao": "Entregue",
+          "entregaAtual": 1
+        },
+        {
+          "chave": "V1-08:1",
+          "id": "V1-08",
+          "parte": 1,
+          "texto": "Incluir, alterar e retirar pedidos quando permitido; preservar o recebimento da secretaria.",
+          "situacao": "Entregue",
+          "entregaAtual": 1
+        },
+        {
+          "chave": "VS-01:1",
+          "id": "VS-01",
+          "parte": 1,
+          "texto": "Cadastros, usuários e compras.",
+          "situacao": "Entregue",
+          "entregaAtual": 1
+        },
+        {
+          "chave": "VS-04:1",
+          "id": "VS-04",
+          "parte": 1,
+          "texto": "Exibição de férias e contratos com tratamento de datas ausentes.",
+          "situacao": "Entregue",
+          "entregaAtual": 1
+        },
+        {
+          "chave": "VS-08:1",
+          "id": "VS-08",
+          "parte": 1,
+          "texto": "Tipo Compras ou Almoxarifado e filtro dos materiais de compras.",
+          "situacao": "Entregue",
+          "entregaAtual": 1
+        },
+        {
+          "chave": "VS-09:1",
+          "id": "VS-09",
+          "parte": 1,
+          "texto": "Envio, reabertura, recebimento, realização/cancelamento, consulta dos períodos encerrados e lista para compras.",
+          "situacao": "Entregue",
+          "entregaAtual": 1
+        },
+        {
+          "chave": "WI-05:2",
+          "id": "WI-05",
+          "parte": 2,
+          "texto": "CERT, férias e contratos, com tratamento de datas ausentes.",
+          "situacao": "Entregue",
+          "entregaAtual": 1
+        },
+        {
+          "chave": "WI-07:1",
+          "id": "WI-07",
+          "parte": 1,
+          "texto": "Datas da CERT e separação das informações no Dashboard.",
+          "situacao": "Entregue",
+          "entregaAtual": 1
+        },
+        {
+          "chave": "WI-08:1",
+          "id": "WI-08",
+          "parte": 1,
+          "texto": "Excluir usuário inativo sem vínculos e manter o formulário/aba após salvar.",
+          "situacao": "Entregue",
+          "entregaAtual": 1
+        },
+        {
+          "chave": "WI-09:1",
+          "id": "WI-09",
+          "parte": 1,
+          "texto": "Parâmetro de antecedência por perfil.",
+          "situacao": "Entregue",
+          "entregaAtual": 1
+        },
+        {
+          "chave": "WI-16:1",
+          "id": "WI-16",
+          "parte": 1,
+          "texto": "Separação por tipo de material e detalhe/observação no recurso da OS.",
+          "situacao": "Entregue",
+          "entregaAtual": 1
+        },
+        {
+          "chave": "WI-20:1",
+          "id": "WI-20",
+          "parte": 1,
+          "texto": "Período vigente, encerramento, consulta dos anteriores, estágios e apresentação dos pedidos.",
+          "situacao": "Entregue",
+          "entregaAtual": 1
+        }
+      ],
+      "referenciasDetalhadas": []
+    },
+    {
+      "id": "E2-01",
+      "entrega": 2,
+      "titulo": "Responsável na listagem e Excel de Disciplinas",
+      "diagnostico": "DisciplinaController::list retorna entidades de disciplina. O vínculo de responsável existe em DisciplinaResponsavel por ano/semestre e não deve ser substituído pelo docente da turma.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/DisciplinaController.php",
+          "busca": "public function list",
+          "base": "dev",
+          "linha": 34,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/DisciplinaController.php#L34"
+        },
+        {
+          "arquivo": "src/Entity/DisciplinaResponsavel.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/DisciplinaResponsavel.php#L1"
+        },
+        {
+          "arquivo": "src/Repository/DisciplinaResponsavelRepository.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Repository/DisciplinaResponsavelRepository.php#L1"
+        },
+        {
+          "arquivo": "templates/disciplina/index.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/disciplina/index.html.twig#L1"
+        }
+      ],
+      "passos": [
+        "Definir o período de referência da listagem. Recomendação: filtros explícitos de ano e semestre, com padrão visível.",
+        "Agregar os responsáveis ativos do período, preservando disciplinas sem responsável e sem duplicar linhas por turma ou curso. Não escolher arbitrariamente o primeiro docente.",
+        "Expor o resultado no JSON da listagem, acrescentar a coluna e usar a infraestrutura de exportação DataTables já adotada em outras telas.",
+        "Exportar o mesmo conjunto filtrado, incluindo código, nome, tipo e responsável do período."
+      ],
+      "dados": "Reutilizar disciplina_responsavel e seus índices; sem criar outro campo de responsável direto em Disciplina.",
+      "aceite": [
+        "Disciplina com dois responsáveis mostra ambos com a referência do período.",
+        "Responsável difere do ministrante no cronograma e a listagem continua correta.",
+        "Sem responsável, o resultado é explícito; o Excel respeita os filtros."
+      ],
+      "decisoes": [
+        "Ano/semestre mostrado por padrão e formato de apresentação de vários responsáveis."
+      ],
+      "dep": [],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "WI-14:2",
+          "id": "WI-14",
+          "parte": 2,
+          "texto": "Exportar a listagem principal e mostrar nela o docente responsável.",
+          "situacao": "Pendente",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "DI02",
+          "pedido": "Exportar a listagem principal de Disciplinas para Excel.",
+          "situacao": "**Pendente** — essa listagem não possui exportação Excel implementada."
+        },
+        {
+          "id": "DI03",
+          "pedido": "Mostrar o docente responsável na listagem principal de Disciplinas.",
+          "situacao": "**Pendente** — o vínculo existe na aba Responsável, mas não aparece como coluna na listagem principal."
+        }
+      ]
+    },
+    {
+      "id": "E2-02",
+      "entrega": 2,
+      "titulo": "Créditos na exportação de Disciplinas docente",
+      "diagnostico": "disciplinasDocentes retorna carga horária, ano e semestre, mas não Crédito. O crédito aparece tanto em Disciplina como em DisciplinaSemestre e sua precedência precisa ser definida.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/DisciplinaTurmaController.php",
+          "busca": "public function disciplinasDocentes",
+          "base": "dev",
+          "linha": 513,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/DisciplinaTurmaController.php#L513"
+        },
+        {
+          "arquivo": "src/Entity/DisciplinaSemestre.php",
+          "busca": "getCredito",
+          "base": "dev",
+          "linha": 90,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/DisciplinaSemestre.php#L90"
+        },
+        {
+          "arquivo": "src/Entity/Disciplina.php",
+          "busca": "getCredito",
+          "base": "dev",
+          "linha": 210,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/Disciplina.php#L210"
+        },
+        {
+          "arquivo": "templates/relatorios/disciplinas_docente.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/relatorios/disciplinas_docente.html.twig#L1"
+        }
+      ],
+      "passos": [
+        "Definir a fonte de crédito por ano/semestre; usar o valor do semestre quando essa for a regra e tratar zero como valor válido.",
+        "Acrescentar o campo na consulta e na exportação, preservando os LEFT JOINs que permitem disciplina sem turma. Parametrizar os filtros tocados na consulta.",
+        "Conferir a associação entre responsável e as próprias turmas para não reintroduzir duplicação corrigida na v1.2.1."
+      ],
+      "dados": "Sem migração prevista; não recalcular créditos históricos a partir da carga horária por suposição.",
+      "aceite": [
+        "Ano/semestre com crédito específico exporta o valor correto, inclusive zero.",
+        "Disciplina sem turma ativa permanece no relatório quando tem responsável.",
+        "Dois responsáveis não recebem cópias das turmas um do outro."
+      ],
+      "decisoes": [
+        "Precedência de DisciplinaSemestre.credito versus Disciplina.credito."
+      ],
+      "dep": [],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "WI-14:3",
+          "id": "WI-14",
+          "parte": 3,
+          "texto": "Incluir crédito na exportação do relatório Disciplinas docente.",
+          "situacao": "Pendente",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "DI04.1",
+          "pedido": "Incluir também Crédito na exportação desse relatório.",
+          "situacao": "**Pendente** — o relatório não retorna nem exporta esse campo."
+        }
+      ]
+    },
+    {
+      "id": "E2-03",
+      "entrega": 2,
+      "titulo": "Preservar migrações e correções do plano e do relatório",
+      "diagnostico": "A dev tem correções e migrations que não estão na branch antiga da PR 9, incluindo o backfill de responsáveis e os ajustes da visualização de anexos.",
+      "arquivos": [
+        {
+          "arquivo": "migrations/Version20261011120000.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/migrations/Version20261011120000.php#L1"
+        },
+        {
+          "arquivo": "migrations/Version20260908230000.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/migrations/Version20260908230000.php#L1"
+        },
+        {
+          "arquivo": "src/Controller/PlanoEnsinoController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/PlanoEnsinoController.php#L1"
+        },
+        {
+          "arquivo": "templates/plano_ensino/modal.visualizar_anexo.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/plano_ensino/modal.visualizar_anexo.html.twig#L1"
+        },
+        {
+          "arquivo": "src/Controller/LoginController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/LoginController.php#L1"
+        }
+      ],
+      "passos": [
+        "Registrar o estado das migrations no teste e manter os arquivos da dev no processo de integração. Não reaplicar backfill em massa para esconder vínculos ausentes.",
+        "Testar observação obrigatória, logs, PDF/DOCX e caminhos de anexos em homologação; preservar o acesso atual aos arquivos.",
+        "Conferir Enter, espaços colados, botão de senha e usuário sem perfil no login. Alterar somente se houver regressão reproduzida."
+      ],
+      "dados": "Backfill e arquivos existentes devem ser preservados. Não apagar versões executadas da tabela de migrations.",
+      "aceite": [
+        "Planos antigos continuam abrindo e alterações sem observação não gravam.",
+        "O relatório da v1.2.1 mantém responsáveis e turmas corretos.",
+        "O login sem perfil não volta a quebrar após a integração."
+      ],
+      "decisoes": [],
+      "dep": [],
+      "status": "Planejado",
+      "referenciasQuadro": [],
+      "referenciasDetalhadas": []
+    },
+    {
+      "id": "E2-99",
+      "entrega": 2,
+      "titulo": "Aceite integrado do fechamento da entrega 2",
+      "diagnostico": "A entrega 2 já foi publicada. As lacunas de colunas/exportação são fechadas aqui; consolidação anual e departamental continua em E7-04.",
+      "arquivos": [
+        {
+          "arquivo": "templates/relatorios/quadro_aulas.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/relatorios/quadro_aulas.html.twig#L1"
+        },
+        {
+          "arquivo": "templates/relatorios/disciplinas_docente.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/relatorios/disciplinas_docente.html.twig#L1"
+        },
+        {
+          "arquivo": "templates/disciplina/index.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/disciplina/index.html.twig#L1"
+        }
+      ],
+      "passos": [
+        "Conferir graduação/pós, dois semestres, múltiplos responsáveis e disciplinas sem turma.",
+        "Comparar listagem e Excel e repetir a ordenação de horários/dias no Quadro de aulas.",
+        "Registrar o aceite dos itens WI-14 e a parte já entregue de WI-15, sem declarar a consolidação anual concluída."
+      ],
+      "dados": "Massa de teste; sem alteração de histórico em produção.",
+      "aceite": [
+        "Resultados e exportação concordam para todos os filtros.",
+        "Os recursos preservados da entrega 2 continuam acessíveis por seus perfis."
+      ],
+      "decisoes": [],
+      "dep": [
+        "E2-01",
+        "E2-02",
+        "E2-03",
+        "E1-99"
+      ],
+      "status": "Planejado",
+      "referenciasQuadro": [
+        {
+          "chave": "V1-11:1",
+          "id": "V1-11",
+          "parte": 1,
+          "texto": "Campos e identificação do tipo de disciplina, graduação ou pós-graduação.",
+          "situacao": "Entregue",
+          "entregaAtual": 2
+        },
+        {
+          "chave": "VS-01:2",
+          "id": "VS-01",
+          "parte": 2,
+          "texto": "Disciplinas, relatórios e login.",
+          "situacao": "Entregue",
+          "entregaAtual": 2
+        },
+        {
+          "chave": "VS-17:1",
+          "id": "VS-17",
+          "parte": 1,
+          "texto": "Filtros, responsável por semestre e visualização das disciplinas docentes.",
+          "situacao": "Entregue",
+          "entregaAtual": 2
+        },
+        {
+          "chave": "WI-14:1",
+          "id": "WI-14",
+          "parte": 1,
+          "texto": "Carga horária, crédito, responsável por ano/semestre, histórico do plano e filtros dos relatórios.",
+          "situacao": "Entregue",
+          "entregaAtual": 2
+        },
+        {
+          "chave": "WI-15:1",
+          "id": "WI-15",
+          "parte": 1,
+          "texto": "Ordenação cronológica dentro de cada dia no Quadro de aulas.",
+          "situacao": "Entregue",
+          "entregaAtual": 2
+        }
+      ],
+      "referenciasDetalhadas": []
+    },
+    {
+      "id": "E3-01",
+      "entrega": 3,
+      "titulo": "Persistência dos seguidores da OS",
+      "diagnostico": "A edição só chama setSeguidores quando a lista não está vazia. O modal também carrega seguidores padrão em uma requisição paralela à leitura da OS. Esses são caminhos concretos para testar remoção total e sobrescrita por corrida de respostas.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/OrdemServicoController.php",
+          "busca": "$seguidoresNovos",
+          "base": "dev",
+          "linha": 476,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/OrdemServicoController.php#L476"
+        },
+        {
+          "arquivo": "src/Repository/OrdemServicoRepository.php",
+          "busca": "public function setSeguidores",
+          "base": "dev",
+          "linha": 36,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Repository/OrdemServicoRepository.php#L36"
+        },
+        {
+          "arquivo": "src/Entity/SeguidorOs.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/SeguidorOs.php#L1"
+        },
+        {
+          "arquivo": "templates/ordem_servico/index.html.twig",
+          "busca": "seguidores_padrao",
+          "base": "dev",
+          "linha": 936,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/ordem_servico/index.html.twig#L936"
+        }
+      ],
+      "passos": [
+        "Carregar seguidores padrão apenas na criação de OS; na edição, a resposta da própria OS deve prevalecer, inclusive quando a lista está vazia.",
+        "Distinguir lista explicitamente vazia de um payload em que o campo não foi enviado por estar bloqueado. Permitir limpar todos quando a edição é autorizada.",
+        "Na leitura/serialização, retornar somente seguidores ativos; na gravação, preservar os vínculos/histórico previstos pelo repository.",
+        "Gravar o histórico da alteração uma única vez e manter a regra de campos bloqueados por estágio."
+      ],
+      "dados": "Sem nova tabela. Atualizar apenas vínculos da OS em edição, validando usuários e permissão GOS.",
+      "aceite": [
+        "Salvar A+B, trocar para C e reabrir mantém só C.",
+        "Remover todos e reabrir mantém vazio.",
+        "Simular resposta lenta de Configurações não repõe seguidores padrão na edição.",
+        "OS encerrada ou usuário sem permissão não perde seus seguidores por payload incompleto."
+      ],
+      "decisoes": [],
+      "dep": [],
+      "status": "Planejado",
+      "referenciasQuadro": [
+        {
+          "chave": "VS-10:2",
+          "id": "VS-10",
+          "parte": 2,
+          "texto": "Validar persistência dos seguidores e definir os relatórios gerenciais restantes.",
+          "situacao": "Validar",
+          "entregaAtual": null
+        },
+        {
+          "chave": "WI-10:2",
+          "id": "WI-10",
+          "parte": 2,
+          "texto": "Verificar se os seguidores escolhidos permanecem após salvar e reabrir.",
+          "situacao": "Validar",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "OS02",
+          "pedido": "Preservar os seguidores selecionados ao salvar e reabrir a OS.",
+          "situacao": "**Validar** — há gravação dos seguidores, mas falta demonstrar a correção do caso que substituía os escolhidos pelos padrões."
+        }
+      ]
+    },
+    {
+      "id": "E3-02",
+      "entrega": 3,
+      "titulo": "Regra do responsável e das subcategorias",
+      "diagnostico": "A criação prioriza a categoria e permite trocar o usuário. CategoriaOsController propaga o responsável às subcategorias; isso não equivale a responsáveis independentes.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/OrdemServicoController.php",
+          "busca": "$responsavel =",
+          "base": "dev",
+          "linha": 187,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/OrdemServicoController.php#L187"
+        },
+        {
+          "arquivo": "src/Controller/CategoriaOsController.php",
+          "busca": "setResponsavelPadrao",
+          "base": "dev",
+          "linha": 224,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/CategoriaOsController.php#L224"
+        },
+        {
+          "arquivo": "src/Controller/SubcategoriaOsController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/SubcategoriaOsController.php#L1"
+        },
+        {
+          "arquivo": "templates/ordem_servico/modal.html.twig",
+          "busca": "os-hint-responsavel",
+          "base": "dev",
+          "linha": 135,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/ordem_servico/modal.html.twig#L135"
+        }
+      ],
+      "passos": [
+        "Fechar a ordem de precedência entre solicitante, subcategoria, categoria e configuração geral; mostrar essa regra na dica do formulário.",
+        "Se houver independência da subcategoria, aproveitar responsavelPadrao e impedir que a atualização da categoria sobrescreva um valor específico sem a regra acordada.",
+        "Validar responsáveis ativos e pertencimento permitido; preservar a escolha explícita ao alternar categoria e abrir a edição."
+      ],
+      "dados": "Campos já existem. Não atualizar todas as OS antigas ao mudar o padrão de uma categoria.",
+      "aceite": [
+        "Criar e editar mostram o responsável da regra aprovada e preservam a escolha explícita.",
+        "Alterar categoria não substitui responsáveis de OS existentes.",
+        "Subcategoria com e sem responsável específico obedece à precedência acordada."
+      ],
+      "decisoes": [
+        "Precedência válida e se a subcategoria tem responsável independente ou herda da categoria."
+      ],
+      "dep": [],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "WI-10:3",
+          "id": "WI-10",
+          "parte": 3,
+          "texto": "Confirmar a regra do responsável inicial solicitada pelo cliente.",
+          "situacao": "Definir",
+          "entregaAtual": null
+        },
+        {
+          "chave": "WI-12:2",
+          "id": "WI-12",
+          "parte": 2,
+          "texto": "Definir se a subcategoria terá responsável próprio; hoje herda da categoria.",
+          "situacao": "Definir",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "OS01.1",
+          "pedido": "Preencher o responsável com o próprio solicitante, como escrito no documento.",
+          "situacao": "**Definir** — a regra implementada sugere o responsável da categoria e permite trocá-lo. Confirmar qual regra deve prevalecer."
+        },
+        {
+          "id": "OS06.1",
+          "pedido": "Ter responsáveis independentes na categoria e na subcategoria, se essa for a intenção do pedido.",
+          "situacao": "**Definir** — a subcategoria herda o responsável da categoria na implementação atual."
+        }
+      ]
+    },
+    {
+      "id": "E3-03",
+      "entrega": 3,
+      "titulo": "Ordenação inicial e resumo de responsáveis",
+      "diagnostico": "A DataTable inicia ordenada pela primeira coluna; o pedido pede Criado em decrescente. Os responsáveis estão nas categorias, mas não há o resumo por categoria em Configurações.",
+      "arquivos": [
+        {
+          "arquivo": "templates/ordem_servico/index.html.twig",
+          "busca": "order: [[0, 'asc']]",
+          "base": "dev",
+          "linha": 788,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/ordem_servico/index.html.twig#L788"
+        },
+        {
+          "arquivo": "src/Controller/ConfiguracoesController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/ConfiguracoesController.php#L1"
+        },
+        {
+          "arquivo": "templates/configuracoes/index.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/configuracoes/index.html.twig#L1"
+        },
+        {
+          "arquivo": "src/Controller/CategoriaOsController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/CategoriaOsController.php#L1"
+        }
+      ],
+      "passos": [
+        "Definir a ordem inicial pela coluna Criado em em valor temporal e um desempate estável por ID; recalcular a numeração visual depois da ordenação.",
+        "Conferir o efeito do estado de tabela salvo para não preservar uma ordem antiga involuntariamente.",
+        "Apresentar em Configurações a relação de categorias e responsáveis reutilizando a mesma fonte, sem gravar uma segunda configuração concorrente."
+      ],
+      "dados": "Sem migração prevista. Resumo somente para o perfil com as permissões necessárias; alterações continuam na fonte única.",
+      "aceite": [
+        "Abertura limpa apresenta OS mais recente primeiro, inclusive entre meses/anos diferentes.",
+        "Ocultar colunas e voltar não quebra a ordenação nem a sequência visual.",
+        "Resumo de responsáveis reflete a mesma regra das categorias/subcategorias."
+      ],
+      "decisoes": [],
+      "dep": [
+        "E3-02"
+      ],
+      "status": "Planejado",
+      "referenciasQuadro": [
+        {
+          "chave": "VS-10:2",
+          "id": "VS-10",
+          "parte": 2,
+          "texto": "Validar persistência dos seguidores e definir os relatórios gerenciais restantes.",
+          "situacao": "Validar",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "OS07",
+          "pedido": "Abrir a listagem ordenada pela data de criação, da mais recente para a mais antiga.",
+          "situacao": "**Pendente** — a ordenação inicial não está configurada para Criado em decrescente."
+        },
+        {
+          "id": "CA07.1",
+          "pedido": "Apresentar os responsáveis de todas as categorias juntos na tela Configurações, um abaixo do outro.",
+          "situacao": "**Pendente** — o cadastro está nas categorias; a tela Configurações mantém apenas o responsável geral da OS."
+        }
+      ]
+    },
+    {
+      "id": "E3-04",
+      "entrega": 3,
+      "titulo": "Orçamentos, anexos e cache do JavaScript",
+      "diagnostico": "O orçamento já foi integrado à criação da OS. O dashboard.js é incluído sem versão explícita na URL, e há registro de pendência de cache no acompanhamento da dev.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/OrcamentoController.php",
+          "busca": "public function create",
+          "base": "dev",
+          "linha": 72,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/OrcamentoController.php#L72"
+        },
+        {
+          "arquivo": "src/Utils/File.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Utils/File.php#L1"
+        },
+        {
+          "arquivo": "templates/orcamento/orcamento.js",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/orcamento/orcamento.js#L1"
+        },
+        {
+          "arquivo": "templates/dashboard/index.html.twig",
+          "busca": "asset('templates/dashboard/dashboard.js')",
+          "base": "dev",
+          "linha": 183,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/dashboard/index.html.twig#L183"
+        },
+        {
+          "arquivo": "templates/dashboard/dashboard.js",
+          "busca": "confetti",
+          "base": "dev",
+          "linha": 445,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/dashboard/dashboard.js#L445"
+        }
+      ],
+      "passos": [
+        "Fechar a lista real de formatos e testar anexos múltiplos, prazo vazio e fornecedor criado no modal da OS. Rejeitar arquivos inválidos com mensagem, sem deixar orçamento parcial.",
+        "Aplicar uma estratégia de versão dos scripts próprios afetados pelo release, compatível com asset/Twig existente; não modificar assets/libs.",
+        "Testar cache aquecido para comprovar que a regra de aniversário nova chega ao navegador sem limpeza manual."
+      ],
+      "dados": "Sem migração prevista. Validar arquivos de teste; preservar anexos existentes e não enviar e-mails reais durante homologação.",
+      "aceite": [
+        "OS nova salva orçamento e anexos válidos e não cria registros incompletos após erro.",
+        "O usuário aniversariante recebe o recado; outro usuário só vê a lista.",
+        "Navegador que abriu a versão anterior carrega o script novo após o deploy."
+      ],
+      "decisoes": [
+        "Lista final de formatos aceitos; visualizadores adicionais permanecem fora do escopo ordinário."
+      ],
+      "dep": [],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [],
+      "referenciasDetalhadas": [
+        {
+          "id": "OS03.1",
+          "pedido": "Garantir aceitação de qualquer formato de documento, sem uma lista definida.",
+          "situacao": "**Definir** — existe lista de formatos suportados; confirmar os arquivos efetivamente necessários."
+        }
+      ]
+    },
+    {
+      "id": "E3-99",
+      "entrega": 3,
+      "titulo": "Homologação e preparação de publicação da entrega 3",
+      "diagnostico": "A v1.3.0-beta está em homologação; não deve ser declarada em produção por existir na dev.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/HistoricoOsController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/HistoricoOsController.php#L1"
+        },
+        {
+          "arquivo": "src/Controller/OrdemServicoController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/OrdemServicoController.php#L1"
+        },
+        {
+          "arquivo": ".github/workflows/deploy-teste.yml",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/.github/workflows/deploy-teste.yml#L1"
+        },
+        {
+          "arquivo": ".github/workflows/deploy-prod.yml",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/.github/workflows/deploy-prod.yml#L1"
+        }
+      ],
+      "passos": [
+        "Validar a matriz de estágios, datas previstas, reabertura, exclusão lógica, histórico e edição de cada campo por estágio.",
+        "Confirmar /login e /js/routing, preferência de colunas e cenários de permissão.",
+        "Preparar notas e evidências da versão cumulativa. O plano de publicação deve respeitar a restrição atual de não escrever no banco de produção; o workflow de produção executa migrations e não pode ser acionado sob essa restrição."
+      ],
+      "dados": "Escrita somente no teste. Publicação do sistema não é executada nesta fase de planejamento.",
+      "aceite": [
+        "Cada correção tem evidência no teste e histórico coerente.",
+        "Plano de versão preserva as correções 1 e 2 e identifica os passos de banco/publicação que exigem outra etapa operacional."
+      ],
+      "decisoes": [],
+      "dep": [
+        "E3-01",
+        "E3-02",
+        "E3-03",
+        "E3-04",
+        "E2-99"
+      ],
+      "status": "Planejado",
+      "referenciasQuadro": [
+        {
+          "chave": "VS-01:3",
+          "id": "VS-01",
+          "parte": 3,
+          "texto": "Ordens de serviço e aniversariantes.",
+          "situacao": "Homologação",
+          "entregaAtual": 3
+        },
+        {
+          "chave": "VS-02:1",
+          "id": "VS-02",
+          "parte": 1,
+          "texto": "Demais usuários continuam vendo os aniversariantes na lista do mês.",
+          "situacao": "Homologação",
+          "entregaAtual": 3
+        },
+        {
+          "chave": "VS-10:1",
+          "id": "VS-10",
+          "parte": 1,
+          "texto": "Responsável, orçamento na criação, anexos, filtros, estágios e histórico.",
+          "situacao": "Homologação",
+          "entregaAtual": 3
+        },
+        {
+          "chave": "WI-10:1",
+          "id": "WI-10",
+          "parte": 1,
+          "texto": "Responsável sugerido pela categoria e possibilidade de troca antes de salvar.",
+          "situacao": "Homologação",
+          "entregaAtual": 3
+        },
+        {
+          "chave": "WI-11:1",
+          "id": "WI-11",
+          "parte": 1,
+          "texto": "Orçamento com anexo já na criação e lista ampliada de formatos suportados.",
+          "situacao": "Homologação",
+          "entregaAtual": 3
+        },
+        {
+          "chave": "WI-12:1",
+          "id": "WI-12",
+          "parte": 1,
+          "texto": "Filtro Aberto por e responsável por categoria.",
+          "situacao": "Homologação",
+          "entregaAtual": 3
+        }
+      ],
+      "referenciasDetalhadas": []
+    },
+    {
+      "id": "E4-01",
+      "entrega": 4,
+      "titulo": "Reconstruir a integração da PR sobre a dev atual",
+      "diagnostico": "PR 9 está aberta, base ordem-servico, com conflitos. Comparada à dev, sua árvore remove migrations e correções de compras, planos e relatórios. Os incrementos próprios do cronograma são principalmente 9dab4c5 e 13f5075.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/CronogramaController.php",
+          "busca": "public function importar",
+          "base": "pr4",
+          "linha": 128,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/src/Controller/CronogramaController.php#L128"
+        },
+        {
+          "arquivo": "templates/cronograma/cronograma.js",
+          "busca": "",
+          "base": "pr4",
+          "linha": 1,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/templates/cronograma/cronograma.js#L1"
+        },
+        {
+          "arquivo": "migrations/Version20261011120000.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/migrations/Version20261011120000.php#L1"
+        },
+        {
+          "arquivo": "migrations/Version20260908230000.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/migrations/Version20260908230000.php#L1"
+        }
+      ],
+      "passos": [
+        "Usar um checkout limpo em branch codex/ baseada na dev atual, preservando as alterações locais de Cronograma do usuário. Nenhum reset ou sobrescrita do diretório atual.",
+        "Reaplicar o incremento específico de cronogramas dos commits 9dab4c5 e 13f5075, resolvendo conflito por intenção. Não levar o pacote inteiro de commits antigos de cadastros/disciplinas/OS.",
+        "Comparar a árvore final com dev e conferir explicitamente que migrations, visualizador de anexos, compras e hotfix v1.2.1 continuam presentes.",
+        "Atualizar a base/diff da PR quando a implementação for executada; recalcular a divergência nessa data."
+      ],
+      "dados": "Nenhuma migração será removida por faltar na branch antiga. Nenhum merge, cherry-pick ou push no SIGLES foi executado no planejamento.",
+      "aceite": [
+        "Diff final contém o incremento de cronogramas e ajustes deliberados, sem reversão dos hotfixes existentes.",
+        "PR deixa de depender de branch antiga e pode ser integrada sem apagar correções de outras entregas."
+      ],
+      "decisoes": [],
+      "dep": [
+        "E3-99"
+      ],
+      "status": "Planejado",
+      "referenciasQuadro": [],
+      "referenciasDetalhadas": []
+    },
+    {
+      "id": "E4-02",
+      "entrega": 4,
+      "titulo": "Criação unificada, cópia e datas brasileiras",
+      "diagnostico": "A PR reúne criação vazia, cópia e CSV em Novo cronograma e introduz parseDataCronograma. Há alterações locais no mesmo conjunto de arquivos que precisam ser conciliadas na implementação.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/CronogramaController.php",
+          "busca": "public function create",
+          "base": "pr4",
+          "linha": 656,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/src/Controller/CronogramaController.php#L656"
+        },
+        {
+          "arquivo": "src/Controller/CronogramaController.php",
+          "busca": "private function parseDataCronograma",
+          "base": "pr4",
+          "linha": 940,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/src/Controller/CronogramaController.php#L940"
+        },
+        {
+          "arquivo": "templates/cronograma/modal.html.twig",
+          "busca": "",
+          "base": "pr4",
+          "linha": 1,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/templates/cronograma/modal.html.twig#L1"
+        },
+        {
+          "arquivo": "templates/disciplina_turma/modal_editar.html.twig",
+          "busca": "",
+          "base": "pr4",
+          "linha": 1,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/templates/disciplina_turma/modal_editar.html.twig#L1"
+        }
+      ],
+      "passos": [
+        "Revisar o contrato de origem (vazio/cópia/CSV), ano, semestre, tipo e início/fim entre modal, JavaScript e controller.",
+        "Validar datas com formato e round-trip para rejeitar datas inexistentes, fim anterior ao início e campos ausentes.",
+        "Conferir a cópia por graduação, pós ou ambas e preservar edição de datas por turma depois da cópia.",
+        "Conciliar as alterações locais do usuário sem substituir silenciosamente a versão trabalhada."
+      ],
+      "dados": "Reutilizar entidades de disciplina_semestre e turma. Validar antes de persistir e usar transação no conjunto copiado quando houver risco de criação parcial.",
+      "aceite": [
+        "Criar vazio e copiar os três recortes gera somente o semestre alvo escolhido.",
+        "31/02 é rejeitado; datas válidas aparecem DD/MM/AAAA e persistem após reabrir.",
+        "Erro de uma turma não deixa um cronograma parcial sem tratamento."
+      ],
+      "decisoes": [],
+      "dep": [
+        "E4-01"
+      ],
+      "status": "Planejado",
+      "referenciasQuadro": [],
+      "referenciasDetalhadas": []
+    },
+    {
+      "id": "E4-03",
+      "entrega": 4,
+      "titulo": "Fechar a exportação de todos os cursos",
+      "diagnostico": "O JavaScript da PR prepara cursos_disciplina, mas a consulta retorna o curso ligado à turma. A apresentação da exportação ainda não tem os dados prometidos.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/CronogramaController.php",
+          "busca": "public function get(",
+          "base": "pr4",
+          "linha": 424,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/src/Controller/CronogramaController.php#L424"
+        },
+        {
+          "arquivo": "templates/cronograma/cronograma.js",
+          "busca": "cursos_disciplina",
+          "base": "pr4",
+          "linha": 671,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/templates/cronograma/cronograma.js#L671"
+        },
+        {
+          "arquivo": "src/Entity/DisciplinaCurso.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/DisciplinaCurso.php#L1"
+        }
+      ],
+      "passos": [
+        "Obter todos os cursos ativos vinculados à disciplina numa consulta agregada ou num lote separado por IDs de disciplina, evitando uma consulta por linha.",
+        "Retornar cursos_disciplina com formato estável para a grade/exportação. Não usar apenas o vínculo de curso da turma como se fosse a lista completa da disciplina.",
+        "Manter filtros e linhas originais sem multiplicação por cursos; ordenar e eliminar nomes duplicados na apresentação."
+      ],
+      "dados": "Sem nova tabela. Consultas parametrizadas e tratamento de disciplina sem curso.",
+      "aceite": [
+        "Disciplina oferecida a três cursos exporta os três, mesmo que a turma tenha um vínculo específico.",
+        "A quantidade de linhas e os totais de carga não triplicam por causa dos cursos.",
+        "Sem curso, a exportação mantém uma célula vazia/indicador acordado."
+      ],
+      "decisoes": [],
+      "dep": [
+        "E4-01"
+      ],
+      "status": "Planejado",
+      "referenciasQuadro": [
+        {
+          "chave": "WI-13:2",
+          "id": "WI-13",
+          "parte": 2,
+          "texto": "Exportar todos os cursos da disciplina: o servidor ainda retorna só o curso da turma.",
+          "situacao": "Pendente",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "CR01",
+          "pedido": "Mostrar todos os cursos vinculados à disciplina no arquivo exportado.",
+          "situacao": "**Pendente** — o PR prepara a exibição de todos os cursos, mas a resposta do servidor ainda retorna apenas o curso ligado à turma."
+        }
+      ]
+    },
+    {
+      "id": "E4-04",
+      "entrega": 4,
+      "titulo": "Aplicar filtros de salas e docentes de ponta a ponta",
+      "diagnostico": "A PR envia sala_aula, mas SalaController::list continua filtrando apenas active. O filtro de docente precisa considerar o cadastro docente e o usuário associado.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/SalaController.php",
+          "busca": "public function list",
+          "base": "pr4",
+          "linha": 37,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/src/Controller/SalaController.php#L37"
+        },
+        {
+          "arquivo": "src/Controller/DisciplinaController.php",
+          "busca": "public function listarDocentes",
+          "base": "dev",
+          "linha": 74,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/DisciplinaController.php#L74"
+        },
+        {
+          "arquivo": "src/Controller/DocenteController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/DocenteController.php#L1"
+        },
+        {
+          "arquivo": "templates/cronograma/cronograma.js",
+          "busca": "sala_aula",
+          "base": "pr4",
+          "linha": 188,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/templates/cronograma/cronograma.js#L188"
+        }
+      ],
+      "passos": [
+        "Definir a elegibilidade acordada e aplicar sala_aula no endpoint quando solicitado, mantendo o comportamento das outras telas que não enviam esse filtro.",
+        "Ocultar docentes/usuários inativos nas seleções novas; permitir que registros antigos mantenham sua referência histórica legível durante a edição.",
+        "Confirmar a presença do perfil Docente Sênior sem ampliar permissões nem usar uma constante de perfil não conferida."
+      ],
+      "dados": "Campo sala_aula já existe; o saneamento de seus valores está em E4-06. Sem exclusão de referências históricas.",
+      "aceite": [
+        "Sala ativa inelegível não aparece no seletor filtrado, mas a listagem geral de Salas continua íntegra.",
+        "Docente inativo não pode ser escolhido para uma nova turma; uma turma antiga continua consultável.",
+        "O docente sênior do cenário relatado aparece quando está elegível."
+      ],
+      "decisoes": [
+        "Confirmar se a condição solicitada é sala_aula, reserva permitida ou ambas; são regras potencialmente diferentes."
+      ],
+      "dep": [
+        "E4-01",
+        "E4-06"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "WI-04:1",
+          "id": "WI-04",
+          "parte": 1,
+          "texto": "Conferir o cadastro e os filtros com o docente do caso original.",
+          "situacao": "Validar",
+          "entregaAtual": null
+        },
+        {
+          "chave": "WI-13:3",
+          "id": "WI-13",
+          "parte": 3,
+          "texto": "Aplicar no servidor o filtro das salas elegíveis.",
+          "situacao": "Pendente",
+          "entregaAtual": null
+        },
+        {
+          "chave": "WI-13:4",
+          "id": "WI-13",
+          "parte": 4,
+          "texto": "Confirmar a seleção de docentes inativos no caso relatado.",
+          "situacao": "Validar",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "ER06",
+          "pedido": "Mostrar Docente Sênior na seleção de docentes do cronograma.",
+          "situacao": "**Validar** — a consulta já inclui esse perfil, confirmado no banco de teste; falta reproduzir a ausência relatada."
+        },
+        {
+          "id": "CR02",
+          "pedido": "Ocultar docentes inativos ao incluir outro docente na turma.",
+          "situacao": "**Validar** — já há filtro de docente ativo, mas não foi identificada correção nova; verificar também usuários inativos que tenham registro de docente ativo."
+        },
+        {
+          "id": "CR03",
+          "pedido": "Mostrar apenas salas elegíveis para reserva no cadastro e no filtro do cronograma.",
+          "situacao": "**Pendente** — o PR envia a intenção de filtrar salas de aula, mas o servidor continua filtrando somente por ativo/inativo."
+        }
+      ]
+    },
+    {
+      "id": "E4-05",
+      "entrega": 4,
+      "titulo": "Aceite da importação CSV da PR",
+      "diagnostico": "O importador usa colunas fixas, delimitador ponto e vírgula e valida getClientMimeType como text/csv. O arquivo original do cliente ainda precisa de aceite.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/CronogramaController.php",
+          "busca": "public function baixarModelo",
+          "base": "pr4",
+          "linha": 44,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/src/Controller/CronogramaController.php#L44"
+        },
+        {
+          "arquivo": "src/Controller/CronogramaController.php",
+          "busca": "getClientMimeType()",
+          "base": "pr4",
+          "linha": 142,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/src/Controller/CronogramaController.php#L142"
+        },
+        {
+          "arquivo": "templates/cronograma/modal.html.twig",
+          "busca": "",
+          "base": "pr4",
+          "linha": 1,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/templates/cronograma/modal.html.twig#L1"
+        }
+      ],
+      "passos": [
+        "Usar o modelo baixado da própria tela e o arquivo original do cliente no teste, registrando cabeçalhos, codificação, colunas, datas e separador esperados.",
+        "Validar o arquivo no servidor sem confiar exclusivamente no MIME informado pelo navegador; retornar erro legível para arquivo inválido.",
+        "Testar arquivo vazio, coluna ausente, data inválida, docente/disciplina não encontrada e repetição do mesmo arquivo; conferir transação e prevenção da duplicação prevista no fluxo.",
+        "O tratamento ampliado por linha, XLSX e recorte Ambas em CSV que ainda não existem ficam em E7-02."
+      ],
+      "dados": "Escrita somente no semestre e na massa de teste. Arquivo real deve ser tratado no ambiente autorizado, sem publicá-lo no Pages.",
+      "aceite": [
+        "Modelo baixado importa; arquivo original tem resultado e erros identificados.",
+        "Uma falha não derruba a página nem gera linhas órfãs.",
+        "Reimportação não duplica silenciosamente as mesmas turmas."
+      ],
+      "decisoes": [
+        "Disponibilidade do arquivo original e política de atomicidade/reimportação."
+      ],
+      "dep": [
+        "E4-02"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "VS-13:2",
+          "id": "VS-13",
+          "parte": 2,
+          "texto": "Testar o arquivo original do cliente e o tratamento dos erros por linha.",
+          "situacao": "Validar",
+          "entregaAtual": null
+        },
+        {
+          "chave": "WI-01:2",
+          "id": "WI-01",
+          "parte": 2,
+          "texto": "O arquivo que originou o erro ainda precisa de teste de aceite.",
+          "situacao": "Validar",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "ER01.2",
+          "pedido": "Confirmar que o arquivo que originou o erro de importação do cliente é aceito e cria o cronograma corretamente.",
+          "situacao": "**Validar** — executar com o arquivo original; a importação continua exigindo CSV e um layout específico."
+        }
+      ]
+    },
+    {
+      "id": "E4-06",
+      "entrega": 4,
+      "titulo": "Conferir a migration de sala_aula e sua reversão",
+      "diagnostico": "Version20260911120000 marca salas usadas em turma OU reserva como sala de aula. Seu down limpa todos os flags 1, inclusive os que poderiam existir antes. Esse comportamento não deve ser aplicado ou revertido sem conferir a regra e o estado anterior.",
+      "arquivos": [
+        {
+          "arquivo": "migrations/Version20260911120000.php",
+          "busca": "public function up",
+          "base": "pr4",
+          "linha": 17,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/migrations/Version20260911120000.php#L17"
+        },
+        {
+          "arquivo": "src/Entity/Sala.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/Sala.php#L1"
+        },
+        {
+          "arquivo": "src/Repository/ReservaRepository.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Repository/ReservaRepository.php#L1"
+        }
+      ],
+      "passos": [
+        "Conferir no teste a migration executada e as salas afetadas, especialmente salas com reserva de reunião que não são salas de aula.",
+        "Fechar o critério de marcação. Se a migration já foi executada, criar uma correção nova, restrita e auditável; não editar o histórico para fingir outra execução.",
+        "Registrar valores anteriores e planejar restauração somente dos IDs afetados. Não executar o down amplo como rollback de rotina."
+      ],
+      "dados": "Migração de dados potencialmente necessária após o diagnóstico; nenhuma escrita em produção. Valores prévios precisam de snapshot para reversão seletiva.",
+      "aceite": [
+        "Sala usada apenas para reunião não é classificada como sala de aula por acidente, conforme a regra aprovada.",
+        "Uma segunda execução é idempotente.",
+        "A reversão de teste não apaga flags legítimos preexistentes."
+      ],
+      "decisoes": [
+        "Critério sala de aula versus sala reservável e estado real da migration no teste."
+      ],
+      "dep": [
+        "E4-01"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [],
+      "referenciasDetalhadas": []
+    },
+    {
+      "id": "E4-99",
+      "entrega": 4,
+      "titulo": "Revisão final e integração da entrega 4",
+      "diagnostico": "Implementação na PR não equivale a entrega homologada. A integração depende da preservação das entregas anteriores e do aceite dos fluxos de cronogramas.",
+      "arquivos": [
+        {
+          "arquivo": ".github/workflows/deploy-teste.yml",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/.github/workflows/deploy-teste.yml#L1"
+        },
+        {
+          "arquivo": "templates/cronograma/index.html.twig",
+          "busca": "",
+          "base": "pr4",
+          "linha": 1,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/templates/cronograma/index.html.twig#L1"
+        },
+        {
+          "arquivo": "src/Controller/CronogramaController.php",
+          "busca": "",
+          "base": "pr4",
+          "linha": 1,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/src/Controller/CronogramaController.php#L1"
+        }
+      ],
+      "passos": [
+        "Executar verificações PHP/Twig/rotas e os cenários de E4-02 a E4-06 no teste.",
+        "Repetir os casos essenciais de compras, login, relatórios e anexos das entregas 1 a 3.",
+        "Atualizar notas da PR, arquivos e riscos de migrations; integrar na dev apenas durante a futura execução.",
+        "Registrar a versão de homologação e atualizar os status com evidências, sem declarar publicação em produção."
+      ],
+      "dados": "Sem execução de deploy do SIGLES nesta etapa. A limitação de escrita em produção permanece.",
+      "aceite": [
+        "PR revisável e sem regressões das entregas anteriores.",
+        "Fluxos vazio/cópia/CSV, exportação e seleções têm aceite registrado."
+      ],
+      "decisoes": [],
+      "dep": [
+        "E4-02",
+        "E4-03",
+        "E4-04",
+        "E4-05",
+        "E4-06"
+      ],
+      "status": "Planejado",
+      "referenciasQuadro": [
+        {
+          "chave": "VS-01:4",
+          "id": "VS-01",
+          "parte": 4,
+          "texto": "Evolução de cronogramas.",
+          "situacao": "Na PR",
+          "entregaAtual": 4
+        },
+        {
+          "chave": "VS-13:1",
+          "id": "VS-13",
+          "parte": 1,
+          "texto": "Fluxo unificado de Novo cronograma e arquivo modelo CSV.",
+          "situacao": "Na PR",
+          "entregaAtual": 4
+        },
+        {
+          "chave": "VS-15:1",
+          "id": "VS-15",
+          "parte": 1,
+          "texto": "Implementado no PR 9; depende de integração e homologação.",
+          "situacao": "Na PR",
+          "entregaAtual": 4
+        },
+        {
+          "chave": "WI-01:1",
+          "id": "WI-01",
+          "parte": 1,
+          "texto": "Criação com ano/semestre e modelo de importação.",
+          "situacao": "Na PR",
+          "entregaAtual": 4
+        },
+        {
+          "chave": "WI-13:1",
+          "id": "WI-13",
+          "parte": 1,
+          "texto": "Copiar entre semestres, com início/fim e seleção Graduação, Pós-graduação ou Ambas.",
+          "situacao": "Na PR",
+          "entregaAtual": 4
+        },
+        {
+          "chave": "WI-22:1",
+          "id": "WI-22",
+          "parte": 1,
+          "texto": "Criação e importação do cronograma implementadas no PR 9.",
+          "situacao": "Na PR",
+          "entregaAtual": 4
+        }
+      ],
+      "referenciasDetalhadas": []
+    },
+    {
+      "id": "E5-01",
+      "entrega": 5,
+      "titulo": "Dashboard: atalhos, imagem e abrangência das informações",
+      "diagnostico": "Dashboard é composto por Twig e consultas AJAX. Há rotas de avisos com perfis e limites próprios; a abrangência precisa ser coerente com E1-04 e com o departamento do usuário.",
+      "arquivos": [
+        {
+          "arquivo": "templates/dashboard/index.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/dashboard/index.html.twig#L1"
+        },
+        {
+          "arquivo": "templates/dashboard/dashboard.js",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/dashboard/dashboard.js#L1"
+        },
+        {
+          "arquivo": "src/Controller/UsuarioController.php",
+          "busca": "public function contrato_ferias",
+          "base": "dev",
+          "linha": 1093,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/UsuarioController.php#L1093"
+        },
+        {
+          "arquivo": "src/Controller/OrdemServicoController.php",
+          "busca": "public function list",
+          "base": "dev",
+          "linha": 49,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/OrdemServicoController.php#L49"
+        }
+      ],
+      "passos": [
+        "Confirmar URLs institucionais e aplicar os três atalhos usando o layout existente, com nomes claros e destino correto.",
+        "Fechar se a imagem é conteúdo ou fundo e ajustar apenas CSS/Twig do bloco afetado.",
+        "Confirmar a abrangência departamental de todas as OS e dos avisos; ajustar consultas parametrizadas e visibilidade por perfil, sem liberar dados de outros departamentos por acidente.",
+        "Reutilizar a regra de antecedência fechada em E1-04, sem reconstruí-la."
+      ],
+      "dados": "Sem migração esperada. A leitura de avisos deve aceitar datas ausentes e resultados vazios.",
+      "aceite": [
+        "Links abrem os destinos fornecidos; a imagem não prejudica a leitura em tela estreita.",
+        "Administrador e usuário comum recebem apenas a visão aprovada; perfis de colaboradores corretos aparecem nos avisos.",
+        "O prazo por perfil corresponde ao validado no fechamento da entrega 1."
+      ],
+      "decisoes": [
+        "Destinos oficiais, uso da imagem e significado de todas as OS."
+      ],
+      "dep": [
+        "E4-99",
+        "E1-04"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "WI-05:3",
+          "id": "WI-05",
+          "parte": 3,
+          "texto": "Acrescentar atalhos diretos para LES, MarteWeb e Júpiter Web.",
+          "situacao": "Pendente",
+          "entregaAtual": null
+        },
+        {
+          "chave": "WI-05:4",
+          "id": "WI-05",
+          "parte": 4,
+          "texto": "Confirmar se a imagem deve ser plano de fundo ou imagem na página.",
+          "situacao": "Definir",
+          "entregaAtual": null
+        },
+        {
+          "chave": "WI-06:2",
+          "id": "WI-06",
+          "parte": 2,
+          "texto": "Confirmar se a visão ampliada deve abranger todos os departamentos; hoje é departamental.",
+          "situacao": "Definir",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "DB03.1",
+          "pedido": "Confirmar se “todas as OS” significa todos os departamentos ou somente o departamento e seus descendentes.",
+          "situacao": "**Definir** — a visão ampliada implementada é departamental."
+        },
+        {
+          "id": "DB07.1",
+          "pedido": "Confirmar que todos os perfis pretendidos como bolsistas/colaboradores entram nessa lista.",
+          "situacao": "**Validar** — a consulta usa perfis específicos; verificar os perfis efetivos em produção."
+        },
+        {
+          "id": "DB08.1",
+          "pedido": "Link direto para o site do LES.",
+          "situacao": "**Pendente** — não identificado no conjunto de atalhos do Dashboard."
+        },
+        {
+          "id": "DB08.2",
+          "pedido": "Link direto para MarteWeb.",
+          "situacao": "**Pendente** — há link para USP Digital, mas não o atalho específico solicitado."
+        },
+        {
+          "id": "DB08.3",
+          "pedido": "Link direto para Júpiter Web.",
+          "situacao": "**Pendente** — há link para USP Digital, mas não o atalho específico solicitado."
+        },
+        {
+          "id": "DB09.1",
+          "pedido": "Aplicar a imagem como plano de fundo, se essa for a intenção literal do pedido.",
+          "situacao": "**Definir** — o código apresenta a imagem na página, não como fundo da página inteira."
+        }
+      ]
+    },
+    {
+      "id": "E5-02",
+      "entrega": 5,
+      "titulo": "Contatos, férias e dados complementares de usuários",
+      "diagnostico": "Os pedidos de evolução são genéricos. Contatos e férias já existem; ordenar usuários e configurar os 45 dias pertencem ao fechamento da entrega 1.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/UsuarioController.php",
+          "busca": "public function contatos",
+          "base": "dev",
+          "linha": 957,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/UsuarioController.php#L957"
+        },
+        {
+          "arquivo": "src/Entity/Usuario.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/Usuario.php#L1"
+        },
+        {
+          "arquivo": "templates/usuario/modal.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/usuario/modal.html.twig#L1"
+        },
+        {
+          "arquivo": "templates/dashboard/dashboard.js",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/dashboard/dashboard.js#L1"
+        }
+      ],
+      "passos": [
+        "Registrar uma lista fechada de campos, consulta e exportação solicitados, distinguindo dado existente de campo novo.",
+        "Reutilizar os campos atuais e ajustar validação, grupos de serialização e modal conforme a lista definida. Campo realmente novo só entra com migration aditiva após esse fechamento.",
+        "Revisar os avisos de férias para considerar início/fim e evitar apresentar períodos antigos como futuros.",
+        "Não repetir as correções e o aceite de E1-01/E1-04."
+      ],
+      "dados": "Esquema somente se a lista aprovada exigir campo ausente; preferir nullable para registros antigos, com validação da tela no caso aplicável.",
+      "aceite": [
+        "Campos aprovados salvam e voltam no cadastro/consulta/exportação correspondentes.",
+        "Férias antigas, futuras, em andamento e sem datas são apresentadas corretamente.",
+        "A sessão sem perfil e dados opcionais não derrubam as consultas."
+      ],
+      "decisoes": [
+        "Lista objetiva dos campos e saídas; regra temporal do aviso de férias."
+      ],
+      "dep": [
+        "E1-99",
+        "E5-01"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "VS-03:2",
+          "id": "VS-03",
+          "parte": 2,
+          "texto": "Detalhar campos, busca e exportações desejados.",
+          "situacao": "Definir",
+          "entregaAtual": null
+        },
+        {
+          "chave": "VS-04:2",
+          "id": "VS-04",
+          "parte": 2,
+          "texto": "Definir outras mudanças além do cadastro e dos avisos existentes.",
+          "situacao": "Definir",
+          "entregaAtual": null
+        },
+        {
+          "chave": "VS-05:1",
+          "id": "VS-05",
+          "parte": 1,
+          "texto": "Especificar o que falta nas informações de usuários e colaboradores.",
+          "situacao": "Definir",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": []
+    },
+    {
+      "id": "E5-03",
+      "entrega": 5,
+      "titulo": "Menu, nome da sala e campos por tipo de reserva",
+      "diagnostico": "O menu está em admin.html.twig; o nome da sala e os campos de discente são exibidos por fluxos específicos de reserva/agenda. Alterar só um rótulo não corrige necessariamente os dois caminhos.",
+      "arquivos": [
+        {
+          "arquivo": "templates/admin.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/admin.html.twig#L1"
+        },
+        {
+          "arquivo": "src/Controller/ReservaController.php",
+          "busca": "private function labelSala",
+          "base": "dev",
+          "linha": 895,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/ReservaController.php#L895"
+        },
+        {
+          "arquivo": "templates/agenda/modal.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/agenda/modal.html.twig#L1"
+        },
+        {
+          "arquivo": "templates/agenda/agenda.js",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/agenda/agenda.js#L1"
+        },
+        {
+          "arquivo": "src/Entity/Reserva.php",
+          "busca": "getDiscente",
+          "base": "dev",
+          "linha": 210,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/Reserva.php#L210"
+        }
+      ],
+      "passos": [
+        "Mover a entrada Períodos para Compras preservando o mesmo código de permissão e URL.",
+        "Reutilizar o campo Nome da sala nas opções, disponibilidade e eventos; se estiver vazio em registro antigo, definir fallback legível.",
+        "Exibir nome/e-mail para todos os tipos e aplicar obrigatoriedade somente em Grupo de extensão tanto no JavaScript como no servidor.",
+        "Manter consultas de reservas antigas e não apagar dados ao mudar um tipo de reserva sem a regra aprovada."
+      ],
+      "dados": "Campos já existem; nenhuma migração prevista. Validar e-mail quando informado.",
+      "aceite": [
+        "Menu continua respeitando a sessão de permissões e o link anterior funciona.",
+        "Sala com e sem nome é identificável e a seleção mantém o ID correto.",
+        "Reunião salva sem discente/e-mail; Grupo de extensão sem os dados é recusado no servidor."
+      ],
+      "decisoes": [
+        "Fallback do nome abreviado para salas antigas sem Nome."
+      ],
+      "dep": [
+        "E4-99"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "WI-17:2",
+          "id": "WI-17",
+          "parte": 2,
+          "texto": "Usar o nome abreviado na apresentação da sala na agenda.",
+          "situacao": "Pendente",
+          "entregaAtual": null
+        },
+        {
+          "chave": "WI-19:1",
+          "id": "WI-19",
+          "parte": 1,
+          "texto": "Exibir os campos em todos os tipos e exigir preenchimento somente em Grupo de extensão.",
+          "situacao": "Pendente",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "CA04",
+          "pedido": "Mover Períodos para dentro do menu Compras.",
+          "situacao": "**Pendente** — permanece em Cadastros."
+        },
+        {
+          "id": "CA06",
+          "pedido": "Na agenda, identificar a sala somente pelo nome abreviado.",
+          "situacao": "**Pendente** — a agenda e a disponibilidade ainda usam a descrição da sala."
+        },
+        {
+          "id": "AG06",
+          "pedido": "Exibir nome e e-mail do discente/solicitante em todos os tipos de reserva.",
+          "situacao": "**Pendente** — os campos ficam ocultos fora de Reunião e Grupo de extensão."
+        },
+        {
+          "id": "AG06.1",
+          "pedido": "Exigir nome e e-mail somente no tipo Grupo de extensão.",
+          "situacao": "**Pendente** — a regra atual também exige esses campos no tipo Reunião."
+        }
+      ]
+    },
+    {
+      "id": "E5-04",
+      "entrega": 5,
+      "titulo": "Matriz de acesso dos perfis existentes",
+      "diagnostico": "A ACL usa PerfilModulo e valores na sessão, não voters. O bug de ROLE_ROOT em GAM é conhecido e não faz parte de uma correção automática nesta revisão.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/PerfilModuloController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/PerfilModuloController.php#L1"
+        },
+        {
+          "arquivo": "src/Controller/BaseController.php",
+          "busca": "verificarPermissoes",
+          "base": "dev",
+          "linha": 31,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/BaseController.php#L31"
+        },
+        {
+          "arquivo": "src/Controller/LoginController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/LoginController.php#L1"
+        },
+        {
+          "arquivo": "src/Entity/PerfilModulo.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/PerfilModulo.php#L1"
+        },
+        {
+          "arquivo": "templates/perfil/index.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/perfil/index.html.twig#L1"
+        }
+      ],
+      "passos": [
+        "Montar uma matriz perfil×módulo×ação com exemplos do negócio antes de editar permissões.",
+        "Conferir listagem, GET individual, criação, alteração e exclusão; UI oculta não substitui a validação da rota.",
+        "Ajustar apenas módulos e ações acordados, seguindo BaseController e a sessão atual. Pedir novo login na validação para carregar a nova matriz.",
+        "Preservar as exceções conhecidas fora do escopo; o acesso externo novo será tratado separadamente em E8-04."
+      ],
+      "dados": "Reutilizar Perfil/PerfilModulo/Modulo. Ajustes de configuração somente no teste; sem reestruturação global de ACL.",
+      "aceite": [
+        "Usuário autorizado executa a ação; outro perfil e acesso direto à rota são recusados.",
+        "Após novo login, os valores da sessão correspondem à matriz aprovada.",
+        "O comportamento conhecido de GAM/ROOT não é replicado em tela nova."
+      ],
+      "decisoes": [
+        "Matriz e responsáveis por aprovar as permissões."
+      ],
+      "dep": [
+        "E1-99"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "VS-06:1",
+          "id": "VS-06",
+          "parte": 1,
+          "texto": "Definir as mudanças pretendidas por perfil, módulo e ação.",
+          "situacao": "Definir",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "OR02",
+          "pedido": "Avaliar e evoluir perfis, permissões e regras de acesso.",
+          "situacao": "**Definir** — existem permissões por perfil; falta uma lista de mudanças além dos ajustes já entregues."
+        }
+      ]
+    },
+    {
+      "id": "E6-01",
+      "entrega": 6,
+      "titulo": "Cadastro e gravação de fornecedores",
+      "diagnostico": "Fornecedor não tem campo de descrição dos serviços. update grava os campos existentes e trata tags apenas quando a lista não está vazia; a falha relatada precisa ser isolada por payload e resposta.",
+      "arquivos": [
+        {
+          "arquivo": "src/Entity/Fornecedor.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/Fornecedor.php#L1"
+        },
+        {
+          "arquivo": "src/Controller/FornecedorController.php",
+          "busca": "public function update",
+          "base": "dev",
+          "linha": 161,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/FornecedorController.php#L161"
+        },
+        {
+          "arquivo": "templates/fornecedor/modal.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/fornecedor/modal.html.twig#L1"
+        },
+        {
+          "arquivo": "templates/fornecedor/fornecedor.js",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/fornecedor/fornecedor.js#L1"
+        }
+      ],
+      "passos": [
+        "Adicionar descrição de serviços em entidade, grupos, criação/alteração e DataTable, após definir tamanho e obrigatoriedade.",
+        "Usar migration aditiva nullable para preservar fornecedores antigos e incluir o campo nas exportações já existentes.",
+        "Reproduzir a edição que não grava, conferindo nomes de campo, validação e persistência; não assumir que todo o CRUD está quebrado.",
+        "Fechar a integração com compras: se for apenas selecionar fornecedor, reutilizar o vínculo aplicável; um processo novo deve ter regra definida antes de alterar o modelo."
+      ],
+      "dados": "Proposta de coluna nova descricao_servicos, a confirmar antes de gerar migration. Nenhuma migration criada nesta etapa.",
+      "aceite": [
+        "Fornecedor antigo continua abrindo; novo serviço salva, reabre e exporta.",
+        "Campo alterado do cenário original persiste ou apresenta erro específico.",
+        "Remoção de tags, se fizer parte do caso, distingue lista vazia de campo omitido."
+      ],
+      "decisoes": [
+        "Texto livre/tamanho/obrigatoriedade e qual documento da compra será vinculado ao fornecedor."
+      ],
+      "dep": [
+        "E5-04"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "V1-04:1",
+          "id": "V1-04",
+          "parte": 1,
+          "texto": "Adicionar o campo ao cadastro, à edição e à listagem de fornecedores.",
+          "situacao": "Pendente",
+          "entregaAtual": null
+        },
+        {
+          "chave": "V1-05:1",
+          "id": "V1-05",
+          "parte": 1,
+          "texto": "Reproduzir com os campos e dados que não eram gravados.",
+          "situacao": "Validar",
+          "entregaAtual": null
+        },
+        {
+          "chave": "VS-11:1",
+          "id": "VS-11",
+          "parte": 1,
+          "texto": "Definir a integração pretendida e tratar os pedidos V1-04 e V1-05.",
+          "situacao": "Definir",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "OR05",
+          "pedido": "Aprimorar fornecedores e a integração com compras.",
+          "situacao": "**Definir** — delimitar a evolução desejada; o cadastro existente e os ajustes pontuais da OS não demonstram atendimento integral desse tema."
+        }
+      ]
+    },
+    {
+      "id": "E6-02",
+      "entrega": 6,
+      "titulo": "Arquivamento e complementos do fluxo de compras",
+      "diagnostico": "A consulta de períodos encerrados já existe. Datas, ativação e transições do período estão no fechamento da entrega 1 e não serão desenvolvidas de novo aqui.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/PainelSolicitacoesController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/PainelSolicitacoesController.php#L1"
+        },
+        {
+          "arquivo": "src/Repository/PeriodoSolicitacoesRepository.php",
+          "busca": "listarPeriodosPainel",
+          "base": "dev",
+          "linha": 101,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Repository/PeriodoSolicitacoesRepository.php#L101"
+        },
+        {
+          "arquivo": "templates/painel_solicitacoes/index.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/painel_solicitacoes/index.html.twig#L1"
+        },
+        {
+          "arquivo": "templates/admin.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/admin.html.twig#L1"
+        }
+      ],
+      "passos": [
+        "Validar com o usuário se Mostrar períodos encerrados atende a Arquivados; se atender, registrar aceite sem criar outro estado de solicitação.",
+        "Se faltar uma aba de navegação, defini-la sobre a mesma consulta e aplicar os filtros de período/departamento existentes.",
+        "Fechar o conteúdo específico da aba Compras e da rotina administrativa antes de criar tela ou consulta nova.",
+        "Referenciar E1-02/E1-03/E1-05 para os pontos já fechados, mantendo histórico e bloqueios."
+      ],
+      "dados": "Nenhuma tabela de arquivo ou novo estágio será criado por mera mudança de nome de aba.",
+      "aceite": [
+        "Solicitações de período encerrado continuam consultáveis, sem permitir alterações indevidas.",
+        "Período vigente permanece padrão e não se mistura ao anterior.",
+        "Se a consulta atual atender, o pedido é encerrado por aceite, com evidência."
+      ],
+      "decisoes": [
+        "Equivalência da consulta atual e conteúdo da nova aba."
+      ],
+      "dep": [
+        "E1-99",
+        "E6-01"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "VS-09:2",
+          "id": "VS-09",
+          "parte": 2,
+          "texto": "Completar a data visível em todas as listagens e definir as demais melhorias da rotina administrativa.",
+          "situacao": "Pendente",
+          "entregaAtual": null
+        },
+        {
+          "chave": "WI-20:2",
+          "id": "WI-20",
+          "parte": 2,
+          "texto": "Confirmar se Mostrar períodos encerrados atende a Arquivados e o que seria a nova aba Compras.",
+          "situacao": "Definir",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "CO01.3",
+          "pedido": "Criar uma aba ou campo específico chamado Arquivados.",
+          "situacao": "**Definir** — a consulta implementada usa Mostrar períodos encerrados; confirmar se essa solução atende ao pedido."
+        },
+        {
+          "id": "CO06",
+          "pedido": "Criar a “aba Compras”, caso seja diferente do menu e do painel já existentes.",
+          "situacao": "**Definir** — indicar o conteúdo e o fluxo esperado dessa aba."
+        }
+      ]
+    },
+    {
+      "id": "E6-03",
+      "entrega": 6,
+      "titulo": "Relatórios e ajustes administrativos restantes de OS",
+      "diagnostico": "Seguidores, responsáveis, ordem inicial e resumo em Configurações estão no fechamento da entrega 3. O que resta aqui é a lista ainda aberta de relatórios/ajustes com Milton.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/OrdemServicoController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/OrdemServicoController.php#L1"
+        },
+        {
+          "arquivo": "src/Controller/HistoricoOsController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/HistoricoOsController.php#L1"
+        },
+        {
+          "arquivo": "src/Controller/OrcamentoController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/OrcamentoController.php#L1"
+        },
+        {
+          "arquivo": "templates/ordem_servico/index.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/ordem_servico/index.html.twig#L1"
+        }
+      ],
+      "passos": [
+        "Registrar campos, filtros, agrupamentos e quem consulta os relatórios solicitados, incluindo uma amostra de resultado esperado.",
+        "Reutilizar a listagem e DataTables quando a saída for o mesmo conjunto, sem duplicar contagem por seguidores, anexos ou orçamentos.",
+        "Aplicar a mesma restrição de departamentos e estágios da tela e parametrizar filtros no servidor.",
+        "Cruzar o aceite de E3-01 a E3-04 antes de remover qualquer pendência do quadro."
+      ],
+      "dados": "Nenhuma migração prevista até haver campo ausente identificado. Não criar um novo cadastro de OS.",
+      "aceite": [
+        "Relatório de amostra bate com as OS e com o histórico dos casos selecionados.",
+        "Uma OS com vários anexos e seguidores é contada uma vez.",
+        "Perfil sem acesso não obtém dados pela exportação direta."
+      ],
+      "decisoes": [
+        "Lista fechada dos ajustes com Milton e desenho de cada relatório."
+      ],
+      "dep": [
+        "E3-99",
+        "E6-02"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "VS-10:2",
+          "id": "VS-10",
+          "parte": 2,
+          "texto": "Validar persistência dos seguidores e definir os relatórios gerenciais restantes.",
+          "situacao": "Validar",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "OS08",
+          "pedido": "Levantar com Milton outros ajustes necessários.",
+          "situacao": "**Definir** — registrar os itens e o aceite; não há lista fechada nesse pedido."
+        }
+      ]
+    },
+    {
+      "id": "E6-04",
+      "entrega": 6,
+      "titulo": "Definir materiais e alcance do Almoxarifado",
+      "diagnostico": "Tipo Compras/Almoxarifado foi entregue. Não há detalhamento suficiente para presumir um sistema completo de estoque ou uma nova hierarquia de categorias.",
+      "arquivos": [
+        {
+          "arquivo": "src/Entity/Material.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/Material.php#L1"
+        },
+        {
+          "arquivo": "src/Entity/CategoriaMaterial.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/CategoriaMaterial.php#L1"
+        },
+        {
+          "arquivo": "src/Controller/MaterialController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/MaterialController.php#L1"
+        },
+        {
+          "arquivo": "templates/material/index.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/material/index.html.twig#L1"
+        }
+      ],
+      "passos": [
+        "Conferir o exemplo do cliente para decidir se Tipo já atende ao termo subcategoria.",
+        "Documentar fluxos, responsáveis, unidades, entradas/saídas e o que realmente integra o contrato inicial.",
+        "Se a saída desta etapa for apenas o estudo, entregar o fluxo e o inventário de requisitos. Se houver construção incluída no pagamento, detalhar e reestimar sua implementação antes de prometer conclusão.",
+        "Preservar a separação e os filtros já entregues, sem criar tabela de estoque por dedução."
+      ],
+      "dados": "Sem migração nem movimento de estoque previstos antes da definição. Não preencher saldos a partir de pedidos de compra.",
+      "aceite": [
+        "Decisão registrada sobre Tipo versus subcategoria.",
+        "O fluxo esperado e seu limite de implementação estão explícitos, sem confundir classificação de material com saldo de estoque."
+      ],
+      "decisoes": [
+        "Tipo ou hierarquia nova; estudo ou controle de estoque completo incluído no pagamento."
+      ],
+      "dep": [
+        "E6-02"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "VS-08:2",
+          "id": "VS-08",
+          "parte": 2,
+          "texto": "Definir o fluxo próprio de Almoxarifado, entradas, saídas e estoque.",
+          "situacao": "Definir",
+          "entregaAtual": null
+        },
+        {
+          "chave": "WI-16:2",
+          "id": "WI-16",
+          "parte": 2,
+          "texto": "Uma hierarquia extra de subcategorias só será necessária se essa for a intenção do cliente.",
+          "situacao": "Definir",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "CA02.1",
+          "pedido": "Criar uma hierarquia adicional de subcategorias, caso seja isso que o cliente pretende.",
+          "situacao": "**Definir** — a separação implementada é pelo campo Tipo de material."
+        },
+        {
+          "id": "OR04.1",
+          "pedido": "Criar controle próprio de Almoxarifado, com fluxos independentes, caso pretendido.",
+          "situacao": "**Definir** — classificação de materiais não equivale a gestão de estoque."
+        }
+      ]
+    },
+    {
+      "id": "E7-01",
+      "entrega": 7,
+      "titulo": "Turmas, edição por dia e preenchimento automático",
+      "diagnostico": "DisciplinaTurma grava carga na turma, mas crédito no vínculo DisciplinaSemestre. A criação pode gerar combinações por dia/docente; é necessário separar combinação legítima de duplicação. Exportação de cursos e filtros da PR são fechados em E4-03/E4-04.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/DisciplinaTurmaController.php",
+          "busca": "public function create",
+          "base": "dev",
+          "linha": 35,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/DisciplinaTurmaController.php#L35"
+        },
+        {
+          "arquivo": "src/Controller/DisciplinaTurmaController.php",
+          "busca": "public function alterar",
+          "base": "dev",
+          "linha": 314,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/DisciplinaTurmaController.php#L314"
+        },
+        {
+          "arquivo": "src/Entity/DisciplinaSemestre.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/DisciplinaSemestre.php#L1"
+        },
+        {
+          "arquivo": "templates/cronograma/cronograma.js",
+          "busca": "",
+          "base": "pr4",
+          "linha": 1,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/templates/cronograma/cronograma.js#L1"
+        },
+        {
+          "arquivo": "src/Controller/DisciplinaController.php",
+          "busca": "public function get(",
+          "base": "dev",
+          "linha": 103,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/DisciplinaController.php#L103"
+        }
+      ],
+      "passos": [
+        "Reproduzir a turma com dois dias e dois docentes, comparar o payload com os registros previstos e impedir inclusão duplicada por duplo envio.",
+        "Definir onde o crédito pertence. Não tornar o crédito individual por dia apenas para esconder o compartilhamento atual; isso exigiria mudança de modelo e regra de migração aprovada.",
+        "Garantir que alterar carga/horário de uma turma não muda outra. Preencher carga, tipo e créditos ao escolher a disciplina somente como valor inicial, sem sobrescrever uma edição consciente.",
+        "Conferir ordem temporal da grade e associar os filtros já concluídos na entrega 4."
+      ],
+      "dados": "Mudança de modelo só se for confirmado crédito por turma/dia. Preservar crédito histórico e não apagar turmas em lote sem separar duplicatas reais.",
+      "aceite": [
+        "Criar uma turma não gera cópias indevidas nem duplica após duplo clique.",
+        "Alterar carga/horário de um dia não muda outro; crédito segue a regra acordada.",
+        "Trocar a disciplina preenche os valores iniciais corretos e a grade ordena horários cronologicamente."
+      ],
+      "decisoes": [
+        "Crédito por disciplina/semestre/turma/dia e identificação exata da duplicação."
+      ],
+      "dep": [
+        "E4-99",
+        "E2-99"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "V1-09:1",
+          "id": "V1-09",
+          "parte": 1,
+          "texto": "Confirmar a ordenação por horário na tela de Cronogramas do vídeo, sem confundir com Quadro de aulas.",
+          "situacao": "Validar",
+          "entregaAtual": null
+        },
+        {
+          "chave": "V1-10:1",
+          "id": "V1-10",
+          "parte": 1,
+          "texto": "Preencher carga horária, tipo e créditos ao escolher a disciplina na criação da turma.",
+          "situacao": "Pendente",
+          "entregaAtual": null
+        },
+        {
+          "chave": "WI-02:1",
+          "id": "WI-02",
+          "parte": 1,
+          "texto": "Reproduzir a criação que triplicava turmas e a alteração de carga entre dias.",
+          "situacao": "Validar",
+          "entregaAtual": null
+        },
+        {
+          "chave": "WI-02:2",
+          "id": "WI-02",
+          "parte": 2,
+          "texto": "Definir se o crédito deve pertencer à disciplina, turma ou dia.",
+          "situacao": "Definir",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "ER02",
+          "pedido": "Impedir que a criação de uma turma triplique indevidamente os cadastros e permita apagar somente um.",
+          "situacao": "**Validar** — confirmar o cenário e distinguir duplicidade indevida dos registros previstos por combinação de docente e dia. Não foi identificada uma correção específica desse caso nas entregas."
+        },
+        {
+          "id": "ER03",
+          "pedido": "Alterar a carga horária de um dia sem modificar indevidamente o outro dia da turma.",
+          "situacao": "**Validar** — a alteração individual existe, mas a resolução do caso relatado não foi demonstrada pelo histórico."
+        },
+        {
+          "id": "ER03.1",
+          "pedido": "Alterar créditos de um dia sem alterar o outro dia.",
+          "situacao": "**Definir** — o crédito é compartilhado pelo vínculo de disciplina/semestre; falta definir se o cliente pretende crédito por turma, por dia ou por disciplina."
+        }
+      ]
+    },
+    {
+      "id": "E7-02",
+      "entrega": 7,
+      "titulo": "Importação ampliada e erros por linha",
+      "diagnostico": "A PR cobre CSV de formato fixo e modelo; o aceite básico é E4-05. XLSX e seleção Ambas no mesmo arquivo ainda são complementos a definir.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/CronogramaController.php",
+          "busca": "public function importar",
+          "base": "pr4",
+          "linha": 128,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/src/Controller/CronogramaController.php#L128"
+        },
+        {
+          "arquivo": "templates/cronograma/modal.html.twig",
+          "busca": "",
+          "base": "pr4",
+          "linha": 1,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/templates/cronograma/modal.html.twig#L1"
+        },
+        {
+          "arquivo": "src/Repository/DisciplinaTurmaRepository.php",
+          "busca": "",
+          "base": "pr4",
+          "linha": 1,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/src/Repository/DisciplinaTurmaRepository.php#L1"
+        },
+        {
+          "arquivo": "composer.json",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/composer.json#L1"
+        }
+      ],
+      "passos": [
+        "Fechar os formatos e definir se Ambas pode preservar o tipo de cada disciplina no mesmo arquivo.",
+        "Separar validação da estrutura e de cada linha da gravação, coletando número da linha, coluna e motivo do erro.",
+        "Definir arquivo inteiro atômico ou aceite parcial explícito; evitar comunicar sucesso quando parte do arquivo falhou sem relatório.",
+        "Se XLSX for exigido, avaliar uma biblioteca compatível com PHP 8.2 a partir das dependências e documentação oficiais na implementação; não instalar nem prometer suporte inexistente agora."
+      ],
+      "dados": "Sem migration prevista. Importação deve ser transacional conforme a política escolhida e idempotente segundo a chave de negócio definida.",
+      "aceite": [
+        "Arquivo com linhas válidas e inválidas produz relatório previsível e contagem conciliada.",
+        "Graduação/pós no mesmo arquivo conserva os tipos quando a opção for aprovada.",
+        "Reimportar o mesmo arquivo não duplica dados; extensão indevida é recusada."
+      ],
+      "decisoes": [
+        "CSV ou CSV+XLSX; política de importação parcial; regra de Ambas e chave de reimportação."
+      ],
+      "dep": [
+        "E4-05",
+        "E7-01"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "VS-13:2",
+          "id": "VS-13",
+          "parte": 2,
+          "texto": "Testar o arquivo original do cliente e o tratamento dos erros por linha.",
+          "situacao": "Validar",
+          "entregaAtual": null
+        },
+        {
+          "chave": "VS-13:3",
+          "id": "VS-13",
+          "parte": 3,
+          "texto": "Confirmar necessidade de XLSX; o formato implementado é CSV.",
+          "situacao": "Definir",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "CR05.1",
+          "pedido": "Na importação de um único CSV, escolher Ambas e preservar os tipos de cada disciplina.",
+          "situacao": "**Pendente** — a tela de CSV oferece Graduação ou Pós-graduação; a opção Ambas está na cópia, não na importação do arquivo."
+        },
+        {
+          "id": "OR07.1",
+          "pedido": "Importar diretamente arquivos Excel, caso seja exigido XLSX além de CSV.",
+          "situacao": "**Definir** — o código conferido importa CSV; confirmar o formato aceito pelo cliente."
+        }
+      ]
+    },
+    {
+      "id": "E7-03",
+      "entrega": 7,
+      "titulo": "Definir o relatório acadêmico adicional ainda genérico",
+      "diagnostico": "Responsável, Excel e Crédito já têm fechamento em E2-01/E2-02. A finalidade do pedido Relatório de disciplinas ainda não está definida.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/RelatorioController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/RelatorioController.php#L1"
+        },
+        {
+          "arquivo": "src/Controller/DisciplinaTurmaController.php",
+          "busca": "public function disciplinasDocentes",
+          "base": "dev",
+          "linha": 513,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/DisciplinaTurmaController.php#L513"
+        },
+        {
+          "arquivo": "templates/relatorios/disciplinas_docente.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/relatorios/disciplinas_docente.html.twig#L1"
+        },
+        {
+          "arquivo": "templates/disciplina/index.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/disciplina/index.html.twig#L1"
+        }
+      ],
+      "passos": [
+        "Comparar o resultado pretendido com a listagem principal e Disciplinas docente após os fechamentos da entrega 2.",
+        "Se for a mesma informação, encerrar por equivalência validada. Se houver saída distinta, fechar colunas, filtros e granularidade antes de acrescentar consulta/Twig.",
+        "Manter a separação entre responsável e ministrante e o período explícito. Não incluir o editor de planos do documento Adicional."
+      ],
+      "dados": "Sem nova tabela presumida; campos novos exigem justificativa e definição anteriores à migration.",
+      "aceite": [
+        "A amostra esperada é reproduzida ou atendida por relatório existente com aceite.",
+        "Sem responsável ou sem turma, o comportamento é definido e não derruba a consulta."
+      ],
+      "decisoes": [
+        "Qual relatório, público, colunas, filtros e período."
+      ],
+      "dep": [
+        "E2-99",
+        "E7-02"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [],
+      "referenciasDetalhadas": [
+        {
+          "id": "DI05",
+          "pedido": "Criar “Relatório de disciplinas”, sem definição de campos e finalidade.",
+          "situacao": "**Definir** — confirmar se é a listagem principal, Disciplinas docente ou outro relatório."
+        }
+      ]
+    },
+    {
+      "id": "E7-04",
+      "entrega": 7,
+      "titulo": "Consolidação anual e departamental da carga docente",
+      "diagnostico": "cargaHorariaDocentes agrega turmas; o relatório de responsáveis tem outra finalidade. Somar joins de cursos/responsáveis sem definir a unidade de contagem pode duplicar carga.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/DisciplinaTurmaController.php",
+          "busca": "public function cargaHorariaDocentes",
+          "base": "dev",
+          "linha": 454,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/DisciplinaTurmaController.php#L454"
+        },
+        {
+          "arquivo": "templates/relatorios/carga_docentes.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/relatorios/carga_docentes.html.twig#L1"
+        },
+        {
+          "arquivo": "src/Entity/DisciplinaTurma.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/DisciplinaTurma.php#L1"
+        },
+        {
+          "arquivo": "src/Entity/Departamento.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/Departamento.php#L1"
+        }
+      ],
+      "passos": [
+        "Definir a unidade de carga: turma/ministrante, compartilhamento de aula e distribuição entre departamentos. Responsável da disciplina não é automaticamente o ministrante.",
+        "Agregar primeiro por chave única da carga e depois por docente, semestre e departamento, com filtros parametrizados de ano/tipo/departamento.",
+        "Apresentar primeiro semestre, segundo semestre, pós e total anual, explicando se pós é recorte ou parcela adicional para não somar duas vezes.",
+        "Exportar a mesma base consolidada e fornecer um detalhamento que permita conferir o total."
+      ],
+      "dados": "Não inventar carga docente ausente dividindo igualmente. Se rateio precisar de um dado novo, definir antes da migration e preservar os registros anteriores.",
+      "aceite": [
+        "Massa com dois docentes, três cursos e dois semestres mantém o total esperado.",
+        "Soma anual confere com o detalhamento e não duplica pós-graduação.",
+        "Filtro de departamento/ano e Excel produzem os mesmos valores; conjunto vazio é válido."
+      ],
+      "decisoes": [
+        "Rateio em turmas compartilhadas, departamento de referência e pós como recorte ou parcela."
+      ],
+      "dep": [
+        "E7-01",
+        "E7-03"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "VS-17:2",
+          "id": "VS-17",
+          "parte": 2,
+          "texto": "Consolidar a carga por departamento com filtros e exportação próprios.",
+          "situacao": "Pendente",
+          "entregaAtual": null
+        },
+        {
+          "chave": "WI-15:2",
+          "id": "WI-15",
+          "parte": 2,
+          "texto": "Consolidar primeiro/segundo semestre e pós-graduação no total anual por docente.",
+          "situacao": "Pendente",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "DD01",
+          "pedido": "Consolidar por docente primeiro semestre, segundo semestre, pós-graduação e carga horária total anual.",
+          "situacao": "**Pendente** — há resultados por docente/semestre, mas não a consolidação completa solicitada."
+        },
+        {
+          "id": "OR12.1",
+          "pedido": "Consolidar a carga horária por departamento, com filtros e exportação próprios.",
+          "situacao": "**Pendente** — os relatórios conferidos não completam esse recorte departamental."
+        }
+      ]
+    },
+    {
+      "id": "E8-01",
+      "entrega": 8,
+      "titulo": "Conflitos e alterações de reservas recorrentes",
+      "diagnostico": "ReservaController::update confere conflito com inicio/fim, mas valida e grava dt_inicio/dt_fim. Há entidades distintas para a regra de recorrência e cada ocorrência.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/ReservaController.php",
+          "busca": "public function update",
+          "base": "dev",
+          "linha": 421,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/ReservaController.php#L421"
+        },
+        {
+          "arquivo": "src/Repository/ReservaRepository.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Repository/ReservaRepository.php#L1"
+        },
+        {
+          "arquivo": "src/Entity/ReservaRecorrencia.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/ReservaRecorrencia.php#L1"
+        },
+        {
+          "arquivo": "src/Entity/ReservaRecorrente.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/ReservaRecorrente.php#L1"
+        },
+        {
+          "arquivo": "templates/agenda/agenda.js",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/agenda/agenda.js#L1"
+        }
+      ],
+      "passos": [
+        "Validar e converter dt_inicio/dt_fim uma única vez antes da checagem de conflito e usar os mesmos objetos na gravação. Excluir a própria reserva da consulta.",
+        "Mapear série, pai, sequência e exceção; aplicar uma, futuras ou todas somente ao conjunto escolhido.",
+        "Conferir a geração da última ocorrência e limites inclusivos, preservando exclusões e alterações de sala individuais.",
+        "Aplicar uma transação ao lote alterado e registrar o log por ocorrência afetada conforme a regra atual."
+      ],
+      "dados": "Preferir o modelo existente. Migração só se uma limitação estrutural for demonstrada; não recriar séries e perder exceções/histórico.",
+      "aceite": [
+        "Editar sem trocar horário não entra em conflito consigo mesma.",
+        "Reservas adjacentes são permitidas e sobreposição real é bloqueada segundo o intervalo acordado.",
+        "Trocar/excluir uma ocorrência não altera as demais; futuras/todas respeitam a data limite e as exceções."
+      ],
+      "decisoes": [
+        "Semântica de futuras/todas quando já há exceções; inclusão da última data."
+      ],
+      "dep": [
+        "E7-04"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "WI-03:1",
+          "id": "WI-03",
+          "parte": 1,
+          "texto": "Testar alteração da série e de uma ocorrência, preservação da sala e conflitos.",
+          "situacao": "Validar",
+          "entregaAtual": null
+        },
+        {
+          "chave": "WI-03:2",
+          "id": "WI-03",
+          "parte": 2,
+          "texto": "Corrigir a diferença entre os campos de data usados na checagem de conflito e na gravação.",
+          "situacao": "Pendente",
+          "entregaAtual": null
+        },
+        {
+          "chave": "WI-18:3",
+          "id": "WI-18",
+          "parte": 3,
+          "texto": "Validar última data, exclusão e troca de sala de uma ocorrência.",
+          "situacao": "Validar",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "ER04",
+          "pedido": "Editar um evento sem perder a sala e sem conflito indevido com a própria reserva.",
+          "situacao": "**Pendente** — concluir a revisão da edição; o fluxo ainda utiliza campos de data diferentes na checagem de conflito e na gravação."
+        },
+        {
+          "id": "ER05",
+          "pedido": "Editar eventos recorrentes corretamente.",
+          "situacao": "**Validar** — há mecanismos anteriores de recorrência, mas não foi identificada uma correção entregue para o problema relatado."
+        },
+        {
+          "id": "AG01",
+          "pedido": "A recorrência incluir e apresentar corretamente a última data prevista.",
+          "situacao": "**Validar** — existe data limite no código, mas falta reproduzir o caso do documento e confirmar a última ocorrência."
+        },
+        {
+          "id": "AG03",
+          "pedido": "Excluir apenas um dia de uma reserva recorrente.",
+          "situacao": "**Validar** — a opção de ocorrência única já existe, mas não foi entregue uma revisão dessa função nas entregas 1 a 4."
+        },
+        {
+          "id": "AG03.1",
+          "pedido": "Trocar a sala somente em um dia de uma reserva recorrente, preservando os demais.",
+          "situacao": "**Validar** — há tratamento anterior de exceções; falta validar o cenário completo de edição."
+        }
+      ]
+    },
+    {
+      "id": "E8-02",
+      "entrega": 8,
+      "titulo": "Escolha de sala disponível e bloqueio manual",
+      "diagnostico": "A consulta de disponibilidade já lista salas, mas não completa o retorno ao evento. O bloqueio manual marcado FEITO não está comprovado; feriados automáticos são Aditivo.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/ReservaController.php",
+          "busca": "public function disponibilidadeSalas",
+          "base": "dev",
+          "linha": 671,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/ReservaController.php#L671"
+        },
+        {
+          "arquivo": "src/Controller/ReservaController.php",
+          "busca": "private function labelSala",
+          "base": "dev",
+          "linha": 895,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/ReservaController.php#L895"
+        },
+        {
+          "arquivo": "templates/agenda/modal.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/agenda/modal.html.twig#L1"
+        },
+        {
+          "arquivo": "templates/agenda/agenda.js",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/agenda/agenda.js#L1"
+        },
+        {
+          "arquivo": "src/Entity/TipoReserva.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/TipoReserva.php#L1"
+        }
+      ],
+      "passos": [
+        "Adicionar ação de escolher sala disponível que devolva o ID ao formulário original sem perder data, horário e conteúdo preenchido.",
+        "Revalidar o conflito ao salvar; o resultado da disponibilidade é uma consulta, não uma garantia de reserva.",
+        "Fechar se a lista de indisponíveis deve ser removida ou mantida como explicação de conflito.",
+        "Conferir a solução manual já usada; preferir um bloqueio com o modelo atual se atender ao pedido, definindo sala, dia inteiro, motivo e quem pode cancelar. Não importar calendário de feriados."
+      ],
+      "dados": "Reutilização de Reserva/TipoReserva é uma proposta a confirmar. Novo cadastro de indisponibilidade só se houver necessidade demonstrada e escopo fechado.",
+      "aceite": [
+        "Selecionar sala preenche o ID e mantém os demais campos do evento.",
+        "Uma sala ocupada entre consulta e gravação é recusada corretamente.",
+        "Bloqueio manual impede sobreposição e sua retirada autorizada libera o intervalo."
+      ],
+      "decisoes": [
+        "Bloqueio por sala ou conjunto de salas, quem administra e o que significou FEITO."
+      ],
+      "dep": [
+        "E8-01",
+        "E5-03"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "WI-18:2",
+          "id": "WI-18",
+          "parte": 2,
+          "texto": "Selecionar a sala na consulta e retornar ao evento com ela preenchida.",
+          "situacao": "Pendente",
+          "entregaAtual": null
+        },
+        {
+          "chave": "WI-22:2",
+          "id": "WI-22",
+          "parte": 2,
+          "texto": "Confirmar o bloqueio manual indicado como FEITO e o que foi efetivamente realizado.",
+          "situacao": "Validar",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "AG02.1",
+          "pedido": "Selecionar uma sala na lista de disponíveis e retornar ao cadastro do evento com a sala preenchida.",
+          "situacao": "**Pendente** — a lista atual apresenta as salas, mas não implementa esse caminho de seleção e retorno."
+        },
+        {
+          "id": "AG02.2",
+          "pedido": "Exibir somente as disponíveis nessa função, sem a lista de indisponíveis.",
+          "situacao": "**Definir** — atualmente são apresentadas as duas listas; confirmar se a lista de conflitos deve ser removida."
+        },
+        {
+          "id": "AG04",
+          "pedido": "Função própria para bloquear manualmente um dia.",
+          "situacao": "**Pendente** — não foi localizada uma função específica nas entregas conferidas; confirmar o que significa a anotação “FEITO” do documento."
+        }
+      ]
+    },
+    {
+      "id": "E8-03",
+      "entrega": 8,
+      "titulo": "Saneamento das salas duplicadas",
+      "diagnostico": "Não há prova de consolidação em produção. A execução precisa de mapeamento de IDs e de todos os vínculos, não apenas de exclusão dos nomes repetidos.",
+      "arquivos": [
+        {
+          "arquivo": "src/Entity/Sala.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/Sala.php#L1"
+        },
+        {
+          "arquivo": "src/Entity/Reserva.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/Reserva.php#L1"
+        },
+        {
+          "arquivo": "src/Entity/DisciplinaTurma.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/DisciplinaTurma.php#L1"
+        },
+        {
+          "arquivo": "src/Entity/OrdemServico.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/OrdemServico.php#L1"
+        },
+        {
+          "arquivo": "src/Controller/SalaController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/SalaController.php#L1"
+        }
+      ],
+      "passos": [
+        "Conferir a planilha e gerar um mapa aprovado sala antiga→sala mantida, com prédio, nome e status.",
+        "Inventariar FKs reais e vínculos via ORM/banco de teste, incluindo reservas, turmas e OS; emitir um relatório de impacto antes de executar.",
+        "Ensaiar em cópia de teste com transação e parâmetros; remapear vínculos, validar conflitos e preferir inativação rastreável dos duplicados.",
+        "Registrar valores e contagens anteriores/depois e testar a reversão seletiva. Não executar saneamento em produção sob a restrição atual."
+      ],
+      "dados": "Operação de dados somente em esalq_sistema_des. Snapshot e mapa de reversão obrigatórios; nenhuma remoção recursiva ou DELETE em lote presumido.",
+      "aceite": [
+        "Total de vínculos e histórico é preservado após o remapeamento.",
+        "Não surgem conflitos de reserva ocultos ao juntar salas antes separadas.",
+        "Repetir a operação não duplica ações e a reversão do teste restaura somente os IDs mapeados."
+      ],
+      "decisoes": [
+        "Planilha e sala canônica por duplicidade; tratamento dos conflitos encontrados."
+      ],
+      "dep": [
+        "E8-01",
+        "E4-06"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "WI-17:1",
+          "id": "WI-17",
+          "parte": 1,
+          "texto": "Conferir a planilha e remover duplicidades com validação dos vínculos.",
+          "situacao": "Validar",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "CA05",
+          "pedido": "Remover salas duplicadas conforme a planilha do cliente.",
+          "situacao": "**Validar** — não há comprovação de execução desse saneamento em produção. O banco de teste não confirma o resultado na base real."
+        }
+      ]
+    },
+    {
+      "id": "E8-04",
+      "entrega": 8,
+      "titulo": "Reservas para alunos e pessoas externas",
+      "diagnostico": "security.yaml exige autenticação para as rotas gerais e o formulário de Reserva é administrativo. Não há fluxo separado de solicitação, aprovação e acompanhamento de externo.",
+      "arquivos": [
+        {
+          "arquivo": "config/packages/security.yaml",
+          "busca": "access_control:",
+          "base": "dev",
+          "linha": 38,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/config/packages/security.yaml#L38"
+        },
+        {
+          "arquivo": "src/Controller/ReservaController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/ReservaController.php#L1"
+        },
+        {
+          "arquivo": "src/Entity/Reserva.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/Reserva.php#L1"
+        },
+        {
+          "arquivo": "src/Controller/CadastroPublicadorController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/CadastroPublicadorController.php#L1"
+        },
+        {
+          "arquivo": "src/Controller/PerfilModuloController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/PerfilModuloController.php#L1"
+        }
+      ],
+      "passos": [
+        "Fechar atores, identificação por número USP, aprovações e acompanhamento. Recomendação inicial: acesso autenticado com perfil de solicitante limitado, reutilizando o login; número USP informado não comprova identidade sozinho.",
+        "Propor Solicitação de reserva como registro separado, com solicitante, período, sala pretendida, estado, decisão e datas. O nome de entidade/controller é proposta, não arquivo existente.",
+        "Implementar CRUD Twig/AJAX no padrão atual e ACL para solicitante/aprovador; o usuário vê apenas seus pedidos. A aprovação revalida a disponibilidade e cria a Reserva no mesmo fluxo transacional.",
+        "Se o negócio exigir acesso sem cadastro, desenhar primeiro rota e autorização específicas, com token limitado ao pedido. Não abrir ^/ nem reaproveitar automaticamente a permissão de publicador.",
+        "Reutilizar MailerInterface para os avisos acordados, usando destinatários de teste na homologação."
+      ],
+      "dados": "Novas entidades/migrations aditivas provavelmente necessárias após definir o fluxo. Sem REST/React/Service novo por conveniência. Não alterar reservas existentes para simular solicitações antigas.",
+      "aceite": [
+        "Aluno acompanha somente seus pedidos e não altera reserva administrativa.",
+        "Solicitação não ocupa a sala antes da regra aprovada; aprovador sem permissão é recusado.",
+        "Dois pedidos para o mesmo intervalo não geram reserva dupla no aceite; reenvio/repetição da ação é tratado.",
+        "Identificação e acesso externo seguem a opção aprovada, com testes de acesso direto ao pedido de outro solicitante."
+      ],
+      "decisoes": [
+        "Autenticação/cadastro, validação do número USP, aprovador e estados; acesso sem cadastro não está decidido."
+      ],
+      "dep": [
+        "E5-04",
+        "E8-01",
+        "E8-02"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "VS-19:1",
+          "id": "VS-19",
+          "parte": 1,
+          "texto": "Solicitação pelo aluno, validação do número USP, acompanhamento e acesso externo.",
+          "situacao": "Pendente",
+          "entregaAtual": null
+        },
+        {
+          "chave": "VS-19:2",
+          "id": "VS-19",
+          "parte": 2,
+          "texto": "Definir responsáveis e regras de aprovação de reservas.",
+          "situacao": "Definir",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "OR14",
+          "pedido": "Solicitação eletrônica de sala por aluno, com acompanhamento.",
+          "situacao": "**Pendente** — o formulário administrativo existente não implementa o fluxo solicitado para aluno."
+        },
+        {
+          "id": "OR15",
+          "pedido": "Aprovação de solicitações de reserva de salas, quando aplicável.",
+          "situacao": "**Definir** — confirmar se haverá aprovação, quem aprova e em quais casos; não foi identificado um fluxo novo de aprovação."
+        },
+        {
+          "id": "OR16",
+          "pedido": "Identificação/validação de aluno por número USP para solicitar sala.",
+          "situacao": "**Pendente**"
+        },
+        {
+          "id": "OR17",
+          "pedido": "Acesso de usuários externos para solicitação de reservas, com autenticação e permissões específicas.",
+          "situacao": "**Pendente**"
+        }
+      ]
+    },
+    {
+      "id": "E8-05",
+      "entrega": 8,
+      "titulo": "Conexão LES: acessos, destinatários e endereços",
+      "diagnostico": "PublicacaoController estende AbstractController e não usa a verificação modular de BaseController. CadastroPublicador e as rotas de publicação precisam ser analisados junto das regras globais do firewall.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/PublicacaoController.php",
+          "busca": "class PublicacaoController",
+          "base": "dev",
+          "linha": 24,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/PublicacaoController.php#L24"
+        },
+        {
+          "arquivo": "src/Controller/CadastroPublicadorController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/CadastroPublicadorController.php#L1"
+        },
+        {
+          "arquivo": "config/packages/security.yaml",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/config/packages/security.yaml#L1"
+        },
+        {
+          "arquivo": "src/Entity/Publicacao.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/Publicacao.php#L1"
+        },
+        {
+          "arquivo": "src/Controller/ConfiguracoesController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/ConfiguracoesController.php#L1"
+        }
+      ],
+      "passos": [
+        "Mapear o fluxo real do publicador e classificar cada rota como consulta interna, manutenção ou entrada externa; conferir o firewall para cada uma.",
+        "Aplicar a verificação GPO nas ações internas pelo padrão existente, sem quebrar o fluxo externo autorizado. Qualquer exceção ao firewall deve ser estrita à rota e à finalidade definidas.",
+        "Consolidar a base de URL do ambiente para os links enviados; não montar endereço com host arbitrário da requisição.",
+        "Conferir destinatários obrigatórios/opcionais, deduplicação e cópias; preservar a autoria e os arquivos da publicação."
+      ],
+      "dados": "Esquema não necessariamente muda. Revisar configurações somente no teste; nenhum envio para a lista real na homologação.",
+      "aceite": [
+        "Usuário sem GPO não obtém/manipula publicação por rota direta.",
+        "Publicador autorizado conclui o fluxo permitido e vê apenas o conteúdo definido.",
+        "Links de teste permanecem no ambiente de teste; destinatários de prova são os esperados, sem duplicação."
+      ],
+      "decisoes": [
+        "Quais ações são permitidas ao externo e quem pode receber cada comunicação."
+      ],
+      "dep": [
+        "E5-04",
+        "E8-04"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "VS-12:1",
+          "id": "VS-12",
+          "parte": 1,
+          "texto": "Revisar cadastros, destinatários, permissões e endereços de teste/produção da Conexão LES.",
+          "situacao": "Pendente",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "OR06",
+          "pedido": "Revisar cadastro, destinatários, permissões e comunicações externas da Conexão LES.",
+          "situacao": "**Pendente** — concluir a revisão e validação do fluxo externo; há problemas conhecidos de endereços entre teste e produção."
+        }
+      ]
+    },
+    {
+      "id": "E8-06",
+      "entrega": 8,
+      "titulo": "Histórico e relatórios de alterações da agenda",
+      "diagnostico": "AgendaLogController já lista eventos e ações; faltam os campos/filtros específicos do pedido. A relação de acesso entre usuário e reserva deve valer também no log.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/AgendaLogController.php",
+          "busca": "public function listarAcoes",
+          "base": "dev",
+          "linha": 51,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/AgendaLogController.php#L51"
+        },
+        {
+          "arquivo": "templates/agenda_log/index.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/agenda_log/index.html.twig#L1"
+        },
+        {
+          "arquivo": "src/Controller/ReservaController.php",
+          "busca": "private function registrarLog",
+          "base": "dev",
+          "linha": 958,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/ReservaController.php#L958"
+        },
+        {
+          "arquivo": "templates/reserva/relatorio.html.twig",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/templates/reserva/relatorio.html.twig#L1"
+        }
+      ],
+      "passos": [
+        "Fechar os campos, períodos e filtros, com amostra de relatório esperado.",
+        "Aplicar o mesmo recorte de autorização na listagem e na consulta por ID da reserva.",
+        "Retornar campos estáveis de data/usuário/ação e exportar com as ferramentas já usadas; manter o log histórico sem reescrita.",
+        "Conferir se as alterações de recorrência de E8-01 geram eventos suficientes para a leitura pedida."
+      ],
+      "dados": "Reutilizar o log; novo campo só se faltar a informação necessária e houver regra de captura aprovada.",
+      "aceite": [
+        "Filtros do relatório e exportação retornam o mesmo conjunto.",
+        "Consulta direta ao ID não expõe histórico fora do recorte permitido.",
+        "Alterar uma ocorrência mostra a ação certa sem sugerir mudança em toda a série."
+      ],
+      "decisoes": [
+        "Campos, filtros e acesso ao histórico."
+      ],
+      "dep": [
+        "E8-01",
+        "E8-05"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "VS-18:2",
+          "id": "VS-18",
+          "parte": 2,
+          "texto": "Definir novos campos e filtros; validar os problemas da agenda.",
+          "situacao": "Definir",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "OR13",
+          "pedido": "Melhorar relatórios e consultas do histórico de alterações de agenda.",
+          "situacao": "**Definir** — log e exportação já existiam; especificar as melhorias esperadas e corrigir as pendências desse fluxo."
+        }
+      ]
+    },
+    {
+      "id": "E8-07",
+      "entrega": 8,
+      "titulo": "Importações em lote de outros cadastros",
+      "diagnostico": "O relatório original cita a possibilidade de importação em lote, mas não define cadastros nem quantidade. Cronograma é referência técnica, não contrato universal de importação.",
+      "arquivos": [
+        {
+          "arquivo": "src/Controller/CronogramaController.php",
+          "busca": "public function importar",
+          "base": "pr4",
+          "linha": 128,
+          "commit": "13f5075b4685f7a26008e63810d38bd8516f558f",
+          "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/src/Controller/CronogramaController.php#L128"
+        },
+        {
+          "arquivo": "src/Controller/UsuarioController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/UsuarioController.php#L1"
+        },
+        {
+          "arquivo": "src/Controller/MaterialController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/MaterialController.php#L1"
+        }
+      ],
+      "passos": [
+        "Fechar uma lista de cadastros-alvo e, para cada um, colunas, formato, chave de identificação, comportamento de atualizar/criar e vínculo com registros inativos.",
+        "Produzir modelo e validação antes de gravação, incluindo relatório de erros e prévia de impacto.",
+        "Implementar cada lote no controller do domínio com as validações de CRUD existentes; não contornar permissões nem transformar o importador em uma API genérica nova.",
+        "Usar a política de atomicidade e reimportação aprovada; não importar dados pessoais reais para massa pública de teste."
+      ],
+      "dados": "Não há migration geral presumida. Alterações dependem dos campos faltantes por cadastro e devem ser aditivas.",
+      "aceite": [
+        "Modelo aprovado importa e arquivo com cabeçalho incorreto não grava.",
+        "Repetição do mesmo lote segue a chave de atualização e não cria duplicatas.",
+        "Erros mostram linha/campo sem deixar dados parciais escondidos."
+      ],
+      "decisoes": [
+        "Cadastros, formatos, quantidade, atualização versus criação e lote incluído no pagamento."
+      ],
+      "dep": [
+        "E7-02",
+        "E8-06"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "VS-14:1",
+          "id": "VS-14",
+          "parte": 1,
+          "texto": "Escolher cadastros, colunas, formatos, validações e regras de duplicidade.",
+          "situacao": "Definir",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "OR08",
+          "pedido": "Importação em lote em outras funcionalidades.",
+          "situacao": "**Definir** — indicar quais cadastros, colunas e regras; não há uma entrega geral de importação em lote."
+        }
+      ]
+    },
+    {
+      "id": "E8-08",
+      "entrega": 8,
+      "titulo": "Estudos previstos de Aproveitamento de Disciplinas e NotebookLM",
+      "diagnostico": "O pedido inicial contém estudo e avaliação. O novo fluxo completo de Aproveitamento de Estudos foi classificado pelo usuário como Adicional/Aditivo e não é implementado por este item.",
+      "arquivos": [
+        {
+          "arquivo": "src/Entity/Disciplina.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/Disciplina.php#L1"
+        },
+        {
+          "arquivo": "src/Entity/DisciplinaCurso.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Entity/DisciplinaCurso.php#L1"
+        },
+        {
+          "arquivo": "src/Controller/DisciplinaController.php",
+          "busca": "",
+          "base": "dev",
+          "linha": 1,
+          "commit": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
+          "url": "https://github.com/Dcadv789/sigles/blob/3ed9a38415417b8a4ead22ecd472f758b3506db1/src/Controller/DisciplinaController.php#L1"
+        }
+      ],
+      "passos": [
+        "Mapear processo atual, participantes, documentos e critérios de equivalência com o responsável acadêmico.",
+        "Comparar os dados existentes com o fluxo pretendido e entregar lacunas, alternativas e critérios de aceite de uma futura implementação.",
+        "Avaliar o uso do NotebookLM com documentação oficial vigente na data do estudo, verificando mecanismo de integração, acesso e limites reais; registrar também a conclusão se a integração não for adequada.",
+        "Entregar um documento de viabilidade e uma delimitação do que é estudo inicial versus desenvolvimento do Aditivo; não desenvolver o módulo completo silenciosamente."
+      ],
+      "dados": "Sem alteração do banco e sem envio de documentos reais a serviço externo nesta fase de estudo.",
+      "aceite": [
+        "Fluxo e lacunas documentados e revisáveis pelo responsável.",
+        "Conclusão sobre NotebookLM tem fontes atuais e não pressupõe API ou funcionalidade inexistente.",
+        "Não há mudança de status dos 48 itens Adicionais para entregue por causa deste estudo."
+      ],
+      "decisoes": [
+        "Responsável acadêmico, processo atual e resultado esperado do estudo."
+      ],
+      "dep": [
+        "E8-07"
+      ],
+      "status": "Planejado — exige definição",
+      "referenciasQuadro": [
+        {
+          "chave": "VS-16:1",
+          "id": "VS-16",
+          "parte": 1,
+          "texto": "Levantar o fluxo acadêmico e detalhar o módulo.",
+          "situacao": "Pendente",
+          "entregaAtual": null
+        },
+        {
+          "chave": "VS-16:2",
+          "id": "VS-16",
+          "parte": 2,
+          "texto": "Avaliar o uso do NotebookLM e registrar o resultado.",
+          "situacao": "Pendente",
+          "entregaAtual": null
+        }
+      ],
+      "referenciasDetalhadas": [
+        {
+          "id": "OR10",
+          "pedido": "Estudar e detalhar o módulo de Aproveitamento de Disciplinas.",
+          "situacao": "**Pendente** — não foi identificado estudo funcional conclusivo ou módulo implementado."
+        },
+        {
+          "id": "OR11",
+          "pedido": "Avaliar eventual integração ou utilização de Notebook LM.",
+          "situacao": "**Pendente** — não foi identificado resultado dessa avaliação nem integração implementada."
+        }
+      ]
+    }
+  ],
+  "regras": [
+    "Preservar Symfony 6.3, PHP 8.2, MariaDB, Twig, jQuery e DataTables; seguir o CRUD existente, sem nova stack, REST, Symfony Form novo ou camada Service por conveniência.",
+    "Escrita de dados exclusivamente em esalq_sistema_des. A restrição de não escrever em produção continua válida. O workflow de produção executa migrations e não deve ser acionado enquanto essa restrição vigorar.",
+    "Trabalhar em checkout limpo com branch codex/, mantendo as alterações locais de Cronograma do usuário. Não usar reset/checkout de arquivos para descartar trabalho existente.",
+    "Novas ações internas devem validar ACL modular no servidor e no Twig. Rotas AJAX expostas, payload e toast/406 seguem o padrão atual; permissões da sessão exigem novo login para validação.",
+    "SQL tocado usa parâmetros. Não interpolar valores da requisição; não refatorar a segurança inteira nem o CSRF de todos os módulos.",
+    "Não alterar o bug conhecido de GAM/ROLE_ROOT por iniciativa própria. Conferir o código real GOÇ no módulo de orçamento e não copiar a ausência de ACL de PublicacaoController.",
+    "Não commitar .env, .env.local, senhas, backups de ambiente, vendor/ ou uploads/. Referências de código deste plano apontam a commits fixos e podem exigir acesso ao GitHub.",
+    "Criar migrations somente na implementação, após fechar a regra. Preservar migrations executadas e usar compensação seletiva de dados, não um down amplo que apague histórico.",
+    "Os comandos e testes abaixo são planejados. Não foram executados testes funcionais do sistema, migrations, merge da PR ou deploy do SIGLES nesta etapa."
+  ],
+  "verificacoes": [
+    "Confirmar o ambiente de teste antes de qualquer comando que carregue o banco; não publicar valores de conexão nos logs.",
+    "Executar php -l nos arquivos PHP alterados e php bin/console lint:twig apenas nos templates afetados.",
+    "Se houver alteração de entidade/migration, executar a validação de schema e o status/dry-run das migrations somente com a conexão de teste conferida; revisar o SQL e as versões já executadas.",
+    "Conferir as rotas AJAX e /js/routing pelo mecanismo já usado no projeto, sem recriar o antigo dump removido pela dev.",
+    "Executar os testes de aceite específicos do item: erro/validação, usuário autorizado, usuário sem permissão e regressão do fluxo modificado.",
+    "Guardar evidência de homologação por item e só então atualizar o status funcional no quadro. Planejamento pronto não significa item implementado.",
+    "Preparar commit e PR focados por lote; teste/homologação precede produção, e a etapa de produção continua sujeita à restrição atual de acesso ao banco."
+  ]
+}

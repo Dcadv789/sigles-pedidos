@@ -113,7 +113,16 @@
           "texto": "Confirmar se a visão ampliada deve abranger todos os departamentos; hoje é departamental.",
           "situacao": "Definir"
         }
-      ]
+      ],
+      "planosTecnicos": [
+        {
+          "id": "E5-01",
+          "entrega": 5,
+          "titulo": "Dashboard: atalhos, imagem e abrangência das informações",
+          "url": "tecnico/entrega-5.html#E5-01"
+        }
+      ],
+      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
     },
     {
       "id": "5.2",
@@ -193,7 +202,28 @@
           "texto": "Conferir a configuração de 45 dias para estagiários.",
           "situacao": "Validar"
         }
-      ]
+      ],
+      "planosTecnicos": [
+        {
+          "id": "E5-02",
+          "entrega": 5,
+          "titulo": "Contatos, férias e dados complementares de usuários",
+          "url": "tecnico/entrega-5.html#E5-02"
+        },
+        {
+          "id": "E1-01",
+          "entrega": 1,
+          "titulo": "Ordenação e persistência da tela de Usuários",
+          "url": "tecnico/entrega-1.html#E1-01"
+        },
+        {
+          "id": "E1-04",
+          "entrega": 1,
+          "titulo": "Regra de antecedência de contratos por perfil",
+          "url": "tecnico/entrega-1.html#E1-04"
+        }
+      ],
+      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
     },
     {
       "id": "5.3",
@@ -258,7 +288,16 @@
           "texto": "Exibir os campos em todos os tipos e exigir preenchimento somente em Grupo de extensão.",
           "situacao": "Pendente"
         }
-      ]
+      ],
+      "planosTecnicos": [
+        {
+          "id": "E5-03",
+          "entrega": 5,
+          "titulo": "Menu, nome da sala e campos por tipo de reserva",
+          "url": "tecnico/entrega-5.html#E5-03"
+        }
+      ],
+      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
     },
     {
       "id": "5.4",
@@ -294,7 +333,16 @@
           "texto": "Definir as mudanças pretendidas por perfil, módulo e ação.",
           "situacao": "Definir"
         }
-      ]
+      ],
+      "planosTecnicos": [
+        {
+          "id": "E5-04",
+          "entrega": 5,
+          "titulo": "Matriz de acesso dos perfis existentes",
+          "url": "tecnico/entrega-5.html#E5-04"
+        }
+      ],
+      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
     },
     {
       "id": "6.1",
@@ -350,7 +398,16 @@
           "texto": "Definir a integração pretendida e tratar os pedidos V1-04 e V1-05.",
           "situacao": "Definir"
         }
-      ]
+      ],
+      "planosTecnicos": [
+        {
+          "id": "E6-01",
+          "entrega": 6,
+          "titulo": "Cadastro e gravação de fornecedores",
+          "url": "tecnico/entrega-6.html#E6-01"
+        }
+      ],
+      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
     },
     {
       "id": "6.2",
@@ -421,7 +478,28 @@
           "texto": "Confirmar se Mostrar períodos encerrados atende a Arquivados e o que seria a nova aba Compras.",
           "situacao": "Definir"
         }
-      ]
+      ],
+      "planosTecnicos": [
+        {
+          "id": "E6-02",
+          "entrega": 6,
+          "titulo": "Arquivamento e complementos do fluxo de compras",
+          "url": "tecnico/entrega-6.html#E6-02"
+        },
+        {
+          "id": "E1-03",
+          "entrega": 1,
+          "titulo": "Ativar e inativar períodos sem erro",
+          "url": "tecnico/entrega-1.html#E1-03"
+        },
+        {
+          "id": "E1-02",
+          "entrega": 1,
+          "titulo": "Data de criação em Minhas solicitações e Painel",
+          "url": "tecnico/entrega-1.html#E1-02"
+        }
+      ],
+      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
     },
     {
       "id": "6.3",
@@ -523,7 +601,34 @@
           "texto": "Definir se a subcategoria terá responsável próprio; hoje herda da categoria.",
           "situacao": "Definir"
         }
-      ]
+      ],
+      "planosTecnicos": [
+        {
+          "id": "E6-03",
+          "entrega": 6,
+          "titulo": "Relatórios e ajustes administrativos restantes de OS",
+          "url": "tecnico/entrega-6.html#E6-03"
+        },
+        {
+          "id": "E3-01",
+          "entrega": 3,
+          "titulo": "Persistência dos seguidores da OS",
+          "url": "tecnico/entrega-3.html#E3-01"
+        },
+        {
+          "id": "E3-03",
+          "entrega": 3,
+          "titulo": "Ordenação inicial e resumo de responsáveis",
+          "url": "tecnico/entrega-3.html#E3-03"
+        },
+        {
+          "id": "E3-02",
+          "entrega": 3,
+          "titulo": "Regra do responsável e das subcategorias",
+          "url": "tecnico/entrega-3.html#E3-02"
+        }
+      ],
+      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
     },
     {
       "id": "6.4",
@@ -575,7 +680,16 @@
           "texto": "Uma hierarquia extra de subcategorias só será necessária se essa for a intenção do cliente.",
           "situacao": "Definir"
         }
-      ]
+      ],
+      "planosTecnicos": [
+        {
+          "id": "E6-04",
+          "entrega": 6,
+          "titulo": "Definir materiais e alcance do Almoxarifado",
+          "url": "tecnico/entrega-6.html#E6-04"
+        }
+      ],
+      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
     },
     {
       "id": "7.1",
@@ -713,7 +827,28 @@
           "texto": "Confirmar a seleção de docentes inativos no caso relatado.",
           "situacao": "Validar"
         }
-      ]
+      ],
+      "planosTecnicos": [
+        {
+          "id": "E7-01",
+          "entrega": 7,
+          "titulo": "Turmas, edição por dia e preenchimento automático",
+          "url": "tecnico/entrega-7.html#E7-01"
+        },
+        {
+          "id": "E4-04",
+          "entrega": 4,
+          "titulo": "Aplicar filtros de salas e docentes de ponta a ponta",
+          "url": "tecnico/entrega-4.html#E4-04"
+        },
+        {
+          "id": "E4-03",
+          "entrega": 4,
+          "titulo": "Fechar a exportação de todos os cursos",
+          "url": "tecnico/entrega-4.html#E4-03"
+        }
+      ],
+      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
     },
     {
       "id": "7.2",
@@ -766,7 +901,22 @@
           "texto": "Confirmar necessidade de XLSX; o formato implementado é CSV.",
           "situacao": "Definir"
         }
-      ]
+      ],
+      "planosTecnicos": [
+        {
+          "id": "E7-02",
+          "entrega": 7,
+          "titulo": "Importação ampliada e erros por linha",
+          "url": "tecnico/entrega-7.html#E7-02"
+        },
+        {
+          "id": "E4-05",
+          "entrega": 4,
+          "titulo": "Aceite da importação CSV da PR",
+          "url": "tecnico/entrega-4.html#E4-05"
+        }
+      ],
+      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
     },
     {
       "id": "7.3",
@@ -831,7 +981,28 @@
           "texto": "Incluir crédito na exportação do relatório Disciplinas docente.",
           "situacao": "Pendente"
         }
-      ]
+      ],
+      "planosTecnicos": [
+        {
+          "id": "E7-03",
+          "entrega": 7,
+          "titulo": "Definir o relatório acadêmico adicional ainda genérico",
+          "url": "tecnico/entrega-7.html#E7-03"
+        },
+        {
+          "id": "E2-01",
+          "entrega": 2,
+          "titulo": "Responsável na listagem e Excel de Disciplinas",
+          "url": "tecnico/entrega-2.html#E2-01"
+        },
+        {
+          "id": "E2-02",
+          "entrega": 2,
+          "titulo": "Créditos na exportação de Disciplinas docente",
+          "url": "tecnico/entrega-2.html#E2-02"
+        }
+      ],
+      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
     },
     {
       "id": "7.4",
@@ -884,7 +1055,16 @@
           "texto": "Consolidar primeiro/segundo semestre e pós-graduação no total anual por docente.",
           "situacao": "Pendente"
         }
-      ]
+      ],
+      "planosTecnicos": [
+        {
+          "id": "E7-04",
+          "entrega": 7,
+          "titulo": "Consolidação anual e departamental da carga docente",
+          "url": "tecnico/entrega-7.html#E7-04"
+        }
+      ],
+      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
     },
     {
       "id": "8.1",
@@ -964,7 +1144,16 @@
           "texto": "Validar última data, exclusão e troca de sala de uma ocorrência.",
           "situacao": "Validar"
         }
-      ]
+      ],
+      "planosTecnicos": [
+        {
+          "id": "E8-01",
+          "entrega": 8,
+          "titulo": "Conflitos e alterações de reservas recorrentes",
+          "url": "tecnico/entrega-8.html#E8-01"
+        }
+      ],
+      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
     },
     {
       "id": "8.2",
@@ -1023,7 +1212,16 @@
           "texto": "Confirmar o bloqueio manual indicado como FEITO e o que foi efetivamente realizado.",
           "situacao": "Validar"
         }
-      ]
+      ],
+      "planosTecnicos": [
+        {
+          "id": "E8-02",
+          "entrega": 8,
+          "titulo": "Escolha de sala disponível e bloqueio manual",
+          "url": "tecnico/entrega-8.html#E8-02"
+        }
+      ],
+      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
     },
     {
       "id": "8.3",
@@ -1061,7 +1259,16 @@
           "texto": "Conferir a planilha e remover duplicidades com validação dos vínculos.",
           "situacao": "Validar"
         }
-      ]
+      ],
+      "planosTecnicos": [
+        {
+          "id": "E8-03",
+          "entrega": 8,
+          "titulo": "Saneamento das salas duplicadas",
+          "url": "tecnico/entrega-8.html#E8-03"
+        }
+      ],
+      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
     },
     {
       "id": "8.4",
@@ -1126,7 +1333,16 @@
           "texto": "Definir responsáveis e regras de aprovação de reservas.",
           "situacao": "Definir"
         }
-      ]
+      ],
+      "planosTecnicos": [
+        {
+          "id": "E8-04",
+          "entrega": 8,
+          "titulo": "Reservas para alunos e pessoas externas",
+          "url": "tecnico/entrega-8.html#E8-04"
+        }
+      ],
+      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
     },
     {
       "id": "8.5",
@@ -1164,7 +1380,16 @@
           "texto": "Revisar cadastros, destinatários, permissões e endereços de teste/produção da Conexão LES.",
           "situacao": "Pendente"
         }
-      ]
+      ],
+      "planosTecnicos": [
+        {
+          "id": "E8-05",
+          "entrega": 8,
+          "titulo": "Conexão LES: acessos, destinatários e endereços",
+          "url": "tecnico/entrega-8.html#E8-05"
+        }
+      ],
+      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
     },
     {
       "id": "8.6",
@@ -1201,7 +1426,16 @@
           "texto": "Definir novos campos e filtros; validar os problemas da agenda.",
           "situacao": "Definir"
         }
-      ]
+      ],
+      "planosTecnicos": [
+        {
+          "id": "E8-06",
+          "entrega": 8,
+          "titulo": "Histórico e relatórios de alterações da agenda",
+          "url": "tecnico/entrega-8.html#E8-06"
+        }
+      ],
+      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
     },
     {
       "id": "8.7",
@@ -1238,7 +1472,16 @@
           "texto": "Escolher cadastros, colunas, formatos, validações e regras de duplicidade.",
           "situacao": "Definir"
         }
-      ]
+      ],
+      "planosTecnicos": [
+        {
+          "id": "E8-07",
+          "entrega": 8,
+          "titulo": "Importações em lote de outros cadastros",
+          "url": "tecnico/entrega-8.html#E8-07"
+        }
+      ],
+      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
     },
     {
       "id": "8.8",
@@ -1290,7 +1533,16 @@
           "texto": "Avaliar o uso do NotebookLM e registrar o resultado.",
           "situacao": "Pendente"
         }
-      ]
+      ],
+      "planosTecnicos": [
+        {
+          "id": "E8-08",
+          "entrega": 8,
+          "titulo": "Estudos previstos de Aproveitamento de Disciplinas e NotebookLM",
+          "url": "tecnico/entrega-8.html#E8-08"
+        }
+      ],
+      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
     }
   ],
   "cobertura": {
@@ -1327,5 +1579,10 @@
         "motivo": "Permanece na entrega 4: aceite do arquivo original no fluxo da PR."
       }
     ]
+  },
+  "planejamentoTecnico": {
+    "url": "tecnico/index.html",
+    "data": "16/10/2026",
+    "nota": "Os percentuais 15/15/20/50 permanecem a referência macro original. Fechamentos antecipados não devem ser contados novamente nas entregas 5 a 8; conferir os pesos após o fechamento das regras."
   }
 }

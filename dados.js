@@ -1,4 +1,4 @@
-/* Atualização de 15/10/2026. Origem Adicional classificada integralmente como Aditivo por orientação do usuário. */
+/* Conferência funcional e planejamento são estados distintos. Planos técnicos em 16/10/2026. */
 window.SIGLES_BOARD = {
   "atualizado": "15/10/2026",
   "itens": [
@@ -15,7 +15,15 @@ window.SIGLES_BOARD = {
           "texto": "Excluir material inativo sem pedidos vinculados; ativar e inativar continuam disponíveis.",
           "entrega": 1,
           "situacao": "Entregue",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E1-99",
+              "entrega": 1,
+              "titulo": "Aceite integrado do fechamento da entrega 1",
+              "url": "tecnico/entrega-1.html#E1-99"
+            }
+          ]
         }
       ]
     },
@@ -32,7 +40,15 @@ window.SIGLES_BOARD = {
           "texto": "Exclusão definitiva com validação de vínculos e manutenção da ativação/inativação.",
           "entrega": 1,
           "situacao": "Entregue",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E1-99",
+              "entrega": 1,
+              "titulo": "Aceite integrado do fechamento da entrega 1",
+              "url": "tecnico/entrega-1.html#E1-99"
+            }
+          ]
         }
       ]
     },
@@ -49,7 +65,15 @@ window.SIGLES_BOARD = {
           "texto": "Testar a ativação com as datas e condições do caso original.",
           "entrega": null,
           "situacao": "Validar",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E1-03",
+              "entrega": 1,
+              "titulo": "Ativar e inativar períodos sem erro",
+              "url": "tecnico/entrega-1.html#E1-03"
+            }
+          ]
         }
       ]
     },
@@ -66,7 +90,15 @@ window.SIGLES_BOARD = {
           "texto": "Adicionar o campo ao cadastro, à edição e à listagem de fornecedores.",
           "entrega": null,
           "situacao": "Pendente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E6-01",
+              "entrega": 6,
+              "titulo": "Cadastro e gravação de fornecedores",
+              "url": "tecnico/entrega-6.html#E6-01"
+            }
+          ]
         }
       ]
     },
@@ -83,7 +115,15 @@ window.SIGLES_BOARD = {
           "texto": "Reproduzir com os campos e dados que não eram gravados.",
           "entrega": null,
           "situacao": "Validar",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E6-01",
+              "entrega": 6,
+              "titulo": "Cadastro e gravação de fornecedores",
+              "url": "tecnico/entrega-6.html#E6-01"
+            }
+          ]
         }
       ]
     },
@@ -100,8 +140,25 @@ window.SIGLES_BOARD = {
           "texto": "Finalizar pelo painel e impedir alterações nos estágios encerrados.",
           "entrega": 1,
           "situacao": "Entregue",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E1-05",
+              "entrega": 1,
+              "titulo": "Conciliar encerramento do período com os estágios combinados",
+              "url": "tecnico/entrega-1.html#E1-05"
+            },
+            {
+              "id": "E1-99",
+              "entrega": 1,
+              "titulo": "Aceite integrado do fechamento da entrega 1",
+              "url": "tecnico/entrega-1.html#E1-99"
+            }
+          ]
         }
+      ],
+      "notasTecnicas": [
+        "Revisão técnica de 16/10: conciliar a transição dos estágios no encerramento de períodos. O código atual e o descritivo inicial divergem; ver E1-05 antes de alterar a regra."
       ]
     },
     {
@@ -117,13 +174,29 @@ window.SIGLES_BOARD = {
           "texto": "Histórico de criação e alterações da solicitação.",
           "entrega": 1,
           "situacao": "Entregue",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E1-99",
+              "entrega": 1,
+              "titulo": "Aceite integrado do fechamento da entrega 1",
+              "url": "tecnico/entrega-1.html#E1-99"
+            }
+          ]
         },
         {
           "texto": "Mostrar a data nas listagens de Minhas solicitações e do Painel, além do período.",
           "entrega": null,
           "situacao": "Pendente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E1-02",
+              "entrega": 1,
+              "titulo": "Data de criação em Minhas solicitações e Painel",
+              "url": "tecnico/entrega-1.html#E1-02"
+            }
+          ]
         }
       ]
     },
@@ -140,7 +213,15 @@ window.SIGLES_BOARD = {
           "texto": "Incluir, alterar e retirar pedidos quando permitido; preservar o recebimento da secretaria.",
           "entrega": 1,
           "situacao": "Entregue",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E1-99",
+              "entrega": 1,
+              "titulo": "Aceite integrado do fechamento da entrega 1",
+              "url": "tecnico/entrega-1.html#E1-99"
+            }
+          ]
         }
       ]
     },
@@ -157,7 +238,15 @@ window.SIGLES_BOARD = {
           "texto": "Confirmar a ordenação por horário na tela de Cronogramas do vídeo, sem confundir com Quadro de aulas.",
           "entrega": null,
           "situacao": "Validar",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E7-01",
+              "entrega": 7,
+              "titulo": "Turmas, edição por dia e preenchimento automático",
+              "url": "tecnico/entrega-7.html#E7-01"
+            }
+          ]
         }
       ]
     },
@@ -174,7 +263,15 @@ window.SIGLES_BOARD = {
           "texto": "Preencher carga horária, tipo e créditos ao escolher a disciplina na criação da turma.",
           "entrega": null,
           "situacao": "Pendente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E7-01",
+              "entrega": 7,
+              "titulo": "Turmas, edição por dia e preenchimento automático",
+              "url": "tecnico/entrega-7.html#E7-01"
+            }
+          ]
         }
       ]
     },
@@ -191,7 +288,15 @@ window.SIGLES_BOARD = {
           "texto": "Campos e identificação do tipo de disciplina, graduação ou pós-graduação.",
           "entrega": 2,
           "situacao": "Entregue",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E2-99",
+              "entrega": 2,
+              "titulo": "Aceite integrado do fechamento da entrega 2",
+              "url": "tecnico/entrega-2.html#E2-99"
+            }
+          ]
         }
       ]
     },
@@ -208,31 +313,71 @@ window.SIGLES_BOARD = {
           "texto": "Cadastros, usuários e compras.",
           "entrega": 1,
           "situacao": "Entregue",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E1-99",
+              "entrega": 1,
+              "titulo": "Aceite integrado do fechamento da entrega 1",
+              "url": "tecnico/entrega-1.html#E1-99"
+            }
+          ]
         },
         {
           "texto": "Disciplinas, relatórios e login.",
           "entrega": 2,
           "situacao": "Entregue",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E2-99",
+              "entrega": 2,
+              "titulo": "Aceite integrado do fechamento da entrega 2",
+              "url": "tecnico/entrega-2.html#E2-99"
+            }
+          ]
         },
         {
           "texto": "Ordens de serviço e aniversariantes.",
           "entrega": 3,
           "situacao": "Homologação",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E3-99",
+              "entrega": 3,
+              "titulo": "Homologação e preparação de publicação da entrega 3",
+              "url": "tecnico/entrega-3.html#E3-99"
+            }
+          ]
         },
         {
           "texto": "Evolução de cronogramas.",
           "entrega": 4,
           "situacao": "Na PR",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E4-99",
+              "entrega": 4,
+              "titulo": "Revisão final e integração da entrega 4",
+              "url": "tecnico/entrega-4.html#E4-99"
+            }
+          ]
         },
         {
           "texto": "Concluir os pedidos específicos ainda pendentes; este item não representa uma funcionalidade única.",
           "entrega": null,
           "situacao": "Pendente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "roteiro",
+              "entrega": 0,
+              "titulo": "Ordem técnica das oito entregas",
+              "url": "tecnico/index.html#sequencia"
+            }
+          ]
         }
       ]
     },
@@ -249,7 +394,15 @@ window.SIGLES_BOARD = {
           "texto": "Demais usuários continuam vendo os aniversariantes na lista do mês.",
           "entrega": 3,
           "situacao": "Homologação",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E3-99",
+              "entrega": 3,
+              "titulo": "Homologação e preparação de publicação da entrega 3",
+              "url": "tecnico/entrega-3.html#E3-99"
+            }
+          ]
         }
       ]
     },
@@ -266,13 +419,22 @@ window.SIGLES_BOARD = {
           "texto": "Consulta de telefones e contatos no Dashboard.",
           "entrega": null,
           "situacao": "Já existente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": []
         },
         {
           "texto": "Detalhar campos, busca e exportações desejados.",
           "entrega": null,
           "situacao": "Definir",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E5-02",
+              "entrega": 5,
+              "titulo": "Contatos, férias e dados complementares de usuários",
+              "url": "tecnico/entrega-5.html#E5-02"
+            }
+          ]
         }
       ]
     },
@@ -289,13 +451,29 @@ window.SIGLES_BOARD = {
           "texto": "Exibição de férias e contratos com tratamento de datas ausentes.",
           "entrega": 1,
           "situacao": "Entregue",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E1-99",
+              "entrega": 1,
+              "titulo": "Aceite integrado do fechamento da entrega 1",
+              "url": "tecnico/entrega-1.html#E1-99"
+            }
+          ]
         },
         {
           "texto": "Definir outras mudanças além do cadastro e dos avisos existentes.",
           "entrega": null,
           "situacao": "Definir",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E5-02",
+              "entrega": 5,
+              "titulo": "Contatos, férias e dados complementares de usuários",
+              "url": "tecnico/entrega-5.html#E5-02"
+            }
+          ]
         }
       ]
     },
@@ -312,7 +490,15 @@ window.SIGLES_BOARD = {
           "texto": "Especificar o que falta nas informações de usuários e colaboradores.",
           "entrega": null,
           "situacao": "Definir",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E5-02",
+              "entrega": 5,
+              "titulo": "Contatos, férias e dados complementares de usuários",
+              "url": "tecnico/entrega-5.html#E5-02"
+            }
+          ]
         }
       ]
     },
@@ -329,7 +515,15 @@ window.SIGLES_BOARD = {
           "texto": "Definir as mudanças pretendidas por perfil, módulo e ação.",
           "entrega": null,
           "situacao": "Definir",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E5-04",
+              "entrega": 5,
+              "titulo": "Matriz de acesso dos perfis existentes",
+              "url": "tecnico/entrega-5.html#E5-04"
+            }
+          ]
         }
       ]
     },
@@ -346,7 +540,8 @@ window.SIGLES_BOARD = {
           "texto": "Levantamento documentado antes da entrega 1; eventual expansão precisa de novo detalhamento.",
           "entrega": null,
           "situacao": "Já existente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": []
         }
       ]
     },
@@ -363,13 +558,29 @@ window.SIGLES_BOARD = {
           "texto": "Tipo Compras ou Almoxarifado e filtro dos materiais de compras.",
           "entrega": 1,
           "situacao": "Entregue",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E1-99",
+              "entrega": 1,
+              "titulo": "Aceite integrado do fechamento da entrega 1",
+              "url": "tecnico/entrega-1.html#E1-99"
+            }
+          ]
         },
         {
           "texto": "Definir o fluxo próprio de Almoxarifado, entradas, saídas e estoque.",
           "entrega": null,
           "situacao": "Definir",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E6-04",
+              "entrega": 6,
+              "titulo": "Definir materiais e alcance do Almoxarifado",
+              "url": "tecnico/entrega-6.html#E6-04"
+            }
+          ]
         }
       ]
     },
@@ -386,13 +597,29 @@ window.SIGLES_BOARD = {
           "texto": "Envio, reabertura, recebimento, realização/cancelamento, consulta dos períodos encerrados e lista para compras.",
           "entrega": 1,
           "situacao": "Entregue",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E1-99",
+              "entrega": 1,
+              "titulo": "Aceite integrado do fechamento da entrega 1",
+              "url": "tecnico/entrega-1.html#E1-99"
+            }
+          ]
         },
         {
           "texto": "Completar a data visível em todas as listagens e definir as demais melhorias da rotina administrativa.",
           "entrega": null,
           "situacao": "Pendente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E6-02",
+              "entrega": 6,
+              "titulo": "Arquivamento e complementos do fluxo de compras",
+              "url": "tecnico/entrega-6.html#E6-02"
+            }
+          ]
         }
       ]
     },
@@ -409,13 +636,41 @@ window.SIGLES_BOARD = {
           "texto": "Responsável, orçamento na criação, anexos, filtros, estágios e histórico.",
           "entrega": 3,
           "situacao": "Homologação",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E3-99",
+              "entrega": 3,
+              "titulo": "Homologação e preparação de publicação da entrega 3",
+              "url": "tecnico/entrega-3.html#E3-99"
+            }
+          ]
         },
         {
           "texto": "Validar persistência dos seguidores e definir os relatórios gerenciais restantes.",
           "entrega": null,
           "situacao": "Validar",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E3-01",
+              "entrega": 3,
+              "titulo": "Persistência dos seguidores da OS",
+              "url": "tecnico/entrega-3.html#E3-01"
+            },
+            {
+              "id": "E3-03",
+              "entrega": 3,
+              "titulo": "Ordenação inicial e resumo de responsáveis",
+              "url": "tecnico/entrega-3.html#E3-03"
+            },
+            {
+              "id": "E6-03",
+              "entrega": 6,
+              "titulo": "Relatórios e ajustes administrativos restantes de OS",
+              "url": "tecnico/entrega-6.html#E6-03"
+            }
+          ]
         }
       ]
     },
@@ -432,7 +687,15 @@ window.SIGLES_BOARD = {
           "texto": "Definir a integração pretendida e tratar os pedidos V1-04 e V1-05.",
           "entrega": null,
           "situacao": "Definir",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E6-01",
+              "entrega": 6,
+              "titulo": "Cadastro e gravação de fornecedores",
+              "url": "tecnico/entrega-6.html#E6-01"
+            }
+          ]
         }
       ]
     },
@@ -449,7 +712,15 @@ window.SIGLES_BOARD = {
           "texto": "Revisar cadastros, destinatários, permissões e endereços de teste/produção da Conexão LES.",
           "entrega": null,
           "situacao": "Pendente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E8-05",
+              "entrega": 8,
+              "titulo": "Conexão LES: acessos, destinatários e endereços",
+              "url": "tecnico/entrega-8.html#E8-05"
+            }
+          ]
         }
       ]
     },
@@ -466,19 +737,49 @@ window.SIGLES_BOARD = {
           "texto": "Fluxo unificado de Novo cronograma e arquivo modelo CSV.",
           "entrega": 4,
           "situacao": "Na PR",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E4-99",
+              "entrega": 4,
+              "titulo": "Revisão final e integração da entrega 4",
+              "url": "tecnico/entrega-4.html#E4-99"
+            }
+          ]
         },
         {
           "texto": "Testar o arquivo original do cliente e o tratamento dos erros por linha.",
           "entrega": null,
           "situacao": "Validar",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E4-05",
+              "entrega": 4,
+              "titulo": "Aceite da importação CSV da PR",
+              "url": "tecnico/entrega-4.html#E4-05"
+            },
+            {
+              "id": "E7-02",
+              "entrega": 7,
+              "titulo": "Importação ampliada e erros por linha",
+              "url": "tecnico/entrega-7.html#E7-02"
+            }
+          ]
         },
         {
           "texto": "Confirmar necessidade de XLSX; o formato implementado é CSV.",
           "entrega": null,
           "situacao": "Definir",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E7-02",
+              "entrega": 7,
+              "titulo": "Importação ampliada e erros por linha",
+              "url": "tecnico/entrega-7.html#E7-02"
+            }
+          ]
         }
       ]
     },
@@ -495,7 +796,15 @@ window.SIGLES_BOARD = {
           "texto": "Escolher cadastros, colunas, formatos, validações e regras de duplicidade.",
           "entrega": null,
           "situacao": "Definir",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E8-07",
+              "entrega": 8,
+              "titulo": "Importações em lote de outros cadastros",
+              "url": "tecnico/entrega-8.html#E8-07"
+            }
+          ]
         }
       ]
     },
@@ -512,7 +821,15 @@ window.SIGLES_BOARD = {
           "texto": "Implementado no PR 9; depende de integração e homologação.",
           "entrega": 4,
           "situacao": "Na PR",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E4-99",
+              "entrega": 4,
+              "titulo": "Revisão final e integração da entrega 4",
+              "url": "tecnico/entrega-4.html#E4-99"
+            }
+          ]
         }
       ]
     },
@@ -529,13 +846,29 @@ window.SIGLES_BOARD = {
           "texto": "Levantar o fluxo acadêmico e detalhar o módulo.",
           "entrega": null,
           "situacao": "Pendente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E8-08",
+              "entrega": 8,
+              "titulo": "Estudos previstos de Aproveitamento de Disciplinas e NotebookLM",
+              "url": "tecnico/entrega-8.html#E8-08"
+            }
+          ]
         },
         {
           "texto": "Avaliar o uso do NotebookLM e registrar o resultado.",
           "entrega": null,
           "situacao": "Pendente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E8-08",
+              "entrega": 8,
+              "titulo": "Estudos previstos de Aproveitamento de Disciplinas e NotebookLM",
+              "url": "tecnico/entrega-8.html#E8-08"
+            }
+          ]
         }
       ]
     },
@@ -552,13 +885,29 @@ window.SIGLES_BOARD = {
           "texto": "Filtros, responsável por semestre e visualização das disciplinas docentes.",
           "entrega": 2,
           "situacao": "Entregue",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E2-99",
+              "entrega": 2,
+              "titulo": "Aceite integrado do fechamento da entrega 2",
+              "url": "tecnico/entrega-2.html#E2-99"
+            }
+          ]
         },
         {
           "texto": "Consolidar a carga por departamento com filtros e exportação próprios.",
           "entrega": null,
           "situacao": "Pendente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E7-04",
+              "entrega": 7,
+              "titulo": "Consolidação anual e departamental da carga docente",
+              "url": "tecnico/entrega-7.html#E7-04"
+            }
+          ]
         }
       ]
     },
@@ -575,13 +924,22 @@ window.SIGLES_BOARD = {
           "texto": "Consulta de alterações e exportação existentes antes da entrega 1.",
           "entrega": null,
           "situacao": "Já existente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": []
         },
         {
           "texto": "Definir novos campos e filtros; validar os problemas da agenda.",
           "entrega": null,
           "situacao": "Definir",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E8-06",
+              "entrega": 8,
+              "titulo": "Histórico e relatórios de alterações da agenda",
+              "url": "tecnico/entrega-8.html#E8-06"
+            }
+          ]
         }
       ]
     },
@@ -598,13 +956,29 @@ window.SIGLES_BOARD = {
           "texto": "Solicitação pelo aluno, validação do número USP, acompanhamento e acesso externo.",
           "entrega": null,
           "situacao": "Pendente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E8-04",
+              "entrega": 8,
+              "titulo": "Reservas para alunos e pessoas externas",
+              "url": "tecnico/entrega-8.html#E8-04"
+            }
+          ]
         },
         {
           "texto": "Definir responsáveis e regras de aprovação de reservas.",
           "entrega": null,
           "situacao": "Definir",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E8-04",
+              "entrega": 8,
+              "titulo": "Reservas para alunos e pessoas externas",
+              "url": "tecnico/entrega-8.html#E8-04"
+            }
+          ]
         }
       ]
     },
@@ -621,13 +995,29 @@ window.SIGLES_BOARD = {
           "texto": "Criação com ano/semestre e modelo de importação.",
           "entrega": 4,
           "situacao": "Na PR",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E4-99",
+              "entrega": 4,
+              "titulo": "Revisão final e integração da entrega 4",
+              "url": "tecnico/entrega-4.html#E4-99"
+            }
+          ]
         },
         {
           "texto": "O arquivo que originou o erro ainda precisa de teste de aceite.",
           "entrega": null,
           "situacao": "Validar",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E4-05",
+              "entrega": 4,
+              "titulo": "Aceite da importação CSV da PR",
+              "url": "tecnico/entrega-4.html#E4-05"
+            }
+          ]
         }
       ]
     },
@@ -644,13 +1034,29 @@ window.SIGLES_BOARD = {
           "texto": "Reproduzir a criação que triplicava turmas e a alteração de carga entre dias.",
           "entrega": null,
           "situacao": "Validar",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E7-01",
+              "entrega": 7,
+              "titulo": "Turmas, edição por dia e preenchimento automático",
+              "url": "tecnico/entrega-7.html#E7-01"
+            }
+          ]
         },
         {
           "texto": "Definir se o crédito deve pertencer à disciplina, turma ou dia.",
           "entrega": null,
           "situacao": "Definir",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E7-01",
+              "entrega": 7,
+              "titulo": "Turmas, edição por dia e preenchimento automático",
+              "url": "tecnico/entrega-7.html#E7-01"
+            }
+          ]
         }
       ]
     },
@@ -667,13 +1073,29 @@ window.SIGLES_BOARD = {
           "texto": "Testar alteração da série e de uma ocorrência, preservação da sala e conflitos.",
           "entrega": null,
           "situacao": "Validar",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E8-01",
+              "entrega": 8,
+              "titulo": "Conflitos e alterações de reservas recorrentes",
+              "url": "tecnico/entrega-8.html#E8-01"
+            }
+          ]
         },
         {
           "texto": "Corrigir a diferença entre os campos de data usados na checagem de conflito e na gravação.",
           "entrega": null,
           "situacao": "Pendente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E8-01",
+              "entrega": 8,
+              "titulo": "Conflitos e alterações de reservas recorrentes",
+              "url": "tecnico/entrega-8.html#E8-01"
+            }
+          ]
         }
       ]
     },
@@ -690,7 +1112,15 @@ window.SIGLES_BOARD = {
           "texto": "Conferir o cadastro e os filtros com o docente do caso original.",
           "entrega": null,
           "situacao": "Validar",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E4-04",
+              "entrega": 4,
+              "titulo": "Aplicar filtros de salas e docentes de ponta a ponta",
+              "url": "tecnico/entrega-4.html#E4-04"
+            }
+          ]
         }
       ]
     },
@@ -707,25 +1137,50 @@ window.SIGLES_BOARD = {
           "texto": "Calendário, retirada de anotações e link Conexão LES.",
           "entrega": null,
           "situacao": "Já existente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": []
         },
         {
           "texto": "CERT, férias e contratos, com tratamento de datas ausentes.",
           "entrega": 1,
           "situacao": "Entregue",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E1-99",
+              "entrega": 1,
+              "titulo": "Aceite integrado do fechamento da entrega 1",
+              "url": "tecnico/entrega-1.html#E1-99"
+            }
+          ]
         },
         {
           "texto": "Acrescentar atalhos diretos para LES, MarteWeb e Júpiter Web.",
           "entrega": null,
           "situacao": "Pendente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E5-01",
+              "entrega": 5,
+              "titulo": "Dashboard: atalhos, imagem e abrangência das informações",
+              "url": "tecnico/entrega-5.html#E5-01"
+            }
+          ]
         },
         {
           "texto": "Confirmar se a imagem deve ser plano de fundo ou imagem na página.",
           "entrega": null,
           "situacao": "Definir",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E5-01",
+              "entrega": 5,
+              "titulo": "Dashboard: atalhos, imagem e abrangência das informações",
+              "url": "tecnico/entrega-5.html#E5-01"
+            }
+          ]
         }
       ]
     },
@@ -742,13 +1197,22 @@ window.SIGLES_BOARD = {
           "texto": "Alternância da visão do administrador e OS abertas/em andamento.",
           "entrega": null,
           "situacao": "Já existente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": []
         },
         {
           "texto": "Confirmar se a visão ampliada deve abranger todos os departamentos; hoje é departamental.",
           "entrega": null,
           "situacao": "Definir",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E5-01",
+              "entrega": 5,
+              "titulo": "Dashboard: atalhos, imagem e abrangência das informações",
+              "url": "tecnico/entrega-5.html#E5-01"
+            }
+          ]
         }
       ]
     },
@@ -765,7 +1229,15 @@ window.SIGLES_BOARD = {
           "texto": "Datas da CERT e separação das informações no Dashboard.",
           "entrega": 1,
           "situacao": "Entregue",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E1-99",
+              "entrega": 1,
+              "titulo": "Aceite integrado do fechamento da entrega 1",
+              "url": "tecnico/entrega-1.html#E1-99"
+            }
+          ]
         }
       ]
     },
@@ -782,13 +1254,29 @@ window.SIGLES_BOARD = {
           "texto": "Excluir usuário inativo sem vínculos e manter o formulário/aba após salvar.",
           "entrega": 1,
           "situacao": "Entregue",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E1-99",
+              "entrega": 1,
+              "titulo": "Aceite integrado do fechamento da entrega 1",
+              "url": "tecnico/entrega-1.html#E1-99"
+            }
+          ]
         },
         {
           "texto": "Reproduzir a desconfiguração relatada ao ordenar nomes.",
           "entrega": null,
           "situacao": "Validar",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E1-01",
+              "entrega": 1,
+              "titulo": "Ordenação e persistência da tela de Usuários",
+              "url": "tecnico/entrega-1.html#E1-01"
+            }
+          ]
         }
       ]
     },
@@ -805,13 +1293,35 @@ window.SIGLES_BOARD = {
           "texto": "Parâmetro de antecedência por perfil.",
           "entrega": 1,
           "situacao": "Entregue",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E1-04",
+              "entrega": 1,
+              "titulo": "Regra de antecedência de contratos por perfil",
+              "url": "tecnico/entrega-1.html#E1-04"
+            },
+            {
+              "id": "E1-99",
+              "entrega": 1,
+              "titulo": "Aceite integrado do fechamento da entrega 1",
+              "url": "tecnico/entrega-1.html#E1-99"
+            }
+          ]
         },
         {
           "texto": "Conferir a configuração de 45 dias para estagiários.",
           "entrega": null,
           "situacao": "Validar",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E1-04",
+              "entrega": 1,
+              "titulo": "Regra de antecedência de contratos por perfil",
+              "url": "tecnico/entrega-1.html#E1-04"
+            }
+          ]
         },
         {
           "texto": "Enviar automaticamente o aviso ao administrador e ao estagiário.",
@@ -835,19 +1345,43 @@ window.SIGLES_BOARD = {
           "texto": "Responsável sugerido pela categoria e possibilidade de troca antes de salvar.",
           "entrega": 3,
           "situacao": "Homologação",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E3-99",
+              "entrega": 3,
+              "titulo": "Homologação e preparação de publicação da entrega 3",
+              "url": "tecnico/entrega-3.html#E3-99"
+            }
+          ]
         },
         {
           "texto": "Verificar se os seguidores escolhidos permanecem após salvar e reabrir.",
           "entrega": null,
           "situacao": "Validar",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E3-01",
+              "entrega": 3,
+              "titulo": "Persistência dos seguidores da OS",
+              "url": "tecnico/entrega-3.html#E3-01"
+            }
+          ]
         },
         {
           "texto": "Confirmar a regra do responsável inicial solicitada pelo cliente.",
           "entrega": null,
           "situacao": "Definir",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E3-02",
+              "entrega": 3,
+              "titulo": "Regra do responsável e das subcategorias",
+              "url": "tecnico/entrega-3.html#E3-02"
+            }
+          ]
         }
       ]
     },
@@ -864,7 +1398,15 @@ window.SIGLES_BOARD = {
           "texto": "Orçamento com anexo já na criação e lista ampliada de formatos suportados.",
           "entrega": 3,
           "situacao": "Homologação",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E3-99",
+              "entrega": 3,
+              "titulo": "Homologação e preparação de publicação da entrega 3",
+              "url": "tecnico/entrega-3.html#E3-99"
+            }
+          ]
         }
       ]
     },
@@ -881,13 +1423,29 @@ window.SIGLES_BOARD = {
           "texto": "Filtro Aberto por e responsável por categoria.",
           "entrega": 3,
           "situacao": "Homologação",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E3-99",
+              "entrega": 3,
+              "titulo": "Homologação e preparação de publicação da entrega 3",
+              "url": "tecnico/entrega-3.html#E3-99"
+            }
+          ]
         },
         {
           "texto": "Definir se a subcategoria terá responsável próprio; hoje herda da categoria.",
           "entrega": null,
           "situacao": "Definir",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E3-02",
+              "entrega": 3,
+              "titulo": "Regra do responsável e das subcategorias",
+              "url": "tecnico/entrega-3.html#E3-02"
+            }
+          ]
         }
       ]
     },
@@ -904,25 +1462,57 @@ window.SIGLES_BOARD = {
           "texto": "Copiar entre semestres, com início/fim e seleção Graduação, Pós-graduação ou Ambas.",
           "entrega": 4,
           "situacao": "Na PR",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E4-99",
+              "entrega": 4,
+              "titulo": "Revisão final e integração da entrega 4",
+              "url": "tecnico/entrega-4.html#E4-99"
+            }
+          ]
         },
         {
           "texto": "Exportar todos os cursos da disciplina: o servidor ainda retorna só o curso da turma.",
           "entrega": null,
           "situacao": "Pendente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E4-03",
+              "entrega": 4,
+              "titulo": "Fechar a exportação de todos os cursos",
+              "url": "tecnico/entrega-4.html#E4-03"
+            }
+          ]
         },
         {
           "texto": "Aplicar no servidor o filtro das salas elegíveis.",
           "entrega": null,
           "situacao": "Pendente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E4-04",
+              "entrega": 4,
+              "titulo": "Aplicar filtros de salas e docentes de ponta a ponta",
+              "url": "tecnico/entrega-4.html#E4-04"
+            }
+          ]
         },
         {
           "texto": "Confirmar a seleção de docentes inativos no caso relatado.",
           "entrega": null,
           "situacao": "Validar",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E4-04",
+              "entrega": 4,
+              "titulo": "Aplicar filtros de salas e docentes de ponta a ponta",
+              "url": "tecnico/entrega-4.html#E4-04"
+            }
+          ]
         }
       ]
     },
@@ -939,19 +1529,43 @@ window.SIGLES_BOARD = {
           "texto": "Carga horária, crédito, responsável por ano/semestre, histórico do plano e filtros dos relatórios.",
           "entrega": 2,
           "situacao": "Entregue",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E2-99",
+              "entrega": 2,
+              "titulo": "Aceite integrado do fechamento da entrega 2",
+              "url": "tecnico/entrega-2.html#E2-99"
+            }
+          ]
         },
         {
           "texto": "Exportar a listagem principal e mostrar nela o docente responsável.",
           "entrega": null,
           "situacao": "Pendente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E2-01",
+              "entrega": 2,
+              "titulo": "Responsável na listagem e Excel de Disciplinas",
+              "url": "tecnico/entrega-2.html#E2-01"
+            }
+          ]
         },
         {
           "texto": "Incluir crédito na exportação do relatório Disciplinas docente.",
           "entrega": null,
           "situacao": "Pendente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E2-02",
+              "entrega": 2,
+              "titulo": "Créditos na exportação de Disciplinas docente",
+              "url": "tecnico/entrega-2.html#E2-02"
+            }
+          ]
         }
       ]
     },
@@ -968,13 +1582,29 @@ window.SIGLES_BOARD = {
           "texto": "Ordenação cronológica dentro de cada dia no Quadro de aulas.",
           "entrega": 2,
           "situacao": "Entregue",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E2-99",
+              "entrega": 2,
+              "titulo": "Aceite integrado do fechamento da entrega 2",
+              "url": "tecnico/entrega-2.html#E2-99"
+            }
+          ]
         },
         {
           "texto": "Consolidar primeiro/segundo semestre e pós-graduação no total anual por docente.",
           "entrega": null,
           "situacao": "Pendente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E7-04",
+              "entrega": 7,
+              "titulo": "Consolidação anual e departamental da carga docente",
+              "url": "tecnico/entrega-7.html#E7-04"
+            }
+          ]
         }
       ]
     },
@@ -991,13 +1621,29 @@ window.SIGLES_BOARD = {
           "texto": "Separação por tipo de material e detalhe/observação no recurso da OS.",
           "entrega": 1,
           "situacao": "Entregue",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E1-99",
+              "entrega": 1,
+              "titulo": "Aceite integrado do fechamento da entrega 1",
+              "url": "tecnico/entrega-1.html#E1-99"
+            }
+          ]
         },
         {
           "texto": "Uma hierarquia extra de subcategorias só será necessária se essa for a intenção do cliente.",
           "entrega": null,
           "situacao": "Definir",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E6-04",
+              "entrega": 6,
+              "titulo": "Definir materiais e alcance do Almoxarifado",
+              "url": "tecnico/entrega-6.html#E6-04"
+            }
+          ]
         }
       ]
     },
@@ -1014,13 +1660,29 @@ window.SIGLES_BOARD = {
           "texto": "Conferir a planilha e remover duplicidades com validação dos vínculos.",
           "entrega": null,
           "situacao": "Validar",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E8-03",
+              "entrega": 8,
+              "titulo": "Saneamento das salas duplicadas",
+              "url": "tecnico/entrega-8.html#E8-03"
+            }
+          ]
         },
         {
           "texto": "Usar o nome abreviado na apresentação da sala na agenda.",
           "entrega": null,
           "situacao": "Pendente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E5-03",
+              "entrega": 5,
+              "titulo": "Menu, nome da sala e campos por tipo de reserva",
+              "url": "tecnico/entrega-5.html#E5-03"
+            }
+          ]
         }
       ]
     },
@@ -1037,19 +1699,36 @@ window.SIGLES_BOARD = {
           "texto": "Consulta de salas disponíveis por intervalo.",
           "entrega": null,
           "situacao": "Já existente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": []
         },
         {
           "texto": "Selecionar a sala na consulta e retornar ao evento com ela preenchida.",
           "entrega": null,
           "situacao": "Pendente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E8-02",
+              "entrega": 8,
+              "titulo": "Escolha de sala disponível e bloqueio manual",
+              "url": "tecnico/entrega-8.html#E8-02"
+            }
+          ]
         },
         {
           "texto": "Validar última data, exclusão e troca de sala de uma ocorrência.",
           "entrega": null,
           "situacao": "Validar",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E8-01",
+              "entrega": 8,
+              "titulo": "Conflitos e alterações de reservas recorrentes",
+              "url": "tecnico/entrega-8.html#E8-01"
+            }
+          ]
         }
       ]
     },
@@ -1066,7 +1745,15 @@ window.SIGLES_BOARD = {
           "texto": "Exibir os campos em todos os tipos e exigir preenchimento somente em Grupo de extensão.",
           "entrega": null,
           "situacao": "Pendente",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E5-03",
+              "entrega": 5,
+              "titulo": "Menu, nome da sala e campos por tipo de reserva",
+              "url": "tecnico/entrega-5.html#E5-03"
+            }
+          ]
         }
       ]
     },
@@ -1083,14 +1770,39 @@ window.SIGLES_BOARD = {
           "texto": "Período vigente, encerramento, consulta dos anteriores, estágios e apresentação dos pedidos.",
           "entrega": 1,
           "situacao": "Entregue",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E1-05",
+              "entrega": 1,
+              "titulo": "Conciliar encerramento do período com os estágios combinados",
+              "url": "tecnico/entrega-1.html#E1-05"
+            },
+            {
+              "id": "E1-99",
+              "entrega": 1,
+              "titulo": "Aceite integrado do fechamento da entrega 1",
+              "url": "tecnico/entrega-1.html#E1-99"
+            }
+          ]
         },
         {
           "texto": "Confirmar se Mostrar períodos encerrados atende a Arquivados e o que seria a nova aba Compras.",
           "entrega": null,
           "situacao": "Definir",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E6-02",
+              "entrega": 6,
+              "titulo": "Arquivamento e complementos do fluxo de compras",
+              "url": "tecnico/entrega-6.html#E6-02"
+            }
+          ]
         }
+      ],
+      "notasTecnicas": [
+        "Revisão técnica de 16/10: conciliar a transição dos estágios no encerramento de períodos. O código atual e o descritivo inicial divergem; ver E1-05 antes de alterar a regra."
       ]
     },
     {
@@ -1124,13 +1836,29 @@ window.SIGLES_BOARD = {
           "texto": "Criação e importação do cronograma implementadas no PR 9.",
           "entrega": 4,
           "situacao": "Na PR",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E4-99",
+              "entrega": 4,
+              "titulo": "Revisão final e integração da entrega 4",
+              "url": "tecnico/entrega-4.html#E4-99"
+            }
+          ]
         },
         {
           "texto": "Confirmar o bloqueio manual indicado como FEITO e o que foi efetivamente realizado.",
           "entrega": null,
           "situacao": "Validar",
-          "cobranca": "Pedido inicial"
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E8-02",
+              "entrega": 8,
+              "titulo": "Escolha de sala disponível e bloqueio manual",
+              "url": "tecnico/entrega-8.html#E8-02"
+            }
+          ]
         },
         {
           "texto": "Implementar calendário e bloqueio automático de feriados integrado à disponibilidade e às reservas recorrentes.",
@@ -2495,5 +3223,10 @@ window.SIGLES_BOARD = {
         }
       ]
     }
-  ]
+  ],
+  "planejamentoTecnico": {
+    "url": "tecnico/index.html",
+    "data": "16/10/2026",
+    "status": "Planos concluídos para revisão; execução funcional não iniciada."
+  }
 };

@@ -34,3 +34,7 @@ A antecedência no Dashboard já entregue, a configuração de 45 dias, a valida
 Em 15/10/2026 foram acrescentados 48 pedidos de **Adiçoes do SIGLES.docx**, com IDs AD-01 a AD-48, origem **Adicional** e cobrança **Aditivo** em todas as partes, conforme instrução expressa do usuário. Os 95 parágrafos não vazios foram associados às referências, incluindo títulos, contexto e links dos modelos. O quadro passa a 100 pedidos.
 
 A classificação comercial não altera o status de implementação. AD-01 registra o responsável já existente na entrega 2 e a definição de vários responsáveis; AD-02 se sobrepõe à coluna pendente de WI-14. Os caminhos de formulário e de anexação das atas são alternativas, sem presumir duas implementações obrigatórias. Os modelos externos são referências para conferência, sem presumir seus campos não extraídos.
+
+## Ordem técnica das entregas 1 a 8
+
+[Índice dos oito planos técnicos](https://dcadv789.github.io/sigles-pedidos/tecnico/) — 42 itens planejados em 16/10/2026. Cada entrega tem um Markdown e uma página HTML, com diagnóstico, arquivos verificados, alterações previstas, dados, dependências, decisões e testes de aceite. O quadro liga cada parte de Pedido inicial ao item técnico correspondente. Aditivos ficam fora. O plano não executou correções no sistema.
