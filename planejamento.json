@@ -1,0 +1,1331 @@
+{
+  "data": "16/10/2026",
+  "status": "Proposta de divisão funcional — não implementada",
+  "criterio": "Pedido inicial considerado pago conforme orientação do usuário; Aditivos excluídos.",
+  "escala": "100 pontos de esforço relativo preliminar. A distribuição 15/15/20/50 é a alocação pedida; não é uma medição do código, uma estimativa em horas ou uma garantia de duração.",
+  "entregas": [
+    {
+      "entrega": 5,
+      "percentual": 15,
+      "titulo": "Usabilidade, cadastros e ajustes de acesso",
+      "objetivo": "Fechar os ajustes menores das telas existentes e as definições básicas de cadastro e acesso."
+    },
+    {
+      "entrega": 6,
+      "percentual": 15,
+      "titulo": "Fornecedores, compras e ordens de serviço",
+      "objetivo": "Concluir as pendências do fluxo administrativo, sem refazer os recursos entregues."
+    },
+    {
+      "entrega": 7,
+      "percentual": 20,
+      "titulo": "Cronogramas, disciplinas e relatórios acadêmicos",
+      "objetivo": "Completar os dados acadêmicos, as exportações e as consolidações que ainda faltam."
+    },
+    {
+      "entrega": 8,
+      "percentual": 50,
+      "titulo": "Agenda, reservas externas e integrações",
+      "objetivo": "Concentrar as regras que cruzam agenda, usuários, dados e comunicações externas, além dos estudos originalmente previstos."
+    }
+  ],
+  "grupos": [
+    {
+      "id": "5.1",
+      "entrega": 5,
+      "pontos": 4,
+      "titulo": "Dashboard e informações iniciais",
+      "tipo": "Usabilidade e validação",
+      "peso": "Leve",
+      "resumo": "Completar atalhos e apresentação das informações do Dashboard.",
+      "acoes": [
+        "Inserir links diretos para LES, MarteWeb e Júpiter Web e confirmar a aplicação da imagem de fundo.",
+        "Conferir a abrangência das OS do administrador e os perfis de bolsistas e colaboradores nos avisos de férias e contratos."
+      ],
+      "detalhados": [
+        "DB03.1",
+        "DB07.1",
+        "DB08.1",
+        "DB08.2",
+        "DB08.3",
+        "DB09.1"
+      ],
+      "quadro": [
+        "WI-05:3",
+        "WI-05:4",
+        "WI-06:2"
+      ],
+      "limite": "",
+      "referenciasDetalhadas": [
+        {
+          "id": "DB03.1",
+          "pedido": "Confirmar se “todas as OS” significa todos os departamentos ou somente o departamento e seus descendentes.",
+          "situacao": "**Definir** — a visão ampliada implementada é departamental."
+        },
+        {
+          "id": "DB07.1",
+          "pedido": "Confirmar que todos os perfis pretendidos como bolsistas/colaboradores entram nessa lista.",
+          "situacao": "**Validar** — a consulta usa perfis específicos; verificar os perfis efetivos em produção."
+        },
+        {
+          "id": "DB08.1",
+          "pedido": "Link direto para o site do LES.",
+          "situacao": "**Pendente** — não identificado no conjunto de atalhos do Dashboard."
+        },
+        {
+          "id": "DB08.2",
+          "pedido": "Link direto para MarteWeb.",
+          "situacao": "**Pendente** — há link para USP Digital, mas não o atalho específico solicitado."
+        },
+        {
+          "id": "DB08.3",
+          "pedido": "Link direto para Júpiter Web.",
+          "situacao": "**Pendente** — há link para USP Digital, mas não o atalho específico solicitado."
+        },
+        {
+          "id": "DB09.1",
+          "pedido": "Aplicar a imagem como plano de fundo, se essa for a intenção literal do pedido.",
+          "situacao": "**Definir** — o código apresenta a imagem na página, não como fundo da página inteira."
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "WI-05:3",
+          "id": "WI-05",
+          "titulo": "Revisar cartões, atalhos e informações iniciais",
+          "parte": 3,
+          "texto": "Acrescentar atalhos diretos para LES, MarteWeb e Júpiter Web.",
+          "situacao": "Pendente"
+        },
+        {
+          "chave": "WI-05:4",
+          "id": "WI-05",
+          "titulo": "Revisar cartões, atalhos e informações iniciais",
+          "parte": 4,
+          "texto": "Confirmar se a imagem deve ser plano de fundo ou imagem na página.",
+          "situacao": "Definir"
+        },
+        {
+          "chave": "WI-06:2",
+          "id": "WI-06",
+          "titulo": "Exibir OS conforme perfil e status",
+          "parte": 2,
+          "texto": "Confirmar se a visão ampliada deve abranger todos os departamentos; hoje é departamental.",
+          "situacao": "Definir"
+        }
+      ]
+    },
+    {
+      "id": "5.2",
+      "entrega": 5,
+      "pontos": 5,
+      "titulo": "Usuários, contatos, férias e prazo de contratos",
+      "tipo": "Correção e complemento de cadastro",
+      "peso": "Leve a médio",
+      "resumo": "Resolver a ordenação e fechar os refinamentos do cadastro e das informações já existentes.",
+      "acoes": [
+        "Validar e corrigir a desconfiguração ao ordenar usuários pelo nome.",
+        "Detalhar e concluir os ajustes ordinários de contatos, dados de colaboradores e férias.",
+        "Conferir a configuração de 45 dias no perfil de estagiários."
+      ],
+      "detalhados": [
+        "US02",
+        "US05.1"
+      ],
+      "quadro": [
+        "VS-03:2",
+        "VS-04:2",
+        "VS-05:1",
+        "WI-08:2",
+        "WI-09:2"
+      ],
+      "limite": "O envio automático de avisos é Aditivo e não integra esta entrega. Os ajustes ainda descritos genericamente precisam ser delimitados; não representam campos ou rotinas ilimitados.",
+      "referenciasDetalhadas": [
+        {
+          "id": "US02",
+          "pedido": "Ordenação alfabética sem desconfigurar a tela.",
+          "situacao": "**Validar** — existe ordenação pelo nome, mas ela já existia antes; falta reproduzir a desconfiguração informada."
+        },
+        {
+          "id": "US05.1",
+          "pedido": "Aplicar especificamente 45 dias ao perfil de estagiários.",
+          "situacao": "**Validar** — confirmar o perfil e a configuração em produção. A parametrização existe, mas a regra específica não foi comprovada."
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "VS-03:2",
+          "id": "VS-03",
+          "titulo": "Telefones e contatos",
+          "parte": 2,
+          "texto": "Detalhar campos, busca e exportações desejados.",
+          "situacao": "Definir"
+        },
+        {
+          "chave": "VS-04:2",
+          "id": "VS-04",
+          "titulo": "Férias",
+          "parte": 2,
+          "texto": "Definir outras mudanças além do cadastro e dos avisos existentes.",
+          "situacao": "Definir"
+        },
+        {
+          "chave": "VS-05:1",
+          "id": "VS-05",
+          "titulo": "Informações gerais de usuários e colaboradores",
+          "parte": 1,
+          "texto": "Especificar o que falta nas informações de usuários e colaboradores.",
+          "situacao": "Definir"
+        },
+        {
+          "chave": "WI-08:2",
+          "id": "WI-08",
+          "titulo": "Ordenação, exclusão e comportamento das abas",
+          "parte": 2,
+          "texto": "Reproduzir a desconfiguração relatada ao ordenar nomes.",
+          "situacao": "Validar"
+        },
+        {
+          "chave": "WI-09:2",
+          "id": "WI-09",
+          "titulo": "Aviso de vencimento de contrato de estagiário",
+          "parte": 2,
+          "texto": "Conferir a configuração de 45 dias para estagiários.",
+          "situacao": "Validar"
+        }
+      ]
+    },
+    {
+      "id": "5.3",
+      "entrega": 5,
+      "pontos": 4,
+      "titulo": "Navegação, identificação das salas e dados do solicitante",
+      "tipo": "Usabilidade e regra de formulário",
+      "peso": "Leve",
+      "resumo": "Reunir pequenos ajustes de apresentação e de preenchimento.",
+      "acoes": [
+        "Mover Períodos para o menu Compras.",
+        "Apresentar o nome abreviado da sala na agenda.",
+        "Exibir nome e e-mail em todos os tipos de reserva e exigir os campos somente em Grupo de extensão."
+      ],
+      "detalhados": [
+        "CA04",
+        "CA06",
+        "AG06",
+        "AG06.1"
+      ],
+      "quadro": [
+        "WI-17:2",
+        "WI-19:1"
+      ],
+      "limite": "",
+      "referenciasDetalhadas": [
+        {
+          "id": "CA04",
+          "pedido": "Mover Períodos para dentro do menu Compras.",
+          "situacao": "**Pendente** — permanece em Cadastros."
+        },
+        {
+          "id": "CA06",
+          "pedido": "Na agenda, identificar a sala somente pelo nome abreviado.",
+          "situacao": "**Pendente** — a agenda e a disponibilidade ainda usam a descrição da sala."
+        },
+        {
+          "id": "AG06",
+          "pedido": "Exibir nome e e-mail do discente/solicitante em todos os tipos de reserva.",
+          "situacao": "**Pendente** — os campos ficam ocultos fora de Reunião e Grupo de extensão."
+        },
+        {
+          "id": "AG06.1",
+          "pedido": "Exigir nome e e-mail somente no tipo Grupo de extensão.",
+          "situacao": "**Pendente** — a regra atual também exige esses campos no tipo Reunião."
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "WI-17:2",
+          "id": "WI-17",
+          "titulo": "Remover salas duplicadas e ajustar exibição na agenda",
+          "parte": 2,
+          "texto": "Usar o nome abreviado na apresentação da sala na agenda.",
+          "situacao": "Pendente"
+        },
+        {
+          "chave": "WI-19:1",
+          "id": "WI-19",
+          "titulo": "Dados do solicitante nos tipos de reserva",
+          "parte": 1,
+          "texto": "Exibir os campos em todos os tipos e exigir preenchimento somente em Grupo de extensão.",
+          "situacao": "Pendente"
+        }
+      ]
+    },
+    {
+      "id": "5.4",
+      "entrega": 5,
+      "pontos": 2,
+      "titulo": "Perfis e permissões existentes",
+      "tipo": "Definição e ajuste de acesso",
+      "peso": "Médio",
+      "resumo": "Fechar a lista de ajustes de acesso nos perfis atuais e adequar o comportamento acordado.",
+      "acoes": [
+        "Identificar as ações permitidas por perfil e módulo e resolver os desvios do fluxo existente."
+      ],
+      "detalhados": [
+        "OR02"
+      ],
+      "quadro": [
+        "VS-06:1"
+      ],
+      "limite": "Abrange a revisão dos perfis atuais. O acesso novo de alunos e externos a reservas fica na entrega 8; não há substituição geral do controle de permissões.",
+      "referenciasDetalhadas": [
+        {
+          "id": "OR02",
+          "pedido": "Avaliar e evoluir perfis, permissões e regras de acesso.",
+          "situacao": "**Definir** — existem permissões por perfil; falta uma lista de mudanças além dos ajustes já entregues."
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "VS-06:1",
+          "id": "VS-06",
+          "titulo": "Evoluir cadastro, perfis e permissões",
+          "parte": 1,
+          "texto": "Definir as mudanças pretendidas por perfil, módulo e ação.",
+          "situacao": "Definir"
+        }
+      ]
+    },
+    {
+      "id": "6.1",
+      "entrega": 6,
+      "pontos": 5,
+      "titulo": "Fornecedores e ligação com compras",
+      "tipo": "Correção e complemento funcional",
+      "peso": "Médio",
+      "resumo": "Concluir o cadastro de fornecedores e a integração administrativa pretendida.",
+      "acoes": [
+        "Acrescentar a descrição dos serviços no cadastro, edição e listagem.",
+        "Reproduzir e corrigir os dados de fornecedor que não eram gravados.",
+        "Definir e concluir a ligação ordinária com o fluxo de compras, sem duplicar os dois ajustes anteriores."
+      ],
+      "detalhados": [
+        "OR05"
+      ],
+      "quadro": [
+        "V1-04:1",
+        "V1-05:1",
+        "VS-11:1"
+      ],
+      "limite": "",
+      "referenciasDetalhadas": [
+        {
+          "id": "OR05",
+          "pedido": "Aprimorar fornecedores e a integração com compras.",
+          "situacao": "**Definir** — delimitar a evolução desejada; o cadastro existente e os ajustes pontuais da OS não demonstram atendimento integral desse tema."
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "V1-04:1",
+          "id": "V1-04",
+          "titulo": "Coluna de descrição dos serviços",
+          "parte": 1,
+          "texto": "Adicionar o campo ao cadastro, à edição e à listagem de fornecedores.",
+          "situacao": "Pendente"
+        },
+        {
+          "chave": "V1-05:1",
+          "id": "V1-05",
+          "titulo": "Editar fornecedor não grava",
+          "parte": 1,
+          "texto": "Reproduzir com os campos e dados que não eram gravados.",
+          "situacao": "Validar"
+        },
+        {
+          "chave": "VS-11:1",
+          "id": "VS-11",
+          "titulo": "Fornecedores pouco usados",
+          "parte": 1,
+          "texto": "Definir a integração pretendida e tratar os pedidos V1-04 e V1-05.",
+          "situacao": "Definir"
+        }
+      ]
+    },
+    {
+      "id": "6.2",
+      "entrega": 6,
+      "pontos": 4,
+      "titulo": "Períodos e apresentação das solicitações de compras",
+      "tipo": "Correção, usabilidade e aceite",
+      "peso": "Leve a médio",
+      "resumo": "Fechar os pontos que restaram da operação de períodos e compras.",
+      "acoes": [
+        "Validar a ativação de período no cenário relatado e corrigir o problema se reproduzido.",
+        "Exibir a data da solicitação nas listagens de Minhas solicitações e do Painel.",
+        "Confirmar a equivalência entre Arquivados e a consulta de períodos encerrados; definir a aba Compras e os complementos da rotina administrativa."
+      ],
+      "detalhados": [
+        "CO01.3",
+        "CO06"
+      ],
+      "quadro": [
+        "V1-03:1",
+        "V1-07:2",
+        "VS-09:2",
+        "WI-20:2"
+      ],
+      "limite": "Não reabre o trabalho de estágios, edição, encerramento e histórico já entregue na entrega 1.",
+      "referenciasDetalhadas": [
+        {
+          "id": "CO01.3",
+          "pedido": "Criar uma aba ou campo específico chamado Arquivados.",
+          "situacao": "**Definir** — a consulta implementada usa Mostrar períodos encerrados; confirmar se essa solução atende ao pedido."
+        },
+        {
+          "id": "CO06",
+          "pedido": "Criar a “aba Compras”, caso seja diferente do menu e do painel já existentes.",
+          "situacao": "**Definir** — indicar o conteúdo e o fluxo esperado dessa aba."
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "V1-03:1",
+          "id": "V1-03",
+          "titulo": "Erro ao ativar período",
+          "parte": 1,
+          "texto": "Testar a ativação com as datas e condições do caso original.",
+          "situacao": "Validar"
+        },
+        {
+          "chave": "V1-07:2",
+          "id": "V1-07",
+          "titulo": "Data em toda solicitação",
+          "parte": 2,
+          "texto": "Mostrar a data nas listagens de Minhas solicitações e do Painel, além do período.",
+          "situacao": "Pendente"
+        },
+        {
+          "chave": "VS-09:2",
+          "id": "VS-09",
+          "titulo": "Revisar o fluxo de compras",
+          "parte": 2,
+          "texto": "Completar a data visível em todas as listagens e definir as demais melhorias da rotina administrativa.",
+          "situacao": "Pendente"
+        },
+        {
+          "chave": "WI-20:2",
+          "id": "WI-20",
+          "titulo": "Arquivamento automático, painel e layout de pedidos",
+          "parte": 2,
+          "texto": "Confirmar se Mostrar períodos encerrados atende a Arquivados e o que seria a nova aba Compras.",
+          "situacao": "Definir"
+        }
+      ]
+    },
+    {
+      "id": "6.3",
+      "entrega": 6,
+      "pontos": 5,
+      "titulo": "Complementos das ordens de serviço",
+      "tipo": "Correção e regra administrativa",
+      "peso": "Médio",
+      "resumo": "Concluir o comportamento de responsáveis, seguidores, formatos e listagem.",
+      "acoes": [
+        "Validar a persistência dos seguidores e corrigir o caso que repunha nomes fixos.",
+        "Fechar a regra do responsável inicial e da independência entre categoria e subcategoria.",
+        "Apresentar os responsáveis por categoria em Configurações e ordenar inicialmente as OS da mais recente para a mais antiga.",
+        "Conferir os formatos de anexos necessários e fechar com Milton a lista dos relatórios e ajustes restantes."
+      ],
+      "detalhados": [
+        "OS01.1",
+        "OS02",
+        "OS03.1",
+        "OS06.1",
+        "OS07",
+        "OS08",
+        "CA07.1"
+      ],
+      "quadro": [
+        "VS-10:2",
+        "WI-10:2",
+        "WI-10:3",
+        "WI-12:2"
+      ],
+      "limite": "A relação de formatos e os ajustes com Milton precisam ser fechados. Não se presume um visualizador para qualquer formato nem uma lista ilimitada de novas funções.",
+      "referenciasDetalhadas": [
+        {
+          "id": "OS01.1",
+          "pedido": "Preencher o responsável com o próprio solicitante, como escrito no documento.",
+          "situacao": "**Definir** — a regra implementada sugere o responsável da categoria e permite trocá-lo. Confirmar qual regra deve prevalecer."
+        },
+        {
+          "id": "OS02",
+          "pedido": "Preservar os seguidores selecionados ao salvar e reabrir a OS.",
+          "situacao": "**Validar** — há gravação dos seguidores, mas falta demonstrar a correção do caso que substituía os escolhidos pelos padrões."
+        },
+        {
+          "id": "OS03.1",
+          "pedido": "Garantir aceitação de qualquer formato de documento, sem uma lista definida.",
+          "situacao": "**Definir** — existe lista de formatos suportados; confirmar os arquivos efetivamente necessários."
+        },
+        {
+          "id": "OS06.1",
+          "pedido": "Ter responsáveis independentes na categoria e na subcategoria, se essa for a intenção do pedido.",
+          "situacao": "**Definir** — a subcategoria herda o responsável da categoria na implementação atual."
+        },
+        {
+          "id": "OS07",
+          "pedido": "Abrir a listagem ordenada pela data de criação, da mais recente para a mais antiga.",
+          "situacao": "**Pendente** — a ordenação inicial não está configurada para Criado em decrescente."
+        },
+        {
+          "id": "OS08",
+          "pedido": "Levantar com Milton outros ajustes necessários.",
+          "situacao": "**Definir** — registrar os itens e o aceite; não há lista fechada nesse pedido."
+        },
+        {
+          "id": "CA07.1",
+          "pedido": "Apresentar os responsáveis de todas as categorias juntos na tela Configurações, um abaixo do outro.",
+          "situacao": "**Pendente** — o cadastro está nas categorias; a tela Configurações mantém apenas o responsável geral da OS."
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "VS-10:2",
+          "id": "VS-10",
+          "titulo": "Aprimorar OS",
+          "parte": 2,
+          "texto": "Validar persistência dos seguidores e definir os relatórios gerenciais restantes.",
+          "situacao": "Validar"
+        },
+        {
+          "chave": "WI-10:2",
+          "id": "WI-10",
+          "titulo": "Responsável e seguidores não persistem corretamente",
+          "parte": 2,
+          "texto": "Verificar se os seguidores escolhidos permanecem após salvar e reabrir.",
+          "situacao": "Validar"
+        },
+        {
+          "chave": "WI-10:3",
+          "id": "WI-10",
+          "titulo": "Responsável e seguidores não persistem corretamente",
+          "parte": 3,
+          "texto": "Confirmar a regra do responsável inicial solicitada pelo cliente.",
+          "situacao": "Definir"
+        },
+        {
+          "chave": "WI-12:2",
+          "id": "WI-12",
+          "titulo": "Filtros e responsáveis por categoria",
+          "parte": 2,
+          "texto": "Definir se a subcategoria terá responsável próprio; hoje herda da categoria.",
+          "situacao": "Definir"
+        }
+      ]
+    },
+    {
+      "id": "6.4",
+      "entrega": 6,
+      "pontos": 1,
+      "titulo": "Separação de materiais e alcance do Almoxarifado",
+      "tipo": "Definição de escopo funcional",
+      "peso": "Definição",
+      "resumo": "Encerrar a interpretação de Compras/Almoxarifado e da eventual hierarquia de materiais.",
+      "acoes": [
+        "Confirmar se o campo Tipo já atende ao pedido de subcategoria.",
+        "Definir o fluxo independente de Almoxarifado pretendido e seu alcance no acordo inicial."
+      ],
+      "detalhados": [
+        "CA02.1",
+        "OR04.1"
+      ],
+      "quadro": [
+        "VS-08:2",
+        "WI-16:2"
+      ],
+      "limite": "O escopo conhecido aqui é a definição. Não foi incluído, dentro de 1 ponto, o desenvolvimento de um sistema completo de estoque ainda sem regras. Se ele fizer parte do pagamento, a dimensão do plano precisa ser recalibrada, sem retirar esse compromisso.",
+      "referenciasDetalhadas": [
+        {
+          "id": "CA02.1",
+          "pedido": "Criar uma hierarquia adicional de subcategorias, caso seja isso que o cliente pretende.",
+          "situacao": "**Definir** — a separação implementada é pelo campo Tipo de material."
+        },
+        {
+          "id": "OR04.1",
+          "pedido": "Criar controle próprio de Almoxarifado, com fluxos independentes, caso pretendido.",
+          "situacao": "**Definir** — classificação de materiais não equivale a gestão de estoque."
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "VS-08:2",
+          "id": "VS-08",
+          "titulo": "Separar Compras e Almoxarifado",
+          "parte": 2,
+          "texto": "Definir o fluxo próprio de Almoxarifado, entradas, saídas e estoque.",
+          "situacao": "Definir"
+        },
+        {
+          "chave": "WI-16:2",
+          "id": "WI-16",
+          "titulo": "Subcategoria Compras/Almoxarifado e descrição FUSP",
+          "parte": 2,
+          "texto": "Uma hierarquia extra de subcategorias só será necessária se essa for a intenção do cliente.",
+          "situacao": "Definir"
+        }
+      ]
+    },
+    {
+      "id": "7.1",
+      "entrega": 7,
+      "pontos": 8,
+      "titulo": "Turmas, dados e seleções do cronograma",
+      "tipo": "Correção e complemento acadêmico",
+      "peso": "Médio a pesado",
+      "resumo": "Resolver os casos de turma e completar a consulta e a exportação do cronograma.",
+      "acoes": [
+        "Validar a criação que triplica turmas e a alteração de carga entre dias; fechar a regra dos créditos.",
+        "Preencher carga, tipo e créditos ao escolher a disciplina e conferir a ordenação por horário.",
+        "Resolver o cenário do Docente Sênior e a seleção de docentes inativos.",
+        "Filtrar salas elegíveis e exportar todos os cursos vinculados à disciplina."
+      ],
+      "detalhados": [
+        "ER02",
+        "ER03",
+        "ER03.1",
+        "ER06",
+        "CR01",
+        "CR02",
+        "CR03"
+      ],
+      "quadro": [
+        "V1-09:1",
+        "V1-10:1",
+        "WI-02:1",
+        "WI-02:2",
+        "WI-04:1",
+        "WI-13:2",
+        "WI-13:3",
+        "WI-13:4"
+      ],
+      "limite": "Cópia, datas, criação unificada e modelo de arquivo já atribuídos à entrega 4 não entram novamente. Se algum complemento for concluído na entrega 4, ele sai da entrega 7.",
+      "referenciasDetalhadas": [
+        {
+          "id": "ER02",
+          "pedido": "Impedir que a criação de uma turma triplique indevidamente os cadastros e permita apagar somente um.",
+          "situacao": "**Validar** — confirmar o cenário e distinguir duplicidade indevida dos registros previstos por combinação de docente e dia. Não foi identificada uma correção específica desse caso nas entregas."
+        },
+        {
+          "id": "ER03",
+          "pedido": "Alterar a carga horária de um dia sem modificar indevidamente o outro dia da turma.",
+          "situacao": "**Validar** — a alteração individual existe, mas a resolução do caso relatado não foi demonstrada pelo histórico."
+        },
+        {
+          "id": "ER03.1",
+          "pedido": "Alterar créditos de um dia sem alterar o outro dia.",
+          "situacao": "**Definir** — o crédito é compartilhado pelo vínculo de disciplina/semestre; falta definir se o cliente pretende crédito por turma, por dia ou por disciplina."
+        },
+        {
+          "id": "ER06",
+          "pedido": "Mostrar Docente Sênior na seleção de docentes do cronograma.",
+          "situacao": "**Validar** — a consulta já inclui esse perfil, confirmado no banco de teste; falta reproduzir a ausência relatada."
+        },
+        {
+          "id": "CR01",
+          "pedido": "Mostrar todos os cursos vinculados à disciplina no arquivo exportado.",
+          "situacao": "**Pendente** — o PR prepara a exibição de todos os cursos, mas a resposta do servidor ainda retorna apenas o curso ligado à turma."
+        },
+        {
+          "id": "CR02",
+          "pedido": "Ocultar docentes inativos ao incluir outro docente na turma.",
+          "situacao": "**Validar** — já há filtro de docente ativo, mas não foi identificada correção nova; verificar também usuários inativos que tenham registro de docente ativo."
+        },
+        {
+          "id": "CR03",
+          "pedido": "Mostrar apenas salas elegíveis para reserva no cadastro e no filtro do cronograma.",
+          "situacao": "**Pendente** — o PR envia a intenção de filtrar salas de aula, mas o servidor continua filtrando somente por ativo/inativo."
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "V1-09:1",
+          "id": "V1-09",
+          "titulo": "Ordenar por horário",
+          "parte": 1,
+          "texto": "Confirmar a ordenação por horário na tela de Cronogramas do vídeo, sem confundir com Quadro de aulas.",
+          "situacao": "Validar"
+        },
+        {
+          "chave": "V1-10:1",
+          "id": "V1-10",
+          "titulo": "Ao escolher a matéria, puxar carga, tipo e créditos",
+          "parte": 1,
+          "texto": "Preencher carga horária, tipo e créditos ao escolher a disciplina na criação da turma.",
+          "situacao": "Pendente"
+        },
+        {
+          "chave": "WI-02:1",
+          "id": "WI-02",
+          "titulo": "Duplicação de turmas e alteração compartilhada entre dias",
+          "parte": 1,
+          "texto": "Reproduzir a criação que triplicava turmas e a alteração de carga entre dias.",
+          "situacao": "Validar"
+        },
+        {
+          "chave": "WI-02:2",
+          "id": "WI-02",
+          "titulo": "Duplicação de turmas e alteração compartilhada entre dias",
+          "parte": 2,
+          "texto": "Definir se o crédito deve pertencer à disciplina, turma ou dia.",
+          "situacao": "Definir"
+        },
+        {
+          "chave": "WI-04:1",
+          "id": "WI-04",
+          "titulo": "Docente sênior não aparece no cronograma",
+          "parte": 1,
+          "texto": "Conferir o cadastro e os filtros com o docente do caso original.",
+          "situacao": "Validar"
+        },
+        {
+          "chave": "WI-13:2",
+          "id": "WI-13",
+          "titulo": "Exportação, filtros e importação entre semestres",
+          "parte": 2,
+          "texto": "Exportar todos os cursos da disciplina: o servidor ainda retorna só o curso da turma.",
+          "situacao": "Pendente"
+        },
+        {
+          "chave": "WI-13:3",
+          "id": "WI-13",
+          "titulo": "Exportação, filtros e importação entre semestres",
+          "parte": 3,
+          "texto": "Aplicar no servidor o filtro das salas elegíveis.",
+          "situacao": "Pendente"
+        },
+        {
+          "chave": "WI-13:4",
+          "id": "WI-13",
+          "titulo": "Exportação, filtros e importação entre semestres",
+          "parte": 4,
+          "texto": "Confirmar a seleção de docentes inativos no caso relatado.",
+          "situacao": "Validar"
+        }
+      ]
+    },
+    {
+      "id": "7.2",
+      "entrega": 7,
+      "pontos": 4,
+      "titulo": "Complementos de importação acadêmica",
+      "tipo": "Complemento funcional e definição de formato",
+      "peso": "Médio",
+      "resumo": "Cobrir as partes de importação que não estão implementadas na entrega 4.",
+      "acoes": [
+        "Definir e tratar os erros de conteúdo por linha além do fluxo básico de importação.",
+        "Permitir graduação e pós-graduação no mesmo arquivo quando essa for a regra acordada.",
+        "Confirmar a exigência de XLSX além de CSV e delimitar o formato aceito."
+      ],
+      "detalhados": [
+        "CR05.1",
+        "OR07.1"
+      ],
+      "quadro": [
+        "VS-13:2",
+        "VS-13:3"
+      ],
+      "limite": "O teste de aceite do arquivo original para a importação da PR continua na entrega 4. VS-13:2 contém esse teste e o tratamento de erros; somente o complemento ainda ausente entra aqui.",
+      "referenciasDetalhadas": [
+        {
+          "id": "CR05.1",
+          "pedido": "Na importação de um único CSV, escolher Ambas e preservar os tipos de cada disciplina.",
+          "situacao": "**Pendente** — a tela de CSV oferece Graduação ou Pós-graduação; a opção Ambas está na cópia, não na importação do arquivo."
+        },
+        {
+          "id": "OR07.1",
+          "pedido": "Importar diretamente arquivos Excel, caso seja exigido XLSX além de CSV.",
+          "situacao": "**Definir** — o código conferido importa CSV; confirmar o formato aceito pelo cliente."
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "VS-13:2",
+          "id": "VS-13",
+          "titulo": "Melhorar importação do cronograma",
+          "parte": 2,
+          "texto": "Testar o arquivo original do cliente e o tratamento dos erros por linha.",
+          "situacao": "Validar"
+        },
+        {
+          "chave": "VS-13:3",
+          "id": "VS-13",
+          "titulo": "Melhorar importação do cronograma",
+          "parte": 3,
+          "texto": "Confirmar necessidade de XLSX; o formato implementado é CSV.",
+          "situacao": "Definir"
+        }
+      ]
+    },
+    {
+      "id": "7.3",
+      "entrega": 7,
+      "pontos": 3,
+      "titulo": "Disciplinas e exportações",
+      "tipo": "Complemento de listagem e relatório",
+      "peso": "Médio",
+      "resumo": "Completar as colunas e exportações das telas de disciplinas.",
+      "acoes": [
+        "Mostrar o docente responsável na listagem principal e disponibilizar sua exportação Excel.",
+        "Incluir Crédito na exportação do relatório Disciplinas docente.",
+        "Definir a finalidade e os campos do pedido genérico Relatório de disciplinas, reutilizando as consultas quando forem o mesmo resultado."
+      ],
+      "detalhados": [
+        "DI02",
+        "DI03",
+        "DI04.1",
+        "DI05"
+      ],
+      "quadro": [
+        "WI-14:2",
+        "WI-14:3"
+      ],
+      "limite": "A coluna de responsável também aparece no novo documento Adicional, mas já consta do pedido inicial. É um único desenvolvimento nesta entrega, sem somar uma segunda cobrança pelo mesmo resultado. O editor de planos de ensino não está incluído.",
+      "referenciasDetalhadas": [
+        {
+          "id": "DI02",
+          "pedido": "Exportar a listagem principal de Disciplinas para Excel.",
+          "situacao": "**Pendente** — essa listagem não possui exportação Excel implementada."
+        },
+        {
+          "id": "DI03",
+          "pedido": "Mostrar o docente responsável na listagem principal de Disciplinas.",
+          "situacao": "**Pendente** — o vínculo existe na aba Responsável, mas não aparece como coluna na listagem principal."
+        },
+        {
+          "id": "DI04.1",
+          "pedido": "Incluir também Crédito na exportação desse relatório.",
+          "situacao": "**Pendente** — o relatório não retorna nem exporta esse campo."
+        },
+        {
+          "id": "DI05",
+          "pedido": "Criar “Relatório de disciplinas”, sem definição de campos e finalidade.",
+          "situacao": "**Definir** — confirmar se é a listagem principal, Disciplinas docente ou outro relatório."
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "WI-14:2",
+          "id": "WI-14",
+          "titulo": "Carga horária, crédito, responsável, exportação e relatórios",
+          "parte": 2,
+          "texto": "Exportar a listagem principal e mostrar nela o docente responsável.",
+          "situacao": "Pendente"
+        },
+        {
+          "chave": "WI-14:3",
+          "id": "WI-14",
+          "titulo": "Carga horária, crédito, responsável, exportação e relatórios",
+          "parte": 3,
+          "texto": "Incluir crédito na exportação do relatório Disciplinas docente.",
+          "situacao": "Pendente"
+        }
+      ]
+    },
+    {
+      "id": "7.4",
+      "entrega": 7,
+      "pontos": 5,
+      "titulo": "Carga horária anual e por departamento",
+      "tipo": "Consolidação e relatório",
+      "peso": "Pesado",
+      "resumo": "Consolidar a carga horária docente nos recortes solicitados.",
+      "acoes": [
+        "Somar primeiro e segundo semestre e pós-graduação, apresentando o total anual por docente.",
+        "Consolidar por departamento, com filtros e exportação.",
+        "Fechar a regra para turmas compartilhadas e evitar dupla contagem."
+      ],
+      "detalhados": [
+        "DD01",
+        "OR12.1"
+      ],
+      "quadro": [
+        "VS-17:2",
+        "WI-15:2"
+      ],
+      "limite": "",
+      "referenciasDetalhadas": [
+        {
+          "id": "DD01",
+          "pedido": "Consolidar por docente primeiro semestre, segundo semestre, pós-graduação e carga horária total anual.",
+          "situacao": "**Pendente** — há resultados por docente/semestre, mas não a consolidação completa solicitada."
+        },
+        {
+          "id": "OR12.1",
+          "pedido": "Consolidar a carga horária por departamento, com filtros e exportação próprios.",
+          "situacao": "**Pendente** — os relatórios conferidos não completam esse recorte departamental."
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "VS-17:2",
+          "id": "VS-17",
+          "titulo": "Relatório de carga por departamento",
+          "parte": 2,
+          "texto": "Consolidar a carga por departamento com filtros e exportação próprios.",
+          "situacao": "Pendente"
+        },
+        {
+          "chave": "WI-15:2",
+          "id": "WI-15",
+          "titulo": "Ordenar aulas e consolidar carga horária docente",
+          "parte": 2,
+          "texto": "Consolidar primeiro/segundo semestre e pós-graduação no total anual por docente.",
+          "situacao": "Pendente"
+        }
+      ]
+    },
+    {
+      "id": "8.1",
+      "entrega": 8,
+      "pontos": 12,
+      "titulo": "Edição e recorrência da agenda",
+      "tipo": "Correção de regras de calendário",
+      "peso": "Pesado",
+      "resumo": "Estabilizar a edição da série e de uma ocorrência, preservando salas e demais reservas.",
+      "acoes": [
+        "Corrigir a edição que perde a sala e o conflito indevido com a própria reserva.",
+        "Validar a última data das recorrências e a alteração da série.",
+        "Excluir ou trocar a sala de uma única ocorrência sem modificar indevidamente as demais."
+      ],
+      "detalhados": [
+        "ER04",
+        "ER05",
+        "AG01",
+        "AG03",
+        "AG03.1"
+      ],
+      "quadro": [
+        "WI-03:1",
+        "WI-03:2",
+        "WI-18:3"
+      ],
+      "limite": "Cobre a correção e o fechamento dos comportamentos já solicitados. Um mecanismo novo de recorrência além desses cenários não é presumido.",
+      "referenciasDetalhadas": [
+        {
+          "id": "ER04",
+          "pedido": "Editar um evento sem perder a sala e sem conflito indevido com a própria reserva.",
+          "situacao": "**Pendente** — concluir a revisão da edição; o fluxo ainda utiliza campos de data diferentes na checagem de conflito e na gravação."
+        },
+        {
+          "id": "ER05",
+          "pedido": "Editar eventos recorrentes corretamente.",
+          "situacao": "**Validar** — há mecanismos anteriores de recorrência, mas não foi identificada uma correção entregue para o problema relatado."
+        },
+        {
+          "id": "AG01",
+          "pedido": "A recorrência incluir e apresentar corretamente a última data prevista.",
+          "situacao": "**Validar** — existe data limite no código, mas falta reproduzir o caso do documento e confirmar a última ocorrência."
+        },
+        {
+          "id": "AG03",
+          "pedido": "Excluir apenas um dia de uma reserva recorrente.",
+          "situacao": "**Validar** — a opção de ocorrência única já existe, mas não foi entregue uma revisão dessa função nas entregas 1 a 4."
+        },
+        {
+          "id": "AG03.1",
+          "pedido": "Trocar a sala somente em um dia de uma reserva recorrente, preservando os demais.",
+          "situacao": "**Validar** — há tratamento anterior de exceções; falta validar o cenário completo de edição."
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "WI-03:1",
+          "id": "WI-03",
+          "titulo": "Alterar eventos recorrentes",
+          "parte": 1,
+          "texto": "Testar alteração da série e de uma ocorrência, preservação da sala e conflitos.",
+          "situacao": "Validar"
+        },
+        {
+          "chave": "WI-03:2",
+          "id": "WI-03",
+          "titulo": "Alterar eventos recorrentes",
+          "parte": 2,
+          "texto": "Corrigir a diferença entre os campos de data usados na checagem de conflito e na gravação.",
+          "situacao": "Pendente"
+        },
+        {
+          "chave": "WI-18:3",
+          "id": "WI-18",
+          "titulo": "Recorrência, disponibilidade e alteração de uma ocorrência",
+          "parte": 3,
+          "texto": "Validar última data, exclusão e troca de sala de uma ocorrência.",
+          "situacao": "Validar"
+        }
+      ]
+    },
+    {
+      "id": "8.2",
+      "entrega": 8,
+      "pontos": 6,
+      "titulo": "Disponibilidade e bloqueios manuais",
+      "tipo": "Complemento do fluxo de reservas",
+      "peso": "Pesado",
+      "resumo": "Concluir a escolha de sala a partir da disponibilidade e confirmar o bloqueio manual.",
+      "acoes": [
+        "Selecionar uma sala disponível e retornar ao evento com ela preenchida.",
+        "Confirmar se a consulta deve ocultar a lista de indisponíveis.",
+        "Conferir a anotação FEITO do bloqueio manual e completar a solução ordinária prevista, se ainda faltar."
+      ],
+      "detalhados": [
+        "AG02.1",
+        "AG02.2",
+        "AG04"
+      ],
+      "quadro": [
+        "WI-18:2",
+        "WI-22:2"
+      ],
+      "limite": "Bloqueio automático de feriados é Aditivo e fica fora. A política de um novo módulo de indisponibilidades não é acrescentada silenciosamente.",
+      "referenciasDetalhadas": [
+        {
+          "id": "AG02.1",
+          "pedido": "Selecionar uma sala na lista de disponíveis e retornar ao cadastro do evento com a sala preenchida.",
+          "situacao": "**Pendente** — a lista atual apresenta as salas, mas não implementa esse caminho de seleção e retorno."
+        },
+        {
+          "id": "AG02.2",
+          "pedido": "Exibir somente as disponíveis nessa função, sem a lista de indisponíveis.",
+          "situacao": "**Definir** — atualmente são apresentadas as duas listas; confirmar se a lista de conflitos deve ser removida."
+        },
+        {
+          "id": "AG04",
+          "pedido": "Função própria para bloquear manualmente um dia.",
+          "situacao": "**Pendente** — não foi localizada uma função específica nas entregas conferidas; confirmar o que significa a anotação “FEITO” do documento."
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "WI-18:2",
+          "id": "WI-18",
+          "titulo": "Recorrência, disponibilidade e alteração de uma ocorrência",
+          "parte": 2,
+          "texto": "Selecionar a sala na consulta e retornar ao evento com ela preenchida.",
+          "situacao": "Pendente"
+        },
+        {
+          "chave": "WI-22:2",
+          "id": "WI-22",
+          "titulo": "Validar os itens já declarados resolvidos",
+          "parte": 2,
+          "texto": "Confirmar o bloqueio manual indicado como FEITO e o que foi efetivamente realizado.",
+          "situacao": "Validar"
+        }
+      ]
+    },
+    {
+      "id": "8.3",
+      "entrega": 8,
+      "pontos": 6,
+      "titulo": "Salas duplicadas e consistência dos vínculos",
+      "tipo": "Saneamento de dados",
+      "peso": "Pesado",
+      "resumo": "Concluir o saneamento solicitado com base na planilha e nos vínculos existentes.",
+      "acoes": [
+        "Identificar os cadastros de sala que permanecem e quais são duplicados.",
+        "Conferir os vínculos de reservas, turmas e histórico antes de consolidar os registros.",
+        "Validar o resultado e a preservação das informações relacionadas."
+      ],
+      "detalhados": [
+        "CA05"
+      ],
+      "quadro": [
+        "WI-17:1"
+      ],
+      "limite": "Planejamento funcional apenas: nenhuma alteração de dados foi executada. A quantidade de duplicidades e vínculos ainda precisa ser medida.",
+      "referenciasDetalhadas": [
+        {
+          "id": "CA05",
+          "pedido": "Remover salas duplicadas conforme a planilha do cliente.",
+          "situacao": "**Validar** — não há comprovação de execução desse saneamento em produção. O banco de teste não confirma o resultado na base real."
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "WI-17:1",
+          "id": "WI-17",
+          "titulo": "Remover salas duplicadas e ajustar exibição na agenda",
+          "parte": 1,
+          "texto": "Conferir a planilha e remover duplicidades com validação dos vínculos.",
+          "situacao": "Validar"
+        }
+      ]
+    },
+    {
+      "id": "8.4",
+      "entrega": 8,
+      "pontos": 12,
+      "titulo": "Solicitação de salas por alunos e usuários externos",
+      "tipo": "Fluxo novo previsto no pedido inicial",
+      "peso": "Pesado",
+      "resumo": "Entregar o fluxo original de reservas para solicitantes externos ao cadastro administrativo atual.",
+      "acoes": [
+        "Disponibilizar solicitação e acompanhamento pelo aluno.",
+        "Definir e aplicar identificação por número USP, acesso externo e permissões próprias.",
+        "Fechar quem aprova e em quais situações, com o acompanhamento da solicitação."
+      ],
+      "detalhados": [
+        "OR14",
+        "OR15",
+        "OR16",
+        "OR17"
+      ],
+      "quadro": [
+        "VS-19:1",
+        "VS-19:2"
+      ],
+      "limite": "Trata de reserva de salas. Não inclui o processo completo de Aproveitamento de Estudos do documento Adicional.",
+      "referenciasDetalhadas": [
+        {
+          "id": "OR14",
+          "pedido": "Solicitação eletrônica de sala por aluno, com acompanhamento.",
+          "situacao": "**Pendente** — o formulário administrativo existente não implementa o fluxo solicitado para aluno."
+        },
+        {
+          "id": "OR15",
+          "pedido": "Aprovação de solicitações de reserva de salas, quando aplicável.",
+          "situacao": "**Definir** — confirmar se haverá aprovação, quem aprova e em quais casos; não foi identificado um fluxo novo de aprovação."
+        },
+        {
+          "id": "OR16",
+          "pedido": "Identificação/validação de aluno por número USP para solicitar sala.",
+          "situacao": "**Pendente**"
+        },
+        {
+          "id": "OR17",
+          "pedido": "Acesso de usuários externos para solicitação de reservas, com autenticação e permissões específicas.",
+          "situacao": "**Pendente**"
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "VS-19:1",
+          "id": "VS-19",
+          "titulo": "Solicitar sala no SIGLES (nº USP e pessoas de fora)",
+          "parte": 1,
+          "texto": "Solicitação pelo aluno, validação do número USP, acompanhamento e acesso externo.",
+          "situacao": "Pendente"
+        },
+        {
+          "chave": "VS-19:2",
+          "id": "VS-19",
+          "titulo": "Solicitar sala no SIGLES (nº USP e pessoas de fora)",
+          "parte": 2,
+          "texto": "Definir responsáveis e regras de aprovação de reservas.",
+          "situacao": "Definir"
+        }
+      ]
+    },
+    {
+      "id": "8.5",
+      "entrega": 8,
+      "pontos": 6,
+      "titulo": "Comunicações externas da Conexão LES",
+      "tipo": "Revisão de integração e acesso",
+      "peso": "Pesado",
+      "resumo": "Concluir a revisão do fluxo de comunicação externa já solicitado.",
+      "acoes": [
+        "Revisar cadastro dos publicadores, destinatários e permissões.",
+        "Conferir os endereços usados nas comunicações para o ambiente correto.",
+        "Validar o envio e o acesso no fluxo externo existente."
+      ],
+      "detalhados": [
+        "OR06"
+      ],
+      "quadro": [
+        "VS-12:1"
+      ],
+      "limite": "",
+      "referenciasDetalhadas": [
+        {
+          "id": "OR06",
+          "pedido": "Revisar cadastro, destinatários, permissões e comunicações externas da Conexão LES.",
+          "situacao": "**Pendente** — concluir a revisão e validação do fluxo externo; há problemas conhecidos de endereços entre teste e produção."
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "VS-12:1",
+          "id": "VS-12",
+          "titulo": "Comunicações para pessoas de fora da USP",
+          "parte": 1,
+          "texto": "Revisar cadastros, destinatários, permissões e endereços de teste/produção da Conexão LES.",
+          "situacao": "Pendente"
+        }
+      ]
+    },
+    {
+      "id": "8.6",
+      "entrega": 8,
+      "pontos": 3,
+      "titulo": "Histórico e relatórios de agenda",
+      "tipo": "Consulta e relatório",
+      "peso": "Médio",
+      "resumo": "Concluir os aprimoramentos da consulta das alterações da agenda.",
+      "acoes": [
+        "Definir campos, filtros e informações de saída.",
+        "Validar as consultas e a extração do histórico, aproveitando o log e a exportação existentes."
+      ],
+      "detalhados": [
+        "OR13"
+      ],
+      "quadro": [
+        "VS-18:2"
+      ],
+      "limite": "",
+      "referenciasDetalhadas": [
+        {
+          "id": "OR13",
+          "pedido": "Melhorar relatórios e consultas do histórico de alterações de agenda.",
+          "situacao": "**Definir** — log e exportação já existiam; especificar as melhorias esperadas e corrigir as pendências desse fluxo."
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "VS-18:2",
+          "id": "VS-18",
+          "titulo": "Relatórios de alteração de agenda",
+          "parte": 2,
+          "texto": "Definir novos campos e filtros; validar os problemas da agenda.",
+          "situacao": "Definir"
+        }
+      ]
+    },
+    {
+      "id": "8.7",
+      "entrega": 8,
+      "pontos": 3,
+      "titulo": "Importação em lote em outros cadastros",
+      "tipo": "Definição e complemento de importação",
+      "peso": "Médio a pesado",
+      "resumo": "Fechar quais importações em lote fazem parte do pedido inicial e o resultado de cada uma.",
+      "acoes": [
+        "Definir cadastros, colunas, formatos e regras de duplicidade e validação.",
+        "Concluir o lote funcional delimitado no acordo inicial; não assumir importação universal para todas as telas."
+      ],
+      "detalhados": [
+        "OR08"
+      ],
+      "quadro": [
+        "VS-14:1"
+      ],
+      "limite": "A quantidade de cadastros e os formatos não estão definidos. Os 3 pontos são uma reserva preliminar, a recalibrar quando o lote for fechado.",
+      "referenciasDetalhadas": [
+        {
+          "id": "OR08",
+          "pedido": "Importação em lote em outras funcionalidades.",
+          "situacao": "**Definir** — indicar quais cadastros, colunas e regras; não há uma entrega geral de importação em lote."
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "VS-14:1",
+          "id": "VS-14",
+          "titulo": "Importação em lote em outras funcionalidades",
+          "parte": 1,
+          "texto": "Escolher cadastros, colunas, formatos, validações e regras de duplicidade.",
+          "situacao": "Definir"
+        }
+      ]
+    },
+    {
+      "id": "8.8",
+      "entrega": 8,
+      "pontos": 2,
+      "titulo": "Estudos de Aproveitamento de Disciplinas e NotebookLM",
+      "tipo": "Estudo funcional e de viabilidade",
+      "peso": "Definição",
+      "resumo": "Encerrar os estudos mencionados no relatório original, com um resultado registrado.",
+      "acoes": [
+        "Levantar o fluxo acadêmico, os documentos e a viabilidade do módulo originalmente mencionado.",
+        "Avaliar o uso do NotebookLM e registrar a conclusão e os limites da solução."
+      ],
+      "detalhados": [
+        "OR10",
+        "OR11"
+      ],
+      "quadro": [
+        "VS-16:1",
+        "VS-16:2"
+      ],
+      "limite": "Inclui estudo e detalhamento. O desenvolvimento completo de Aproveitamento de Estudos descrito no documento Adicional permanece Aditivo e não entra nesses 2 pontos.",
+      "referenciasDetalhadas": [
+        {
+          "id": "OR10",
+          "pedido": "Estudar e detalhar o módulo de Aproveitamento de Disciplinas.",
+          "situacao": "**Pendente** — não foi identificado estudo funcional conclusivo ou módulo implementado."
+        },
+        {
+          "id": "OR11",
+          "pedido": "Avaliar eventual integração ou utilização de Notebook LM.",
+          "situacao": "**Pendente** — não foi identificado resultado dessa avaliação nem integração implementada."
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "VS-16:1",
+          "id": "VS-16",
+          "titulo": "Novo módulo + Notebook LM",
+          "parte": 1,
+          "texto": "Levantar o fluxo acadêmico e detalhar o módulo.",
+          "situacao": "Pendente"
+        },
+        {
+          "chave": "VS-16:2",
+          "id": "VS-16",
+          "titulo": "Novo módulo + Notebook LM",
+          "parte": 2,
+          "texto": "Avaliar o uso do NotebookLM e registrar o resultado.",
+          "situacao": "Pendente"
+        }
+      ]
+    }
+  ],
+  "cobertura": {
+    "partesElegiveis": 53,
+    "partesPlanejadas": 51,
+    "referenciasDetalhadas": 58,
+    "partesTratadasSeparadamente": {
+      "VS-01:5": "Resumo geral: contemplado pelo conjunto das entregas, sem esforço duplicado.",
+      "WI-01:2": "Teste de aceite da importação já atribuída à entrega 4."
+    },
+    "exclusoesDetalhadas": [
+      {
+        "id": "US05.2",
+        "motivo": "Aditivo: novo envio automático de avisos de contratos."
+      },
+      {
+        "id": "AG05",
+        "motivo": "Aditivo: bloqueio automático de feriados."
+      },
+      {
+        "id": "NM01",
+        "motivo": "Aditivo: gestão de comissões."
+      },
+      {
+        "id": "NM02",
+        "motivo": "Aditivo: representantes das comissões."
+      },
+      {
+        "id": "NM03",
+        "motivo": "Aditivo: reuniões das comissões."
+      },
+      {
+        "id": "ER01.2",
+        "motivo": "Permanece na entrega 4: aceite do arquivo original no fluxo da PR."
+      }
+    ]
+  }
+}

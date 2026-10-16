@@ -2,6 +2,8 @@
 
 [Abrir o quadro](https://dcadv789.github.io/sigles-pedidos/)
 
+[Planejamento funcional das entregas 5 a 8](https://dcadv789.github.io/sigles-pedidos/planejamento.html) — proposta de 16/10/2026, restrita ao restante de Pedido inicial, com divisão de esforço relativo de 15%, 15%, 20% e 50%. As novas entregas ainda não estão implementadas. Os status do quadro de conferência permanecem independentes do planejamento.
+
 Conferência atualizada em **15/10/2026**, preservando os 52 identificadores e pedidos do quadro anterior. As descrições dos pedidos são os resumos que já estavam nesta página, não transcrições literais dos documentos originais. Os pedidos podem se sobrepor e não representam 52 funcionalidades independentes.
 
 - **Entrega 1:** cadastros, usuários e compras, em produção (v1.1.0/v1.1.1).
