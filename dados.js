@@ -1,4 +1,4 @@
-/* Conferência funcional e planejamento são estados distintos. Planos técnicos em 16/10/2026. */
+/* Planejamento revisado em 16/10/2026; status funcionais preservados. */
 window.SIGLES_BOARD = {
   "atualizado": "15/10/2026",
   "itens": [
@@ -21,7 +21,9 @@ window.SIGLES_BOARD = {
               "id": "E1-99",
               "entrega": 1,
               "titulo": "Aceite integrado do fechamento da entrega 1",
-              "url": "tecnico/entrega-1.html#E1-99"
+              "url": "tecnico/entrega-1.html#E1-99",
+              "papel": "aceite",
+              "escopo": "Aceite integrado do fechamento da entrega 1"
             }
           ]
         }
@@ -46,7 +48,9 @@ window.SIGLES_BOARD = {
               "id": "E1-99",
               "entrega": 1,
               "titulo": "Aceite integrado do fechamento da entrega 1",
-              "url": "tecnico/entrega-1.html#E1-99"
+              "url": "tecnico/entrega-1.html#E1-99",
+              "papel": "aceite",
+              "escopo": "Aceite integrado do fechamento da entrega 1"
             }
           ]
         }
@@ -71,7 +75,9 @@ window.SIGLES_BOARD = {
               "id": "E1-03",
               "entrega": 1,
               "titulo": "Ativar e inativar períodos sem erro",
-              "url": "tecnico/entrega-1.html#E1-03"
+              "url": "tecnico/entrega-1.html#E1-03",
+              "papel": "execução",
+              "escopo": "Ativar e inativar períodos sem erro"
             }
           ]
         }
@@ -96,7 +102,9 @@ window.SIGLES_BOARD = {
               "id": "E6-01",
               "entrega": 6,
               "titulo": "Cadastro e gravação de fornecedores",
-              "url": "tecnico/entrega-6.html#E6-01"
+              "url": "tecnico/entrega-6.html#E6-01",
+              "papel": "execução",
+              "escopo": "Cadastro e gravação de fornecedores"
             }
           ]
         }
@@ -121,7 +129,9 @@ window.SIGLES_BOARD = {
               "id": "E6-01",
               "entrega": 6,
               "titulo": "Cadastro e gravação de fornecedores",
-              "url": "tecnico/entrega-6.html#E6-01"
+              "url": "tecnico/entrega-6.html#E6-01",
+              "papel": "execução",
+              "escopo": "Cadastro e gravação de fornecedores"
             }
           ]
         }
@@ -146,13 +156,17 @@ window.SIGLES_BOARD = {
               "id": "E1-05",
               "entrega": 1,
               "titulo": "Conciliar encerramento do período com os estágios combinados",
-              "url": "tecnico/entrega-1.html#E1-05"
+              "url": "tecnico/entrega-1.html#E1-05",
+              "papel": "execução",
+              "escopo": "Matriz de encerramento a conciliar"
             },
             {
               "id": "E1-99",
               "entrega": 1,
               "titulo": "Aceite integrado do fechamento da entrega 1",
-              "url": "tecnico/entrega-1.html#E1-99"
+              "url": "tecnico/entrega-1.html#E1-99",
+              "papel": "aceite",
+              "escopo": "Regressão do fluxo já entregue"
             }
           ]
         }
@@ -180,7 +194,9 @@ window.SIGLES_BOARD = {
               "id": "E1-99",
               "entrega": 1,
               "titulo": "Aceite integrado do fechamento da entrega 1",
-              "url": "tecnico/entrega-1.html#E1-99"
+              "url": "tecnico/entrega-1.html#E1-99",
+              "papel": "aceite",
+              "escopo": "Aceite integrado do fechamento da entrega 1"
             }
           ]
         },
@@ -194,7 +210,9 @@ window.SIGLES_BOARD = {
               "id": "E1-02",
               "entrega": 1,
               "titulo": "Data de criação em Minhas solicitações e Painel",
-              "url": "tecnico/entrega-1.html#E1-02"
+              "url": "tecnico/entrega-1.html#E1-02",
+              "papel": "execução",
+              "escopo": "Data de criação em Minhas solicitações e Painel"
             }
           ]
         }
@@ -219,7 +237,9 @@ window.SIGLES_BOARD = {
               "id": "E1-99",
               "entrega": 1,
               "titulo": "Aceite integrado do fechamento da entrega 1",
-              "url": "tecnico/entrega-1.html#E1-99"
+              "url": "tecnico/entrega-1.html#E1-99",
+              "papel": "aceite",
+              "escopo": "Aceite integrado do fechamento da entrega 1"
             }
           ]
         }
@@ -244,7 +264,9 @@ window.SIGLES_BOARD = {
               "id": "E7-01",
               "entrega": 7,
               "titulo": "Turmas, edição por dia e preenchimento automático",
-              "url": "tecnico/entrega-7.html#E7-01"
+              "url": "tecnico/entrega-7.html#E7-01",
+              "papel": "execução",
+              "escopo": "Turmas, edição por dia e preenchimento automático"
             }
           ]
         }
@@ -269,7 +291,9 @@ window.SIGLES_BOARD = {
               "id": "E7-01",
               "entrega": 7,
               "titulo": "Turmas, edição por dia e preenchimento automático",
-              "url": "tecnico/entrega-7.html#E7-01"
+              "url": "tecnico/entrega-7.html#E7-01",
+              "papel": "execução",
+              "escopo": "Turmas, edição por dia e preenchimento automático"
             }
           ]
         }
@@ -294,7 +318,9 @@ window.SIGLES_BOARD = {
               "id": "E2-99",
               "entrega": 2,
               "titulo": "Aceite integrado do fechamento da entrega 2",
-              "url": "tecnico/entrega-2.html#E2-99"
+              "url": "tecnico/entrega-2.html#E2-99",
+              "papel": "aceite",
+              "escopo": "Aceite integrado do fechamento da entrega 2"
             }
           ]
         }
@@ -319,7 +345,9 @@ window.SIGLES_BOARD = {
               "id": "E1-99",
               "entrega": 1,
               "titulo": "Aceite integrado do fechamento da entrega 1",
-              "url": "tecnico/entrega-1.html#E1-99"
+              "url": "tecnico/entrega-1.html#E1-99",
+              "papel": "aceite",
+              "escopo": "Aceite integrado do fechamento da entrega 1"
             }
           ]
         },
@@ -333,7 +361,9 @@ window.SIGLES_BOARD = {
               "id": "E2-99",
               "entrega": 2,
               "titulo": "Aceite integrado do fechamento da entrega 2",
-              "url": "tecnico/entrega-2.html#E2-99"
+              "url": "tecnico/entrega-2.html#E2-99",
+              "papel": "aceite",
+              "escopo": "Aceite integrado do fechamento da entrega 2"
             }
           ]
         },
@@ -347,7 +377,9 @@ window.SIGLES_BOARD = {
               "id": "E3-99",
               "entrega": 3,
               "titulo": "Homologação e preparação de publicação da entrega 3",
-              "url": "tecnico/entrega-3.html#E3-99"
+              "url": "tecnico/entrega-3.html#E3-99",
+              "papel": "aceite",
+              "escopo": "Homologação e preparação de publicação da entrega 3"
             }
           ]
         },
@@ -361,7 +393,9 @@ window.SIGLES_BOARD = {
               "id": "E4-99",
               "entrega": 4,
               "titulo": "Revisão final e integração da entrega 4",
-              "url": "tecnico/entrega-4.html#E4-99"
+              "url": "tecnico/entrega-4.html#E4-99",
+              "papel": "aceite",
+              "escopo": "Revisão final e integração da entrega 4"
             }
           ]
         },
@@ -400,7 +434,9 @@ window.SIGLES_BOARD = {
               "id": "E3-99",
               "entrega": 3,
               "titulo": "Homologação e preparação de publicação da entrega 3",
-              "url": "tecnico/entrega-3.html#E3-99"
+              "url": "tecnico/entrega-3.html#E3-99",
+              "papel": "aceite",
+              "escopo": "Homologação e preparação de publicação da entrega 3"
             }
           ]
         }
@@ -432,7 +468,9 @@ window.SIGLES_BOARD = {
               "id": "E5-02",
               "entrega": 5,
               "titulo": "Contatos, férias e dados complementares de usuários",
-              "url": "tecnico/entrega-5.html#E5-02"
+              "url": "tecnico/entrega-5.html#E5-02",
+              "papel": "execução",
+              "escopo": "Contatos, férias e dados complementares de usuários"
             }
           ]
         }
@@ -457,7 +495,9 @@ window.SIGLES_BOARD = {
               "id": "E1-99",
               "entrega": 1,
               "titulo": "Aceite integrado do fechamento da entrega 1",
-              "url": "tecnico/entrega-1.html#E1-99"
+              "url": "tecnico/entrega-1.html#E1-99",
+              "papel": "aceite",
+              "escopo": "Aceite integrado do fechamento da entrega 1"
             }
           ]
         },
@@ -471,7 +511,9 @@ window.SIGLES_BOARD = {
               "id": "E5-02",
               "entrega": 5,
               "titulo": "Contatos, férias e dados complementares de usuários",
-              "url": "tecnico/entrega-5.html#E5-02"
+              "url": "tecnico/entrega-5.html#E5-02",
+              "papel": "execução",
+              "escopo": "Contatos, férias e dados complementares de usuários"
             }
           ]
         }
@@ -496,7 +538,9 @@ window.SIGLES_BOARD = {
               "id": "E5-02",
               "entrega": 5,
               "titulo": "Contatos, férias e dados complementares de usuários",
-              "url": "tecnico/entrega-5.html#E5-02"
+              "url": "tecnico/entrega-5.html#E5-02",
+              "papel": "execução",
+              "escopo": "Contatos, férias e dados complementares de usuários"
             }
           ]
         }
@@ -521,7 +565,9 @@ window.SIGLES_BOARD = {
               "id": "E5-04",
               "entrega": 5,
               "titulo": "Matriz de acesso dos perfis existentes",
-              "url": "tecnico/entrega-5.html#E5-04"
+              "url": "tecnico/entrega-5.html#E5-04",
+              "papel": "execução",
+              "escopo": "Matriz de acesso dos perfis existentes"
             }
           ]
         }
@@ -564,7 +610,9 @@ window.SIGLES_BOARD = {
               "id": "E1-99",
               "entrega": 1,
               "titulo": "Aceite integrado do fechamento da entrega 1",
-              "url": "tecnico/entrega-1.html#E1-99"
+              "url": "tecnico/entrega-1.html#E1-99",
+              "papel": "aceite",
+              "escopo": "Aceite integrado do fechamento da entrega 1"
             }
           ]
         },
@@ -578,7 +626,9 @@ window.SIGLES_BOARD = {
               "id": "E6-04",
               "entrega": 6,
               "titulo": "Definir materiais e alcance do Almoxarifado",
-              "url": "tecnico/entrega-6.html#E6-04"
+              "url": "tecnico/entrega-6.html#E6-04",
+              "papel": "execução",
+              "escopo": "Definir materiais e alcance do Almoxarifado"
             }
           ]
         }
@@ -603,7 +653,9 @@ window.SIGLES_BOARD = {
               "id": "E1-99",
               "entrega": 1,
               "titulo": "Aceite integrado do fechamento da entrega 1",
-              "url": "tecnico/entrega-1.html#E1-99"
+              "url": "tecnico/entrega-1.html#E1-99",
+              "papel": "aceite",
+              "escopo": "Aceite integrado do fechamento da entrega 1"
             }
           ]
         },
@@ -617,7 +669,9 @@ window.SIGLES_BOARD = {
               "id": "E6-02",
               "entrega": 6,
               "titulo": "Arquivamento e complementos do fluxo de compras",
-              "url": "tecnico/entrega-6.html#E6-02"
+              "url": "tecnico/entrega-6.html#E6-02",
+              "papel": "execução",
+              "escopo": "Arquivamento e complementos do fluxo de compras"
             }
           ]
         }
@@ -642,7 +696,9 @@ window.SIGLES_BOARD = {
               "id": "E3-99",
               "entrega": 3,
               "titulo": "Homologação e preparação de publicação da entrega 3",
-              "url": "tecnico/entrega-3.html#E3-99"
+              "url": "tecnico/entrega-3.html#E3-99",
+              "papel": "aceite",
+              "escopo": "Homologação e preparação de publicação da entrega 3"
             }
           ]
         },
@@ -656,19 +712,25 @@ window.SIGLES_BOARD = {
               "id": "E3-01",
               "entrega": 3,
               "titulo": "Persistência dos seguidores da OS",
-              "url": "tecnico/entrega-3.html#E3-01"
+              "url": "tecnico/entrega-3.html#E3-01",
+              "papel": "parcela",
+              "escopo": "Persistência de seguidores"
             },
             {
               "id": "E3-03",
               "entrega": 3,
               "titulo": "Ordenação inicial e resumo de responsáveis",
-              "url": "tecnico/entrega-3.html#E3-03"
+              "url": "tecnico/entrega-3.html#E3-03",
+              "papel": "parcela",
+              "escopo": "Ordenação e resumo de responsáveis"
             },
             {
               "id": "E6-03",
               "entrega": 6,
               "titulo": "Relatórios e ajustes administrativos restantes de OS",
-              "url": "tecnico/entrega-6.html#E6-03"
+              "url": "tecnico/entrega-6.html#E6-03",
+              "papel": "parcela",
+              "escopo": "Relatórios e ajustes administrativos definidos com Milton"
             }
           ]
         }
@@ -693,7 +755,9 @@ window.SIGLES_BOARD = {
               "id": "E6-01",
               "entrega": 6,
               "titulo": "Cadastro e gravação de fornecedores",
-              "url": "tecnico/entrega-6.html#E6-01"
+              "url": "tecnico/entrega-6.html#E6-01",
+              "papel": "execução",
+              "escopo": "Cadastro e gravação de fornecedores"
             }
           ]
         }
@@ -718,7 +782,9 @@ window.SIGLES_BOARD = {
               "id": "E8-05",
               "entrega": 8,
               "titulo": "Conexão LES: acessos, destinatários e endereços",
-              "url": "tecnico/entrega-8.html#E8-05"
+              "url": "tecnico/entrega-8.html#E8-05",
+              "papel": "execução",
+              "escopo": "Conexão LES: acessos, destinatários e endereços"
             }
           ]
         }
@@ -743,7 +809,9 @@ window.SIGLES_BOARD = {
               "id": "E4-99",
               "entrega": 4,
               "titulo": "Revisão final e integração da entrega 4",
-              "url": "tecnico/entrega-4.html#E4-99"
+              "url": "tecnico/entrega-4.html#E4-99",
+              "papel": "aceite",
+              "escopo": "Revisão final e integração da entrega 4"
             }
           ]
         },
@@ -757,13 +825,17 @@ window.SIGLES_BOARD = {
               "id": "E4-05",
               "entrega": 4,
               "titulo": "Aceite da importação CSV da PR",
-              "url": "tecnico/entrega-4.html#E4-05"
+              "url": "tecnico/entrega-4.html#E4-05",
+              "papel": "parcela",
+              "escopo": "CSV básico, integridade e arquivo original"
             },
             {
               "id": "E7-02",
               "entrega": 7,
               "titulo": "Importação ampliada e erros por linha",
-              "url": "tecnico/entrega-7.html#E7-02"
+              "url": "tecnico/entrega-7.html#E7-02",
+              "papel": "parcela",
+              "escopo": "Diagnóstico ampliado e formatos/recortes aprovados"
             }
           ]
         },
@@ -777,7 +849,9 @@ window.SIGLES_BOARD = {
               "id": "E7-02",
               "entrega": 7,
               "titulo": "Importação ampliada e erros por linha",
-              "url": "tecnico/entrega-7.html#E7-02"
+              "url": "tecnico/entrega-7.html#E7-02",
+              "papel": "execução",
+              "escopo": "Importação ampliada e erros por linha"
             }
           ]
         }
@@ -802,7 +876,9 @@ window.SIGLES_BOARD = {
               "id": "E8-07",
               "entrega": 8,
               "titulo": "Importações em lote de outros cadastros",
-              "url": "tecnico/entrega-8.html#E8-07"
+              "url": "tecnico/entrega-8.html#E8-07",
+              "papel": "execução",
+              "escopo": "Importações em lote de outros cadastros"
             }
           ]
         }
@@ -827,7 +903,9 @@ window.SIGLES_BOARD = {
               "id": "E4-99",
               "entrega": 4,
               "titulo": "Revisão final e integração da entrega 4",
-              "url": "tecnico/entrega-4.html#E4-99"
+              "url": "tecnico/entrega-4.html#E4-99",
+              "papel": "aceite",
+              "escopo": "Revisão final e integração da entrega 4"
             }
           ]
         }
@@ -852,7 +930,9 @@ window.SIGLES_BOARD = {
               "id": "E8-08",
               "entrega": 8,
               "titulo": "Estudos previstos de Aproveitamento de Disciplinas e NotebookLM",
-              "url": "tecnico/entrega-8.html#E8-08"
+              "url": "tecnico/entrega-8.html#E8-08",
+              "papel": "execução",
+              "escopo": "Estudos previstos de Aproveitamento de Disciplinas e NotebookLM"
             }
           ]
         },
@@ -866,7 +946,9 @@ window.SIGLES_BOARD = {
               "id": "E8-08",
               "entrega": 8,
               "titulo": "Estudos previstos de Aproveitamento de Disciplinas e NotebookLM",
-              "url": "tecnico/entrega-8.html#E8-08"
+              "url": "tecnico/entrega-8.html#E8-08",
+              "papel": "execução",
+              "escopo": "Estudos previstos de Aproveitamento de Disciplinas e NotebookLM"
             }
           ]
         }
@@ -891,7 +973,9 @@ window.SIGLES_BOARD = {
               "id": "E2-99",
               "entrega": 2,
               "titulo": "Aceite integrado do fechamento da entrega 2",
-              "url": "tecnico/entrega-2.html#E2-99"
+              "url": "tecnico/entrega-2.html#E2-99",
+              "papel": "aceite",
+              "escopo": "Aceite integrado do fechamento da entrega 2"
             }
           ]
         },
@@ -905,7 +989,9 @@ window.SIGLES_BOARD = {
               "id": "E7-04",
               "entrega": 7,
               "titulo": "Consolidação anual e departamental da carga docente",
-              "url": "tecnico/entrega-7.html#E7-04"
+              "url": "tecnico/entrega-7.html#E7-04",
+              "papel": "execução",
+              "escopo": "Consolidação anual e departamental da carga docente"
             }
           ]
         }
@@ -937,7 +1023,9 @@ window.SIGLES_BOARD = {
               "id": "E8-06",
               "entrega": 8,
               "titulo": "Histórico e relatórios de alterações da agenda",
-              "url": "tecnico/entrega-8.html#E8-06"
+              "url": "tecnico/entrega-8.html#E8-06",
+              "papel": "execução",
+              "escopo": "Histórico e relatórios de alterações da agenda"
             }
           ]
         }
@@ -962,7 +1050,9 @@ window.SIGLES_BOARD = {
               "id": "E8-04",
               "entrega": 8,
               "titulo": "Reservas para alunos e pessoas externas",
-              "url": "tecnico/entrega-8.html#E8-04"
+              "url": "tecnico/entrega-8.html#E8-04",
+              "papel": "execução",
+              "escopo": "Reservas para alunos e pessoas externas"
             }
           ]
         },
@@ -976,7 +1066,9 @@ window.SIGLES_BOARD = {
               "id": "E8-04",
               "entrega": 8,
               "titulo": "Reservas para alunos e pessoas externas",
-              "url": "tecnico/entrega-8.html#E8-04"
+              "url": "tecnico/entrega-8.html#E8-04",
+              "papel": "execução",
+              "escopo": "Reservas para alunos e pessoas externas"
             }
           ]
         }
@@ -1001,7 +1093,9 @@ window.SIGLES_BOARD = {
               "id": "E4-99",
               "entrega": 4,
               "titulo": "Revisão final e integração da entrega 4",
-              "url": "tecnico/entrega-4.html#E4-99"
+              "url": "tecnico/entrega-4.html#E4-99",
+              "papel": "aceite",
+              "escopo": "Revisão final e integração da entrega 4"
             }
           ]
         },
@@ -1015,7 +1109,9 @@ window.SIGLES_BOARD = {
               "id": "E4-05",
               "entrega": 4,
               "titulo": "Aceite da importação CSV da PR",
-              "url": "tecnico/entrega-4.html#E4-05"
+              "url": "tecnico/entrega-4.html#E4-05",
+              "papel": "execução",
+              "escopo": "Aceite da importação CSV da PR"
             }
           ]
         }
@@ -1040,7 +1136,9 @@ window.SIGLES_BOARD = {
               "id": "E7-01",
               "entrega": 7,
               "titulo": "Turmas, edição por dia e preenchimento automático",
-              "url": "tecnico/entrega-7.html#E7-01"
+              "url": "tecnico/entrega-7.html#E7-01",
+              "papel": "execução",
+              "escopo": "Turmas, edição por dia e preenchimento automático"
             }
           ]
         },
@@ -1054,7 +1152,9 @@ window.SIGLES_BOARD = {
               "id": "E7-01",
               "entrega": 7,
               "titulo": "Turmas, edição por dia e preenchimento automático",
-              "url": "tecnico/entrega-7.html#E7-01"
+              "url": "tecnico/entrega-7.html#E7-01",
+              "papel": "execução",
+              "escopo": "Turmas, edição por dia e preenchimento automático"
             }
           ]
         }
@@ -1079,7 +1179,9 @@ window.SIGLES_BOARD = {
               "id": "E8-01",
               "entrega": 8,
               "titulo": "Conflitos e alterações de reservas recorrentes",
-              "url": "tecnico/entrega-8.html#E8-01"
+              "url": "tecnico/entrega-8.html#E8-01",
+              "papel": "execução",
+              "escopo": "Conflitos e alterações de reservas recorrentes"
             }
           ]
         },
@@ -1093,7 +1195,9 @@ window.SIGLES_BOARD = {
               "id": "E8-01",
               "entrega": 8,
               "titulo": "Conflitos e alterações de reservas recorrentes",
-              "url": "tecnico/entrega-8.html#E8-01"
+              "url": "tecnico/entrega-8.html#E8-01",
+              "papel": "execução",
+              "escopo": "Conflitos e alterações de reservas recorrentes"
             }
           ]
         }
@@ -1118,7 +1222,9 @@ window.SIGLES_BOARD = {
               "id": "E4-04",
               "entrega": 4,
               "titulo": "Aplicar filtros de salas e docentes de ponta a ponta",
-              "url": "tecnico/entrega-4.html#E4-04"
+              "url": "tecnico/entrega-4.html#E4-04",
+              "papel": "execução",
+              "escopo": "Aplicar filtros de salas e docentes de ponta a ponta"
             }
           ]
         }
@@ -1150,7 +1256,9 @@ window.SIGLES_BOARD = {
               "id": "E1-99",
               "entrega": 1,
               "titulo": "Aceite integrado do fechamento da entrega 1",
-              "url": "tecnico/entrega-1.html#E1-99"
+              "url": "tecnico/entrega-1.html#E1-99",
+              "papel": "aceite",
+              "escopo": "Aceite integrado do fechamento da entrega 1"
             }
           ]
         },
@@ -1164,7 +1272,9 @@ window.SIGLES_BOARD = {
               "id": "E5-01",
               "entrega": 5,
               "titulo": "Dashboard: atalhos, imagem e abrangência das informações",
-              "url": "tecnico/entrega-5.html#E5-01"
+              "url": "tecnico/entrega-5.html#E5-01",
+              "papel": "execução",
+              "escopo": "Dashboard: atalhos, imagem e abrangência das informações"
             }
           ]
         },
@@ -1178,7 +1288,9 @@ window.SIGLES_BOARD = {
               "id": "E5-01",
               "entrega": 5,
               "titulo": "Dashboard: atalhos, imagem e abrangência das informações",
-              "url": "tecnico/entrega-5.html#E5-01"
+              "url": "tecnico/entrega-5.html#E5-01",
+              "papel": "execução",
+              "escopo": "Dashboard: atalhos, imagem e abrangência das informações"
             }
           ]
         }
@@ -1210,7 +1322,9 @@ window.SIGLES_BOARD = {
               "id": "E5-01",
               "entrega": 5,
               "titulo": "Dashboard: atalhos, imagem e abrangência das informações",
-              "url": "tecnico/entrega-5.html#E5-01"
+              "url": "tecnico/entrega-5.html#E5-01",
+              "papel": "execução",
+              "escopo": "Dashboard: atalhos, imagem e abrangência das informações"
             }
           ]
         }
@@ -1235,7 +1349,9 @@ window.SIGLES_BOARD = {
               "id": "E1-99",
               "entrega": 1,
               "titulo": "Aceite integrado do fechamento da entrega 1",
-              "url": "tecnico/entrega-1.html#E1-99"
+              "url": "tecnico/entrega-1.html#E1-99",
+              "papel": "aceite",
+              "escopo": "Aceite integrado do fechamento da entrega 1"
             }
           ]
         }
@@ -1260,7 +1376,9 @@ window.SIGLES_BOARD = {
               "id": "E1-99",
               "entrega": 1,
               "titulo": "Aceite integrado do fechamento da entrega 1",
-              "url": "tecnico/entrega-1.html#E1-99"
+              "url": "tecnico/entrega-1.html#E1-99",
+              "papel": "aceite",
+              "escopo": "Aceite integrado do fechamento da entrega 1"
             }
           ]
         },
@@ -1274,7 +1392,9 @@ window.SIGLES_BOARD = {
               "id": "E1-01",
               "entrega": 1,
               "titulo": "Ordenação e persistência da tela de Usuários",
-              "url": "tecnico/entrega-1.html#E1-01"
+              "url": "tecnico/entrega-1.html#E1-01",
+              "papel": "execução",
+              "escopo": "Ordenação e persistência da tela de Usuários"
             }
           ]
         }
@@ -1299,13 +1419,17 @@ window.SIGLES_BOARD = {
               "id": "E1-04",
               "entrega": 1,
               "titulo": "Regra de antecedência de contratos por perfil",
-              "url": "tecnico/entrega-1.html#E1-04"
+              "url": "tecnico/entrega-1.html#E1-04",
+              "papel": "execução",
+              "escopo": "Regra da antecedência por perfil"
             },
             {
               "id": "E1-99",
               "entrega": 1,
               "titulo": "Aceite integrado do fechamento da entrega 1",
-              "url": "tecnico/entrega-1.html#E1-99"
+              "url": "tecnico/entrega-1.html#E1-99",
+              "papel": "aceite",
+              "escopo": "Aceite integrado do aviso no Dashboard"
             }
           ]
         },
@@ -1319,7 +1443,9 @@ window.SIGLES_BOARD = {
               "id": "E1-04",
               "entrega": 1,
               "titulo": "Regra de antecedência de contratos por perfil",
-              "url": "tecnico/entrega-1.html#E1-04"
+              "url": "tecnico/entrega-1.html#E1-04",
+              "papel": "execução",
+              "escopo": "Regra de antecedência de contratos por perfil"
             }
           ]
         },
@@ -1351,7 +1477,9 @@ window.SIGLES_BOARD = {
               "id": "E3-99",
               "entrega": 3,
               "titulo": "Homologação e preparação de publicação da entrega 3",
-              "url": "tecnico/entrega-3.html#E3-99"
+              "url": "tecnico/entrega-3.html#E3-99",
+              "papel": "aceite",
+              "escopo": "Homologação e preparação de publicação da entrega 3"
             }
           ]
         },
@@ -1365,7 +1493,9 @@ window.SIGLES_BOARD = {
               "id": "E3-01",
               "entrega": 3,
               "titulo": "Persistência dos seguidores da OS",
-              "url": "tecnico/entrega-3.html#E3-01"
+              "url": "tecnico/entrega-3.html#E3-01",
+              "papel": "execução",
+              "escopo": "Persistência dos seguidores da OS"
             }
           ]
         },
@@ -1379,7 +1509,9 @@ window.SIGLES_BOARD = {
               "id": "E3-02",
               "entrega": 3,
               "titulo": "Regra do responsável e das subcategorias",
-              "url": "tecnico/entrega-3.html#E3-02"
+              "url": "tecnico/entrega-3.html#E3-02",
+              "papel": "execução",
+              "escopo": "Regra do responsável e das subcategorias"
             }
           ]
         }
@@ -1404,7 +1536,9 @@ window.SIGLES_BOARD = {
               "id": "E3-99",
               "entrega": 3,
               "titulo": "Homologação e preparação de publicação da entrega 3",
-              "url": "tecnico/entrega-3.html#E3-99"
+              "url": "tecnico/entrega-3.html#E3-99",
+              "papel": "aceite",
+              "escopo": "Homologação e preparação de publicação da entrega 3"
             }
           ]
         }
@@ -1429,7 +1563,9 @@ window.SIGLES_BOARD = {
               "id": "E3-99",
               "entrega": 3,
               "titulo": "Homologação e preparação de publicação da entrega 3",
-              "url": "tecnico/entrega-3.html#E3-99"
+              "url": "tecnico/entrega-3.html#E3-99",
+              "papel": "aceite",
+              "escopo": "Homologação e preparação de publicação da entrega 3"
             }
           ]
         },
@@ -1443,7 +1579,9 @@ window.SIGLES_BOARD = {
               "id": "E3-02",
               "entrega": 3,
               "titulo": "Regra do responsável e das subcategorias",
-              "url": "tecnico/entrega-3.html#E3-02"
+              "url": "tecnico/entrega-3.html#E3-02",
+              "papel": "execução",
+              "escopo": "Regra do responsável e das subcategorias"
             }
           ]
         }
@@ -1468,7 +1606,9 @@ window.SIGLES_BOARD = {
               "id": "E4-99",
               "entrega": 4,
               "titulo": "Revisão final e integração da entrega 4",
-              "url": "tecnico/entrega-4.html#E4-99"
+              "url": "tecnico/entrega-4.html#E4-99",
+              "papel": "aceite",
+              "escopo": "Revisão final e integração da entrega 4"
             }
           ]
         },
@@ -1482,7 +1622,9 @@ window.SIGLES_BOARD = {
               "id": "E4-03",
               "entrega": 4,
               "titulo": "Fechar a exportação de todos os cursos",
-              "url": "tecnico/entrega-4.html#E4-03"
+              "url": "tecnico/entrega-4.html#E4-03",
+              "papel": "execução",
+              "escopo": "Fechar a exportação de todos os cursos"
             }
           ]
         },
@@ -1496,7 +1638,9 @@ window.SIGLES_BOARD = {
               "id": "E4-04",
               "entrega": 4,
               "titulo": "Aplicar filtros de salas e docentes de ponta a ponta",
-              "url": "tecnico/entrega-4.html#E4-04"
+              "url": "tecnico/entrega-4.html#E4-04",
+              "papel": "execução",
+              "escopo": "Aplicar filtros de salas e docentes de ponta a ponta"
             }
           ]
         },
@@ -1510,7 +1654,9 @@ window.SIGLES_BOARD = {
               "id": "E4-04",
               "entrega": 4,
               "titulo": "Aplicar filtros de salas e docentes de ponta a ponta",
-              "url": "tecnico/entrega-4.html#E4-04"
+              "url": "tecnico/entrega-4.html#E4-04",
+              "papel": "execução",
+              "escopo": "Aplicar filtros de salas e docentes de ponta a ponta"
             }
           ]
         }
@@ -1535,7 +1681,9 @@ window.SIGLES_BOARD = {
               "id": "E2-99",
               "entrega": 2,
               "titulo": "Aceite integrado do fechamento da entrega 2",
-              "url": "tecnico/entrega-2.html#E2-99"
+              "url": "tecnico/entrega-2.html#E2-99",
+              "papel": "aceite",
+              "escopo": "Aceite integrado do fechamento da entrega 2"
             }
           ]
         },
@@ -1549,7 +1697,9 @@ window.SIGLES_BOARD = {
               "id": "E2-01",
               "entrega": 2,
               "titulo": "Responsável na listagem e Excel de Disciplinas",
-              "url": "tecnico/entrega-2.html#E2-01"
+              "url": "tecnico/entrega-2.html#E2-01",
+              "papel": "execução",
+              "escopo": "Responsável na listagem e Excel de Disciplinas"
             }
           ]
         },
@@ -1563,7 +1713,9 @@ window.SIGLES_BOARD = {
               "id": "E2-02",
               "entrega": 2,
               "titulo": "Créditos na exportação de Disciplinas docente",
-              "url": "tecnico/entrega-2.html#E2-02"
+              "url": "tecnico/entrega-2.html#E2-02",
+              "papel": "execução",
+              "escopo": "Créditos na exportação de Disciplinas docente"
             }
           ]
         }
@@ -1588,7 +1740,9 @@ window.SIGLES_BOARD = {
               "id": "E2-99",
               "entrega": 2,
               "titulo": "Aceite integrado do fechamento da entrega 2",
-              "url": "tecnico/entrega-2.html#E2-99"
+              "url": "tecnico/entrega-2.html#E2-99",
+              "papel": "aceite",
+              "escopo": "Aceite integrado do fechamento da entrega 2"
             }
           ]
         },
@@ -1602,7 +1756,9 @@ window.SIGLES_BOARD = {
               "id": "E7-04",
               "entrega": 7,
               "titulo": "Consolidação anual e departamental da carga docente",
-              "url": "tecnico/entrega-7.html#E7-04"
+              "url": "tecnico/entrega-7.html#E7-04",
+              "papel": "execução",
+              "escopo": "Consolidação anual e departamental da carga docente"
             }
           ]
         }
@@ -1627,7 +1783,9 @@ window.SIGLES_BOARD = {
               "id": "E1-99",
               "entrega": 1,
               "titulo": "Aceite integrado do fechamento da entrega 1",
-              "url": "tecnico/entrega-1.html#E1-99"
+              "url": "tecnico/entrega-1.html#E1-99",
+              "papel": "aceite",
+              "escopo": "Aceite integrado do fechamento da entrega 1"
             }
           ]
         },
@@ -1641,7 +1799,9 @@ window.SIGLES_BOARD = {
               "id": "E6-04",
               "entrega": 6,
               "titulo": "Definir materiais e alcance do Almoxarifado",
-              "url": "tecnico/entrega-6.html#E6-04"
+              "url": "tecnico/entrega-6.html#E6-04",
+              "papel": "execução",
+              "escopo": "Definir materiais e alcance do Almoxarifado"
             }
           ]
         }
@@ -1666,7 +1826,9 @@ window.SIGLES_BOARD = {
               "id": "E8-03",
               "entrega": 8,
               "titulo": "Saneamento das salas duplicadas",
-              "url": "tecnico/entrega-8.html#E8-03"
+              "url": "tecnico/entrega-8.html#E8-03",
+              "papel": "execução",
+              "escopo": "Saneamento das salas duplicadas"
             }
           ]
         },
@@ -1679,8 +1841,10 @@ window.SIGLES_BOARD = {
             {
               "id": "E5-03",
               "entrega": 5,
-              "titulo": "Menu, nome da sala e campos por tipo de reserva",
-              "url": "tecnico/entrega-5.html#E5-03"
+              "titulo": "Menu, nome abreviado da sala e dados por tipo de reserva",
+              "url": "tecnico/entrega-5.html#E5-03",
+              "papel": "execução",
+              "escopo": "Menu, nome abreviado da sala e dados por tipo de reserva"
             }
           ]
         }
@@ -1712,7 +1876,9 @@ window.SIGLES_BOARD = {
               "id": "E8-02",
               "entrega": 8,
               "titulo": "Escolha de sala disponível e bloqueio manual",
-              "url": "tecnico/entrega-8.html#E8-02"
+              "url": "tecnico/entrega-8.html#E8-02",
+              "papel": "execução",
+              "escopo": "Escolha de sala disponível e bloqueio manual"
             }
           ]
         },
@@ -1726,7 +1892,9 @@ window.SIGLES_BOARD = {
               "id": "E8-01",
               "entrega": 8,
               "titulo": "Conflitos e alterações de reservas recorrentes",
-              "url": "tecnico/entrega-8.html#E8-01"
+              "url": "tecnico/entrega-8.html#E8-01",
+              "papel": "execução",
+              "escopo": "Conflitos e alterações de reservas recorrentes"
             }
           ]
         }
@@ -1750,8 +1918,10 @@ window.SIGLES_BOARD = {
             {
               "id": "E5-03",
               "entrega": 5,
-              "titulo": "Menu, nome da sala e campos por tipo de reserva",
-              "url": "tecnico/entrega-5.html#E5-03"
+              "titulo": "Menu, nome abreviado da sala e dados por tipo de reserva",
+              "url": "tecnico/entrega-5.html#E5-03",
+              "papel": "execução",
+              "escopo": "Menu, nome abreviado da sala e dados por tipo de reserva"
             }
           ]
         }
@@ -1776,13 +1946,17 @@ window.SIGLES_BOARD = {
               "id": "E1-05",
               "entrega": 1,
               "titulo": "Conciliar encerramento do período com os estágios combinados",
-              "url": "tecnico/entrega-1.html#E1-05"
+              "url": "tecnico/entrega-1.html#E1-05",
+              "papel": "execução",
+              "escopo": "Regra única de estágios no encerramento"
             },
             {
               "id": "E1-99",
               "entrega": 1,
               "titulo": "Aceite integrado do fechamento da entrega 1",
-              "url": "tecnico/entrega-1.html#E1-99"
+              "url": "tecnico/entrega-1.html#E1-99",
+              "papel": "aceite",
+              "escopo": "Validação do fluxo de compras existente"
             }
           ]
         },
@@ -1796,7 +1970,9 @@ window.SIGLES_BOARD = {
               "id": "E6-02",
               "entrega": 6,
               "titulo": "Arquivamento e complementos do fluxo de compras",
-              "url": "tecnico/entrega-6.html#E6-02"
+              "url": "tecnico/entrega-6.html#E6-02",
+              "papel": "execução",
+              "escopo": "Arquivamento e complementos do fluxo de compras"
             }
           ]
         }
@@ -1842,7 +2018,9 @@ window.SIGLES_BOARD = {
               "id": "E4-99",
               "entrega": 4,
               "titulo": "Revisão final e integração da entrega 4",
-              "url": "tecnico/entrega-4.html#E4-99"
+              "url": "tecnico/entrega-4.html#E4-99",
+              "papel": "aceite",
+              "escopo": "Revisão final e integração da entrega 4"
             }
           ]
         },
@@ -1856,7 +2034,9 @@ window.SIGLES_BOARD = {
               "id": "E8-02",
               "entrega": 8,
               "titulo": "Escolha de sala disponível e bloqueio manual",
-              "url": "tecnico/entrega-8.html#E8-02"
+              "url": "tecnico/entrega-8.html#E8-02",
+              "papel": "execução",
+              "escopo": "Escolha de sala disponível e bloqueio manual"
             }
           ]
         },
@@ -3227,6 +3407,7 @@ window.SIGLES_BOARD = {
   "planejamentoTecnico": {
     "url": "tecnico/index.html",
     "data": "16/10/2026",
-    "status": "Planos concluídos para revisão; execução funcional não iniciada."
+    "status": "Revisão técnica e documental concluída; decisões de negócio e execução pendentes",
+    "revisao": "02"
   }
 };

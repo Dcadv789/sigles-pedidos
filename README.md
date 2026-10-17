@@ -38,3 +38,7 @@ A classificação comercial não altera o status de implementação. AD-01 regis
 ## Ordem técnica das entregas 1 a 8
 
 [Índice dos oito planos técnicos](https://dcadv789.github.io/sigles-pedidos/tecnico/) — 42 itens planejados em 16/10/2026. Cada entrega tem um Markdown e uma página HTML, com diagnóstico, arquivos verificados, alterações previstas, dados, dependências, decisões e testes de aceite. O quadro liga cada parte de Pedido inicial ao item técnico correspondente. Aditivos ficam fora. O plano não executou correções no sistema.
+
+## Revisão técnica 02 — 16/10/2026
+
+[Planos revisados em cadeia](https://dcadv789.github.io/sigles-pedidos/tecnico/) — entrada/saída, regra dona, dependências, testes de aceite e fechamento por entrega. [Decisões e integração](https://dcadv789.github.io/sigles-pedidos/tecnico/integracao.html). Nenhum status funcional alterado por esta revisão.

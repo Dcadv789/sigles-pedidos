@@ -1,51 +1,70 @@
-# SIGLES — Ordem de implementação e planos técnicos
+# SIGLES — Planos técnicos em cadeia, entregas 1 a 8
 
-**Data:** 16/10/2026. **Status:** oito planos concluídos para revisão; nenhuma implementação funcional iniciada.
+**Revisão 02 · 16/10/2026.** Revisão documental/técnica concluída; execução funcional não iniciada.
 
-[Revisar na página](https://dcadv789.github.io/sigles-pedidos/tecnico/)
+[Abrir a página de revisão](https://dcadv789.github.io/sigles-pedidos/tecnico/)
 
-Primeiro fechar as entregas 1 a 4; depois executar 5, 6, 7 e 8. Cada arquivo contém diagnóstico, arquivos/linhas conferidos, passos de alteração, dados, dependências, decisões e testes de aceite por item. Aditivos continuam fora.
+Primeiro fechar as lacunas de 1 a 4; depois executar 5 a 8. Há **42 itens técnicos**, um Markdown por entrega, **84 cenários de aceite** e 28 decisões identificadas. Decisões são propostas para revisão, não regras homologadas. Aditivos continuam excluídos.
 
-| Ordem | Plano | Itens | Etapa |
+## Sequência obrigatória
+
+| Ordem | Arquivo de planejamento | Itens | Entrada → saída |
 |---|---|---:|---|
-| 1 | [Entrega 1 — Cadastros, usuários e compras](entrega-01.md) | 6 | Fechamento de entrega existente |
-| 2 | [Entrega 2 — Disciplinas, relatórios, planos e login](entrega-02.md) | 4 | Fechamento de entrega existente |
-| 3 | [Entrega 3 — Ordens de serviço, orçamentos e aniversários](entrega-03.md) | 5 | Fechamento e homologação |
-| 4 | [Entrega 4 — Integração e conclusão dos cronogramas](entrega-04.md) | 7 | Integração da PR 9 e homologação |
-| 5 | [Entrega 5 — Usabilidade, cadastros e acesso](entrega-05.md) | 4 | Escopo inicial restante |
-| 6 | [Entrega 6 — Fornecedores e operação administrativa](entrega-06.md) | 4 | Escopo inicial restante |
-| 7 | [Entrega 7 — Complementos acadêmicos e consolidações](entrega-07.md) | 4 | Escopo inicial restante |
-| 8 | [Entrega 8 — Agenda, reservas externas, integrações e estudos](entrega-08.md) | 8 | Escopo inicial restante |
+| 1 | [Entrega 1 — Cadastros, usuários e compras](entrega-01.md) | 6 | BASE-0 → FECHO-1 |
+| 2 | [Entrega 2 — Disciplinas, relatórios, planos e login](entrega-02.md) | 4 | FECHO-1 → FECHO-2 |
+| 3 | [Entrega 3 — Ordens de serviço, orçamentos e aniversários](entrega-03.md) | 5 | FECHO-2 → FECHO-3 |
+| 4 | [Entrega 4 — Integração e conclusão dos cronogramas](entrega-04.md) | 7 | FECHO-3 → FECHO-4 |
+| 5 | [Entrega 5 — Usabilidade, cadastros e acesso](entrega-05.md) | 4 | FECHO-4 → FECHO-5 |
+| 6 | [Entrega 6 — Fornecedores e operação administrativa](entrega-06.md) | 4 | FECHO-5 → FECHO-6 |
+| 7 | [Entrega 7 — Complementos acadêmicos e consolidações](entrega-07.md) | 4 | FECHO-6 → FECHO-7 |
+| 8 | [Entrega 8 — Agenda, reservas externas, integrações e estudos](entrega-08.md) | 8 | FECHO-7 → FECHO-8 |
 
-## Como tratar os fechamentos sem duplicar o plano anterior
+Cada item tem entrada, saída, limite, passos, pontos de código verificados, decisões, massa/ação/resultado de aceite e vínculo com o pedido. Cada entrega fecha em homologação antes da próxima. Isso é uma sequência de trabalho; publicação em produção depende de uma etapa operacional futura.
 
-Datas de compras, ordenação de usuários e antecedência por perfil são fechadas na entrega 1. Colunas/Excel de Disciplinas e Crédito no relatório são fechados na 2. Seguidores, responsáveis e complementos de OS são fechados na 3. Exportação de cursos e filtros incompletos da PR são fechados na 4. Os respectivos grupos macro de 5 a 8 agora apontam para esses planos; o mesmo resultado não será implementado duas vezes.
+## Documentos de controle
 
-Os percentuais 15/15/20/50 continuam como referência do planejamento macro original, não como uma medição recalculada após antecipar essas pendências. Conferir a distribuição de esforço depois do fechamento das regras.
+- [Regras únicas, decisões e integração](INTEGRACAO_E_DECISOES.md): D01–D28, dono de cada decisão, consumidores e ordem dos arquivos compartilhados.
+- [Conferência de cobertura](COBERTURA_E_CONFERENCIA.md): cada parte do Pedido inicial ligada à tarefa responsável, com execução, parcela ou aceite distinguidos.
 
-## Achados técnicos prioritários
+## O que foi corrigido nesta revisão
 
-1. PR 9 antiga e conflitante: preservar os hotfixes da dev e reaplicar apenas o incremento de cronogramas (E4-01).
-2. Seguidores: lista vazia não é persistida na edição e há corrida possível entre padrões e dados da OS (E3-01).
-3. Aviso de contratos/férias: janela fixa de 30 dias e perfis fixos, apesar do parâmetro por perfil (E1-04).
-4. Encerramento de períodos: conciliar a matriz do texto inicial com o código que expira solicitações em andamento (E1-05).
-5. Migration de sala_aula: rever o critério e a reversão que limpa flags indiscriminadamente (E4-06).
+- E5-03 corrigido para nome_abreviado; criação e edição de nome/e-mail passam a ser verificadas no cliente, controller, repository e serialização.
+- E5-04 vem primeiro na entrega 5 para fechar o recorte antes de ajustar o Dashboard.
+- Crédito D05 é decidido uma vez na 2; se mudar de nível, só a 7 implementa o modelo e revalida as leituras anteriores.
+- D09 sobre identidade/atomicidade já entra na 4; a 7 amplia o mesmo importador, evitando sobrescrever outro dia/docente e repetir decisões.
+- Reservas E8-01 incluem data nula, sobreposição na janela, aulas, IDs, recorrência e concorrência; E8-04 só aprova usando esse contrato.
+- E8-03 precede a liberação de reservas externas e inclui simulação de colisões antes de juntar salas.
+- A comparação de árvores da PR foi qualificada: ela revela divergências, não prova exclusão automática por merge. A integração usa a base cumulativa do FECHO-3.
+- Os 42 itens agora têm entrada, saída, limite, roteiro, massa/ação/resultado de aceite, decisões e ligação ao fechamento da entrega.
+- Aditivos e status funcionais foram preservados. Estudos, equivalência e construção paga têm critérios distintos de encerramento.
 
-## Regras de execução
+## Preparação antes da execução
 
-- Preservar Symfony 6.3, PHP 8.2, MariaDB, Twig, jQuery e DataTables; seguir o CRUD existente, sem nova stack, REST, Symfony Form novo ou camada Service por conveniência.
-- Escrita de dados exclusivamente em esalq_sistema_des. A restrição de não escrever em produção continua válida. O workflow de produção executa migrations e não deve ser acionado enquanto essa restrição vigorar.
-- Trabalhar em checkout limpo com branch codex/, mantendo as alterações locais de Cronograma do usuário. Não usar reset/checkout de arquivos para descartar trabalho existente.
-- Novas ações internas devem validar ACL modular no servidor e no Twig. Rotas AJAX expostas, payload e toast/406 seguem o padrão atual; permissões da sessão exigem novo login para validação.
-- SQL tocado usa parâmetros. Não interpolar valores da requisição; não refatorar a segurança inteira nem o CSRF de todos os módulos.
-- Não alterar o bug conhecido de GAM/ROLE_ROOT por iniciativa própria. Conferir o código real GOÇ no módulo de orçamento e não copiar a ausência de ACL de PublicacaoController.
-- Não commitar .env, .env.local, senhas, backups de ambiente, vendor/ ou uploads/. Referências de código deste plano apontam a commits fixos e podem exigir acesso ao GitHub.
-- Criar migrations somente na implementação, após fechar a regra. Preservar migrations executadas e usar compensação seletiva de dados, não um down amplo que apague histórico.
-- Os comandos e testes abaixo são planejados. Não foram executados testes funcionais do sistema, migrations, merge da PR ou deploy do SIGLES nesta etapa.
+- BASE-0: recalcular refs dev/main/PR e registrar o commit que será a base. Os hashes deste documento são evidência da leitura, não autorização para sobrescrever mudanças posteriores.
+- Preservar o trabalho local de Cronograma, a alteração já staged de .gitignore e documentos existentes. Preparar checkout limpo e branch codex/; nunca resetar arquivos para iniciar.
+- Confirmar ambiente e conexão esalq_sistema_des antes de comandos de aplicação/migrations. Se o acesso não estiver disponível, solicitar o túnel sem expor credenciais. Nenhuma consulta ao banco foi necessária nesta revisão documental.
+- Usar massa sintética com datas fixas, IDs identificáveis e e-mails de prova; mapear as migrations executadas e guardar reversão seletiva antes de qualquer saneamento.
+- Registrar um responsável funcional por decisão D01–D28. Definir uma decisão na sua tarefa dona antes de iniciar consumidores; não é necessário interromper o planejamento para isso.
+- Não definir versão de produção apenas pelo nome histórico da entrega. Cada fechamento produz um commit cumulativo de homologação, preservando todas as correções anteriores.
 
-## Base da leitura
+## Distribuição de esforço
 
-- dev: 3ed9a38415417b8a4ead22ecd472f758b3506db1
-- PR 9: 13f5075b4685f7a26008e63810d38bd8516f558f; aberta e conflitante em 16/10/2026.
-- Alterações locais do usuário foram preservadas.
-- As evidências de código sustentam o plano, mas não substituem o teste funcional de cada cenário.
+As metas macro de 5/6/7/8 permanecem **15% / 15% / 20% / 50%**. São divisão relativa pretendida, não horas medidas nem evidência de que o esforço real já foi estimado. Os fechamentos antecipados para 1 a 4 ficam nessas entregas e não são outra implementação nos grupos 5 a 8. Decisões de alcance, especialmente estoque, importações e acesso externo, precisam ser fechadas para conferir o peso real.
+
+## Resultado da conferência estrutural
+
+Sem ciclos, dependências futuras ou dupla implementação integral nas relações verificadas; regras de negócio pendentes identificadas. Não é resultado de testes funcionais.
+
+- 70 dependências técnicas verificadas contra a ordem.
+- 194 referências de código conferidas em arquivos e âncoras dos snapshots.
+- 85 partes iniciais com plano; 53 ainda sem número de entrega implementada, incluindo o roteiro geral.
+- 48 pedidos de origem Adicional preservados como Aditivo, sem implementação neste escopo.
+- Banco não consultado nesta revisão; código não executado, PR não integrada, migrations e deploy do SIGLES não executados.
+
+## Base e limites
+
+- dev lida: 3ed9a38415417b8a4ead22ecd472f758b3506db1.
+- PR 9 lida: 13f5075b4685f7a26008e63810d38bd8516f558f; aberta, base ordem-servico e conflitante na conferência.
+- O diff de árvores aponta divergências; não prova que o merge apagaria todos os arquivos divergentes.
+- Condições de banco, FKs, dados legados e comportamento real precisam de validação no teste durante a execução.
+- As alterações locais do usuário foram preservadas.

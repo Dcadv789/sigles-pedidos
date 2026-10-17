@@ -1,6 +1,6 @@
 {
   "data": "16/10/2026",
-  "status": "Proposta de divisão funcional — não implementada",
+  "status": "Macro alinhado à revisão técnica 02 — execução não iniciada",
   "criterio": "Pedido inicial considerado pago conforme orientação do usuário; Aditivos excluídos.",
   "escala": "100 pontos de esforço relativo preliminar. A distribuição 15/15/20/50 é a alocação pedida; não é uma medição do código, uma estimativa em horas ou uma garantia de duração.",
   "entregas": [
@@ -39,8 +39,9 @@
       "peso": "Leve",
       "resumo": "Completar atalhos e apresentação das informações do Dashboard.",
       "acoes": [
-        "Inserir links diretos para LES, MarteWeb e Júpiter Web e confirmar a aplicação da imagem de fundo.",
-        "Conferir a abrangência das OS do administrador e os perfis de bolsistas e colaboradores nos avisos de férias e contratos."
+        "Inserir LES, Conexão LES, MarteWeb e Júpiter Web com destinos confirmados.",
+        "Conferir recorte Minhas/Todas das OS e perfis de colaboradores; consumir a regra contratual D02, sem reimplementá-la.",
+        "Aplicar a decisão sobre a imagem de fundo/conteúdo e testar legibilidade."
       ],
       "detalhados": [
         "DB03.1",
@@ -122,7 +123,9 @@
           "url": "tecnico/entrega-5.html#E5-01"
         }
       ],
-      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
+      "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
+      "responsavelTecnico": "E5-01",
+      "delegados": []
     },
     {
       "id": "5.2",
@@ -131,11 +134,10 @@
       "titulo": "Usuários, contatos, férias e prazo de contratos",
       "tipo": "Correção e complemento de cadastro",
       "peso": "Leve a médio",
-      "resumo": "Resolver a ordenação e fechar os refinamentos do cadastro e das informações já existentes.",
+      "resumo": "Refinar contatos, férias e dados complementares usando as regras já fechadas.",
       "acoes": [
-        "Validar e corrigir a desconfiguração ao ordenar usuários pelo nome.",
-        "Detalhar e concluir os ajustes ordinários de contatos, dados de colaboradores e férias.",
-        "Conferir a configuração de 45 dias no perfil de estagiários."
+        "Reutilizar E1-01 para ordenação/permanência de aba e E1-04 para a regra dos 45 dias; esses resultados ficam no fechamento da entrega 1.",
+        "Definir e concluir somente os complementos de contatos, dados e férias previstos em E5-02."
       ],
       "detalhados": [
         "US02",
@@ -148,7 +150,7 @@
         "WI-08:2",
         "WI-09:2"
       ],
-      "limite": "O envio automático de avisos é Aditivo e não integra esta entrega. Os ajustes ainda descritos genericamente precisam ser delimitados; não representam campos ou rotinas ilimitados.",
+      "limite": "O envio automático de avisos continua Aditivo. Campos e saídas genéricos precisam de uma lista finita; correções já fechadas na entrega 1 não são desenvolvidas novamente.",
       "referenciasDetalhadas": [
         {
           "id": "US02",
@@ -223,7 +225,22 @@
           "url": "tecnico/entrega-1.html#E1-04"
         }
       ],
-      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
+      "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
+      "responsavelTecnico": "E5-02",
+      "delegados": [
+        {
+          "id": "E1-01",
+          "entrega": 1,
+          "titulo": "Ordenação e persistência da tela de Usuários",
+          "url": "tecnico/entrega-1.html#E1-01"
+        },
+        {
+          "id": "E1-04",
+          "entrega": 1,
+          "titulo": "Regra de antecedência de contratos por perfil",
+          "url": "tecnico/entrega-1.html#E1-04"
+        }
+      ]
     },
     {
       "id": "5.3",
@@ -293,11 +310,13 @@
         {
           "id": "E5-03",
           "entrega": 5,
-          "titulo": "Menu, nome da sala e campos por tipo de reserva",
+          "titulo": "Menu, nome abreviado da sala e dados por tipo de reserva",
           "url": "tecnico/entrega-5.html#E5-03"
         }
       ],
-      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
+      "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
+      "responsavelTecnico": "E5-03",
+      "delegados": []
     },
     {
       "id": "5.4",
@@ -342,7 +361,9 @@
           "url": "tecnico/entrega-5.html#E5-04"
         }
       ],
-      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
+      "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
+      "responsavelTecnico": "E5-04",
+      "delegados": []
     },
     {
       "id": "6.1",
@@ -407,7 +428,9 @@
           "url": "tecnico/entrega-6.html#E6-01"
         }
       ],
-      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
+      "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
+      "responsavelTecnico": "E6-01",
+      "delegados": []
     },
     {
       "id": "6.2",
@@ -416,11 +439,11 @@
       "titulo": "Períodos e apresentação das solicitações de compras",
       "tipo": "Correção, usabilidade e aceite",
       "peso": "Leve a médio",
-      "resumo": "Fechar os pontos que restaram da operação de períodos e compras.",
+      "resumo": "Completar navegação de períodos encerrados e esclarecer a aba Compras.",
       "acoes": [
-        "Validar a ativação de período no cenário relatado e corrigir o problema se reproduzido.",
-        "Exibir a data da solicitação nas listagens de Minhas solicitações e do Painel.",
-        "Confirmar a equivalência entre Arquivados e a consulta de períodos encerrados; definir a aba Compras e os complementos da rotina administrativa."
+        "Consumir ativação, datas e transições fechadas em E1-02/E1-03/E1-05.",
+        "Comprovar equivalência da consulta de encerrados com Arquivados ou especificar a diferença.",
+        "Definir se a aba Compras é navegação existente ou saída distinta e implementar apenas o complemento acordado."
       ],
       "detalhados": [
         "CO01.3",
@@ -432,7 +455,7 @@
         "VS-09:2",
         "WI-20:2"
       ],
-      "limite": "Não reabre o trabalho de estágios, edição, encerramento e histórico já entregue na entrega 1.",
+      "limite": "Estágios, datas e histórico pertencem ao fechamento da entrega 1. Arquivados não cria outro estágio sem regra explícita.",
       "referenciasDetalhadas": [
         {
           "id": "CO01.3",
@@ -499,7 +522,22 @@
           "url": "tecnico/entrega-1.html#E1-02"
         }
       ],
-      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
+      "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
+      "responsavelTecnico": "E6-02",
+      "delegados": [
+        {
+          "id": "E1-03",
+          "entrega": 1,
+          "titulo": "Ativar e inativar períodos sem erro",
+          "url": "tecnico/entrega-1.html#E1-03"
+        },
+        {
+          "id": "E1-02",
+          "entrega": 1,
+          "titulo": "Data de criação em Minhas solicitações e Painel",
+          "url": "tecnico/entrega-1.html#E1-02"
+        }
+      ]
     },
     {
       "id": "6.3",
@@ -508,12 +546,11 @@
       "titulo": "Complementos das ordens de serviço",
       "tipo": "Correção e regra administrativa",
       "peso": "Médio",
-      "resumo": "Concluir o comportamento de responsáveis, seguidores, formatos e listagem.",
+      "resumo": "Concluir apenas os relatórios e complementos administrativos que restarem após E3.",
       "acoes": [
-        "Validar a persistência dos seguidores e corrigir o caso que repunha nomes fixos.",
-        "Fechar a regra do responsável inicial e da independência entre categoria e subcategoria.",
-        "Apresentar os responsáveis por categoria em Configurações e ordenar inicialmente as OS da mais recente para a mais antiga.",
-        "Conferir os formatos de anexos necessários e fechar com Milton a lista dos relatórios e ajustes restantes."
+        "Reutilizar seguidores E3-01, responsáveis E3-02, ordenação/resumo E3-03 e anexos E3-04.",
+        "Fechar com Milton a lista dos relatórios e ajustes administrativos restantes e implementar a saída realmente distinta.",
+        "Conferir unidade de contagem e exportação sem multiplicar OS por anexos ou seguidores."
       ],
       "detalhados": [
         "OS01.1",
@@ -530,7 +567,7 @@
         "WI-10:3",
         "WI-12:2"
       ],
-      "limite": "A relação de formatos e os ajustes com Milton precisam ser fechados. Não se presume um visualizador para qualquer formato nem uma lista ilimitada de novas funções.",
+      "limite": "Não reexecutar a construção da entrega 3. Lista de relatórios finita e validada por amostra; nenhum visualizador universal é presumido.",
       "referenciasDetalhadas": [
         {
           "id": "OS01.1",
@@ -626,9 +663,42 @@
           "entrega": 3,
           "titulo": "Regra do responsável e das subcategorias",
           "url": "tecnico/entrega-3.html#E3-02"
+        },
+        {
+          "id": "E3-04",
+          "entrega": 3,
+          "titulo": "Orçamentos, anexos e cache do JavaScript",
+          "url": "tecnico/entrega-3.html#E3-04"
         }
       ],
-      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
+      "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
+      "responsavelTecnico": "E6-03",
+      "delegados": [
+        {
+          "id": "E3-01",
+          "entrega": 3,
+          "titulo": "Persistência dos seguidores da OS",
+          "url": "tecnico/entrega-3.html#E3-01"
+        },
+        {
+          "id": "E3-03",
+          "entrega": 3,
+          "titulo": "Ordenação inicial e resumo de responsáveis",
+          "url": "tecnico/entrega-3.html#E3-03"
+        },
+        {
+          "id": "E3-02",
+          "entrega": 3,
+          "titulo": "Regra do responsável e das subcategorias",
+          "url": "tecnico/entrega-3.html#E3-02"
+        },
+        {
+          "id": "E3-04",
+          "entrega": 3,
+          "titulo": "Orçamentos, anexos e cache do JavaScript",
+          "url": "tecnico/entrega-3.html#E3-04"
+        }
+      ]
     },
     {
       "id": "6.4",
@@ -639,8 +709,9 @@
       "peso": "Definição",
       "resumo": "Encerrar a interpretação de Compras/Almoxarifado e da eventual hierarquia de materiais.",
       "acoes": [
-        "Confirmar se o campo Tipo já atende ao pedido de subcategoria.",
-        "Definir o fluxo independente de Almoxarifado pretendido e seu alcance no acordo inicial."
+        "Conferir se Tipo atende à subcategoria Compras/Almoxarifado.",
+        "Fechar D17: avaliação da separação ou construção paga de estoque.",
+        "Se houver estoque contratado, manter a tarefa aberta até detalhar e implementar movimentos/saldo/estorno no limite aprovado."
       ],
       "detalhados": [
         "CA02.1",
@@ -650,7 +721,7 @@
         "VS-08:2",
         "WI-16:2"
       ],
-      "limite": "O escopo conhecido aqui é a definição. Não foi incluído, dentro de 1 ponto, o desenvolvimento de um sistema completo de estoque ainda sem regras. Se ele fizer parte do pagamento, a dimensão do plano precisa ser recalibrada, sem retirar esse compromisso.",
+      "limite": "O ponto macro é reserva preliminar para definição. Ele não prova capacidade de construir estoque completo. Se a construção fizer parte do pagamento, o compromisso permanece e o esforço precisa ser conferido antes de fechar FECHO-6.",
       "referenciasDetalhadas": [
         {
           "id": "CA02.1",
@@ -689,7 +760,9 @@
           "url": "tecnico/entrega-6.html#E6-04"
         }
       ],
-      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
+      "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
+      "responsavelTecnico": "E6-04",
+      "delegados": []
     },
     {
       "id": "7.1",
@@ -700,10 +773,9 @@
       "peso": "Médio a pesado",
       "resumo": "Resolver os casos de turma e completar a consulta e a exportação do cronograma.",
       "acoes": [
-        "Validar a criação que triplica turmas e a alteração de carga entre dias; fechar a regra dos créditos.",
-        "Preencher carga, tipo e créditos ao escolher a disciplina e conferir a ordenação por horário.",
-        "Resolver o cenário do Docente Sênior e a seleção de docentes inativos.",
-        "Filtrar salas elegíveis e exportar todos os cursos vinculados à disciplina."
+        "Validar criação repetida, edição individual e exclusão por ID sem confundir dias/docentes legítimos com duplicatas.",
+        "Reutilizar crédito D05 e identidade D09; preencher carga, tipo/crédito e ordenar horários sem sobrescrita por resposta tardia.",
+        "Filtros de docentes/salas e exportação de cursos são fechados em E4-03/E4-04; aqui somente regressão desses resultados."
       ],
       "detalhados": [
         "ER02",
@@ -724,7 +796,7 @@
         "WI-13:3",
         "WI-13:4"
       ],
-      "limite": "Cópia, datas, criação unificada e modelo de arquivo já atribuídos à entrega 4 não entram novamente. Se algum complemento for concluído na entrega 4, ele sai da entrega 7.",
+      "limite": "Não refazer cópia, datas, filtros, modelo e cursos da entrega 4. Mudança de nível do crédito só ocorre aqui se já deliberada em D05 e revalida consumidores anteriores.",
       "referenciasDetalhadas": [
         {
           "id": "ER02",
@@ -848,7 +920,22 @@
           "url": "tecnico/entrega-4.html#E4-03"
         }
       ],
-      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
+      "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
+      "responsavelTecnico": "E7-01",
+      "delegados": [
+        {
+          "id": "E4-04",
+          "entrega": 4,
+          "titulo": "Aplicar filtros de salas e docentes de ponta a ponta",
+          "url": "tecnico/entrega-4.html#E4-04"
+        },
+        {
+          "id": "E4-03",
+          "entrega": 4,
+          "titulo": "Fechar a exportação de todos os cursos",
+          "url": "tecnico/entrega-4.html#E4-03"
+        }
+      ]
     },
     {
       "id": "7.2",
@@ -859,9 +946,9 @@
       "peso": "Médio",
       "resumo": "Cobrir as partes de importação que não estão implementadas na entrega 4.",
       "acoes": [
-        "Definir e tratar os erros de conteúdo por linha além do fluxo básico de importação.",
-        "Permitir graduação e pós-graduação no mesmo arquivo quando essa for a regra acordada.",
-        "Confirmar a exigência de XLSX além de CSV e delimitar o formato aceito."
+        "Ampliar o diagnóstico por linha sobre o importador seguro de E4-05.",
+        "Preservar a chave/atomicidade D09 e definir CSV/XLSX e graduação/pós no mesmo arquivo em D18.",
+        "Conferir contagens, repetição e arquivo original, sem reabrir a regra silenciosamente."
       ],
       "detalhados": [
         "CR05.1",
@@ -871,7 +958,7 @@
         "VS-13:2",
         "VS-13:3"
       ],
-      "limite": "O teste de aceite do arquivo original para a importação da PR continua na entrega 4. VS-13:2 contém esse teste e o tratamento de erros; somente o complemento ainda ausente entra aqui.",
+      "limite": "Importação básica e arquivo original continuam no fechamento da entrega 4. A entrega 7 amplia o mesmo fluxo; não cria um segundo importador nem adia integridade da E4.",
       "referenciasDetalhadas": [
         {
           "id": "CR05.1",
@@ -916,7 +1003,16 @@
           "url": "tecnico/entrega-4.html#E4-05"
         }
       ],
-      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
+      "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
+      "responsavelTecnico": "E7-02",
+      "delegados": [
+        {
+          "id": "E4-05",
+          "entrega": 4,
+          "titulo": "Aceite da importação CSV da PR",
+          "url": "tecnico/entrega-4.html#E4-05"
+        }
+      ]
     },
     {
       "id": "7.3",
@@ -925,11 +1021,11 @@
       "titulo": "Disciplinas e exportações",
       "tipo": "Complemento de listagem e relatório",
       "peso": "Médio",
-      "resumo": "Completar as colunas e exportações das telas de disciplinas.",
+      "resumo": "Delimitar relatórios acadêmicos restantes, sem repetir colunas/exportações já fechadas.",
       "acoes": [
-        "Mostrar o docente responsável na listagem principal e disponibilizar sua exportação Excel.",
-        "Incluir Crédito na exportação do relatório Disciplinas docente.",
-        "Definir a finalidade e os campos do pedido genérico Relatório de disciplinas, reutilizando as consultas quando forem o mesmo resultado."
+        "Reutilizar responsável/Excel E2-01 e crédito E2-02 já fechados.",
+        "Definir o pedido genérico Relatório de disciplinas e comprovar equivalência ou uma saída distinta.",
+        "A consulta de pós por filtro já registrada como entregue é regressão/equivalência, salvo diferença concreta de campos/finalidade."
       ],
       "detalhados": [
         "DI02",
@@ -941,7 +1037,7 @@
         "WI-14:2",
         "WI-14:3"
       ],
-      "limite": "A coluna de responsável também aparece no novo documento Adicional, mas já consta do pedido inicial. É um único desenvolvimento nesta entrega, sem somar uma segunda cobrança pelo mesmo resultado. O editor de planos de ensino não está incluído.",
+      "limite": "Responsável, Excel e crédito são uma única implementação na entrega 2. O editor de planos do documento Adicional continua fora.",
       "referenciasDetalhadas": [
         {
           "id": "DI02",
@@ -986,7 +1082,7 @@
         {
           "id": "E7-03",
           "entrega": 7,
-          "titulo": "Definir o relatório acadêmico adicional ainda genérico",
+          "titulo": "Relatórios de disciplinas e pós-graduação do pedido inicial",
           "url": "tecnico/entrega-7.html#E7-03"
         },
         {
@@ -1002,7 +1098,22 @@
           "url": "tecnico/entrega-2.html#E2-02"
         }
       ],
-      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
+      "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
+      "responsavelTecnico": "E7-03",
+      "delegados": [
+        {
+          "id": "E2-01",
+          "entrega": 2,
+          "titulo": "Responsável na listagem e Excel de Disciplinas",
+          "url": "tecnico/entrega-2.html#E2-01"
+        },
+        {
+          "id": "E2-02",
+          "entrega": 2,
+          "titulo": "Créditos na exportação de Disciplinas docente",
+          "url": "tecnico/entrega-2.html#E2-02"
+        }
+      ]
     },
     {
       "id": "7.4",
@@ -1013,9 +1124,9 @@
       "peso": "Pesado",
       "resumo": "Consolidar a carga horária docente nos recortes solicitados.",
       "acoes": [
-        "Somar primeiro e segundo semestre e pós-graduação, apresentando o total anual por docente.",
-        "Consolidar por departamento, com filtros e exportação.",
-        "Fechar a regra para turmas compartilhadas e evitar dupla contagem."
+        "Definir D20: carga da turma ou do docente, rateio, departamento e unidade única de contagem.",
+        "Consolidar semestres e pós em parcelas exclusivas ou recortes explicados, evitando dupla soma.",
+        "Exportar a mesma base e fornecer detalhamento conciliável."
       ],
       "detalhados": [
         "DD01",
@@ -1064,7 +1175,9 @@
           "url": "tecnico/entrega-7.html#E7-04"
         }
       ],
-      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
+      "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
+      "responsavelTecnico": "E7-04",
+      "delegados": []
     },
     {
       "id": "8.1",
@@ -1075,9 +1188,9 @@
       "peso": "Pesado",
       "resumo": "Estabilizar a edição da série e de uma ocorrência, preservando salas e demais reservas.",
       "acoes": [
-        "Corrigir a edição que perde a sala e o conflito indevido com a própria reserva.",
-        "Validar a última data das recorrências e a alteração da série.",
-        "Excluir ou trocar a sala de uma única ocorrência sem modificar indevidamente as demais."
+        "Alinhar dt_inicio/dt_fim, validação anterior à consulta e exclusão da própria ocorrência.",
+        "Unificar ocupação de reservas/aulas/exceções, incluindo eventos iniciados antes da janela e proteção contra gravação concorrente.",
+        "Aplicar esta/futuras/todas com última data e exceções conforme D21."
       ],
       "detalhados": [
         "ER04",
@@ -1091,7 +1204,7 @@
         "WI-03:2",
         "WI-18:3"
       ],
-      "limite": "Cobre a correção e o fechamento dos comportamentos já solicitados. Um mecanismo novo de recorrência além desses cenários não é presumido.",
+      "limite": "Correção incremental das recorrências existentes. Consulta e gravação devem usar o mesmo contrato de ocupação; não se presume um mecanismo novo de recorrência além do necessário.",
       "referenciasDetalhadas": [
         {
           "id": "ER04",
@@ -1153,7 +1266,9 @@
           "url": "tecnico/entrega-8.html#E8-01"
         }
       ],
-      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
+      "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
+      "responsavelTecnico": "E8-01",
+      "delegados": []
     },
     {
       "id": "8.2",
@@ -1164,9 +1279,9 @@
       "peso": "Pesado",
       "resumo": "Concluir a escolha de sala a partir da disponibilidade e confirmar o bloqueio manual.",
       "acoes": [
-        "Selecionar uma sala disponível e retornar ao evento com ela preenchida.",
-        "Confirmar se a consulta deve ocultar a lista de indisponíveis.",
-        "Conferir a anotação FEITO do bloqueio manual e completar a solução ordinária prevista, se ainda faltar."
+        "Mostrar somente salas disponíveis e retornar ao evento com ID e campos preservados.",
+        "Revalidar ocupação D21 na gravação; consulta anterior não garante reserva.",
+        "Conferir a solução manual marcada FEITO e implementar somente a lacuna comprovada de bloqueio manual."
       ],
       "detalhados": [
         "AG02.1",
@@ -1221,7 +1336,9 @@
           "url": "tecnico/entrega-8.html#E8-02"
         }
       ],
-      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
+      "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
+      "responsavelTecnico": "E8-02",
+      "delegados": []
     },
     {
       "id": "8.3",
@@ -1232,9 +1349,9 @@
       "peso": "Pesado",
       "resumo": "Concluir o saneamento solicitado com base na planilha e nos vínculos existentes.",
       "acoes": [
-        "Identificar os cadastros de sala que permanecem e quais são duplicados.",
-        "Conferir os vínculos de reservas, turmas e histórico antes de consolidar os registros.",
-        "Validar o resultado e a preservação das informações relacionadas."
+        "Fechar mapa antiga→canônica por ID conforme a planilha.",
+        "Simular união de calendários e resolver colisões antes de remapear vínculos.",
+        "Ensaiar snapshot, remapeamento, idempotência e compensação seletiva no teste; revalidar classificação e rótulos."
       ],
       "detalhados": [
         "CA05"
@@ -1268,7 +1385,9 @@
           "url": "tecnico/entrega-8.html#E8-03"
         }
       ],
-      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
+      "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
+      "responsavelTecnico": "E8-03",
+      "delegados": []
     },
     {
       "id": "8.4",
@@ -1279,9 +1398,9 @@
       "peso": "Pesado",
       "resumo": "Entregar o fluxo original de reservas para solicitantes externos ao cadastro administrativo atual.",
       "acoes": [
-        "Disponibilizar solicitação e acompanhamento pelo aluno.",
-        "Definir e aplicar identificação por número USP, acesso externo e permissões próprias.",
-        "Fechar quem aprova e em quais situações, com o acompanhamento da solicitação."
+        "Definir identificação/cadastro, propriedade do pedido e regras de aprovação.",
+        "Criar solicitação separada da Reserva, com estados e acompanhamento.",
+        "Aprovar com bloqueio/revalidação D21 e vínculo único, depois do saneamento de salas E8-03."
       ],
       "detalhados": [
         "OR14",
@@ -1342,7 +1461,9 @@
           "url": "tecnico/entrega-8.html#E8-04"
         }
       ],
-      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
+      "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
+      "responsavelTecnico": "E8-04",
+      "delegados": []
     },
     {
       "id": "8.5",
@@ -1389,7 +1510,9 @@
           "url": "tecnico/entrega-8.html#E8-05"
         }
       ],
-      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
+      "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
+      "responsavelTecnico": "E8-05",
+      "delegados": []
     },
     {
       "id": "8.6",
@@ -1435,7 +1558,9 @@
           "url": "tecnico/entrega-8.html#E8-06"
         }
       ],
-      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
+      "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
+      "responsavelTecnico": "E8-06",
+      "delegados": []
     },
     {
       "id": "8.7",
@@ -1481,7 +1606,9 @@
           "url": "tecnico/entrega-8.html#E8-07"
         }
       ],
-      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
+      "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
+      "responsavelTecnico": "E8-07",
+      "delegados": []
     },
     {
       "id": "8.8",
@@ -1542,7 +1669,9 @@
           "url": "tecnico/entrega-8.html#E8-08"
         }
       ],
-      "notaTecnica": "O fechamento de lacunas das entregas 1 a 4 precede este grupo; executar cada item apenas no plano técnico responsável."
+      "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
+      "responsavelTecnico": "E8-08",
+      "delegados": []
     }
   ],
   "cobertura": {
@@ -1583,6 +1712,9 @@
   "planejamentoTecnico": {
     "url": "tecnico/index.html",
     "data": "16/10/2026",
-    "nota": "Os percentuais 15/15/20/50 permanecem a referência macro original. Fechamentos antecipados não devem ser contados novamente nas entregas 5 a 8; conferir os pesos após o fechamento das regras."
+    "nota": "Sequência cumulativa com fechamento de cada entrega. 15/15/20/50 são metas de alocação do macro original, não horas medidas; as partes antecipadas para 1 a 4 não serão implementadas outra vez.",
+    "revisao": "02",
+    "integracao": "tecnico/integracao.html",
+    "cobertura": "tecnico/cobertura.html"
   }
 }
