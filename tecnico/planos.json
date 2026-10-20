@@ -1,6 +1,6 @@
 {
-  "data": "16/10/2026",
-  "status": "Revisão técnica e documental concluída; decisões de negócio e execução pendentes",
+  "data": "20/10/2026",
+  "status": "Referência revisada com antecipação parcial E8-01 → Entrega 3.5; publicada em homologação, aguardando aceite.",
   "refs": {
     "dev": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
     "pr4": "13f5075b4685f7a26008e63810d38bd8516f558f"
@@ -5262,7 +5262,7 @@
         "E5-03",
         "E7-01"
       ],
-      "status": "Planejado — execução não iniciada",
+      "status": "Parcial: parcela urgente antecipada para E3.5-01; complementos da Entrega 8 pendentes.",
       "referenciasQuadro": [
         {
           "chave": "WI-03:1",
@@ -5404,7 +5404,18 @@
           "origem": "Relatório de visita, página 4 — Detalhamento técnico: 10-) alteração de agenda",
           "texto": "As funcionalidades relacionadas às alterações de agenda também deverão ser revisadas."
         }
-      ]
+      ],
+      "antecipacao": {
+        "origem": "E8-01/D21",
+        "destino": "E3.5-01",
+        "escopo": "Bloquear criação, edição e reativação de reservas sobrepostas; conferir repetições, exceções e aulas existentes; serializar tentativas simultâneas de reserva por sala; alinhar datas e consulta de disponibilidade.",
+        "status": "Homologação — aguardando aceite de Daniel",
+        "pr": "https://github.com/Dcadv789/sigles/pull/40",
+        "tag": "v1.3.1-beta1",
+        "acao": "39460536898",
+        "semMigration": true,
+        "producao": "v1.3.0 — preservada"
+      }
     },
     {
       "id": "E8-02",
@@ -6728,7 +6739,8 @@
         "E8-04",
         "E8-06"
       ],
-      "status": "Proposta para revisão — não homologada"
+      "status": "Proposta para revisão — não homologada",
+      "antecipacaoEntrega35": "[início,fim), ID da sala, reservas/repetições/exceções/aulas existentes e bloqueio transacional dos gravadores de reservas. Outros escritores, bloqueios manuais e aprovação externa continuam na integração E8."
     },
     {
       "id": "D22",
@@ -7671,7 +7683,8 @@
           "papel": "execução",
           "escopo": "Conflitos e alterações de reservas recorrentes"
         }
-      ]
+      ],
+      "antecipacaoEntrega35": "20/10/2026 — a parcela urgente de bloqueio de ocupação de E8-01/D21 foi antecipada para a Entrega 3.5 (PR #40), publicada somente em homologação como v1.3.1-beta1 e aguardando aceite de Daniel. O restante de E8-01 continua na Entrega 8; não duplicar esta implementação."
     },
     {
       "chave": "WI-03:2",
@@ -7688,7 +7701,8 @@
           "papel": "execução",
           "escopo": "Conflitos e alterações de reservas recorrentes"
         }
-      ]
+      ],
+      "antecipacaoEntrega35": "20/10/2026 — a parcela urgente de bloqueio de ocupação de E8-01/D21 foi antecipada para a Entrega 3.5 (PR #40), publicada somente em homologação como v1.3.1-beta1 e aguardando aceite de Daniel. O restante de E8-01 continua na Entrega 8; não duplicar esta implementação."
     },
     {
       "chave": "WI-04:1",
@@ -8217,7 +8231,8 @@
       "texto": "Consulta de salas disponíveis por intervalo.",
       "status": "Já existente",
       "entregaAtual": null,
-      "planejamentos": []
+      "planejamentos": [],
+      "antecipacaoEntrega35": "20/10/2026 — a parcela urgente de bloqueio de ocupação de E8-01/D21 foi antecipada para a Entrega 3.5 (PR #40), publicada somente em homologação como v1.3.1-beta1 e aguardando aceite de Daniel. O restante de E8-01 continua na Entrega 8; não duplicar esta implementação."
     },
     {
       "chave": "WI-18:2",
@@ -8234,7 +8249,8 @@
           "papel": "execução",
           "escopo": "Escolha de sala disponível e bloqueio manual"
         }
-      ]
+      ],
+      "antecipacaoEntrega35": "20/10/2026 — a parcela urgente de bloqueio de ocupação de E8-01/D21 foi antecipada para a Entrega 3.5 (PR #40), publicada somente em homologação como v1.3.1-beta1 e aguardando aceite de Daniel. O restante de E8-01 continua na Entrega 8; não duplicar esta implementação."
     },
     {
       "chave": "WI-18:3",
@@ -8251,7 +8267,8 @@
           "papel": "execução",
           "escopo": "Conflitos e alterações de reservas recorrentes"
         }
-      ]
+      ],
+      "antecipacaoEntrega35": "20/10/2026 — a parcela urgente de bloqueio de ocupação de E8-01/D21 foi antecipada para a Entrega 3.5 (PR #40), publicada somente em homologação como v1.3.1-beta1 e aguardando aceite de Daniel. O restante de E8-01 continua na Entrega 8; não duplicar esta implementação."
     },
     {
       "chave": "WI-19:1",
@@ -8710,6 +8727,7 @@
     "Não definir versão de produção apenas pelo nome histórico da entrega. Cada fechamento produz um commit cumulativo de homologação, preservando todas as correções anteriores."
   ],
   "mudancasRevisao": [
+    "20/10/2026 — a parcela urgente de bloqueio de ocupação de E8-01/D21 foi antecipada para a Entrega 3.5 (PR #40), publicada somente em homologação como v1.3.1-beta1 e aguardando aceite de Daniel. O restante de E8-01 continua na Entrega 8; não duplicar esta implementação.",
     "E5-03 corrigido para nome_abreviado; criação e edição de nome/e-mail passam a ser verificadas no cliente, controller, repository e serialização.",
     "E5-04 vem primeiro na entrega 5 para fechar o recorte antes de ajustar o Dashboard.",
     "Crédito D05 é decidido uma vez na 2; se mudar de nível, só a 7 implementa o modelo e revalida as leituras anteriores.",
@@ -8719,5 +8737,16 @@
     "A comparação de árvores da PR foi qualificada: ela revela divergências, não prova exclusão automática por merge. A integração usa a base cumulativa do FECHO-3.",
     "Os 42 itens agora têm entrada, saída, limite, roteiro, massa/ação/resultado de aceite, decisões e ligação ao fechamento da entrega.",
     "Aditivos e status funcionais foram preservados. Estudos, equivalência e construção paga têm critérios distintos de encerramento."
-  ]
+  ],
+  "antecipacaoEntrega35": {
+    "origem": "E8-01/D21",
+    "destino": "E3.5-01",
+    "escopo": "Bloquear criação, edição e reativação de reservas sobrepostas; conferir repetições, exceções e aulas existentes; serializar tentativas simultâneas de reserva por sala; alinhar datas e consulta de disponibilidade.",
+    "status": "Homologação — aguardando aceite de Daniel",
+    "pr": "https://github.com/Dcadv789/sigles/pull/40",
+    "tag": "v1.3.1-beta1",
+    "acao": "39460536898",
+    "semMigration": true,
+    "producao": "v1.3.0 — preservada"
+  }
 }

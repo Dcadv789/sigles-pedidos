@@ -1204,7 +1204,7 @@
         "WI-03:2",
         "WI-18:3"
       ],
-      "limite": "Correção incremental das recorrências existentes. Consulta e gravação devem usar o mesmo contrato de ocupação; não se presume um mecanismo novo de recorrência além do necessário.",
+      "limite": "Correção incremental das recorrências existentes. Consulta e gravação devem usar o mesmo contrato de ocupação; não se presume um mecanismo novo de recorrência além do necessário. 20/10/2026 — a parcela urgente de bloqueio de ocupação de E8-01/D21 foi antecipada para a Entrega 3.5 (PR #40), publicada somente em homologação como v1.3.1-beta1 e aguardando aceite de Daniel. O restante de E8-01 continua na Entrega 8; não duplicar esta implementação.",
       "referenciasDetalhadas": [
         {
           "id": "ER04",
@@ -1268,7 +1268,8 @@
       ],
       "notaTecnica": "Executar o item técnico responsável sobre a base cumulativa. Referências a fechamentos anteriores são reutilização/aceite, não nova construção.",
       "responsavelTecnico": "E8-01",
-      "delegados": []
+      "delegados": [],
+      "antecipacaoEntrega35": "20/10/2026 — a parcela urgente de bloqueio de ocupação de E8-01/D21 foi antecipada para a Entrega 3.5 (PR #40), publicada somente em homologação como v1.3.1-beta1 e aguardando aceite de Daniel. O restante de E8-01 continua na Entrega 8; não duplicar esta implementação."
     },
     {
       "id": "8.2",
@@ -1716,5 +1717,16 @@
     "revisao": "02",
     "integracao": "tecnico/integracao.html",
     "cobertura": "tecnico/cobertura.html"
+  },
+  "antecipacaoEntrega35": {
+    "origem": "E8-01/D21",
+    "destino": "E3.5-01",
+    "escopo": "Bloquear criação, edição e reativação de reservas sobrepostas; conferir repetições, exceções e aulas existentes; serializar tentativas simultâneas de reserva por sala; alinhar datas e consulta de disponibilidade.",
+    "status": "Homologação — aguardando aceite de Daniel",
+    "pr": "https://github.com/Dcadv789/sigles/pull/40",
+    "tag": "v1.3.1-beta1",
+    "acao": "39460536898",
+    "semMigration": true,
+    "producao": "v1.3.0 — preservada"
   }
 }

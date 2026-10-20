@@ -1,5 +1,7 @@
 # SIGLES — Planos técnicos em cadeia, entregas 1 a 8
 
+> 20/10/2026 — a parcela urgente de bloqueio de ocupação de E8-01/D21 foi antecipada para a Entrega 3.5 (PR #40), publicada somente em homologação como v1.3.1-beta1 e aguardando aceite de Daniel. O restante de E8-01 continua na Entrega 8; não duplicar esta implementação. [Plano da Entrega 3.5](entrega-3.5.html).
+
 **Revisão 02 · 16/10/2026.** Revisão documental/técnica concluída; execução funcional não iniciada.
 
 [Abrir a página de revisão](https://dcadv789.github.io/sigles-pedidos/tecnico/)

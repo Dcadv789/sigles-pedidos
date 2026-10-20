@@ -1,6 +1,6 @@
-/* Planejamento revisado em 16/10/2026; status funcionais preservados. */
+/* Atualização urgente em 20/10/2026: Entrega 3.5; demais aceites preservados. */
 window.SIGLES_BOARD = {
-  "atualizado": "15/10/2026",
+  "atualizado": "20/10/2026",
   "itens": [
     {
       "id": "V1-01",
@@ -1166,29 +1166,45 @@ window.SIGLES_BOARD = {
       "tela": "Agenda → eventos recorrentes",
       "titulo": "Alterar eventos recorrentes",
       "pedido": "Alterações em eventos recorrentes continuam sem funcionar; o documento marca como urgente.",
-      "status": "Validar",
-      "resumo": "Há mecanismos de recorrência anteriores às entregas, mas a correção relatada não foi comprovada.",
+      "status": "Parcial",
+      "resumo": "Bloqueio e datas antecipados para a Entrega 3.5, em homologação (PR #40). A revisão integral da recorrência permanece em E8-01.",
       "partes": [
         {
-          "texto": "Testar alteração da série e de uma ocorrência, preservação da sala e conflitos.",
-          "entrega": null,
-          "situacao": "Validar",
+          "texto": "Bloquear conflitos ao alterar uma ocorrência, preservando a sala (parcela urgente).",
+          "entrega": 3.5,
+          "situacao": "Homologação",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
-              "id": "E8-01",
-              "entrega": 8,
-              "titulo": "Conflitos e alterações de reservas recorrentes",
-              "url": "tecnico/entrega-8.html#E8-01",
+              "id": "E3.5-01",
+              "entrega": 3.5,
+              "titulo": "Bloqueio de reservas sobrepostas",
+              "url": "tecnico/entrega-3.5.html#E3.5-01",
               "papel": "execução",
-              "escopo": "Conflitos e alterações de reservas recorrentes"
+              "escopo": "Bloquear criação, edição e reativação de reservas sobrepostas; conferir repetições, exceções e aulas existentes; serializar tentativas simultâneas de reserva por sala; alinhar datas e consulta de disponibilidade."
             }
           ]
         },
         {
           "texto": "Corrigir a diferença entre os campos de data usados na checagem de conflito e na gravação.",
-          "entrega": null,
-          "situacao": "Pendente",
+          "entrega": 3.5,
+          "situacao": "Homologação",
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E3.5-01",
+              "entrega": 3.5,
+              "titulo": "Bloqueio de reservas sobrepostas",
+              "url": "tecnico/entrega-3.5.html#E3.5-01",
+              "papel": "execução",
+              "escopo": "Bloquear criação, edição e reativação de reservas sobrepostas; conferir repetições, exceções e aulas existentes; serializar tentativas simultâneas de reserva por sala; alinhar datas e consulta de disponibilidade."
+            }
+          ]
+        },
+        {
+          "texto": "Revisão integral de alterações da série e das operações esta/futuras/todas, além da parcela urgente antecipada.",
+          "entrega": 8,
+          "situacao": "Validar",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -1857,7 +1873,7 @@ window.SIGLES_BOARD = {
       "titulo": "Recorrência, disponibilidade e alteração de uma ocorrência",
       "pedido": "Corrigir data final da recorrência, listar apenas salas disponíveis e permitir alterar/excluir apenas um dia.",
       "status": "Parcial",
-      "resumo": "A consulta de disponibilidade já existia; seleção de sala e recorrência ainda têm pendências.",
+      "resumo": "Datas, conflitos e leitura de disponibilidade corrigidos na Entrega 3.5, em homologação. Seleção de sala, bloqueios manuais e revisão integral das exclusões continuam na Entrega 8.",
       "partes": [
         {
           "texto": "Consulta de salas disponíveis por intervalo.",
@@ -1883,8 +1899,24 @@ window.SIGLES_BOARD = {
           ]
         },
         {
-          "texto": "Validar última data, exclusão e troca de sala de uma ocorrência.",
-          "entrega": null,
+          "texto": "Última data inclusiva, bloqueio de colisões nas repetições e alteração de uma ocorrência sem ignorar as demais (parcela urgente).",
+          "entrega": 3.5,
+          "situacao": "Homologação",
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E3.5-01",
+              "entrega": 3.5,
+              "titulo": "Bloqueio de reservas sobrepostas",
+              "url": "tecnico/entrega-3.5.html#E3.5-01",
+              "papel": "execução",
+              "escopo": "Bloquear criação, edição e reativação de reservas sobrepostas; conferir repetições, exceções e aulas existentes; serializar tentativas simultâneas de reserva por sala; alinhar datas e consulta de disponibilidade."
+            }
+          ]
+        },
+        {
+          "texto": "Concluir a revisão integral de exclusão e alteração esta/futuras/todas, reutilizando o bloqueio da Entrega 3.5.",
+          "entrega": 8,
           "situacao": "Validar",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
