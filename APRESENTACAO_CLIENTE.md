@@ -22,77 +22,107 @@ Correções e melhorias previstas continuam no escopo original. Novos processos 
 - **Reservas para alunos e externos:** O fluxo de solicitação/aprovação de salas previsto no relatório original continua na Entrega 8.
 - **Estudos previstos:** Estudo e detalhamento de Aproveitamento de Disciplinas e avaliação do NotebookLM continuam no escopo original delimitado.
 
-## Pacotes para orçamento adicional
+## Ampliações de escopo
 
 ### Gestão das comissões
 
-**Propor orçamento adicional. Origem:** WI-21 · Documento inicial.
+**Ampliação de escopo. Origem:** Documento inicial SINGLES.docx · Novos módulos — Graduação, Pós-Graduação, Pesquisa e Extensão · parágrafos 169–175.
 
-**Por quê:** Cria um processo de gestão de comissões, representantes e reuniões que não foi descrito no relatório original. É diferente do módulo de Aproveitamento de Disciplinas mencionado naquele relatório.
+**Trecho do pedido:** “Inserir relatórios das reuniões de cada uma das Comissões”
+
+[Consultar os trechos do documento](https://dcadv789.github.io/sigles-pedidos/referencias-comerciais.html#comissoes).
+
+**Por quê:** A solicitação reúne representantes, reuniões, relatórios e arquivos em uma área própria. Essa rotina não foi descrita no relatório de visita e será apresentada em proposta separada.
 
 **Escopo a delimitar:** Comissões de Graduação, Pós-Graduação, Pesquisa e Extensão; titular/suplente; reuniões, datas, textos e anexos; consultas e permissões.
 
-**Limite:** Orçar uma estrutura compartilhada para as quatro comissões. Aprovação de atas, assinaturas e automações só entram se forem expressamente incluídas.
+**Limite:** Uma mesma estrutura atenderá às quatro comissões. A proposta reunirá esse trabalho em um único pacote.
 
-### Edição completa dos planos de ensino
+### Planos de ensino editáveis no SIGLES
 
-**Propor orçamento adicional. Origem:** AD-03 a AD-12 · Adiçoes do SIGLES.docx.
+**Ampliação de escopo. Origem:** Adiçoes do SIGLES.docx · Na aba Disciplinas — Novo item: Planos de Ensino · parágrafos 8–21.
 
-**Por quê:** O pedido posterior amplia o processo para editar o plano dentro do sistema, com versões anuais, janelas de atualização e regras de autorização. Esse fluxo vai além do cadastro de arquivos e do histórico já entregues.
+**Trecho do pedido:** “Seria possível que o plano de ensino fosse uma página editável do próprio sistema, no modelo do plano de ensino, em que o docente possa consultar, realizar a alterações e que possamos imprimir os formulários alterados […]”
+
+[Consultar os trechos do documento](https://dcadv789.github.io/sigles-pedidos/referencias-comerciais.html#planos).
+
+**Por quê:** O novo pedido permite preencher e alterar o plano dentro do SIGLES, criar uma versão para cada ano e controlar os períodos de atualização. É uma ampliação do cadastro de arquivos e do histórico já disponíveis.
 
 **Escopo a delimitar:** Editor, cópia para novo ano, ano de referência, período de atualização, exceções, acesso por perfil, impressão e consulta histórica.
 
-**Limite:** Descontar ou excluir do novo orçamento a consulta, os anexos e o histórico já atendidos pela Entrega 2. Relatório igual ao existente não é uma segunda implementação.
+**Limite:** As funções já entregues de anexação, consulta e histórico serão aproveitadas. O orçamento abrangerá as funções novas.
 
-### Fluxo completo de Aproveitamento de Estudos
+### Solicitações de Aproveitamento de Estudos
 
-**Propor orçamento do desenvolvimento ampliado. Origem:** AD-13 a AD-33 · Adiçoes do SIGLES.docx.
+**Ampliação de escopo. Origem:** Adiçoes do SIGLES.docx · Nova aba — Aproveitamento de Estudos — Alunos não usuários do Sistema · parágrafos 23–50.
 
-**Por quê:** O pedido posterior detalha um processo operacional completo para alunos, secretaria, docentes e Serviço de Graduação. O estudo e o detalhamento previstos na Entrega 8 continuam incluídos; não devem ser cobrados novamente como parte nova.
+**Trecho do pedido:** “- O aluno deverá acessar o sistema para cadastrar (já temos um link de acesso para externos, para solicitar publicações, verificar se pode ser este mesmo acesso para as solicitações de aproveitamento de estudos;”
+
+[Consultar os trechos do documento](https://dcadv789.github.io/sigles-pedidos/referencias-comerciais.html#aproveitamento).
+
+**Por quê:** O documento de adições descreve o atendimento completo da solicitação: envio pelo aluno, análise da secretaria, parecer do docente e encaminhamento ao Serviço de Graduação. A proposta será para essa implementação, além do estudo e detalhamento previstos inicialmente.
 
 **Escopo a delimitar:** Solicitação e documentos, triagem, devolução/reenvio, encaminhamento, parecer, notificações, acesso do Serviço de Graduação, guarda de documentos e relatórios.
 
-**Limite:** Conciliar com o contrato aprovado antes de fechar o valor: cobrar somente a implementação ampliada que não esteja já contratada. Reservas de salas por alunos/externos pertencem ao planejamento da Entrega 8 e não são este módulo.
+**Limite:** O estudo já previsto permanece incluído. Antes da proposta, serão conferidas as condições contratadas para delimitar apenas a ampliação solicitada.
 
 ### Atas de defesa
 
-**Propor orçamento adicional. Origem:** AD-34 a AD-42 · Adiçoes do SIGLES.docx.
+**Ampliação de escopo. Origem:** Adiçoes do SIGLES.docx · Nova aba — Atas de defesas; formulários e modelos de referência · parágrafos 51–100.
 
-**Por quê:** Introduz um processo acadêmico de cadastro, preenchimento e finalização de atas, com participantes, documentos e regras próprias, solicitado no documento de adições.
+**Trecho do pedido:** “Nova Aba - Atas de defesas:  Se conseguir fazer novos itens com os formulários específicos para cada tipo de defesa: TCC, Monografia, Estágios, e depois salvar em PDF editável.”
+
+[Consultar os trechos do documento](https://dcadv789.github.io/sigles-pedidos/referencias-comerciais.html#atas).
+
+**Por quê:** O pedido acrescenta o registro de defesas, a composição da banca, os documentos e os relatórios correspondentes. É uma rotina nova, descrita no documento de adições.
 
 **Escopo a delimitar:** Definir o caminho desejado: formulário preenchido no sistema ou cadastro com envio do arquivo; banca, impressão, finalização, relatórios, prazos e permissões conforme a opção escolhida.
 
-**Limite:** Os dois caminhos apresentados são alternativas. Não cobrar os dois como obrigatórios; orçar ambos somente se forem solicitados.
+**Limite:** O documento apresenta duas alternativas: formulário no sistema ou cadastro com envio da ata. A escolha será feita antes de definir o orçamento.
 
 ### Solicitações de viagens didáticas
 
-**Propor orçamento adicional. Origem:** AD-43 a AD-48 · Adiçoes do SIGLES.docx.
+**Ampliação de escopo. Origem:** Adiçoes do SIGLES.docx · Nova aba — Viagens Didáticas · parágrafos 102–111.
 
-**Por quê:** Cria uma nova rotina de solicitações acadêmicas, com calendário, identificação dos docentes, notificações e relatórios próprios, descrita no documento de adições.
+**Trecho do pedido:** “- Criar a aba com base no formulário existente;”
+
+[Consultar os trechos do documento](https://dcadv789.github.io/sigles-pedidos/referencias-comerciais.html#viagens).
+
+**Por quê:** A nova aba deverá receber solicitações em período definido, registrar docente e disciplina e permitir notificações, consultas e download. Esse fluxo foi solicitado no documento de adições e terá proposta própria.
 
 **Escopo a delimitar:** Formulário baseado no modelo aprovado, período de recebimento, docente/disciplina/contato, notificações, relatórios e download da solicitação.
 
-**Limite:** Confirmar os campos do formulário e quem recebe os avisos. Integrações, aprovação e assinatura não são presumidas.
+**Limite:** Os campos e destinatários serão confirmados a partir do formulário indicado no pedido.
 
-### Avisos automáticos de contratos
+### E-mails de vencimento de contratos
 
-**Orçamento condicionado à conferência do histórico. Origem:** WI-09 · Somente a parcela de envio automático.
+**Conferir cobertura anterior. Origem:** Documento inicial SINGLES.docx · Alterações → Usuário → Para o perfil Estagiários · parágrafos 50.
 
-**Por quê:** Enviar automaticamente mensagens ao administrador e ao estagiário, com conteúdo orientativo e controle de repetição, é uma automação específica além do aviso exibido no Dashboard.
+**Trecho do pedido:** “Para o perfil ESTAGIÁRIOS:
+
+aviso de vencimento de contrato com 45  dias de antecedência, para o ADM e estagiários, com uma mensagem do que precisa ser providenciado.”
+
+[Consultar os trechos do documento](https://dcadv789.github.io/sigles-pedidos/referencias-comerciais.html#avisos).
+
+**Por quê:** O pedido inclui o envio de uma mensagem ao administrador e ao estagiário, com orientações sobre o vencimento. Essa automação será orçada separadamente se ainda não estiver contemplada nas aprovações anteriores.
 
 **Escopo a delimitar:** Destinatários, modelo da mensagem, execução agendada, registro do envio, prevenção de duplicidade e tratamento de prorrogação/cancelamento.
 
-**Limite:** O parâmetro de antecedência e a configuração de 45 dias continuam incluídos. Orçar apenas se o envio automático não tiver sido aprovado ou pago anteriormente.
+**Limite:** O aviso no Dashboard e a configuração de antecedência de 45 dias permanecem incluídos. A conferência se refere somente ao envio automático.
 
 ### Bloqueio automático de feriados
 
-**Orçamento condicionado à conferência do histórico. Origem:** WI-22 · Somente a automação de calendário.
+**Conferir cobertura anterior. Origem:** Documento inicial SINGLES.docx · Agenda → Calendário → Nova função: Bloquear dia · parágrafos 133.
 
-**Por quê:** Manter um calendário de feriados e aplicá-lo automaticamente às reservas e recorrências é uma capacidade nova em relação à consulta comum de disponibilidade.
+**Trecho do pedido:** “NOVA FUNÇÃO: BLOQUEAR DIA - FEITO DE FORMA MANUAL PARA DATAS COMUNS E DE FORMA AUTOMÁTICA PARA FERIADOS.”
+
+[Consultar os trechos do documento](https://dcadv789.github.io/sigles-pedidos/referencias-comerciais.html#feriados).
+
+**Por quê:** O calendário automático deverá impedir reservas nos feriados aplicáveis e tratar as recorrências nessas datas. Antes de uma proposta, será esclarecida a anotação “FEITO” que acompanha esse pedido.
 
 **Escopo a delimitar:** Calendário aplicável, atualização das datas, integração com disponibilidade/recorrências, motivos do bloqueio e exceções autorizadas.
 
-**Limite:** Há uma anotação “FEITO” no documento original: esclarecer o que já foi entregue/pago antes de orçar. Correção de sobreposição e bloqueio manual previsto na Entrega 8 não entram novamente como extra.
+**Limite:** Não haverá nova cobrança por algo já entregue ou pago. A correção das sobreposições e o bloqueio manual previsto continuam no escopo inicial.
 
 ## Sobreposições e aprovação
 
