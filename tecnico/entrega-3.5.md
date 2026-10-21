@@ -1,40 +1,282 @@
-# Entrega 3.5 — Bloqueio de reservas sobrepostas
+# Entrega 3.5 — Agenda, proteção das salas e estabilidade
 
-**Atualização: 20/10/2026 · Publicada em homologação · Aguardando aceite de Daniel.**
+**Atualizado em 21/10/2026 · Publicado em produção — v1.3.3; dados legados aguardam coordenação.**
 
-[PR #40](https://github.com/Dcadv789/sigles/pull/40) · [Testar na Agenda](https://sistemas.economia.esalq.usp.br/des/agenda/) · [Voltar à sequência](index.html) · [Escopo restante E8-01](entrega-8.html#E8-01)
+[Índice](README.md) · [Decisões](INTEGRACAO_E_DECISOES.md) · [Cobertura](COBERTURA_E_CONFERENCIA.md)
 
-## Posição no cronograma
+## Entrada, resultado e situação
 
-Entrega 3 (v1.3.0 em produção) → **Entrega 3.5** → Entrega 4 → Entrega 5 → Entrega 6 → Entrega 7 → Entrega 8.
+- Entrada: FECHO-3: Entrega 3 publicada.
+- Situação: Publicado em produção — v1.3.3; dados legados aguardam coordenação.
+- Preservar a base cumulativa e todos os controles já publicados.
 
-Demanda urgente relatada pela contratante: reservas simultâneas da mesma sala. A correção já constava de E8-01 e D21. Foi antecipada apenas a parcela necessária ao bloqueio, sem nova cobrança e sem encerrar toda a revisão de recorrências. Base: Entrega 3 publicada; PRs #9 e #36 não foram incorporadas.
+## Situação dos dados antigos
 
-## E3.5-01 — O que mudou
+Dados legados: 25 cruzamentos reserva/aula foram resolvidos por 23 remanejamentos autorizados. Restam 172 pares de ocorrências acadêmicas preexistentes para a coordenação: 21 entre disciplinas diferentes e 151 para confirmar identificação/compartilhamento. São alertas de dados antigos, não 172 novos agendamentos. Não remanejar automaticamente.
 
-- Criar, editar e reativar uma reserva agora confere reservas, repetições, exceções e aulas já cadastradas da mesma sala.
-- Duas tentativas simultâneas são verificadas sob bloqueio transacional: apenas a primeira pode ocupar o horário.
-- Horários sobrepostos são recusados. Começar exatamente quando a reserva anterior termina continua permitido.
-- A edição confere as mesmas datas que serão gravadas. Séries incluem a última data e suas ocorrências futuras; ao alterar uma ocorrência, as outras continuam protegidas.
-- Disponibilidade reconhece eventos iniciados antes do período pesquisado e interpreta corretamente datas em português; usa o ID do cadastro da sala.
+<a id="E3.5-01"></a>
 
-## O que continua na Entrega 8
+## E3.5-01 — Bloqueio de reservas e concorrência por sala
 
-Revisão integral de esta/futuras/todas e exclusão de recorrências, seleção de sala na consulta e bloqueios manuais (E8-02), saneamento de salas duplicadas (E8-03), reservas externas/aprovações (E8-04). A concorrência entre gravação de reservas da Agenda e outros gravadores de turmas/importações ainda precisa adotar o mesmo protocolo na integração desses fluxos. Não há promessa de bloqueio universal de todos os escritores de cronograma nesta antecipação.
+**Situação:** Entregue em produção — v1.3.3.
 
-Não foram unificados cadastros duplicados nem canceladas reservas históricas. A estrutura do banco não mudou: nenhuma migration nova. O número 3.5 é a entrega; a versão candidata é v1.3.1-beta1.
+Publicado nas versões 1.3.1/1.3.2 e complemento 1.3.3; escopo urgente antecipado, sem cobrança ou duplicação na Entrega 8.
 
-## Evidências e aceite
+- Entrada: Entrega 3 publicada, regras e matriz aprovadas por Daniel.
+- Saída: Funcionalidade publicada e rastreada na Entrega 3.5.
+- Limite: Preservar dados legados que aguardam coordenação; complementos futuros reutilizam a proteção.
 
-- 32 testes automatizados, 61 asserções, e 49 verificações locais com gravação no clone isolado.
-- 24 verificações HTTP em homologação; concorrência em duas sessões: 200/409, uma única reserva. Simulações e salas temporárias inativadas.
-- Container, PHP e Twig conferidos. Publicação de homologação concluída na execução [39460536898](https://github.com/Dcadv789/sigles/actions/runs/39460536898).
-- Nenhuma escrita desta tarefa em produção. Produção aguarda o teste e a autorização de Daniel.
+### Funções, correções ou próximos passos
 
-Para testar: criar uma reserva; tentar outra no mesmo horário/sala; tentar sobreposição parcial; editar para horário ocupado; conferir uma repetição na última data. Todos devem recusar o conflito. Horário adjacente ou sala diferente deve permitir.
+- Criar, editar e reativar reservas verifica reservas, repetições, exceções e aulas da mesma sala, usando o ID do cadastro.
+- Sobreposição parcial ou total é recusada; intervalos consecutivos são permitidos (04h30–05h30 pode anteceder 05h30–06h30).
+- Revalidação dentro da transação com bloqueio das salas em ordem; tentativas simultâneas incompatíveis produzem uma gravação e um conflito.
+- Datas brasileiras, limites inválidos e eventos que começam antes da janela consultada são tratados de forma consistente.
 
-## Rastreio
+### Evidências registradas
 
-WI-03:2 foi transferido; WI-03:1 e WI-18:3 tiveram a parcela de bloqueio/datas antecipada. Os complementos continuam rastreados em E8-01. Os percentuais macro 15/15/20/50 são a referência original; não foram recalculados como se esta antecipação adicionasse esforço novo.
+- PR #40 e complemento #46; produção pela PR #47.
+- 94 testes unitários/174 asserções e 187 verificações de integração do complemento, registrados em 20/10.
+- Publicação v1.3.3: 80 verificações HTTP de reservas e 22 acadêmicas em homologação; tag final e regressões registradas no STATUS_DEPLOY.
+- Deploy produção: https://github.com/Dcadv789/sigles/actions/runs/39527259499
 
-Antes de publicar a Entrega 4, integrar esta correção à base cumulativa para não perder o bloqueio. A PR #40 permanece aberta aguardando o aceite; não foi feito merge nem deploy de produção.
+### Banco e reversão
+
+Nenhuma migration nova. Esta atualização documental não executa aplicação, deploy nem comandos de banco.
+
+### Rastreio dos pedidos
+
+- VS-01:6 — Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3). · Entregue.
+
+<a id="E3.5-02"></a>
+
+## E3.5-02 — Recorrências e preservação de exceções
+
+**Situação:** Entregue em produção — v1.3.3.
+
+Publicado nas versões 1.3.1/1.3.2 e complemento 1.3.3; escopo urgente antecipado, sem cobrança ou duplicação na Entrega 8.
+
+- Entrada: Entrega 3 publicada, regras e matriz aprovadas por Daniel.
+- Saída: Funcionalidade publicada e rastreada na Entrega 3.5.
+- Limite: Preservar dados legados que aguardam coordenação; complementos futuros reutilizam a proteção.
+
+### Funções, correções ou próximos passos
+
+- Última data da série incluída; editar/dividir/inativar uma ocorrência, futuras ou série preserva as ocorrências e exceções aplicáveis.
+- Troca de sala de apenas um dia usa exceção nativa; cancelar a confirmação não salva. Séries que se sobrepõem internamente não podem ser reativadas.
+
+### Evidências registradas
+
+- PR #40 e complemento #46; produção pela PR #47.
+- 94 testes unitários/174 asserções e 187 verificações de integração do complemento, registrados em 20/10.
+- Publicação v1.3.3: 80 verificações HTTP de reservas e 22 acadêmicas em homologação; tag final e regressões registradas no STATUS_DEPLOY.
+- Deploy produção: https://github.com/Dcadv789/sigles/actions/runs/39527259499
+
+### Banco e reversão
+
+Nenhuma migration nova. Esta atualização documental não executa aplicação, deploy nem comandos de banco.
+
+### Rastreio dos pedidos
+
+- WI-03:1 — Editar uma ocorrência preservando sala, outras ocorrências e a validação dos conflitos. · Entregue.
+- WI-03:2 — Corrigir a diferença entre os campos de data usados na checagem de conflito e na gravação. · Entregue.
+- WI-03:3 — Alterações e inativações desta ocorrência, futuras ou série, preservando exceções e sem salvar ao cancelar. · Entregue.
+- WI-18:3 — Última data incluída, repetições protegidas e alteração de uma ocorrência preservando as demais. · Entregue.
+- WI-18:4 — Inativar apenas uma ocorrência ou alterar sua sala sem apagar as demais ocorrências da série. · Entregue.
+
+### Pendências detalhadas
+
+- ER04 — Editar um evento sem perder a sala e sem conflito indevido com a própria reserva. **Entrega 3.5 — produção**: edição preserva a sala e usa as mesmas datas na checagem e gravação.
+- ER05 — Editar eventos recorrentes corretamente. **Entrega 3.5 — produção**: edição/divisão/inativação de série ou ocorrência com preservação de exceções.
+- AG01 — A recorrência incluir e apresentar corretamente a última data prevista. **Entrega 3.5 — produção**: última data incluída e conferida nas recorrências.
+- AG03 — Excluir apenas um dia de uma reserva recorrente. **Entrega 3.5 — produção**: inativar uma ocorrência preserva as demais.
+- AG03.1 — Trocar a sala somente em um dia de uma reserva recorrente, preservando os demais. **Entrega 3.5 — produção**: troca de sala de uma ocorrência por exceção nativa.
+
+### Documentos originais (rastreio preservado)
+
+**DI04 — Documento inicial SINGLES — ERROS / AGENDA — parágrafo 15**
+
+> Ao editar uma informação em um evento já cadastrado, o sistema altera o que queremos, mas a sala some, ou seja, não dá para alterar o evento, o sistema obriga a criar outro em outra sala. 25/03/2026 - agora nem conseguimos alterar, pois o sistema apresenta a mensagem que a sala já está reservada.
+
+**DI05 — Documento inicial SINGLES — ERROS / AGENDA — parágrafo 17**
+
+> 26/03 - Sanada a questão de alteração do evento. Apenas para os eventos recorrentes não está sendo possível realizar alterações. Como não estava no escopo, ficará para depois. - URGENTE
+
+**DI51 — Documento inicial SINGLES — AGENDA / Calendário — parágrafo 130**
+
+> Na função “novo evento” está com erro ao efetuar reserva com recorrência, não aparece a última data.
+
+**DI53 — Documento inicial SINGLES — AGENDA / Calendário — parágrafo 132**
+
+> Possibilidade de excluir ou alterar sala somente um dia na reserva com recorrência.
+
+**RV51 — Relatório de visita, página 4 — Detalhamento técnico: 10-) alteração de agenda**
+
+> As funcionalidades relacionadas às alterações de agenda também deverão ser revisadas.
+
+**Dependências:** E3.5-01.
+
+<a id="E3.5-03"></a>
+
+## E3.5-03 — Agenda e Relatório de reservas
+
+**Situação:** Entregue em produção — v1.3.3.
+
+Publicado nas versões 1.3.1/1.3.2 e complemento 1.3.3; escopo urgente antecipado, sem cobrança ou duplicação na Entrega 8.
+
+- Entrada: Entrega 3 publicada, regras e matriz aprovadas por Daniel.
+- Saída: Funcionalidade publicada e rastreada na Entrega 3.5.
+- Limite: Preservar dados legados que aguardam coordenação; complementos futuros reutilizam a proteção.
+
+### Funções, correções ou próximos passos
+
+- Título, Novo evento à esquerda, filtros, calendários em português e legendas padronizados; Relatório de reservas também reorganizado.
+- Salas ocupadas continuam visíveis em cinza, não selecionáveis, com o motivo do bloqueio ao passar o mouse.
+- Eventos exibem balão de detalhes; clique abre consulta e a edição só é liberada pela ação Editar, com permissão. Fechamento sem recarga ou piscada de opacidade.
+
+### Evidências registradas
+
+- PR #40 e complemento #46; produção pela PR #47.
+- 94 testes unitários/174 asserções e 187 verificações de integração do complemento, registrados em 20/10.
+- Publicação v1.3.3: 80 verificações HTTP de reservas e 22 acadêmicas em homologação; tag final e regressões registradas no STATUS_DEPLOY.
+- Deploy produção: https://github.com/Dcadv789/sigles/actions/runs/39527259499
+
+### Banco e reversão
+
+Nenhuma migration nova. Esta atualização documental não executa aplicação, deploy nem comandos de banco.
+
+### Pendências detalhadas
+
+- AG02.2 — Apresentação das salas ocupadas no seletor do evento. **Definido e aplicado na Entrega 3.5**: manter ocupadas em cinza, bloqueadas e com motivo, conforme Daniel.
+
+**Dependências:** E3.5-01.
+
+<a id="E3.5-04"></a>
+
+## E3.5-04 — Permissões da Agenda e configuração de perfis
+
+**Situação:** Entregue em produção — v1.3.3.
+
+Publicado nas versões 1.3.1/1.3.2 e complemento 1.3.3; escopo urgente antecipado, sem cobrança ou duplicação na Entrega 8.
+
+- Entrada: Entrega 3 publicada, regras e matriz aprovadas por Daniel.
+- Saída: Funcionalidade publicada e rastreada na Entrega 3.5.
+- Limite: Preservar dados legados que aguardam coordenação; complementos futuros reutilizam a proteção.
+
+### Funções, correções ou próximos passos
+
+- Edição de reservas respeita GDRA.alterar no servidor e na interface; padrão aprovado: somente Administrador.
+- Configuração das permissões de perfis restrita ao Administrador. Ajustes ficam em Gestão de acessos → Perfis → Módulos; novo login renova a sessão.
+- As demais permissões de visualizar/criar seguem a matriz existente; não declarar que todo perfil pode criar eventos.
+
+### Evidências registradas
+
+- PR #40 e complemento #46; produção pela PR #47.
+- 94 testes unitários/174 asserções e 187 verificações de integração do complemento, registrados em 20/10.
+- Publicação v1.3.3: 80 verificações HTTP de reservas e 22 acadêmicas em homologação; tag final e regressões registradas no STATUS_DEPLOY.
+- Deploy produção: https://github.com/Dcadv789/sigles/actions/runs/39527259499
+
+### Banco e reversão
+
+Nenhuma migration nova. Esta atualização documental não executa aplicação, deploy nem comandos de banco.
+
+**Dependências:** E3.5-01.
+
+<a id="E3.5-05"></a>
+
+## E3.5-05 — Bloqueio acadêmico: aulas, cópia e importação
+
+**Situação:** Entregue em produção — v1.3.3.
+
+Publicado nas versões 1.3.1/1.3.2 e complemento 1.3.3; escopo urgente antecipado, sem cobrança ou duplicação na Entrega 8.
+
+- Entrada: Entrega 3 publicada, regras e matriz aprovadas por Daniel.
+- Saída: Funcionalidade publicada e rastreada na Entrega 3.5.
+- Limite: Preservar dados legados que aguardam coordenação; complementos futuros reutilizam a proteção.
+
+### Funções, correções ou próximos passos
+
+- Cadastro, edição individual/em lote, importação, reativação e cópia de cronogramas validam aula × aula e aula × reserva, com proteção concorrente e rollback.
+- Compartilhamento só é reconhecido para a mesma disciplina do semestre, turma preenchida, tipo, sala, dia, período completo e horários, com docentes diferentes.
+- Cópias repetidas não duplicam os vínculos de docentes. Dados antigos com ocupação inalterada podem receber ajustes de metadados sem remanejamento automático.
+- Entrega 4 herdou a proteção e a conciliou com seu próprio fluxo XLSX/cópia antes do primeiro flush.
+
+### Evidências registradas
+
+- PR #40 e complemento #46; produção pela PR #47.
+- 94 testes unitários/174 asserções e 187 verificações de integração do complemento, registrados em 20/10.
+- Publicação v1.3.3: 80 verificações HTTP de reservas e 22 acadêmicas em homologação; tag final e regressões registradas no STATUS_DEPLOY.
+- Deploy produção: https://github.com/Dcadv789/sigles/actions/runs/39527259499
+
+### Banco e reversão
+
+Nenhuma migration nova. Esta atualização documental não executa aplicação, deploy nem comandos de banco.
+
+**Dependências:** E3.5-01.
+
+<a id="E3.5-06"></a>
+
+## E3.5-06 — Diagnóstico e tratamento de conflitos antigos
+
+**Situação:** Entregue em produção — v1.3.3.
+
+Publicado nas versões 1.3.1/1.3.2 e complemento 1.3.3; escopo urgente antecipado, sem cobrança ou duplicação na Entrega 8.
+
+- Entrada: Entrega 3 publicada, regras e matriz aprovadas por Daniel.
+- Saída: Funcionalidade publicada e rastreada na Entrega 3.5.
+- Limite: Preservar dados legados que aguardam coordenação; complementos futuros reutilizam a proteção.
+
+### Funções, correções ou próximos passos
+
+- Aviso Conflitos de agenda identifica disciplinas, turmas, cronogramas e horários; distingue sobreposição entre atividades e confirmação de compartilhamento.
+- Dados legados: 25 cruzamentos reserva/aula foram resolvidos por 23 remanejamentos autorizados. Restam 172 pares de ocorrências acadêmicas preexistentes para a coordenação: 21 entre disciplinas diferentes e 151 para confirmar identificação/compartilhamento. São alertas de dados antigos, não 172 novos agendamentos. Não remanejar automaticamente.
+- Remanejamentos autorizados preservaram aulas, duração e dados das reservas; 22 exceções individuais mantiveram as demais datas das séries. Não confundir saneamento de reservas com saneamento de cadastros duplicados de salas (E8-03).
+
+### Evidências registradas
+
+- PR #40 e complemento #46; produção pela PR #47.
+- 94 testes unitários/174 asserções e 187 verificações de integração do complemento, registrados em 20/10.
+- Publicação v1.3.3: 80 verificações HTTP de reservas e 22 acadêmicas em homologação; tag final e regressões registradas no STATUS_DEPLOY.
+- Deploy produção: https://github.com/Dcadv789/sigles/actions/runs/39527259499
+
+### Banco e reversão
+
+Nenhuma migration nova. Esta atualização documental não executa aplicação, deploy nem comandos de banco.
+
+**Dependências:** E3.5-01.
+
+<a id="E3.5-07"></a>
+
+## E3.5-07 — Login e estabilidade da sessão
+
+**Situação:** Entregue em produção — v1.3.3.
+
+Publicado nas versões 1.3.1/1.3.2 e complemento 1.3.3; escopo urgente antecipado, sem cobrança ou duplicação na Entrega 8.
+
+- Entrada: Entrega 3 publicada, regras e matriz aprovadas por Daniel.
+- Saída: Funcionalidade publicada e rastreada na Entrega 3.5.
+- Limite: Preservar dados legados que aguardam coordenação; complementos futuros reutilizam a proteção.
+
+### Funções, correções ou próximos passos
+
+- Login com ícone de perfil no cabeçalho, ícones nos campos, placeholders e rótulos acessíveis; cartão até 460 px, cantos de 8 px e campos/botão de 6 px.
+- Limpeza das sessões alinhada ao agendamento do servidor, evitando erro intermitente de permissão.
+
+### Evidências registradas
+
+- PR #40 e complemento #46; produção pela PR #47.
+- 94 testes unitários/174 asserções e 187 verificações de integração do complemento, registrados em 20/10.
+- Publicação v1.3.3: 80 verificações HTTP de reservas e 22 acadêmicas em homologação; tag final e regressões registradas no STATUS_DEPLOY.
+- Deploy produção: https://github.com/Dcadv789/sigles/actions/runs/39527259499
+
+### Banco e reversão
+
+Nenhuma migration nova. Esta atualização documental não executa aplicação, deploy nem comandos de banco.
+
+**Dependências:** E3.5-01.
+
+## FECHO-3.5 — Fechamento
+
+**Publicado em produção — v1.3.3; dados legados aguardam coordenação.**
+
+Nenhum aceite pendente foi marcado concluído apenas por esta revisão documental.

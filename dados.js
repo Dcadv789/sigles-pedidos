@@ -1,6 +1,6 @@
-/* Atualização urgente em 20/10/2026: Entrega 3.5; demais aceites preservados. */
+/* Situação documental atualizada em 21/10/2026; preservar IDs e classificação comercial. */
 window.SIGLES_BOARD = {
-  "atualizado": "20/10/2026",
+  "atualizado": "21/10/2026",
   "itens": [
     {
       "id": "V1-01",
@@ -370,7 +370,7 @@ window.SIGLES_BOARD = {
         {
           "texto": "Ordens de serviço e aniversariantes.",
           "entrega": 3,
-          "situacao": "Homologação",
+          "situacao": "Entregue",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -386,7 +386,7 @@ window.SIGLES_BOARD = {
         {
           "texto": "Evolução de cronogramas.",
           "entrega": 4,
-          "situacao": "Na PR",
+          "situacao": "Homologação",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -412,6 +412,22 @@ window.SIGLES_BOARD = {
               "url": "tecnico/index.html#sequencia"
             }
           ]
+        },
+        {
+          "texto": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3).",
+          "entrega": 3.5,
+          "situacao": "Entregue",
+          "cobranca": "Pedido inicial",
+          "planosTecnicos": [
+            {
+              "id": "E3.5-01",
+              "entrega": 3.5,
+              "titulo": "Bloqueio de reservas e ocupação por sala",
+              "url": "tecnico/entrega-3.5.html#E3.5-01",
+              "papel": "execução",
+              "escopo": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3)."
+            }
+          ]
         }
       ]
     },
@@ -421,13 +437,13 @@ window.SIGLES_BOARD = {
       "tela": "Dashboard (parabéns de aniversário)",
       "titulo": "Parabéns só para o aniversariante",
       "pedido": "O aviso grande aparece para todo mundo. Só o aniversariante deve ver.",
-      "status": "Homologação",
+      "status": "Entregue",
       "resumo": "Entrega 3: a janela de parabéns aparece somente ao aniversariante.",
       "partes": [
         {
           "texto": "Demais usuários continuam vendo os aniversariantes na lista do mês.",
           "entrega": 3,
-          "situacao": "Homologação",
+          "situacao": "Entregue",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -460,8 +476,8 @@ window.SIGLES_BOARD = {
         },
         {
           "texto": "Detalhar campos, busca e exportações desejados.",
-          "entrega": null,
-          "situacao": "Definir",
+          "entrega": 5,
+          "situacao": "Na PR",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -503,8 +519,8 @@ window.SIGLES_BOARD = {
         },
         {
           "texto": "Definir outras mudanças além do cadastro e dos avisos existentes.",
-          "entrega": null,
-          "situacao": "Definir",
+          "entrega": 5,
+          "situacao": "Na PR",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -525,13 +541,13 @@ window.SIGLES_BOARD = {
       "tela": "Usuários",
       "titulo": "Informações gerais de usuários e colaboradores",
       "pedido": "Avaliar o que o cadastro ainda não cobre.",
-      "status": "Definir",
+      "status": "Na PR",
       "resumo": "O cadastro existe; falta uma lista dos dados ou comportamentos adicionais.",
       "partes": [
         {
           "texto": "Especificar o que falta nas informações de usuários e colaboradores.",
-          "entrega": null,
-          "situacao": "Definir",
+          "entrega": 5,
+          "situacao": "Na PR",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -552,13 +568,13 @@ window.SIGLES_BOARD = {
       "tela": "Usuários / Perfis / Módulos",
       "titulo": "Evoluir cadastro, perfis e permissões",
       "pedido": "O módulo é quase só cadastro. Avaliar perfis e regras de acesso.",
-      "status": "Definir",
+      "status": "Na PR",
       "resumo": "Perfis e permissões já existem; uma revisão ampla não foi encerrada pelas entregas.",
       "partes": [
         {
           "texto": "Definir as mudanças pretendidas por perfil, módulo e ação.",
-          "entrega": null,
-          "situacao": "Definir",
+          "entrega": 5,
+          "situacao": "Na PR",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -689,7 +705,7 @@ window.SIGLES_BOARD = {
         {
           "texto": "Responsável, orçamento na criação, anexos, filtros, estágios e histórico.",
           "entrega": 3,
-          "situacao": "Homologação",
+          "situacao": "Entregue",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -703,7 +719,7 @@ window.SIGLES_BOARD = {
           ]
         },
         {
-          "texto": "Validar persistência dos seguidores e definir os relatórios gerenciais restantes.",
+          "texto": "Persistência de seguidores corrigida na Entrega 3; ordenação/resumo e relatórios gerenciais restantes continuam individualizados para revisão.",
           "entrega": null,
           "situacao": "Validar",
           "cobranca": "Pedido inicial",
@@ -797,12 +813,12 @@ window.SIGLES_BOARD = {
       "titulo": "Melhorar importação do cronograma",
       "pedido": "Validar planilha, tratar erro, modelo padrão.",
       "status": "Parcial",
-      "resumo": "Entrega 4, na PR: importação CSV e modelo. Importação Excel e validação completa não estão comprovadas.",
+      "resumo": "Entrega 4 em homologação: importação somente .xlsx, modelo com 15 colunas e orientações, preservação de tipos e rollback. Arquivo original e diagnóstico ampliado continuam distintos do aceite sintético.",
       "partes": [
         {
-          "texto": "Fluxo unificado de Novo cronograma e arquivo modelo CSV.",
+          "texto": "Novo cronograma reúne criação do zero, cópia e importação Excel (.xlsx), com modelo para download.",
           "entrega": 4,
-          "situacao": "Na PR",
+          "situacao": "Homologação",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -816,7 +832,7 @@ window.SIGLES_BOARD = {
           ]
         },
         {
-          "texto": "Testar o arquivo original do cliente e o tratamento dos erros por linha.",
+          "texto": "Aceitar o arquivo original do cliente e definir os complementos de diagnóstico por linha além dos cenários já testados.",
           "entrega": null,
           "situacao": "Validar",
           "cobranca": "Pedido inicial",
@@ -824,10 +840,10 @@ window.SIGLES_BOARD = {
             {
               "id": "E4-05",
               "entrega": 4,
-              "titulo": "Aceite da importação CSV da PR",
+              "titulo": "Importação Excel (.xlsx), modelo e integridade",
               "url": "tecnico/entrega-4.html#E4-05",
               "papel": "parcela",
-              "escopo": "CSV básico, integridade e arquivo original"
+              "escopo": "XLSX básico, integridade e aceite do arquivo original"
             },
             {
               "id": "E7-02",
@@ -840,18 +856,18 @@ window.SIGLES_BOARD = {
           ]
         },
         {
-          "texto": "Confirmar necessidade de XLSX; o formato implementado é CSV.",
-          "entrega": null,
-          "situacao": "Definir",
+          "texto": "Formato definido por Daniel: somente Excel (.xlsx), com modelo organizado e aba de orientações.",
+          "entrega": 4,
+          "situacao": "Homologação",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
-              "id": "E7-02",
-              "entrega": 7,
-              "titulo": "Importação ampliada e erros por linha",
-              "url": "tecnico/entrega-7.html#E7-02",
+              "id": "E4-05",
+              "entrega": 4,
+              "titulo": "Importação Excel (.xlsx), modelo e integridade",
+              "url": "tecnico/entrega-4.html#E4-05",
               "papel": "execução",
-              "escopo": "Importação ampliada e erros por linha"
+              "escopo": "Formato XLSX entregue; não reimplementar na Entrega 7"
             }
           ]
         }
@@ -890,13 +906,13 @@ window.SIGLES_BOARD = {
       "tela": "Aulas e horários → Cronogramas",
       "titulo": "Reorganizar a página do cronograma",
       "pedido": "Visual, filtros, espaço, fonte, legibilidade.",
-      "status": "Na PR",
-      "resumo": "Entrega 4: organização visual, filtros e criação unificada de cronogramas.",
+      "status": "Homologação",
+      "resumo": "Entrega 4 em homologação na v1.4.0-beta2: criação do zero, cópia e importação Excel (.xlsx), com modelo para download.",
       "partes": [
         {
-          "texto": "Implementado no PR 9; depende de integração e homologação.",
+          "texto": "PR #9 atualizada sobre a Entrega 3.5, integrada na candidata de homologação; aceite funcional e produção ainda pendentes.",
           "entrega": 4,
-          "situacao": "Na PR",
+          "situacao": "Homologação",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -1080,13 +1096,13 @@ window.SIGLES_BOARD = {
       "tela": "Cronogramas",
       "titulo": "Criação e importação do cronograma do 2º semestre de 2026",
       "pedido": "O documento marca erro ao importar ou criar o cronograma, com indicação posterior de FEITO.",
-      "status": "Na PR",
-      "resumo": "Entrega 4: criar do zero ou importar CSV no mesmo fluxo.",
+      "status": "Homologação",
+      "resumo": "Entrega 4 em homologação na v1.4.0-beta2: criação do zero, cópia e importação Excel (.xlsx), com modelo para download.",
       "partes": [
         {
           "texto": "Criação com ano/semestre e modelo de importação.",
           "entrega": 4,
-          "situacao": "Na PR",
+          "situacao": "Homologação",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -1100,7 +1116,7 @@ window.SIGLES_BOARD = {
           ]
         },
         {
-          "texto": "O arquivo que originou o erro ainda precisa de teste de aceite.",
+          "texto": "Testar o caso original do cliente no modelo .xlsx aprovado; os cenários sintéticos de importação, repetição e rollback já passaram.",
           "entrega": null,
           "situacao": "Validar",
           "cobranca": "Pedido inicial",
@@ -1108,10 +1124,10 @@ window.SIGLES_BOARD = {
             {
               "id": "E4-05",
               "entrega": 4,
-              "titulo": "Aceite da importação CSV da PR",
+              "titulo": "Importação Excel (.xlsx), modelo e integridade",
               "url": "tecnico/entrega-4.html#E4-05",
               "papel": "execução",
-              "escopo": "Aceite da importação CSV da PR"
+              "escopo": "Planilha XLSX, repetição sem duplicação e rollback; arquivo original do cliente ainda sujeito a aceite"
             }
           ]
         }
@@ -1166,54 +1182,54 @@ window.SIGLES_BOARD = {
       "tela": "Agenda → eventos recorrentes",
       "titulo": "Alterar eventos recorrentes",
       "pedido": "Alterações em eventos recorrentes continuam sem funcionar; o documento marca como urgente.",
-      "status": "Parcial",
-      "resumo": "Bloqueio e datas antecipados para a Entrega 3.5, em homologação (PR #40). A revisão integral da recorrência permanece em E8-01.",
+      "status": "Entregue",
+      "resumo": "Entrega 3.5 em produção: edição e inativação de ocorrências/séries, última data, exceções e bloqueio de sobreposições. Complementos de consulta e bloqueio manual permanecem na Entrega 8.",
       "partes": [
         {
-          "texto": "Bloquear conflitos ao alterar uma ocorrência, preservando a sala (parcela urgente).",
+          "texto": "Editar uma ocorrência preservando sala, outras ocorrências e a validação dos conflitos.",
           "entrega": 3.5,
-          "situacao": "Homologação",
+          "situacao": "Entregue",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
-              "id": "E3.5-01",
+              "id": "E3.5-02",
               "entrega": 3.5,
-              "titulo": "Bloqueio de reservas sobrepostas",
-              "url": "tecnico/entrega-3.5.html#E3.5-01",
+              "titulo": "Recorrências e preservação de exceções",
+              "url": "tecnico/entrega-3.5.html#E3.5-02",
               "papel": "execução",
-              "escopo": "Bloquear criação, edição e reativação de reservas sobrepostas; conferir repetições, exceções e aulas existentes; serializar tentativas simultâneas de reserva por sala; alinhar datas e consulta de disponibilidade."
+              "escopo": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3)."
             }
           ]
         },
         {
           "texto": "Corrigir a diferença entre os campos de data usados na checagem de conflito e na gravação.",
           "entrega": 3.5,
-          "situacao": "Homologação",
+          "situacao": "Entregue",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
-              "id": "E3.5-01",
+              "id": "E3.5-02",
               "entrega": 3.5,
-              "titulo": "Bloqueio de reservas sobrepostas",
-              "url": "tecnico/entrega-3.5.html#E3.5-01",
+              "titulo": "Recorrências e preservação de exceções",
+              "url": "tecnico/entrega-3.5.html#E3.5-02",
               "papel": "execução",
-              "escopo": "Bloquear criação, edição e reativação de reservas sobrepostas; conferir repetições, exceções e aulas existentes; serializar tentativas simultâneas de reserva por sala; alinhar datas e consulta de disponibilidade."
+              "escopo": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3)."
             }
           ]
         },
         {
-          "texto": "Revisão integral de alterações da série e das operações esta/futuras/todas, além da parcela urgente antecipada.",
-          "entrega": 8,
-          "situacao": "Validar",
+          "texto": "Alterações e inativações desta ocorrência, futuras ou série, preservando exceções e sem salvar ao cancelar.",
+          "entrega": 3.5,
+          "situacao": "Entregue",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
-              "id": "E8-01",
-              "entrega": 8,
-              "titulo": "Conflitos e alterações de reservas recorrentes",
-              "url": "tecnico/entrega-8.html#E8-01",
+              "id": "E3.5-02",
+              "entrega": 3.5,
+              "titulo": "Recorrências e preservação de exceções",
+              "url": "tecnico/entrega-3.5.html#E3.5-02",
               "papel": "execução",
-              "escopo": "Conflitos e alterações de reservas recorrentes"
+              "escopo": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3)."
             }
           ]
         }
@@ -1225,13 +1241,13 @@ window.SIGLES_BOARD = {
       "tela": "Usuários / Cronogramas",
       "titulo": "Docente sênior não aparece no cronograma",
       "pedido": "Perfil de docente sênior não é apresentado, apenas docente.",
-      "status": "Validar",
-      "resumo": "A consulta já inclui Docente Sênior; falta reproduzir a ausência relatada.",
+      "status": "Homologação",
+      "resumo": "Entrega 4 em homologação: seleção de docentes com usuário e cadastro ativos, incluindo Docente Sênior elegível; vínculos históricos preservados.",
       "partes": [
         {
-          "texto": "Conferir o cadastro e os filtros com o docente do caso original.",
-          "entrega": null,
-          "situacao": "Validar",
+          "texto": "Filtros de atividade do usuário e do docente aplicados às novas seleções; conferir também o caso real relatado.",
+          "entrega": 4,
+          "situacao": "Homologação",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -1280,8 +1296,8 @@ window.SIGLES_BOARD = {
         },
         {
           "texto": "Acrescentar atalhos diretos para LES, MarteWeb e Júpiter Web.",
-          "entrega": null,
-          "situacao": "Pendente",
+          "entrega": 5,
+          "situacao": "Na PR",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -1296,8 +1312,8 @@ window.SIGLES_BOARD = {
         },
         {
           "texto": "Confirmar se a imagem deve ser plano de fundo ou imagem na página.",
-          "entrega": null,
-          "situacao": "Definir",
+          "entrega": 5,
+          "situacao": "Na PR",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -1330,8 +1346,8 @@ window.SIGLES_BOARD = {
         },
         {
           "texto": "Confirmar se a visão ampliada deve abranger todos os departamentos; hoje é departamental.",
-          "entrega": null,
-          "situacao": "Definir",
+          "entrega": 5,
+          "situacao": "Na PR",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -1480,13 +1496,13 @@ window.SIGLES_BOARD = {
       "tela": "Ordens de serviço",
       "titulo": "Responsável e seguidores não persistem corretamente",
       "pedido": "Responsável aparece aleatório; seguidores voltam para nomes fixos após reabrir.",
-      "status": "Parcial",
-      "resumo": "Entrega 3 permite escolher responsável na criação; seguidores precisam de validação.",
+      "status": "Entregue",
+      "resumo": "Entrega 3 em produção: responsável por categoria e persistência dos seguidores, inclusive remoção de todos, corrigidos e testados.",
       "partes": [
         {
           "texto": "Responsável sugerido pela categoria e possibilidade de troca antes de salvar.",
           "entrega": 3,
-          "situacao": "Homologação",
+          "situacao": "Entregue",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -1500,9 +1516,9 @@ window.SIGLES_BOARD = {
           ]
         },
         {
-          "texto": "Verificar se os seguidores escolhidos permanecem após salvar e reabrir.",
-          "entrega": null,
-          "situacao": "Validar",
+          "texto": "Seguidores escolhidos preservados; remoção integral e lista vazia corrigidas e testadas na publicação da Entrega 3.",
+          "entrega": 3,
+          "situacao": "Entregue",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -1516,9 +1532,9 @@ window.SIGLES_BOARD = {
           ]
         },
         {
-          "texto": "Confirmar a regra do responsável inicial solicitada pelo cliente.",
-          "entrega": null,
-          "situacao": "Definir",
+          "texto": "Responsáveis por categoria definidos conforme Daniel na publicação, preservando os demais vínculos e a herança das subcategorias.",
+          "entrega": 3,
+          "situacao": "Entregue",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -1539,13 +1555,13 @@ window.SIGLES_BOARD = {
       "tela": "Ordens de serviço → orçamento",
       "titulo": "Anexos e orçamento na criação da OS",
       "pedido": "Aceitar mais tipos de arquivo e anexar orçamento já ao criar a ordem.",
-      "status": "Homologação",
+      "status": "Entregue",
       "resumo": "Entrega 3: mais formatos de anexo e orçamento durante a criação da OS.",
       "partes": [
         {
           "texto": "Orçamento com anexo já na criação e lista ampliada de formatos suportados.",
           "entrega": 3,
-          "situacao": "Homologação",
+          "situacao": "Entregue",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -1567,12 +1583,12 @@ window.SIGLES_BOARD = {
       "titulo": "Filtros e responsáveis por categoria",
       "pedido": "Filtrar por solicitante e indicar responsável por categoria/subcategoria.",
       "status": "Parcial",
-      "resumo": "Entrega 3: filtro por solicitante e responsável por categoria; subcategoria precisa de definição.",
+      "resumo": "Entrega 3 em produção: filtro e responsável por categoria; subcategorias preservam a herança. Responsável independente seria uma ampliação ainda a definir.",
       "partes": [
         {
           "texto": "Filtro Aberto por e responsável por categoria.",
           "entrega": 3,
-          "situacao": "Homologação",
+          "situacao": "Entregue",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -1609,13 +1625,13 @@ window.SIGLES_BOARD = {
       "tela": "Cronogramas",
       "titulo": "Exportação, filtros e importação entre semestres",
       "pedido": "Exportar cursos, ocultar docentes inativos, filtrar salas e informar início/fim ao importar.",
-      "status": "Parcial",
-      "resumo": "Entrega 4 atende cópia com datas; exportação de todos os cursos e filtro de salas ainda têm lacunas.",
+      "status": "Homologação",
+      "resumo": "Entrega 4 em homologação: cópia por tipo com datas, cursos ativos reunidos na exportação XLSX, docentes ativos e salas ativas marcadas como sala de aula.",
       "partes": [
         {
           "texto": "Copiar entre semestres, com início/fim e seleção Graduação, Pós-graduação ou Ambas.",
           "entrega": 4,
-          "situacao": "Na PR",
+          "situacao": "Homologação",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -1629,9 +1645,9 @@ window.SIGLES_BOARD = {
           ]
         },
         {
-          "texto": "Exportar todos os cursos da disciplina: o servidor ainda retorna só o curso da turma.",
-          "entrega": null,
-          "situacao": "Pendente",
+          "texto": "Exibir e exportar todos os cursos ativos da disciplina, sem multiplicar as aulas.",
+          "entrega": 4,
+          "situacao": "Homologação",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -1645,9 +1661,9 @@ window.SIGLES_BOARD = {
           ]
         },
         {
-          "texto": "Aplicar no servidor o filtro das salas elegíveis.",
-          "entrega": null,
-          "situacao": "Pendente",
+          "texto": "Novas atribuições usam somente salas ativas marcadas “É sala de aula?”; vínculos históricos continuam visíveis.",
+          "entrega": 4,
+          "situacao": "Homologação",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -1661,9 +1677,9 @@ window.SIGLES_BOARD = {
           ]
         },
         {
-          "texto": "Confirmar a seleção de docentes inativos no caso relatado.",
-          "entrega": null,
-          "situacao": "Validar",
+          "texto": "Novas seleções exigem usuário e cadastro docente ativos; Docente Sênior elegível incluído.",
+          "entrega": 4,
+          "situacao": "Homologação",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -1850,8 +1866,8 @@ window.SIGLES_BOARD = {
         },
         {
           "texto": "Usar o nome abreviado na apresentação da sala na agenda.",
-          "entrega": null,
-          "situacao": "Pendente",
+          "entrega": 5,
+          "situacao": "Na PR",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -1873,7 +1889,7 @@ window.SIGLES_BOARD = {
       "titulo": "Recorrência, disponibilidade e alteração de uma ocorrência",
       "pedido": "Corrigir data final da recorrência, listar apenas salas disponíveis e permitir alterar/excluir apenas um dia.",
       "status": "Parcial",
-      "resumo": "Datas, conflitos e leitura de disponibilidade corrigidos na Entrega 3.5, em homologação. Seleção de sala, bloqueios manuais e revisão integral das exclusões continuam na Entrega 8.",
+      "resumo": "Entrega 3.5 em produção: edição e inativação de ocorrências/séries, última data, exceções e bloqueio de sobreposições. Complementos de consulta e bloqueio manual permanecem na Entrega 8.",
       "partes": [
         {
           "texto": "Consulta de salas disponíveis por intervalo.",
@@ -1899,34 +1915,34 @@ window.SIGLES_BOARD = {
           ]
         },
         {
-          "texto": "Última data inclusiva, bloqueio de colisões nas repetições e alteração de uma ocorrência sem ignorar as demais (parcela urgente).",
+          "texto": "Última data incluída, repetições protegidas e alteração de uma ocorrência preservando as demais.",
           "entrega": 3.5,
-          "situacao": "Homologação",
+          "situacao": "Entregue",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
-              "id": "E3.5-01",
+              "id": "E3.5-02",
               "entrega": 3.5,
-              "titulo": "Bloqueio de reservas sobrepostas",
-              "url": "tecnico/entrega-3.5.html#E3.5-01",
+              "titulo": "Recorrências e preservação de exceções",
+              "url": "tecnico/entrega-3.5.html#E3.5-02",
               "papel": "execução",
-              "escopo": "Bloquear criação, edição e reativação de reservas sobrepostas; conferir repetições, exceções e aulas existentes; serializar tentativas simultâneas de reserva por sala; alinhar datas e consulta de disponibilidade."
+              "escopo": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3)."
             }
           ]
         },
         {
-          "texto": "Concluir a revisão integral de exclusão e alteração esta/futuras/todas, reutilizando o bloqueio da Entrega 3.5.",
-          "entrega": 8,
-          "situacao": "Validar",
+          "texto": "Inativar apenas uma ocorrência ou alterar sua sala sem apagar as demais ocorrências da série.",
+          "entrega": 3.5,
+          "situacao": "Entregue",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
-              "id": "E8-01",
-              "entrega": 8,
-              "titulo": "Conflitos e alterações de reservas recorrentes",
-              "url": "tecnico/entrega-8.html#E8-01",
+              "id": "E3.5-02",
+              "entrega": 3.5,
+              "titulo": "Recorrências e preservação de exceções",
+              "url": "tecnico/entrega-3.5.html#E3.5-02",
               "papel": "execução",
-              "escopo": "Conflitos e alterações de reservas recorrentes"
+              "escopo": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3)."
             }
           ]
         }
@@ -1938,13 +1954,13 @@ window.SIGLES_BOARD = {
       "tela": "Tipos de reserva",
       "titulo": "Dados do solicitante nos tipos de reserva",
       "pedido": "Incluir e-mail e nome do discente/solicitante, mantendo grupo de extensão obrigatório.",
-      "status": "Pendente",
+      "status": "Na PR",
       "resumo": "Nome e e-mail ainda ficam restritos a certos tipos; a obrigatoriedade não corresponde ao pedido.",
       "partes": [
         {
           "texto": "Exibir os campos em todos os tipos e exigir preenchimento somente em Grupo de extensão.",
-          "entrega": null,
-          "situacao": "Pendente",
+          "entrega": 5,
+          "situacao": "Na PR",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {
@@ -2041,9 +2057,9 @@ window.SIGLES_BOARD = {
       "resumo": "Cronograma na entrega 4; bloqueio manual a validar. A automação de feriados é recomendada como aditivo, após conferir a anotação FEITO.",
       "partes": [
         {
-          "texto": "Criação e importação do cronograma implementadas no PR 9.",
+          "texto": "Criação, cópia e importação XLSX em homologação na v1.4.0-beta2; bloqueio manual continua separado.",
           "entrega": 4,
-          "situacao": "Na PR",
+          "situacao": "Homologação",
           "cobranca": "Pedido inicial",
           "planosTecnicos": [
             {

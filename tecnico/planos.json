@@ -1,9 +1,13 @@
 {
-  "data": "20/10/2026",
-  "status": "Referência revisada com antecipação parcial E8-01 → Entrega 3.5; publicada em homologação, aguardando aceite.",
+  "data": "21/10/2026",
+  "status": "Atualização de 21/10/2026: Entregas 1, 2, 3 e 3.5 em produção; produção atual v1.3.3. Entrega 4 em homologação na v1.4.0-beta2, PR #9 aberta e sem merge. Entrega 5 implementada em rascunho na PR #36, ainda precisa incorporar a base atual e passar por homologação. Entregas 6 a 8: escopo restante planejado.",
   "refs": {
     "dev": "3ed9a38415417b8a4ead22ecd472f758b3506db1",
-    "pr4": "13f5075b4685f7a26008e63810d38bd8516f558f"
+    "pr4": "13f5075b4685f7a26008e63810d38bd8516f558f",
+    "publicadoProducao": "8ccbdb130774a09e7385d9a880a1947a62e0943f",
+    "publicadoHomologacao": "8efeeea56b7fd2dbb394f727c58e404c22c871a4",
+    "pr4Atual": "e39840c",
+    "observacao": "dev/pr4 originais são snapshots da revisão de 16/10; não representam a versão atual."
   },
   "entregas": [
     {
@@ -23,7 +27,7 @@
       "pesoReferencia": null,
       "entrada": "BASE-0: diagnóstico e ambiente de teste identificados",
       "fecho": "FECHO-1",
-      "estadoFecho": "Não executado",
+      "estadoFecho": "Versão publicada; lacunas de revisão continuam individualizadas, sem aceite automático",
       "entregaSeguinte": 2,
       "criteriosFecho": [
         "Todos os itens desta entrega têm saída comprovada e testes de aceite registrados; correção dispensada por equivalência exige evidência e aceite.",
@@ -48,7 +52,7 @@
       "pesoReferencia": null,
       "entrada": "FECHO-1: entrega anterior aceita em homologação",
       "fecho": "FECHO-2",
-      "estadoFecho": "Não executado",
+      "estadoFecho": "Versão publicada; lacunas de revisão continuam individualizadas, sem aceite automático",
       "entregaSeguinte": 3,
       "criteriosFecho": [
         "Todos os itens desta entrega têm saída comprovada e testes de aceite registrados; correção dispensada por equivalência exige evidência e aceite.",
@@ -74,14 +78,39 @@
       "pesoReferencia": null,
       "entrada": "FECHO-2: entrega anterior aceita em homologação",
       "fecho": "FECHO-3",
-      "estadoFecho": "Não executado",
-      "entregaSeguinte": 4,
+      "estadoFecho": "Publicado em produção — v1.3.0; complementos gerais de revisão permanecem individualizados",
+      "entregaSeguinte": 3.5,
       "criteriosFecho": [
         "Todos os itens desta entrega têm saída comprovada e testes de aceite registrados; correção dispensada por equivalência exige evidência e aceite.",
         "Decisões de negócio desta entrega resolvidas ou ramo não aplicável justificado; nenhuma lacuna paga foi encerrada só como estudo.",
         "Regressões dos contratos anteriores reexecutadas e diferenças registradas; nenhuma dependência técnica futura foi criada.",
         "Commit cumulativo, migrations aplicáveis, dados de teste, reversão e notas registrados; status do quadro só muda depois da evidência.",
         "Homologação antecede qualquer produção. A autorização atual continua permitindo escrita apenas em esalq_sistema_des."
+      ]
+    },
+    {
+      "numero": 3.5,
+      "titulo": "Agenda, proteção das salas e estabilidade",
+      "etapa": "Antecipação urgente concluída",
+      "ordem": [
+        "E3.5-01",
+        "E3.5-02",
+        "E3.5-03",
+        "E3.5-04",
+        "E3.5-05",
+        "E3.5-06",
+        "E3.5-07"
+      ],
+      "markdown": "entrega-3.5.md",
+      "pagina": "entrega-3.5.html",
+      "pesoReferencia": null,
+      "entrada": "FECHO-3: Entrega 3 publicada",
+      "fecho": "FECHO-3.5",
+      "estadoFecho": "Publicado em produção — v1.3.3; dados legados aguardam coordenação",
+      "entregaSeguinte": 4,
+      "criteriosFecho": [
+        "Preservar as proteções publicadas em todas as entregas seguintes.",
+        "Saneamento acadêmico legado depende da coordenação; não gerar novos conflitos."
       ]
     },
     {
@@ -100,9 +129,9 @@
       "markdown": "entrega-04.md",
       "pagina": "entrega-4.html",
       "pesoReferencia": null,
-      "entrada": "FECHO-3: entrega anterior aceita em homologação",
+      "entrada": "FECHO-3.5: preservar v1.3.3",
       "fecho": "FECHO-4",
-      "estadoFecho": "Não executado",
+      "estadoFecho": "Publicado em homologação — v1.4.0-beta2; aceite e produção pendentes",
       "entregaSeguinte": 5,
       "criteriosFecho": [
         "Todos os itens desta entrega têm saída comprovada e testes de aceite registrados; correção dispensada por equivalência exige evidência e aceite.",
@@ -127,7 +156,7 @@
       "pesoReferencia": 15,
       "entrada": "FECHO-4: entrega anterior aceita em homologação",
       "fecho": "FECHO-5",
-      "estadoFecho": "Não executado",
+      "estadoFecho": "Código na PR #36; atualizar base, validar visualmente e homologar",
       "entregaSeguinte": 6,
       "criteriosFecho": [
         "Todos os itens desta entrega têm saída comprovada e testes de aceite registrados; correção dispensada por equivalência exige evidência e aceite.",
@@ -206,7 +235,7 @@
       "pesoReferencia": 50,
       "entrada": "FECHO-7: entrega anterior aceita em homologação",
       "fecho": "FECHO-8",
-      "estadoFecho": "Não executado",
+      "estadoFecho": "Somente escopo restante planejado; E8-01 transferido à 3.5",
       "entregaSeguinte": null,
       "criteriosFecho": [
         "Todos os itens desta entrega têm saída comprovada e testes de aceite registrados; correção dispensada por equivalência exige evidência e aceite.",
@@ -1642,7 +1671,7 @@
       "id": "E3-01",
       "entrega": 3,
       "titulo": "Persistência dos seguidores da OS",
-      "diagnostico": "A edição só chama setSeguidores quando a lista não está vazia. O modal também carrega seguidores padrão em uma requisição paralela à leitura da OS. Esses são caminhos concretos para testar remoção total e sobrescrita por corrida de respostas.",
+      "diagnostico": "O diagnóstico de 16/10 é histórico. Publicação v1.3.0 e correções de seguidores/responsáveis comprovadas no STATUS_DEPLOY; os cenários adicionais de revisão não devem ser marcados aceitos sem evidência.",
       "arquivos": [
         {
           "arquivo": "src/Controller/OrdemServicoController.php",
@@ -1693,13 +1722,13 @@
       ],
       "decisoes": [],
       "dep": [],
-      "status": "Planejado — execução não iniciada",
+      "status": "Correções/publicação registradas na Entrega 3 — v1.3.0 em produção",
       "referenciasQuadro": [
         {
           "chave": "VS-10:2",
           "id": "VS-10",
           "parte": 2,
-          "texto": "Validar persistência dos seguidores e definir os relatórios gerenciais restantes.",
+          "texto": "Persistência de seguidores corrigida na Entrega 3; ordenação/resumo e relatórios gerenciais restantes continuam individualizados para revisão.",
           "situacao": "Validar",
           "entregaAtual": null,
           "papel": "parcela",
@@ -1709,9 +1738,9 @@
           "chave": "WI-10:2",
           "id": "WI-10",
           "parte": 2,
-          "texto": "Verificar se os seguidores escolhidos permanecem após salvar e reabrir.",
-          "situacao": "Validar",
-          "entregaAtual": null,
+          "texto": "Seguidores escolhidos preservados; remoção integral e lista vazia corrigidas e testadas na publicação da Entrega 3.",
+          "situacao": "Entregue",
+          "entregaAtual": 3,
           "papel": "execução",
           "escopo": "Persistência dos seguidores da OS"
         }
@@ -1720,7 +1749,7 @@
         {
           "id": "OS02",
           "pedido": "Preservar os seguidores selecionados ao salvar e reabrir a OS.",
-          "situacao": "**Validar** — há gravação dos seguidores, mas falta demonstrar a correção do caso que substituía os escolhidos pelos padrões."
+          "situacao": "**Entrega 3 — produção**: persistência de seguidores e remoção integral corrigidas e testadas na publicação v1.3.0."
         }
       ],
       "entrada": "FECHO-2, payload de criação/edição e regra dos campos por estágio.",
@@ -1765,13 +1794,18 @@
           "origem": "Documento inicial SINGLES — ALTERAÇÕES / 3. ORDEM DE SERVIÇO / Erro: — parágrafo 58",
           "texto": "Está com erro também no cadastro de seguidores, seleciono o nome desejado e ao reabrir ele corrige mantendo somente André e Iraides como seguidores e excluindo o nome selecionado."
         }
+      ],
+      "evidencias": [
+        "Entrega 3 publicada em 20/10/2026, código d4d3734f15dbf86e1427a693fe9008f8a0af7f3b.",
+        "Responsáveis por categoria definidos conforme Daniel; seguidores podem ser removidos integralmente sem FK nula.",
+        "Notificação automática ao solicitante não foi incluída silenciosamente; manter a regra de destinatários e a pendência específica de e-mail."
       ]
     },
     {
       "id": "E3-02",
       "entrega": 3,
       "titulo": "Regra do responsável e das subcategorias",
-      "diagnostico": "A criação prioriza a categoria e permite trocar o usuário. CategoriaOsController propaga o responsável às subcategorias; isso não equivale a responsáveis independentes.",
+      "diagnostico": "O diagnóstico de 16/10 é histórico. Publicação v1.3.0 e correções de seguidores/responsáveis comprovadas no STATUS_DEPLOY; os cenários adicionais de revisão não devem ser marcados aceitos sem evidência.",
       "arquivos": [
         {
           "arquivo": "src/Controller/OrdemServicoController.php",
@@ -1830,15 +1864,15 @@
         "D06 (E3-02): Solicitante versus categoria/subcategoria/configuração; independência e como distinguir herança de escolha específica."
       ],
       "dep": [],
-      "status": "Planejado — execução não iniciada",
+      "status": "Correções/publicação registradas na Entrega 3 — v1.3.0 em produção",
       "referenciasQuadro": [
         {
           "chave": "WI-10:3",
           "id": "WI-10",
           "parte": 3,
-          "texto": "Confirmar a regra do responsável inicial solicitada pelo cliente.",
-          "situacao": "Definir",
-          "entregaAtual": null,
+          "texto": "Responsáveis por categoria definidos conforme Daniel na publicação, preservando os demais vínculos e a herança das subcategorias.",
+          "situacao": "Entregue",
+          "entregaAtual": 3,
           "papel": "execução",
           "escopo": "Regra do responsável e das subcategorias"
         },
@@ -1909,6 +1943,11 @@
           "origem": "Documento inicial SINGLES — ALTERAÇÕES / 3. ORDEM DE SERVIÇO / Erro: — parágrafo 63",
           "texto": "Poder indicar um responsável por cada categoria, independente da Categoria/Subcategoria"
         }
+      ],
+      "evidencias": [
+        "Entrega 3 publicada em 20/10/2026, código d4d3734f15dbf86e1427a693fe9008f8a0af7f3b.",
+        "Responsáveis por categoria definidos conforme Daniel; seguidores podem ser removidos integralmente sem FK nula.",
+        "Notificação automática ao solicitante não foi incluída silenciosamente; manter a regra de destinatários e a pendência específica de e-mail."
       ]
     },
     {
@@ -1973,7 +2012,7 @@
           "chave": "VS-10:2",
           "id": "VS-10",
           "parte": 2,
-          "texto": "Validar persistência dos seguidores e definir os relatórios gerenciais restantes.",
+          "texto": "Persistência de seguidores corrigida na Entrega 3; ordenação/resumo e relatórios gerenciais restantes continuam individualizados para revisão.",
           "situacao": "Validar",
           "entregaAtual": null,
           "papel": "parcela",
@@ -2165,7 +2204,7 @@
       "id": "E3-99",
       "entrega": 3,
       "titulo": "Homologação e preparação de publicação da entrega 3",
-      "diagnostico": "A v1.3.0-beta está em homologação; não deve ser declarada em produção por existir na dev.",
+      "diagnostico": "O diagnóstico de 16/10 é histórico. Publicação v1.3.0 e correções de seguidores/responsáveis comprovadas no STATUS_DEPLOY; os cenários adicionais de revisão não devem ser marcados aceitos sem evidência.",
       "arquivos": [
         {
           "arquivo": "src/Controller/HistoricoOsController.php",
@@ -2220,14 +2259,14 @@
         "E3-03",
         "E3-04"
       ],
-      "status": "Planejado — execução não iniciada",
+      "status": "Correções/publicação registradas na Entrega 3 — v1.3.0 em produção",
       "referenciasQuadro": [
         {
           "chave": "VS-01:3",
           "id": "VS-01",
           "parte": 3,
           "texto": "Ordens de serviço e aniversariantes.",
-          "situacao": "Homologação",
+          "situacao": "Entregue",
           "entregaAtual": 3,
           "papel": "aceite",
           "escopo": "Homologação e preparação de publicação da entrega 3"
@@ -2237,7 +2276,7 @@
           "id": "VS-02",
           "parte": 1,
           "texto": "Demais usuários continuam vendo os aniversariantes na lista do mês.",
-          "situacao": "Homologação",
+          "situacao": "Entregue",
           "entregaAtual": 3,
           "papel": "aceite",
           "escopo": "Homologação e preparação de publicação da entrega 3"
@@ -2247,7 +2286,7 @@
           "id": "VS-10",
           "parte": 1,
           "texto": "Responsável, orçamento na criação, anexos, filtros, estágios e histórico.",
-          "situacao": "Homologação",
+          "situacao": "Entregue",
           "entregaAtual": 3,
           "papel": "aceite",
           "escopo": "Homologação e preparação de publicação da entrega 3"
@@ -2257,7 +2296,7 @@
           "id": "WI-10",
           "parte": 1,
           "texto": "Responsável sugerido pela categoria e possibilidade de troca antes de salvar.",
-          "situacao": "Homologação",
+          "situacao": "Entregue",
           "entregaAtual": 3,
           "papel": "aceite",
           "escopo": "Homologação e preparação de publicação da entrega 3"
@@ -2267,7 +2306,7 @@
           "id": "WI-11",
           "parte": 1,
           "texto": "Orçamento com anexo já na criação e lista ampliada de formatos suportados.",
-          "situacao": "Homologação",
+          "situacao": "Entregue",
           "entregaAtual": 3,
           "papel": "aceite",
           "escopo": "Homologação e preparação de publicação da entrega 3"
@@ -2277,7 +2316,7 @@
           "id": "WI-12",
           "parte": 1,
           "texto": "Filtro Aberto por e responsável por categoria.",
-          "situacao": "Homologação",
+          "situacao": "Entregue",
           "entregaAtual": 3,
           "papel": "aceite",
           "escopo": "Homologação e preparação de publicação da entrega 3"
@@ -2323,13 +2362,18 @@
           "origem": "Relatório de visita, página 2 — Detalhamento técnico: 3-) módulo de compras e almoxarifado",
           "texto": "- Avaliar e aprimorar as funcionalidades relacionadas às Ordens de Serviço;"
         }
+      ],
+      "evidencias": [
+        "Entrega 3 publicada em 20/10/2026, código d4d3734f15dbf86e1427a693fe9008f8a0af7f3b.",
+        "Responsáveis por categoria definidos conforme Daniel; seguidores podem ser removidos integralmente sem FK nula.",
+        "Notificação automática ao solicitante não foi incluída silenciosamente; manter a regra de destinatários e a pendência específica de e-mail."
       ]
     },
     {
       "id": "E4-01",
       "entrega": 4,
-      "titulo": "Reconstruir a integração da PR sobre a dev atual",
-      "diagnostico": "A PR 9 está aberta, base ordem-servico, e o GitHub informa conflitos. Sua árvore é anterior a correções da dev. Comparar árvores mostra arquivos divergentes, mas não demonstra que um merge removeria todos esses arquivos. A futura integração deve preservar a base cumulativa aceita e reaplicar só as intenções de cronogramas, conciliando o trabalho local.",
+      "titulo": "Integração cumulativa da Entrega 4 com a Entrega 3.5",
+      "diagnostico": "Conflitos em CronogramaController, DisciplinaTurmaController e DisciplinaTurmaRepository resolvidos. Recursos da 3.5 preservados; PR #9 aberta, base dev, sem merge.",
       "arquivos": [
         {
           "arquivo": "src/Controller/CronogramaController.php",
@@ -2365,13 +2409,10 @@
         }
       ],
       "passos": [
-        "Recalcular merge-base, commits próprios e diff da PR 9. A PR continua com base ordem-servico; trocar base é uma alteração futura, não executada por este plano.",
-        "Criar checkout limpo baseado no commit cumulativo do FECHO-3, não no snapshot antigo 3ed9a38. Registrar diff/patch das alterações locais sem descartá-las nem publicá-las automaticamente.",
-        "Reaplicar os incrementos 9dab4c5/13f5075 por intenção, conferindo o patch completo antes de escolher cherry-pick ou reaplicação manual.",
-        "Conciliar cada alteração local com o resultado pretendido, especialmente parsing de datas e modais; registrar aceito, incorporado ou preservado separadamente.",
-        "Comparar a árvore resultante com a base cumulativa: manter migrations, login, compras, responsáveis e visualizador. Atualizar a PR apenas na futura implementação."
+        "Base cumulativa incorpora a aplicação v1.3.3.",
+        "Agenda preserva sala_id e datas; cópia valida cada nova aula antes do primeiro flush e lote valida os valores finais."
       ],
-      "dados": "Nenhuma migração será removida por faltar na branch antiga. Nenhum merge, cherry-pick ou push no SIGLES foi executado no planejamento.",
+      "dados": "Sem nova migration executada em homologação. Produção preservada na Entrega 3.5.",
       "aceite": [
         "Base FECHO-3 e incrementos cronograma → Revisar diff final → Somente mudanças intencionais, sem regressão das entregas 1 a 3.",
         "Arquivos locais modificados → Comparar antes/depois da preparação → Nenhum arquivo do usuário perdido ou substituído."
@@ -2380,18 +2421,15 @@
       "dep": [
         "E2-03"
       ],
-      "status": "Planejado — execução não iniciada",
+      "status": "Implementado e disponível em homologação — v1.4.0-beta2",
       "referenciasQuadro": [],
       "referenciasDetalhadas": [],
-      "entrada": "FECHO-3, refs recalculadas e inventário das alterações locais não commitadas.",
+      "entrada": "Entrega 3.5/v1.3.3 publicada; preservar todo o seu contrato.",
       "saida": "Branch de integração sobre a base cumulativa aprovada, com preservações comprovadas.",
       "limite": "Reaplicar intenção dos incrementos; o diff direto de árvores não prova que um merge Git deletaria tudo.",
       "roteiro": [
-        "Recalcular merge-base, commits próprios e diff da PR 9. A PR continua com base ordem-servico; trocar base é uma alteração futura, não executada por este plano.",
-        "Criar checkout limpo baseado no commit cumulativo do FECHO-3, não no snapshot antigo 3ed9a38. Registrar diff/patch das alterações locais sem descartá-las nem publicá-las automaticamente.",
-        "Reaplicar os incrementos 9dab4c5/13f5075 por intenção, conferindo o patch completo antes de escolher cherry-pick ou reaplicação manual.",
-        "Conciliar cada alteração local com o resultado pretendido, especialmente parsing de datas e modais; registrar aceito, incorporado ou preservado separadamente.",
-        "Comparar a árvore resultante com a base cumulativa: manter migrations, login, compras, responsáveis e visualizador. Atualizar a PR apenas na futura implementação."
+        "Base cumulativa incorpora a aplicação v1.3.3.",
+        "Agenda preserva sala_id e datas; cópia valida cada nova aula antes do primeiro flush e lote valida os valores finais."
       ],
       "casos": [
         [
@@ -2410,7 +2448,7 @@
         "DI34"
       ],
       "ordem": 16,
-      "apos": "FECHO-3",
+      "apos": "FECHO-3.5",
       "gateEntrada": "FECHO-3: entrega anterior aceita em homologação",
       "fechoEntrega": "FECHO-4",
       "decisoesIds": [],
@@ -2425,13 +2463,18 @@
           "origem": "Documento inicial SINGLES — ALTERAÇÕES / 4. CRONOGRAMA — parágrafo 75",
           "texto": "Retirar a página inicial, logo após clicar no semestre do cronograma e ir direto para os dados."
         }
+      ],
+      "evidencias": [
+        "PR #9: https://github.com/Dcadv789/sigles/pull/9",
+        "Deploy beta2: https://github.com/Dcadv789/sigles/actions/runs/39532075957",
+        "Código publicado: 8efeeea56b7fd2dbb394f727c58e404c22c871a4. Registro técnico posterior: e39840c."
       ]
     },
     {
       "id": "E4-06",
       "entrega": 4,
-      "titulo": "Conferir a migration de sala_aula e sua reversão",
-      "diagnostico": "Version20260911120000 marca salas usadas em turma OU reserva como sala de aula. Seu down limpa todos os flags 1, inclusive os que poderiam existir antes. Esse comportamento não deve ser aplicado ou revertido sem conferir a regra e o estado anterior.",
+      "titulo": "Classificação de salas e preparação do banco para produção",
+      "diagnostico": "Homologação tem 60 migrations; Version20260911120000 já estava registrada. Produção tem 59 e essa migration histórica continua pendente.",
       "arquivos": [
         {
           "arquivo": "migrations/Version20260911120000.php",
@@ -2459,13 +2502,11 @@
         }
       ],
       "passos": [
-        "Conferir se Version20260911120000 está registrada e quais valores existiam; ausência de snapshot impede alegar reversão exata dos valores antigos.",
-        "Comparar sala com turma, com reunião, sem uso e com marcação manual. Registrar D08 antes de usar sala_aula como filtro de reserva.",
-        "Se a migration não foi executada, desenhar sua entrada segura mantendo a rastreabilidade; se já executada, preservar a versão e criar correção aditiva seletiva.",
-        "Preparar mapa ID→valor anterior/novo para os casos conhecidos; registros de origem incerta precisam de validação, não de inferência pela ausência de uso.",
-        "Proibir down que zera todos os flags. Entregar o critério a E4-04 e o mapa de classificação a E8-03."
+        "Nenhuma migration executada no deploy da Entrega 4.",
+        "Antes de produção, ensaiar/revisar efeitos de Version20260911120000 e a classificação das salas.",
+        "Não executar down amplo nem zerar marcações manuais; preparar reversão seletiva."
       ],
-      "dados": "Migração de dados potencialmente necessária após o diagnóstico; nenhuma escrita em produção. Valores prévios precisam de snapshot para reversão seletiva.",
+      "dados": "Sem nova migration executada em homologação. Produção preservada na Entrega 3.5.",
       "aceite": [
         "Sala só de reunião e sala letiva → Aplicar o critério D08 em massa de teste → Cada uma recebe somente a classificação aprovada.",
         "Flag manual preexistente e sem snapshot → Ensaiar compensação → Flag não é apagado por regra ampla; incerteza fica registrada."
@@ -2476,18 +2517,16 @@
       "dep": [
         "E4-01"
       ],
-      "status": "Planejado — execução não iniciada",
+      "status": "Homologação conferida; ensaio/classificação pendentes antes de produção",
       "referenciasQuadro": [],
       "referenciasDetalhadas": [],
       "entrada": "Inventário da migration e D08 de classificação das salas.",
       "saida": "Critério de sala de aula/reservável e estratégia de dados reversível no teste.",
       "limite": "Não confundir sala de aula com sala reservável; duplicidades são remapeadas em E8-03.",
       "roteiro": [
-        "Conferir se Version20260911120000 está registrada e quais valores existiam; ausência de snapshot impede alegar reversão exata dos valores antigos.",
-        "Comparar sala com turma, com reunião, sem uso e com marcação manual. Registrar D08 antes de usar sala_aula como filtro de reserva.",
-        "Se a migration não foi executada, desenhar sua entrada segura mantendo a rastreabilidade; se já executada, preservar a versão e criar correção aditiva seletiva.",
-        "Preparar mapa ID→valor anterior/novo para os casos conhecidos; registros de origem incerta precisam de validação, não de inferência pela ausência de uso.",
-        "Proibir down que zera todos os flags. Entregar o critério a E4-04 e o mapa de classificação a E8-03."
+        "Nenhuma migration executada no deploy da Entrega 4.",
+        "Antes de produção, ensaiar/revisar efeitos de Version20260911120000 e a classificação das salas.",
+        "Não executar down amplo nem zerar marcações manuais; preparar reversão seletiva."
       ],
       "casos": [
         [
@@ -2517,13 +2556,18 @@
           "origem": "Documento inicial SINGLES — ALTERAÇÕES / 4. CRONOGRAMA — parágrafo 72",
           "texto": "No filtro de salas tanto no cadastro quanto na página inicial, só aparecer as salas possíveis de reserva e não todas como aparecem."
         }
+      ],
+      "evidencias": [
+        "PR #9: https://github.com/Dcadv789/sigles/pull/9",
+        "Deploy beta2: https://github.com/Dcadv789/sigles/actions/runs/39532075957",
+        "Código publicado: 8efeeea56b7fd2dbb394f727c58e404c22c871a4. Registro técnico posterior: e39840c."
       ]
     },
     {
       "id": "E4-02",
       "entrega": 4,
       "titulo": "Criação unificada, cópia e datas brasileiras",
-      "diagnostico": "A PR reúne criação vazia, cópia e CSV em Novo cronograma e introduz parseDataCronograma. Há alterações locais no mesmo conjunto de arquivos que precisam ser conciliadas na implementação.",
+      "diagnostico": "Novo cronograma reúne criar do zero, copiar e importar .xlsx.",
       "arquivos": [
         {
           "arquivo": "src/Controller/CronogramaController.php",
@@ -2567,13 +2611,12 @@
         }
       ],
       "passos": [
-        "Documentar payload de origem vazio/cópia/CSV, ano, semestre, recorte e início/fim. Tratar POST inválido antes de persistir qualquer DisciplinaSemestre.",
-        "Validar datas por formato e round-trip; aceitar somente os formatos declarados pelo fluxo, rejeitando datas normalizadas como 31/02.",
-        "Definir precedência entre datas alvo e datas específicas de pós. A cópia não altera a origem e não cria um segundo vínculo de semestre para a mesma disciplina.",
-        "Copiar em transação com a identidade D09, preservando cursos, docentes, sala, crédito D05 e relação de AceiteDocente conforme a regra existente.",
-        "Registrar contagem prevista/criada/atualizada e tratar repetição da operação explicitamente."
+        "Cópia por Graduação/Pós-graduação/Ambos, início/fim na mesma janela.",
+        "Cópia repetida preserva aulas, ajustes de datas/crédito, cursos e responsáveis ativos conforme os vínculos do destino.",
+        "DD/MM/AAAA e calendário em português; datas impossíveis ou final anterior ao início são recusados.",
+        "Semestre existente abre em Dados; editar sem mudança mantém aceite, alterações efetivas geram aceite pendente."
       ],
-      "dados": "Reutilizar entidades de disciplina_semestre e turma. Validar antes de persistir e usar transação no conjunto copiado quando houver risco de criação parcial.",
+      "dados": "Sem nova migration executada em homologação. Produção preservada na Entrega 3.5.",
       "aceite": [
         "Graduação e pós com datas diferentes → Copiar cada recorte e Ambos → Somente alvo alterado, recorte preservado e datas editáveis depois.",
         "Cópia repetida e data 31/02 → Submeter → Sem duplicação silenciosa e nenhuma gravação com data inválida."
@@ -2586,18 +2629,17 @@
         "E4-01",
         "E2-02"
       ],
-      "status": "Planejado — execução não iniciada",
+      "status": "Implementado e disponível em homologação — v1.4.0-beta2",
       "referenciasQuadro": [],
       "referenciasDetalhadas": [],
       "entrada": "E4-01, D05 e D09 de identidade e gravação de turmas.",
       "saida": "Criar vazio/copiar com datas válidas e alvo correto, sem alterar origem ou copiar a mesma turma duas vezes.",
       "limite": "Ampliar formatos e corrigir edição por dia são tarefas de E7; preservar o contrato definido agora.",
       "roteiro": [
-        "Documentar payload de origem vazio/cópia/CSV, ano, semestre, recorte e início/fim. Tratar POST inválido antes de persistir qualquer DisciplinaSemestre.",
-        "Validar datas por formato e round-trip; aceitar somente os formatos declarados pelo fluxo, rejeitando datas normalizadas como 31/02.",
-        "Definir precedência entre datas alvo e datas específicas de pós. A cópia não altera a origem e não cria um segundo vínculo de semestre para a mesma disciplina.",
-        "Copiar em transação com a identidade D09, preservando cursos, docentes, sala, crédito D05 e relação de AceiteDocente conforme a regra existente.",
-        "Registrar contagem prevista/criada/atualizada e tratar repetição da operação explicitamente."
+        "Cópia por Graduação/Pós-graduação/Ambos, início/fim na mesma janela.",
+        "Cópia repetida preserva aulas, ajustes de datas/crédito, cursos e responsáveis ativos conforme os vínculos do destino.",
+        "DD/MM/AAAA e calendário em português; datas impossíveis ou final anterior ao início são recusados.",
+        "Semestre existente abre em Dados; editar sem mudança mantém aceite, alterações efetivas geram aceite pendente."
       ],
       "casos": [
         [
@@ -2640,13 +2682,18 @@
           "origem": "Documento inicial SINGLES — ALTERAÇÕES / 4. CRONOGRAMA — parágrafo 74",
           "texto": "Na página de importação do cronograma acrescentar as opções de baixar não só os dados das turmas da graduação, mas da pós-graduação ou ambos."
         }
+      ],
+      "evidencias": [
+        "PR #9: https://github.com/Dcadv789/sigles/pull/9",
+        "Deploy beta2: https://github.com/Dcadv789/sigles/actions/runs/39532075957",
+        "Código publicado: 8efeeea56b7fd2dbb394f727c58e404c22c871a4. Registro técnico posterior: e39840c."
       ]
     },
     {
       "id": "E4-03",
       "entrega": 4,
-      "titulo": "Fechar a exportação de todos os cursos",
-      "diagnostico": "O JavaScript da PR prepara cursos_disciplina, mas a consulta retorna o curso ligado à turma. A apresentação da exportação ainda não tem os dados prometidos.",
+      "titulo": "Cursos e exportação Excel (.xlsx)",
+      "diagnostico": "Cursos ativos da disciplina reunidos sem multiplicar aulas na grade ou exportação.",
       "arquivos": [
         {
           "arquivo": "src/Controller/CronogramaController.php",
@@ -2674,12 +2721,10 @@
         }
       ],
       "passos": [
-        "Carregar todos os vínculos DisciplinaCurso relevantes em consulta por lote; definir se a atividade é do vínculo, do curso e da disciplina.",
-        "Acrescentar cursos_disciplina como coleção estável e manter os campos legados necessários; resolver ordenação e nomes repetidos por IDs.",
-        "Renderizar vários nomes na célula da exportação com separador claro e HTML removido; sem curso, usar vazio/indicador acordado.",
-        "Comparar número de linhas e carga antes/depois para impedir fan-out por JOIN em cursos."
+        "Servidor apresenta todos os cursos ativos vinculados à disciplina.",
+        "Exportação da grade somente Excel (.xlsx)."
       ],
-      "dados": "Sem nova tabela. Consultas parametrizadas e tratamento de disciplina sem curso.",
+      "dados": "Sem nova migration executada em homologação. Produção preservada na Entrega 3.5.",
       "aceite": [
         "Disciplina em três cursos e turma ligada a um → Exportar cronograma → Três cursos na célula, uma linha de turma e mesma carga."
       ],
@@ -2687,15 +2732,15 @@
       "dep": [
         "E4-02"
       ],
-      "status": "Planejado — execução não iniciada",
+      "status": "Implementado e disponível em homologação — v1.4.0-beta2",
       "referenciasQuadro": [
         {
           "chave": "WI-13:2",
           "id": "WI-13",
           "parte": 2,
-          "texto": "Exportar todos os cursos da disciplina: o servidor ainda retorna só o curso da turma.",
-          "situacao": "Pendente",
-          "entregaAtual": null,
+          "texto": "Exibir e exportar todos os cursos ativos da disciplina, sem multiplicar as aulas.",
+          "situacao": "Homologação",
+          "entregaAtual": 4,
           "papel": "execução",
           "escopo": "Fechar a exportação de todos os cursos"
         }
@@ -2704,17 +2749,15 @@
         {
           "id": "CR01",
           "pedido": "Mostrar todos os cursos vinculados à disciplina no arquivo exportado.",
-          "situacao": "**Pendente** — o PR prepara a exibição de todos os cursos, mas a resposta do servidor ainda retorna apenas o curso ligado à turma."
+          "situacao": "**Entrega 4 — homologação**: cursos ativos reunidos na grade e exportação XLSX, sem multiplicar aulas."
         }
       ],
       "entrada": "Cursos ativos e formato de exportação por linha definidos.",
       "saida": "Todos os cursos da disciplina disponíveis no JSON e Excel, sem multiplicar linhas.",
       "limite": "Curso da turma e lista de cursos oferecidos pela disciplina são campos distintos.",
       "roteiro": [
-        "Carregar todos os vínculos DisciplinaCurso relevantes em consulta por lote; definir se a atividade é do vínculo, do curso e da disciplina.",
-        "Acrescentar cursos_disciplina como coleção estável e manter os campos legados necessários; resolver ordenação e nomes repetidos por IDs.",
-        "Renderizar vários nomes na célula da exportação com separador claro e HTML removido; sem curso, usar vazio/indicador acordado.",
-        "Comparar número de linhas e carga antes/depois para impedir fan-out por JOIN em cursos."
+        "Servidor apresenta todos os cursos ativos vinculados à disciplina.",
+        "Exportação da grade somente Excel (.xlsx)."
       ],
       "casos": [
         [
@@ -2737,13 +2780,18 @@
           "origem": "Documento inicial SINGLES — ALTERAÇÕES / 4. CRONOGRAMA — parágrafo 70",
           "texto": "Ao baixar o arquivo do cronograma, termos a opção de aparecerem todos os cursos para os quais as disciplinas são oferecidas."
         }
+      ],
+      "evidencias": [
+        "PR #9: https://github.com/Dcadv789/sigles/pull/9",
+        "Deploy beta2: https://github.com/Dcadv789/sigles/actions/runs/39532075957",
+        "Código publicado: 8efeeea56b7fd2dbb394f727c58e404c22c871a4. Registro técnico posterior: e39840c."
       ]
     },
     {
       "id": "E4-04",
       "entrega": 4,
-      "titulo": "Aplicar filtros de salas e docentes de ponta a ponta",
-      "diagnostico": "A PR envia sala_aula, mas SalaController::list continua filtrando apenas active. O filtro de docente precisa considerar o cadastro docente e o usuário associado.",
+      "titulo": "Docentes ativos e salas elegíveis",
+      "diagnostico": "Filtros aplicados no servidor e nos seletores para novas atribuições.",
       "arquivos": [
         {
           "arquivo": "src/Controller/SalaController.php",
@@ -2779,13 +2827,11 @@
         }
       ],
       "passos": [
-        "Inventariar seletor principal, modal de turma e incluir outro docente; enviar parâmetros uniformes e realmente aplicá-los nas queries.",
-        "Validar atividade de Docente e Usuario e conferir o perfil real do sênior, sem lista arbitrária de IDs. Não reativar usuário só para aparecer no seletor.",
-        "Aplicar o critério D08 nas salas do cronograma; não assumir que salaAula equivale a reservável.",
-        "Na edição histórica, apresentar o vínculo inativo atual identificado como tal, mas impedir nova atribuição indevida; não apagar o vínculo por ele sair da lista.",
-        "Testar persistência no servidor, não apenas ocultação de opções na UI."
+        "Docente e usuário ativos; Docente Sênior elegível incluído.",
+        "Salas ativas marcadas “É sala de aula?”; vínculo histórico continua disponível para conferência.",
+        "Cadastro/edição da sala grava e reapresenta corretamente a marcação."
       ],
-      "dados": "Campo sala_aula já existe; o saneamento de seus valores está em E4-06. Sem exclusão de referências históricas.",
+      "dados": "Sem nova migration executada em homologação. Produção preservada na Entrega 3.5.",
       "aceite": [
         "Docente sênior ativo, usuário inativo e docente inativo → Pesquisar nos três pontos → Só elegíveis para nova atribuição; sênior ativo disponível.",
         "Turma antiga em sala inativa → Abrir e salvar outro campo → Vínculo antigo legível, sem remoção silenciosa."
@@ -2796,15 +2842,15 @@
       "dep": [
         "E4-06"
       ],
-      "status": "Planejado — execução não iniciada",
+      "status": "Implementado e disponível em homologação — v1.4.0-beta2",
       "referenciasQuadro": [
         {
           "chave": "WI-04:1",
           "id": "WI-04",
           "parte": 1,
-          "texto": "Conferir o cadastro e os filtros com o docente do caso original.",
-          "situacao": "Validar",
-          "entregaAtual": null,
+          "texto": "Filtros de atividade do usuário e do docente aplicados às novas seleções; conferir também o caso real relatado.",
+          "situacao": "Homologação",
+          "entregaAtual": 4,
           "papel": "execução",
           "escopo": "Aplicar filtros de salas e docentes de ponta a ponta"
         },
@@ -2812,9 +2858,9 @@
           "chave": "WI-13:3",
           "id": "WI-13",
           "parte": 3,
-          "texto": "Aplicar no servidor o filtro das salas elegíveis.",
-          "situacao": "Pendente",
-          "entregaAtual": null,
+          "texto": "Novas atribuições usam somente salas ativas marcadas “É sala de aula?”; vínculos históricos continuam visíveis.",
+          "situacao": "Homologação",
+          "entregaAtual": 4,
           "papel": "execução",
           "escopo": "Aplicar filtros de salas e docentes de ponta a ponta"
         },
@@ -2822,9 +2868,9 @@
           "chave": "WI-13:4",
           "id": "WI-13",
           "parte": 4,
-          "texto": "Confirmar a seleção de docentes inativos no caso relatado.",
-          "situacao": "Validar",
-          "entregaAtual": null,
+          "texto": "Novas seleções exigem usuário e cadastro docente ativos; Docente Sênior elegível incluído.",
+          "situacao": "Homologação",
+          "entregaAtual": 4,
           "papel": "execução",
           "escopo": "Aplicar filtros de salas e docentes de ponta a ponta"
         }
@@ -2833,28 +2879,26 @@
         {
           "id": "ER06",
           "pedido": "Mostrar Docente Sênior na seleção de docentes do cronograma.",
-          "situacao": "**Validar** — a consulta já inclui esse perfil, confirmado no banco de teste; falta reproduzir a ausência relatada."
+          "situacao": "**Entrega 4 — homologação**: Docente Sênior elegível incluído nas listas, com filtros de atividade."
         },
         {
           "id": "CR02",
           "pedido": "Ocultar docentes inativos ao incluir outro docente na turma.",
-          "situacao": "**Validar** — já há filtro de docente ativo, mas não foi identificada correção nova; verificar também usuários inativos que tenham registro de docente ativo."
+          "situacao": "**Entrega 4 — homologação**: novas seleções exigem cadastro docente e usuário ativos."
         },
         {
           "id": "CR03",
           "pedido": "Mostrar apenas salas elegíveis para reserva no cadastro e no filtro do cronograma.",
-          "situacao": "**Pendente** — o PR envia a intenção de filtrar salas de aula, mas o servidor continua filtrando somente por ativo/inativo."
+          "situacao": "**Entrega 4 — homologação**: sala ativa marcada “É sala de aula?” para nova atribuição; histórico preservado."
         }
       ],
       "entrada": "D08, cadastro Docente/Usuario e caso original do docente sênior.",
       "saida": "Filtros aplicados no servidor e em todos os seletores, preservando vínculos históricos.",
       "limite": "Elegibilidade de sala não garante disponibilidade no horário; essa regra pertence a E8-01/E8-02.",
       "roteiro": [
-        "Inventariar seletor principal, modal de turma e incluir outro docente; enviar parâmetros uniformes e realmente aplicá-los nas queries.",
-        "Validar atividade de Docente e Usuario e conferir o perfil real do sênior, sem lista arbitrária de IDs. Não reativar usuário só para aparecer no seletor.",
-        "Aplicar o critério D08 nas salas do cronograma; não assumir que salaAula equivale a reservável.",
-        "Na edição histórica, apresentar o vínculo inativo atual identificado como tal, mas impedir nova atribuição indevida; não apagar o vínculo por ele sair da lista.",
-        "Testar persistência no servidor, não apenas ocultação de opções na UI."
+        "Docente e usuário ativos; Docente Sênior elegível incluído.",
+        "Salas ativas marcadas “É sala de aula?”; vínculo histórico continua disponível para conferência.",
+        "Cadastro/edição da sala grava e reapresenta corretamente a marcação."
       ],
       "casos": [
         [
@@ -2896,13 +2940,18 @@
           "origem": "Documento inicial SINGLES — ALTERAÇÕES / 4. CRONOGRAMA — parágrafo 72",
           "texto": "No filtro de salas tanto no cadastro quanto na página inicial, só aparecer as salas possíveis de reserva e não todas como aparecem."
         }
+      ],
+      "evidencias": [
+        "PR #9: https://github.com/Dcadv789/sigles/pull/9",
+        "Deploy beta2: https://github.com/Dcadv789/sigles/actions/runs/39532075957",
+        "Código publicado: 8efeeea56b7fd2dbb394f727c58e404c22c871a4. Registro técnico posterior: e39840c."
       ]
     },
     {
       "id": "E4-05",
       "entrega": 4,
-      "titulo": "Aceite da importação CSV da PR",
-      "diagnostico": "O importador usa colunas fixas, delimitador ponto e vírgula e valida getClientMimeType como text/csv. O arquivo original do cliente ainda precisa de aceite. O código tem flushes intermediários sem transação explícita, conversão fixa Latin-1, leitura limitada a 1000 e chave que não inclui dia/horário/docente. São riscos verificáveis de gravação parcial, corrupção e sobrescrita, a confirmar com testes na execução.",
+      "titulo": "Importação Excel (.xlsx), modelo e integridade",
+      "diagnostico": "Daniel definiu somente .xlsx, sem macros. Importação e exportação CSV substituídas.",
       "arquivos": [
         {
           "arquivo": "src/Controller/CronogramaController.php",
@@ -2954,19 +3003,17 @@
         }
       ],
       "passos": [
-        "Comparar modelo baixado, cabeçalhos e arquivo original com as 25 posições lidas hoje. Tratar BOM/codificação e delimitador explicitamente; não converter todo UTF-8 como Latin-1.",
-        "Validar todas as linhas e referências antes de gravar. Não ignorar docente desconhecido nem criar categoria docente vazia por falta de tipo_jornada sem regra aprovada.",
-        "Corrigir a identidade atual que busca só código_turma/semestre/início/fim: ela pode sobrescrever aulas de outros dias/docentes. Aplicar D09 desde esta entrega.",
-        "A chave proposta contém campos mutáveis: documentar como reconhecer correção de docente/dia/horário versus nova aula. Se não houver identidade confiável, recusar atualização ambígua com diagnóstico; não criar outra linha nem sobrescrever por aproximação.",
-        "Evitar alteração colateral de Disciplina.tipo global pelo tipo escolhido da importação; comparar o existente e recusar conflito enquanto D05/D09 não o autorizarem.",
-        "Envolver os flushes necessários em transação única do arquivo, com rollback integral em falha; repetir o arquivo deve seguir a chave de negócio, inclusive AceiteDocente.",
-        "Validar extensão, conteúdo e tamanho sem confiar no MIME do cliente. Arquivo indisponível mantém o caso ER01.2 em Validar; modelo aprovado não substitui esse aceite."
+        "Modelo de 15 colunas, exemplos, datas/horários formatados e aba de orientações.",
+        "Repetição idêntica não duplica; dias/horários distintos são diferenciados e tipo de disciplina existente é preservado.",
+        "Erro desfaz todo o arquivo; a atomicidade preserva a proteção anterior da 3.5.",
+        "A planilha não escolhe sala automaticamente: conferir turmas e atribuir salas, com validação de disponibilidade.",
+        "Arquivo original do cliente ainda deve ser aceito no modelo aprovado; diagnóstico ampliado permanece E7-02."
       ],
-      "dados": "Escrita somente no semestre e na massa de teste. Arquivo real deve ser tratado no ambiente autorizado, sem publicá-lo no Pages.",
+      "dados": "Sem nova migration executada em homologação. Produção preservada na Entrega 3.5.",
       "aceite": [
-        "Mesmo código de turma em dois dias e dois docentes → Importar arquivo e repetir → Nenhuma linha legítima sobrescrita e nenhuma duplicata na repetição.",
-        "Arquivo com erro só na última linha → Importar → Nenhum dado do arquivo persiste, inclusive cadastros auxiliares.",
-        "CSV UTF-8 com acento e linha maior que 1000 caracteres → Importar → Sem corrupção de nomes ou divisão silenciosa da linha."
+        "Planilha do modelo com aulas em dias/horários distintos → Importar e repetir → Nenhuma duplicação ou sobrescrita de outra aula.",
+        "Planilha com erro na última linha → Importar → Rollback de todo o arquivo.",
+        "Planilha com acentos, datas e horários formatados → Importar → Dados e vínculos preservados no formato aprovado."
       ],
       "decisoes": [
         "D05 (E2-02): Crédito por disciplina/semestre ou por turma/dia e regra de preservação/migração se o nível mudar.",
@@ -2976,63 +3023,76 @@
         "E4-02",
         "E4-04"
       ],
-      "status": "Planejado — execução não iniciada",
+      "status": "XLSX testado em homologação; arquivo original do cliente ainda sujeito a aceite",
       "referenciasQuadro": [
         {
           "chave": "VS-13:2",
           "id": "VS-13",
           "parte": 2,
-          "texto": "Testar o arquivo original do cliente e o tratamento dos erros por linha.",
+          "texto": "Aceitar o arquivo original do cliente e definir os complementos de diagnóstico por linha além dos cenários já testados.",
           "situacao": "Validar",
           "entregaAtual": null,
           "papel": "parcela",
-          "escopo": "CSV básico, integridade e arquivo original"
+          "escopo": "XLSX básico, integridade e aceite do arquivo original"
+        },
+        {
+          "chave": "VS-13:3",
+          "id": "VS-13",
+          "parte": 3,
+          "texto": "Formato definido por Daniel: somente Excel (.xlsx), com modelo organizado e aba de orientações.",
+          "situacao": "Homologação",
+          "entregaAtual": 4,
+          "papel": "execução",
+          "escopo": "Formato XLSX entregue; não reimplementar na Entrega 7"
         },
         {
           "chave": "WI-01:2",
           "id": "WI-01",
           "parte": 2,
-          "texto": "O arquivo que originou o erro ainda precisa de teste de aceite.",
+          "texto": "Testar o caso original do cliente no modelo .xlsx aprovado; os cenários sintéticos de importação, repetição e rollback já passaram.",
           "situacao": "Validar",
           "entregaAtual": null,
           "papel": "execução",
-          "escopo": "Aceite da importação CSV da PR"
+          "escopo": "Planilha XLSX, repetição sem duplicação e rollback; arquivo original do cliente ainda sujeito a aceite"
         }
       ],
       "referenciasDetalhadas": [
         {
           "id": "ER01.2",
           "pedido": "Confirmar que o arquivo que originou o erro de importação do cliente é aceito e cria o cronograma corretamente.",
-          "situacao": "**Validar** — executar com o arquivo original; a importação continua exigindo CSV e um layout específico."
+          "situacao": "**Validar com cliente**: XLSX/modelo e cenários sintéticos já testados; falta aceite do arquivo original no formato aprovado."
+        },
+        {
+          "id": "OR07.1",
+          "pedido": "Importar planilhas Excel (.xlsx).",
+          "situacao": "**Entrega 4 — homologação**: somente .xlsx, com modelo; formato definido por Daniel."
         }
       ],
-      "entrada": "Modelo CSV, arquivo de erro original quando disponível e D09.",
+      "entrada": "Modelo XLSX aprovado, arquivo original quando disponível e contrato D09.",
       "saida": "Importação básica segura: estrutura validada, lote coerente e chave de turma definida.",
       "limite": "XLSX e relatório ampliado são E7-02; atomicidade e identidade não podem ser adiadas para lá.",
       "roteiro": [
-        "Comparar modelo baixado, cabeçalhos e arquivo original com as 25 posições lidas hoje. Tratar BOM/codificação e delimitador explicitamente; não converter todo UTF-8 como Latin-1.",
-        "Validar todas as linhas e referências antes de gravar. Não ignorar docente desconhecido nem criar categoria docente vazia por falta de tipo_jornada sem regra aprovada.",
-        "Corrigir a identidade atual que busca só código_turma/semestre/início/fim: ela pode sobrescrever aulas de outros dias/docentes. Aplicar D09 desde esta entrega.",
-        "A chave proposta contém campos mutáveis: documentar como reconhecer correção de docente/dia/horário versus nova aula. Se não houver identidade confiável, recusar atualização ambígua com diagnóstico; não criar outra linha nem sobrescrever por aproximação.",
-        "Evitar alteração colateral de Disciplina.tipo global pelo tipo escolhido da importação; comparar o existente e recusar conflito enquanto D05/D09 não o autorizarem.",
-        "Envolver os flushes necessários em transação única do arquivo, com rollback integral em falha; repetir o arquivo deve seguir a chave de negócio, inclusive AceiteDocente.",
-        "Validar extensão, conteúdo e tamanho sem confiar no MIME do cliente. Arquivo indisponível mantém o caso ER01.2 em Validar; modelo aprovado não substitui esse aceite."
+        "Modelo de 15 colunas, exemplos, datas/horários formatados e aba de orientações.",
+        "Repetição idêntica não duplica; dias/horários distintos são diferenciados e tipo de disciplina existente é preservado.",
+        "Erro desfaz todo o arquivo; a atomicidade preserva a proteção anterior da 3.5.",
+        "A planilha não escolhe sala automaticamente: conferir turmas e atribuir salas, com validação de disponibilidade.",
+        "Arquivo original do cliente ainda deve ser aceito no modelo aprovado; diagnóstico ampliado permanece E7-02."
       ],
       "casos": [
         [
-          "Mesmo código de turma em dois dias e dois docentes",
-          "Importar arquivo e repetir",
-          "Nenhuma linha legítima sobrescrita e nenhuma duplicata na repetição."
+          "Planilha do modelo com aulas em dias/horários distintos",
+          "Importar e repetir",
+          "Nenhuma duplicação ou sobrescrita de outra aula."
         ],
         [
-          "Arquivo com erro só na última linha",
+          "Planilha com erro na última linha",
           "Importar",
-          "Nenhum dado do arquivo persiste, inclusive cadastros auxiliares."
+          "Rollback de todo o arquivo."
         ],
         [
-          "CSV UTF-8 com acento e linha maior que 1000 caracteres",
+          "Planilha com acentos, datas e horários formatados",
           "Importar",
-          "Sem corrupção de nomes ou divisão silenciosa da linha."
+          "Dados e vínculos preservados no formato aprovado."
         ]
       ],
       "fontesOriginais": [
@@ -3082,13 +3142,18 @@
           "origem": "Relatório de visita, página 3 — Detalhamento técnico: 6-) cronograma e importação de dados",
           "texto": "- Avaliação da possibilidade de criação de modelos padronizados de planilha para alimentação do sistema."
         }
+      ],
+      "evidencias": [
+        "PR #9: https://github.com/Dcadv789/sigles/pull/9",
+        "Deploy beta2: https://github.com/Dcadv789/sigles/actions/runs/39532075957",
+        "Código publicado: 8efeeea56b7fd2dbb394f727c58e404c22c871a4. Registro técnico posterior: e39840c."
       ]
     },
     {
       "id": "E4-99",
       "entrega": 4,
-      "titulo": "Revisão final e integração da entrega 4",
-      "diagnostico": "Implementação na PR não equivale a entrega homologada. A integração depende da preservação das entregas anteriores e do aceite dos fluxos de cronogramas.",
+      "titulo": "Publicação em homologação e aceite da Entrega 4",
+      "diagnostico": "v1.4.0-beta2 publicada em homologação; PR #9 aberta e sem conflitos. Produção permanece v1.3.3.",
       "arquivos": [
         {
           "arquivo": ".github/workflows/deploy-teste.yml",
@@ -3116,12 +3181,14 @@
         }
       ],
       "passos": [
-        "Conferir diff, migrations presentes, contratos de payload e a conciliação do trabalho local antes de integrar.",
-        "Executar vazio/cópia/CSV, datas inválidas, cursos múltiplos, filtros e docente sênior; conferir PHP/Twig e /js/routing.",
-        "Reaplicar os testes essenciais de compras, login, planos e OS das entregas anteriores.",
-        "Registrar o commit e a URL/versão de homologação; arquivo original não testado continua pendência explícita e impede aceite integral desse caso."
+        "Títulos com separador, botões compactos à esquerda, filtros e ajuda por ícone padronizados nas páginas revisadas de cadastros, compras, OS e cronogramas.",
+        "Perfis e Departamentos padronizados; menu Configurações reposicionado abaixo de Gestão de acessos. O erro de publicação dessa página foi diagnosticado, sem correção funcional nesta rodada.",
+        "120 testes unitários/230 asserções, 203 verificações de integração e 147 HTTP em homologação registrados na integração beta1.",
+        "Beta2: YAML/Twig válidos e cinco rotas HTTP autenticadas verificadas localmente e em homologação; rodapé com versão sem badge.",
+        "147 HTTP anteriores não foram reexecutados para a alteração isolada do rodapé; não somar rodadas como novos casos únicos.",
+        "Aguardar aceite funcional de Daniel e preparação específica do banco antes de autorizar produção."
       ],
-      "dados": "Sem execução de deploy do SIGLES nesta etapa. A limitação de escrita em produção permanece.",
+      "dados": "Sem nova migration executada em homologação. Produção preservada na Entrega 3.5.",
       "aceite": [
         "Branch de integração cumulativa → Homologar todos os cenários E4 e regressões → Nenhuma regressão conhecida aberta; FECHO-4 só então é liberado."
       ],
@@ -3136,14 +3203,14 @@
         "E4-04",
         "E4-05"
       ],
-      "status": "Planejado — execução não iniciada",
+      "status": "Publicado em homologação; aceite final e produção pendentes",
       "referenciasQuadro": [
         {
           "chave": "VS-01:4",
           "id": "VS-01",
           "parte": 4,
           "texto": "Evolução de cronogramas.",
-          "situacao": "Na PR",
+          "situacao": "Homologação",
           "entregaAtual": 4,
           "papel": "aceite",
           "escopo": "Revisão final e integração da entrega 4"
@@ -3152,8 +3219,8 @@
           "chave": "VS-13:1",
           "id": "VS-13",
           "parte": 1,
-          "texto": "Fluxo unificado de Novo cronograma e arquivo modelo CSV.",
-          "situacao": "Na PR",
+          "texto": "Novo cronograma reúne criação do zero, cópia e importação Excel (.xlsx), com modelo para download.",
+          "situacao": "Homologação",
           "entregaAtual": 4,
           "papel": "aceite",
           "escopo": "Revisão final e integração da entrega 4"
@@ -3162,8 +3229,8 @@
           "chave": "VS-15:1",
           "id": "VS-15",
           "parte": 1,
-          "texto": "Implementado no PR 9; depende de integração e homologação.",
-          "situacao": "Na PR",
+          "texto": "PR #9 atualizada sobre a Entrega 3.5, integrada na candidata de homologação; aceite funcional e produção ainda pendentes.",
+          "situacao": "Homologação",
           "entregaAtual": 4,
           "papel": "aceite",
           "escopo": "Revisão final e integração da entrega 4"
@@ -3173,7 +3240,7 @@
           "id": "WI-01",
           "parte": 1,
           "texto": "Criação com ano/semestre e modelo de importação.",
-          "situacao": "Na PR",
+          "situacao": "Homologação",
           "entregaAtual": 4,
           "papel": "aceite",
           "escopo": "Revisão final e integração da entrega 4"
@@ -3183,7 +3250,7 @@
           "id": "WI-13",
           "parte": 1,
           "texto": "Copiar entre semestres, com início/fim e seleção Graduação, Pós-graduação ou Ambas.",
-          "situacao": "Na PR",
+          "situacao": "Homologação",
           "entregaAtual": 4,
           "papel": "aceite",
           "escopo": "Revisão final e integração da entrega 4"
@@ -3192,8 +3259,8 @@
           "chave": "WI-22:1",
           "id": "WI-22",
           "parte": 1,
-          "texto": "Criação e importação do cronograma implementadas no PR 9.",
-          "situacao": "Na PR",
+          "texto": "Criação, cópia e importação XLSX em homologação na v1.4.0-beta2; bloqueio manual continua separado.",
+          "situacao": "Homologação",
           "entregaAtual": 4,
           "papel": "aceite",
           "escopo": "Revisão final e integração da entrega 4"
@@ -3204,10 +3271,12 @@
       "saida": "FECHO-4 com diff revisável, cronogramas homologados e base para a entrega 5.",
       "limite": "PR aberta e código existente não são prova de integração ou publicação.",
       "roteiro": [
-        "Conferir diff, migrations presentes, contratos de payload e a conciliação do trabalho local antes de integrar.",
-        "Executar vazio/cópia/CSV, datas inválidas, cursos múltiplos, filtros e docente sênior; conferir PHP/Twig e /js/routing.",
-        "Reaplicar os testes essenciais de compras, login, planos e OS das entregas anteriores.",
-        "Registrar o commit e a URL/versão de homologação; arquivo original não testado continua pendência explícita e impede aceite integral desse caso."
+        "Títulos com separador, botões compactos à esquerda, filtros e ajuda por ícone padronizados nas páginas revisadas de cadastros, compras, OS e cronogramas.",
+        "Perfis e Departamentos padronizados; menu Configurações reposicionado abaixo de Gestão de acessos. O erro de publicação dessa página foi diagnosticado, sem correção funcional nesta rodada.",
+        "120 testes unitários/230 asserções, 203 verificações de integração e 147 HTTP em homologação registrados na integração beta1.",
+        "Beta2: YAML/Twig válidos e cinco rotas HTTP autenticadas verificadas localmente e em homologação; rodapé com versão sem badge.",
+        "147 HTTP anteriores não foram reexecutados para a alteração isolada do rodapé; não somar rodadas como novos casos únicos.",
+        "Aguardar aceite funcional de Daniel e preparação específica do banco antes de autorizar produção."
       ],
       "casos": [
         [
@@ -3268,6 +3337,11 @@
           "origem": "Relatório de visita, página 3 — Detalhamento técnico: 7-) cronograma de aulas",
           "texto": "- Avaliação das informações apresentadas e da forma de consulta pelos usuários."
         }
+      ],
+      "evidencias": [
+        "PR #9: https://github.com/Dcadv789/sigles/pull/9",
+        "Deploy beta2: https://github.com/Dcadv789/sigles/actions/runs/39532075957",
+        "Código publicado: 8efeeea56b7fd2dbb394f727c58e404c22c871a4. Registro técnico posterior: e39840c."
       ]
     },
     {
@@ -3331,15 +3405,15 @@
         "D11 (E5-04): Perfis reais e ações permitidas; não alterar exceções conhecidas fora do escopo."
       ],
       "dep": [],
-      "status": "Planejado — execução não iniciada",
+      "status": "Implementado na PR #36; rascunho, integração atualizada e homologação pendentes",
       "referenciasQuadro": [
         {
           "chave": "VS-06:1",
           "id": "VS-06",
           "parte": 1,
           "texto": "Definir as mudanças pretendidas por perfil, módulo e ação.",
-          "situacao": "Definir",
-          "entregaAtual": null,
+          "situacao": "Na PR",
+          "entregaAtual": 5,
           "papel": "execução",
           "escopo": "Matriz de acesso dos perfis existentes"
         }
@@ -3383,6 +3457,12 @@
           "origem": "Relatório de visita, página 2 — Detalhamento técnico: 2-) o que foi apresentado",
           "texto": "O Módulo de Usuários, atualmente, possui funcionalidades predominantemente voltadas ao cadastro, sendo necessária avaliação quanto às possibilidades de evolução, perfis, permissões e demais regras de acesso."
         }
+      ],
+      "evidencias": [
+        "PR #36: código implementado sobre uma revisão anterior da PR #9; sem deploy.",
+        "75 testes unitários/208 asserções, 72 HTTP, 7 JavaScript e 8 verificações ORM registrados na revisão da PR.",
+        "Reconciliar com a 3.5/v1.3.3 e a Entrega 4/beta2 antes de homologar; não assumir compatibilidade só pela base nominal.",
+        "Sem migration nova. Três inconsistências ORM e a suíte antiga de Compras continuam declaradas."
       ]
     },
     {
@@ -3445,15 +3525,15 @@
         "E1-04",
         "E5-04"
       ],
-      "status": "Planejado — execução não iniciada",
+      "status": "Implementado na PR #36; rascunho, integração atualizada e homologação pendentes",
       "referenciasQuadro": [
         {
           "chave": "WI-05:3",
           "id": "WI-05",
           "parte": 3,
           "texto": "Acrescentar atalhos diretos para LES, MarteWeb e Júpiter Web.",
-          "situacao": "Pendente",
-          "entregaAtual": null,
+          "situacao": "Na PR",
+          "entregaAtual": 5,
           "papel": "execução",
           "escopo": "Dashboard: atalhos, imagem e abrangência das informações"
         },
@@ -3462,8 +3542,8 @@
           "id": "WI-05",
           "parte": 4,
           "texto": "Confirmar se a imagem deve ser plano de fundo ou imagem na página.",
-          "situacao": "Definir",
-          "entregaAtual": null,
+          "situacao": "Na PR",
+          "entregaAtual": 5,
           "papel": "execução",
           "escopo": "Dashboard: atalhos, imagem e abrangência das informações"
         },
@@ -3472,8 +3552,8 @@
           "id": "WI-06",
           "parte": 2,
           "texto": "Confirmar se a visão ampliada deve abranger todos os departamentos; hoje é departamental.",
-          "situacao": "Definir",
-          "entregaAtual": null,
+          "situacao": "Na PR",
+          "entregaAtual": 5,
           "papel": "execução",
           "escopo": "Dashboard: atalhos, imagem e abrangência das informações"
         }
@@ -3568,6 +3648,12 @@
           "origem": "Documento inicial SINGLES — ALTERAÇÕES / DASHBOARD — parágrafo 38",
           "texto": "Inserir plano de fundo com a imagem inicial do Dashboard."
         }
+      ],
+      "evidencias": [
+        "PR #36: código implementado sobre uma revisão anterior da PR #9; sem deploy.",
+        "75 testes unitários/208 asserções, 72 HTTP, 7 JavaScript e 8 verificações ORM registrados na revisão da PR.",
+        "Reconciliar com a 3.5/v1.3.3 e a Entrega 4/beta2 antes de homologar; não assumir compatibilidade só pela base nominal.",
+        "Sem migration nova. Três inconsistências ORM e a suíte antiga de Compras continuam declaradas."
       ]
     },
     {
@@ -3630,15 +3716,15 @@
         "E1-04",
         "E5-04"
       ],
-      "status": "Planejado — execução não iniciada",
+      "status": "Implementado na PR #36; rascunho, integração atualizada e homologação pendentes",
       "referenciasQuadro": [
         {
           "chave": "VS-03:2",
           "id": "VS-03",
           "parte": 2,
           "texto": "Detalhar campos, busca e exportações desejados.",
-          "situacao": "Definir",
-          "entregaAtual": null,
+          "situacao": "Na PR",
+          "entregaAtual": 5,
           "papel": "execução",
           "escopo": "Contatos, férias e dados complementares de usuários"
         },
@@ -3647,8 +3733,8 @@
           "id": "VS-04",
           "parte": 2,
           "texto": "Definir outras mudanças além do cadastro e dos avisos existentes.",
-          "situacao": "Definir",
-          "entregaAtual": null,
+          "situacao": "Na PR",
+          "entregaAtual": 5,
           "papel": "execução",
           "escopo": "Contatos, férias e dados complementares de usuários"
         },
@@ -3657,8 +3743,8 @@
           "id": "VS-05",
           "parte": 1,
           "texto": "Especificar o que falta nas informações de usuários e colaboradores.",
-          "situacao": "Definir",
-          "entregaAtual": null,
+          "situacao": "Na PR",
+          "entregaAtual": 5,
           "papel": "execução",
           "escopo": "Contatos, férias e dados complementares de usuários"
         }
@@ -3711,6 +3797,12 @@
           "origem": "Relatório de visita, página 2 — Detalhamento técnico: 2-) o que foi apresentado",
           "texto": "- Informações gerais relacionadas aos usuários e colaboradores."
         }
+      ],
+      "evidencias": [
+        "PR #36: código implementado sobre uma revisão anterior da PR #9; sem deploy.",
+        "75 testes unitários/208 asserções, 72 HTTP, 7 JavaScript e 8 verificações ORM registrados na revisão da PR.",
+        "Reconciliar com a 3.5/v1.3.3 e a Entrega 4/beta2 antes de homologar; não assumir compatibilidade só pela base nominal.",
+        "Sem migration nova. Três inconsistências ORM e a suíte antiga de Compras continuam declaradas."
       ]
     },
     {
@@ -3807,15 +3899,15 @@
         "E4-06",
         "E5-04"
       ],
-      "status": "Planejado — execução não iniciada",
+      "status": "Implementado na PR #36; rascunho, integração atualizada e homologação pendentes",
       "referenciasQuadro": [
         {
           "chave": "WI-17:2",
           "id": "WI-17",
           "parte": 2,
           "texto": "Usar o nome abreviado na apresentação da sala na agenda.",
-          "situacao": "Pendente",
-          "entregaAtual": null,
+          "situacao": "Na PR",
+          "entregaAtual": 5,
           "papel": "execução",
           "escopo": "Menu, nome abreviado da sala e dados por tipo de reserva"
         },
@@ -3824,8 +3916,8 @@
           "id": "WI-19",
           "parte": 1,
           "texto": "Exibir os campos em todos os tipos e exigir preenchimento somente em Grupo de extensão.",
-          "situacao": "Pendente",
-          "entregaAtual": null,
+          "situacao": "Na PR",
+          "entregaAtual": 5,
           "papel": "execução",
           "escopo": "Menu, nome abreviado da sala e dados por tipo de reserva"
         }
@@ -3910,6 +4002,12 @@
           "origem": "Documento inicial SINGLES — AGENDA / Tipos de reserva — parágrafo 138",
           "texto": "Acrescentar a função e-mail e nome discente/solicitante em todos os tipos de reserva, deixando somente grupo de extensão como obrigatório."
         }
+      ],
+      "evidencias": [
+        "PR #36: código implementado sobre uma revisão anterior da PR #9; sem deploy.",
+        "75 testes unitários/208 asserções, 72 HTTP, 7 JavaScript e 8 verificações ORM registrados na revisão da PR.",
+        "Reconciliar com a 3.5/v1.3.3 e a Entrega 4/beta2 antes de homologar; não assumir compatibilidade só pela base nominal.",
+        "Sem migration nova. Três inconsistências ORM e a suíte antiga de Compras continuam declaradas."
       ]
     },
     {
@@ -4267,7 +4365,7 @@
           "chave": "VS-10:2",
           "id": "VS-10",
           "parte": 2,
-          "texto": "Validar persistência dos seguidores e definir os relatórios gerenciais restantes.",
+          "texto": "Persistência de seguidores corrigida na Entrega 3; ordenação/resumo e relatórios gerenciais restantes continuam individualizados para revisão.",
           "situacao": "Validar",
           "entregaAtual": null,
           "papel": "parcela",
@@ -4667,8 +4765,8 @@
     {
       "id": "E7-02",
       "entrega": 7,
-      "titulo": "Importação ampliada e erros por linha",
-      "diagnostico": "A PR cobre CSV de formato fixo e modelo; o aceite básico é E4-05. XLSX e seleção Ambas no mesmo arquivo ainda são complementos a definir.",
+      "titulo": "Complementos da importação XLSX e diagnóstico ampliado",
+      "diagnostico": "XLSX, modelo, repetição e rollback já pertencem à Entrega 4. Restam a escolha de tipos no mesmo arquivo e o diagnóstico ampliado a delimitar e validar.",
       "arquivos": [
         {
           "arquivo": "src/Controller/CronogramaController.php",
@@ -4704,22 +4802,19 @@
         }
       ],
       "passos": [
-        "Reutilizar o pipeline leitura→validação→prévia→gravação de E4-05, mantendo um resultado com linha/campo/motivo.",
-        "Proposta: arquivo inteiro atômico permanece; só admitir parcial se D18 aprovar contagens e tratamento explícito, com revisão de D09.",
-        "Para Ambas, preservar o tipo real de cada disciplina e rejeitar conflitos com cadastro global; não preencher todo o arquivo com uma única escolha.",
-        "XLSX só após definição e avaliação das dependências oficiais na execução; CSV nunca é renomeado para fingir outro formato.",
-        "Validar nulos, decimais, acentos, linha longa e fórmulas apenas como dados; relatório final concilia lidas, válidas, criadas, atualizadas e recusadas.",
-        "Reexecutar o arquivo original e a repetição com a mesma chave, sem recriar aceites docentes desnecessariamente."
+        "Preservar o importador .xlsx da Entrega 4 e a proteção concorrente da 3.5.",
+        "Definir importação de Graduação/Pós-graduação/Ambos no mesmo arquivo sem alterar o tipo de disciplina existente.",
+        "Definir e implementar o diagnóstico ampliado por linha e os recortes realmente faltantes, usando o arquivo original aprovado."
       ],
       "dados": "Sem migration prevista. Importação deve ser transacional conforme a política escolhida e idempotente segundo a chave de negócio definida.",
       "aceite": [
-        "CSV misto com uma linha inválida → Validar/importar → Erros por linha e nenhuma gravação se mantida atomicidade.",
+        "XLSX misto com uma linha inválida → Validar/importar → Erros por linha e nenhuma gravação se mantida atomicidade.",
         "Arquivo válido em cada formato aprovado → Importar duas vezes → Mesmo resultado sem duplicação; formatos não aprovados recusados."
       ],
       "decisoes": [
         "D05 (E2-02): Crédito por disciplina/semestre ou por turma/dia e regra de preservação/migração se o nível mudar.",
         "D09 (E4-02): Campos que realmente identificam aula/turma, criar versus atualizar, disciplina com tipo divergente, aceite docente e política de reimportação.",
-        "D18 (E7-02): CSV/XLSX, Ambas, limites e eventual aceite parcial. Qualquer alteração de D09 exige revisão dos consumidores anteriores."
+        "D18 (E7-02): XLSX definido; delimitar tipos mistos, limites e eventual aceite parcial. Qualquer alteração de D09 exige revisão dos consumidores anteriores."
       ],
       "dep": [
         "E4-05",
@@ -4731,49 +4826,31 @@
           "chave": "VS-13:2",
           "id": "VS-13",
           "parte": 2,
-          "texto": "Testar o arquivo original do cliente e o tratamento dos erros por linha.",
+          "texto": "Aceitar o arquivo original do cliente e definir os complementos de diagnóstico por linha além dos cenários já testados.",
           "situacao": "Validar",
           "entregaAtual": null,
           "papel": "parcela",
           "escopo": "Diagnóstico ampliado e formatos/recortes aprovados"
-        },
-        {
-          "chave": "VS-13:3",
-          "id": "VS-13",
-          "parte": 3,
-          "texto": "Confirmar necessidade de XLSX; o formato implementado é CSV.",
-          "situacao": "Definir",
-          "entregaAtual": null,
-          "papel": "execução",
-          "escopo": "Importação ampliada e erros por linha"
         }
       ],
       "referenciasDetalhadas": [
         {
           "id": "CR05.1",
-          "pedido": "Na importação de um único CSV, escolher Ambas e preservar os tipos de cada disciplina.",
-          "situacao": "**Pendente** — a tela de CSV oferece Graduação ou Pós-graduação; a opção Ambas está na cópia, não na importação do arquivo."
-        },
-        {
-          "id": "OR07.1",
-          "pedido": "Importar diretamente arquivos Excel, caso seja exigido XLSX além de CSV.",
-          "situacao": "**Definir** — o código conferido importa CSV; confirmar o formato aceito pelo cliente."
+          "pedido": "No mesmo arquivo XLSX, escolher Ambos e preservar os tipos existentes.",
+          "situacao": "**Pendente na 7** — cópia já tem Ambos; importação continua com tipo selecionado. XLSX básico já entregue na 4."
         }
       ],
       "entrada": "D09 implementada em E4-05 e D18 de formatos/recortes.",
       "saida": "Validação ampliada por linha e formatos/recortes aprovados, preservando o importador seguro.",
       "limite": "Não reabrir atomicidade ou chave silenciosamente; eventual mudança exige regressão da E4.",
       "roteiro": [
-        "Reutilizar o pipeline leitura→validação→prévia→gravação de E4-05, mantendo um resultado com linha/campo/motivo.",
-        "Proposta: arquivo inteiro atômico permanece; só admitir parcial se D18 aprovar contagens e tratamento explícito, com revisão de D09.",
-        "Para Ambas, preservar o tipo real de cada disciplina e rejeitar conflitos com cadastro global; não preencher todo o arquivo com uma única escolha.",
-        "XLSX só após definição e avaliação das dependências oficiais na execução; CSV nunca é renomeado para fingir outro formato.",
-        "Validar nulos, decimais, acentos, linha longa e fórmulas apenas como dados; relatório final concilia lidas, válidas, criadas, atualizadas e recusadas.",
-        "Reexecutar o arquivo original e a repetição com a mesma chave, sem recriar aceites docentes desnecessariamente."
+        "Preservar o importador .xlsx da Entrega 4 e a proteção concorrente da 3.5.",
+        "Definir importação de Graduação/Pós-graduação/Ambos no mesmo arquivo sem alterar o tipo de disciplina existente.",
+        "Definir e implementar o diagnóstico ampliado por linha e os recortes realmente faltantes, usando o arquivo original aprovado."
       ],
       "casos": [
         [
-          "CSV misto com uma linha inválida",
+          "XLSX misto com uma linha inválida",
           "Validar/importar",
           "Erros por linha e nenhuma gravação se mantida atomicidade."
         ],
@@ -5134,8 +5211,8 @@
     {
       "id": "E8-01",
       "entrega": 8,
-      "titulo": "Conflitos e alterações de reservas recorrentes",
-      "diagnostico": "ReservaController::update confere conflito com inicio/fim, mas valida e grava dt_inicio/dt_fim. Há entidades distintas para a regra de recorrência e cada ocorrência. A criação pode enviar data nula à checagem antes da validação; getPeriodo usa BETWEEN no início e pode omitir eventos iniciados antes da janela. A disponibilidade considera aulas, mas a checagem de gravação consulta só Reserva. A garantia precisa ser definida e testada em todos esses caminhos.",
+      "titulo": "Recorrências e conflitos — antecipados para a Entrega 3.5",
+      "diagnostico": "Os problemas de datas, disponibilidade, série/exceções e concorrência descritos em 16/10 foram corrigidos na Entrega 3.5/v1.3.3. Este identificador permanece somente para rastreio.",
       "arquivos": [
         {
           "arquivo": "src/Controller/ReservaController.php",
@@ -5234,141 +5311,29 @@
           "url": "https://github.com/Dcadv789/sigles/blob/13f5075b4685f7a26008e63810d38bd8516f558f/src/Controller/CronogramaController.php#L128"
         }
       ],
-      "passos": [
-        "Validar IDs e datas antes de chamar funções tipadas: create hoje pode passar null à checagem e update usa inicio/fim em vez de dt_inicio/dt_fim. Rejeitar datas normalizadas, fim igual ou anterior e intervalos inválidos.",
-        "Uniformizar intervalo semiaberto [início,fim) com conflito início_existente < fim_novo e fim_existente > início_novo, sujeito a D21; excluir só a ocorrência editada.",
-        "Conferir ReservaRepository::getPeriodo: BETWEEN apenas no início perde reserva que começou antes da janela. Ajustar a leitura de sobreposição e as recorrências para o mesmo contrato.",
-        "A disponibilidade lê reservas e cronogramas, mas verificarConflitoReserva hoje só consulta Reserva. Definir o conjunto de ocupantes D21 e usar IDs de sala ao combinar aulas, reservas, exceções e bloqueios manuais.",
-        "Mapear pai/série/exceção e operações esta/futuras/todas. Definir limite inclusivo, primeira/última ocorrência e preservação das exceções sem recriar toda a série.",
-        "Na gravação, revalidar ocupação dentro da transação e da proteção concorrente escolhida. Proposta: bloquear a linha de Sala e, ao trocar sala, bloquear IDs em ordem; todas as entradas de reserva participantes usam o mesmo protocolo.",
-        "Inventariar também escrita de cronogramas/importações que ocupa salas. Se participar da garantia contra concorrência, usar o mesmo protocolo; se não, registrar explicitamente a limitação antes de liberar reserva externa.",
-        "Auditar flushes internos de cria/altera/registrarLog para manter reserva, ocorrências e histórico no mesmo limite de commit. E-mail fica após commit, sem reverter reserva válida por falha de envio."
-      ],
-      "dados": "Preferir o modelo existente. Migração só se uma limitação estrutural for demonstrada; não recriar séries e perder exceções/histórico.",
-      "aceite": [
-        "Reserva que começa ontem e termina hoje → Consultar e tentar sobrepor hoje → Aparece como ocupada mesmo começando fora da janela.",
-        "Evento sem mudar horário e dois eventos adjacentes → Editar e criar → Sem conflito consigo mesmo; adjacência conforme D21.",
-        "Série até sexta e exceção na quarta → Alterar uma/futuras/todas → Última sexta aparece; exceção preservada conforme a operação.",
-        "Duas conexões para mesma sala/hora → Gravar simultaneamente → Só uma gravação incompatível confirma; a outra recebe conflito legível.",
-        "Aula de cronograma na sala → Consultar e tentar reservar → Mesma resposta de disponibilidade e de gravação."
-      ],
+      "passos": [],
+      "dados": "Sem nova alteração de dados por este item transferido.",
+      "aceite": [],
       "decisoes": [
-        "D08 (E4-06): Critério real de elegibilidade e se é necessária uma marcação distinta de salaAula.",
-        "D10 (E5-03): Fallback se abreviado estiver vazio; limpeza explícita de campos opcionais e troca de tipo.",
-        "D21 (E8-01): Fontes que bloqueiam a sala, limite inclusivo da série, esta/futuras/todas, proteção comum dos escritores e política para conflitos com aulas."
+        "D21: regra publicada na Entrega 3.5; bloqueios manuais e reservas externas continuam em seus itens próprios."
       ],
       "dep": [
-        "E4-06",
-        "E5-03",
-        "E7-01"
+        "E3.5-01",
+        "E3.5-02",
+        "E3.5-05"
       ],
-      "status": "Parcial: parcela urgente antecipada para E3.5-01; complementos da Entrega 8 pendentes.",
-      "referenciasQuadro": [
-        {
-          "chave": "WI-03:1",
-          "id": "WI-03",
-          "parte": 1,
-          "texto": "Testar alteração da série e de uma ocorrência, preservação da sala e conflitos.",
-          "situacao": "Validar",
-          "entregaAtual": null,
-          "papel": "execução",
-          "escopo": "Conflitos e alterações de reservas recorrentes"
-        },
-        {
-          "chave": "WI-03:2",
-          "id": "WI-03",
-          "parte": 2,
-          "texto": "Corrigir a diferença entre os campos de data usados na checagem de conflito e na gravação.",
-          "situacao": "Pendente",
-          "entregaAtual": null,
-          "papel": "execução",
-          "escopo": "Conflitos e alterações de reservas recorrentes"
-        },
-        {
-          "chave": "WI-18:3",
-          "id": "WI-18",
-          "parte": 3,
-          "texto": "Validar última data, exclusão e troca de sala de uma ocorrência.",
-          "situacao": "Validar",
-          "entregaAtual": null,
-          "papel": "execução",
-          "escopo": "Conflitos e alterações de reservas recorrentes"
-        }
-      ],
-      "referenciasDetalhadas": [
-        {
-          "id": "ER04",
-          "pedido": "Editar um evento sem perder a sala e sem conflito indevido com a própria reserva.",
-          "situacao": "**Pendente** — concluir a revisão da edição; o fluxo ainda utiliza campos de data diferentes na checagem de conflito e na gravação."
-        },
-        {
-          "id": "ER05",
-          "pedido": "Editar eventos recorrentes corretamente.",
-          "situacao": "**Validar** — há mecanismos anteriores de recorrência, mas não foi identificada uma correção entregue para o problema relatado."
-        },
-        {
-          "id": "AG01",
-          "pedido": "A recorrência incluir e apresentar corretamente a última data prevista.",
-          "situacao": "**Validar** — existe data limite no código, mas falta reproduzir o caso do documento e confirmar a última ocorrência."
-        },
-        {
-          "id": "AG03",
-          "pedido": "Excluir apenas um dia de uma reserva recorrente.",
-          "situacao": "**Validar** — a opção de ocorrência única já existe, mas não foi entregue uma revisão dessa função nas entregas 1 a 4."
-        },
-        {
-          "id": "AG03.1",
-          "pedido": "Trocar a sala somente em um dia de uma reserva recorrente, preservando os demais.",
-          "situacao": "**Validar** — há tratamento anterior de exceções; falta validar o cenário completo de edição."
-        }
-      ],
-      "entrada": "FECHO-7, D08/D10 e inventário de ocupação/recorrência; definir D21 no início antes das correções dependentes.",
-      "saida": "Um contrato de datas e ocupação para criar, editar, consultar e aprovar reservas.",
-      "limite": "Consulta de disponibilidade, gravação e recorrência precisam concordar; transação sozinha não elimina corrida.",
+      "status": "Transferido e entregue na 3.5; sem implementação pendente nesta entrega",
+      "referenciasQuadro": [],
+      "referenciasDetalhadas": [],
+      "entrada": "Contrato D21 já publicado na Entrega 3.5.",
+      "saida": "Regressão preservada nas novas integrações; nenhuma entrega duplicada.",
+      "limite": "Saneamento dos dados antigos depende da coordenação; não caracteriza falha nova do bloqueio.",
       "roteiro": [
-        "Validar IDs e datas antes de chamar funções tipadas: create hoje pode passar null à checagem e update usa inicio/fim em vez de dt_inicio/dt_fim. Rejeitar datas normalizadas, fim igual ou anterior e intervalos inválidos.",
-        "Uniformizar intervalo semiaberto [início,fim) com conflito início_existente < fim_novo e fim_existente > início_novo, sujeito a D21; excluir só a ocorrência editada.",
-        "Conferir ReservaRepository::getPeriodo: BETWEEN apenas no início perde reserva que começou antes da janela. Ajustar a leitura de sobreposição e as recorrências para o mesmo contrato.",
-        "A disponibilidade lê reservas e cronogramas, mas verificarConflitoReserva hoje só consulta Reserva. Definir o conjunto de ocupantes D21 e usar IDs de sala ao combinar aulas, reservas, exceções e bloqueios manuais.",
-        "Mapear pai/série/exceção e operações esta/futuras/todas. Definir limite inclusivo, primeira/última ocorrência e preservação das exceções sem recriar toda a série.",
-        "Na gravação, revalidar ocupação dentro da transação e da proteção concorrente escolhida. Proposta: bloquear a linha de Sala e, ao trocar sala, bloquear IDs em ordem; todas as entradas de reserva participantes usam o mesmo protocolo.",
-        "Inventariar também escrita de cronogramas/importações que ocupa salas. Se participar da garantia contra concorrência, usar o mesmo protocolo; se não, registrar explicitamente a limitação antes de liberar reserva externa.",
-        "Auditar flushes internos de cria/altera/registrarLog para manter reserva, ocorrências e histórico no mesmo limite de commit. E-mail fica após commit, sem reverter reserva válida por falha de envio."
+        "Consumir E3.5-01, E3.5-02 e E3.5-05 como contrato já publicado.",
+        "Reexecutar regressões ao implementar reservas externas e bloqueios manuais; não reconstruir o mecanismo."
       ],
-      "casos": [
-        [
-          "Reserva que começa ontem e termina hoje",
-          "Consultar e tentar sobrepor hoje",
-          "Aparece como ocupada mesmo começando fora da janela."
-        ],
-        [
-          "Evento sem mudar horário e dois eventos adjacentes",
-          "Editar e criar",
-          "Sem conflito consigo mesmo; adjacência conforme D21."
-        ],
-        [
-          "Série até sexta e exceção na quarta",
-          "Alterar uma/futuras/todas",
-          "Última sexta aparece; exceção preservada conforme a operação."
-        ],
-        [
-          "Duas conexões para mesma sala/hora",
-          "Gravar simultaneamente",
-          "Só uma gravação incompatível confirma; a outra recebe conflito legível."
-        ],
-        [
-          "Aula de cronograma na sala",
-          "Consultar e tentar reservar",
-          "Mesma resposta de disponibilidade e de gravação."
-        ]
-      ],
-      "fontesOriginais": [
-        "DI04",
-        "DI05",
-        "DI51",
-        "DI53",
-        "RV51"
-      ],
+      "casos": [],
+      "fontesOriginais": [],
       "ordem": 35,
       "apos": "FECHO-7",
       "gateEntrada": "FECHO-7: entrega anterior aceita em homologação",
@@ -5378,50 +5343,30 @@
         "D10",
         "D21"
       ],
-      "originais": [
-        {
-          "id": "DI04",
-          "origem": "Documento inicial SINGLES — ERROS / AGENDA — parágrafo 15",
-          "texto": "Ao editar uma informação em um evento já cadastrado, o sistema altera o que queremos, mas a sala some, ou seja, não dá para alterar o evento, o sistema obriga a criar outro em outra sala. 25/03/2026 - agora nem conseguimos alterar, pois o sistema apresenta a mensagem que a sala já está reservada."
-        },
-        {
-          "id": "DI05",
-          "origem": "Documento inicial SINGLES — ERROS / AGENDA — parágrafo 17",
-          "texto": "26/03 - Sanada a questão de alteração do evento. Apenas para os eventos recorrentes não está sendo possível realizar alterações. Como não estava no escopo, ficará para depois. - URGENTE"
-        },
-        {
-          "id": "DI51",
-          "origem": "Documento inicial SINGLES — AGENDA / Calendário — parágrafo 130",
-          "texto": "Na função “novo evento” está com erro ao efetuar reserva com recorrência, não aparece a última data."
-        },
-        {
-          "id": "DI53",
-          "origem": "Documento inicial SINGLES — AGENDA / Calendário — parágrafo 132",
-          "texto": "Possibilidade de excluir ou alterar sala somente um dia na reserva com recorrência."
-        },
-        {
-          "id": "RV51",
-          "origem": "Relatório de visita, página 4 — Detalhamento técnico: 10-) alteração de agenda",
-          "texto": "As funcionalidades relacionadas às alterações de agenda também deverão ser revisadas."
-        }
-      ],
+      "originais": [],
       "antecipacao": {
-        "origem": "E8-01/D21",
-        "destino": "E3.5-01",
-        "escopo": "Bloquear criação, edição e reativação de reservas sobrepostas; conferir repetições, exceções e aulas existentes; serializar tentativas simultâneas de reserva por sala; alinhar datas e consulta de disponibilidade.",
-        "status": "Homologação — aguardando aceite de Daniel",
+        "origem": "E8-01/D21 e apresentação da Agenda",
+        "destino": "Entrega 3.5",
+        "escopo": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3).",
+        "status": "Entregue em produção",
         "pr": "https://github.com/Dcadv789/sigles/pull/40",
-        "tag": "v1.3.1-beta1",
-        "acao": "39460536898",
+        "prsComplementares": [
+          46,
+          47
+        ],
+        "tag": "v1.3.3",
+        "acao": "39527259499",
         "semMigration": true,
-        "producao": "v1.3.0 — preservada"
+        "producao": "v1.3.3",
+        "homologacaoAtual": "v1.4.0-beta2, cumulativa com a 3.5",
+        "naoDuplicar": true
       }
     },
     {
       "id": "E8-02",
       "entrega": 8,
       "titulo": "Escolha de sala disponível e bloqueio manual",
-      "diagnostico": "A consulta de disponibilidade já lista salas, mas não completa o retorno ao evento. O bloqueio manual marcado FEITO não está comprovado; feriados automáticos são Aditivo.",
+      "diagnostico": "O seletor do evento já mostra ocupadas em cinza, bloqueadas e com motivo (Entrega 3.5). A aba Salas continua sendo consulta: o atalho de selecionar e retornar ao formulário e o bloqueio manual próprio ainda são complementos pendentes.",
       "arquivos": [
         {
           "arquivo": "src/Controller/ReservaController.php",
@@ -5482,7 +5427,7 @@
         "D22 (E8-02): Salas abrangidas, perfil administrador, conflito com evento existente e cancelamento."
       ],
       "dep": [
-        "E8-01",
+        "E3.5-01",
         "E5-03"
       ],
       "status": "Planejado — execução não iniciada",
@@ -5515,11 +5460,6 @@
           "situacao": "**Pendente** — a lista atual apresenta as salas, mas não implementa esse caminho de seleção e retorno."
         },
         {
-          "id": "AG02.2",
-          "pedido": "Exibir somente as disponíveis nessa função, sem a lista de indisponíveis.",
-          "situacao": "**Definir** — atualmente são apresentadas as duas listas; confirmar se a lista de conflitos deve ser removida."
-        },
-        {
           "id": "AG04",
           "pedido": "Função própria para bloquear manualmente um dia.",
           "situacao": "**Pendente** — não foi localizada uma função específica nas entregas conferidas; confirmar o que significa a anotação “FEITO” do documento."
@@ -5527,7 +5467,7 @@
       ],
       "entrada": "D21 funcionando e D22 de bloqueio manual.",
       "saida": "Seleção da sala disponível retorna ao evento e bloqueio manual participa da ocupação.",
-      "limite": "Feriados automáticos são Aditivo; o nome da sala não identifica o registro.",
+      "limite": "Não ocultar as salas ocupadas: Daniel aprovou exibi-las em cinza com motivo do bloqueio. Feriados automáticos continuam Aditivo.",
       "roteiro": [
         "Usar IDs retornados pelo servidor e esconder a lista de indisponíveis nessa função, como o pedido literal, preservando mensagem de ausência de salas.",
         "Ao escolher sala, voltar ao formulário sem perder datas, tipo, nome/e-mail e descrição; prevenir respostas antigas de uma consulta anterior.",
@@ -6256,7 +6196,7 @@
         "D11 (E5-04): Perfis reais e ações permitidas; não alterar exceções conhecidas fora do escopo.",
         "D13 (E5-02): Quais melhorias além das já entregues, regras temporais das férias e necessidade de campo novo.",
         "D17 (E6-04): Tipo atende subcategoria? O compromisso é avaliar ou construir? Se construir: unidades, locais, movimentos, saldo negativo e estorno.",
-        "D18 (E7-02): CSV/XLSX, Ambas, limites e eventual aceite parcial. Qualquer alteração de D09 exige revisão dos consumidores anteriores.",
+        "D18 (E7-02): XLSX definido; delimitar tipos mistos, limites e eventual aceite parcial. Qualquer alteração de D09 exige revisão dos consumidores anteriores.",
         "D27 (E8-07): Lista paga/finita de cadastros, colunas, identidades, criar/atualizar, inativos e tamanho de lote."
       ],
       "dep": [
@@ -6449,6 +6389,424 @@
           "texto": "Também foi mencionada a utilização de solução/processo relacionado ao Notebook LM, cuja eventual integração ou utilização deverá ser avaliada tecnicamente."
         }
       ]
+    },
+    {
+      "id": "E3.5-01",
+      "entrega": 3.5,
+      "titulo": "Bloqueio de reservas e concorrência por sala",
+      "status": "Entregue em produção — v1.3.3",
+      "diagnostico": "Publicado nas versões 1.3.1/1.3.2 e complemento 1.3.3; escopo urgente antecipado, sem cobrança ou duplicação na Entrega 8.",
+      "roteiro": [
+        "Criar, editar e reativar reservas verifica reservas, repetições, exceções e aulas da mesma sala, usando o ID do cadastro.",
+        "Sobreposição parcial ou total é recusada; intervalos consecutivos são permitidos (04h30–05h30 pode anteceder 05h30–06h30).",
+        "Revalidação dentro da transação com bloqueio das salas em ordem; tentativas simultâneas incompatíveis produzem uma gravação e um conflito.",
+        "Datas brasileiras, limites inválidos e eventos que começam antes da janela consultada são tratados de forma consistente."
+      ],
+      "passos": [
+        "Criar, editar e reativar reservas verifica reservas, repetições, exceções e aulas da mesma sala, usando o ID do cadastro.",
+        "Sobreposição parcial ou total é recusada; intervalos consecutivos são permitidos (04h30–05h30 pode anteceder 05h30–06h30).",
+        "Revalidação dentro da transação com bloqueio das salas em ordem; tentativas simultâneas incompatíveis produzem uma gravação e um conflito.",
+        "Datas brasileiras, limites inválidos e eventos que começam antes da janela consultada são tratados de forma consistente."
+      ],
+      "dados": "Nenhuma migration nova. Esta atualização documental não executa aplicação, deploy nem comandos de banco.",
+      "casos": [],
+      "aceite": [],
+      "dep": [],
+      "apos": "FECHO-3",
+      "entrada": "Entrega 3 publicada, regras e matriz aprovadas por Daniel.",
+      "saida": "Funcionalidade publicada e rastreada na Entrega 3.5.",
+      "limite": "Preservar dados legados que aguardam coordenação; complementos futuros reutilizam a proteção.",
+      "referenciasDetalhadas": [],
+      "referenciasQuadro": [
+        {
+          "chave": "VS-01:6",
+          "id": "VS-01",
+          "parte": 6,
+          "texto": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3).",
+          "situacao": "Entregue",
+          "entregaAtual": 3.5,
+          "papel": "execução",
+          "escopo": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3)."
+        }
+      ],
+      "originais": [],
+      "fontesOriginais": [],
+      "arquivos": [],
+      "decisoes": [],
+      "decisoesIds": [
+        "D21"
+      ],
+      "evidencias": [
+        "PR #40 e complemento #46; produção pela PR #47.",
+        "94 testes unitários/174 asserções e 187 verificações de integração do complemento, registrados em 20/10.",
+        "Publicação v1.3.3: 80 verificações HTTP de reservas e 22 acadêmicas em homologação; tag final e regressões registradas no STATUS_DEPLOY.",
+        "Deploy produção: https://github.com/Dcadv789/sigles/actions/runs/39527259499"
+      ]
+    },
+    {
+      "id": "E3.5-02",
+      "entrega": 3.5,
+      "titulo": "Recorrências e preservação de exceções",
+      "status": "Entregue em produção — v1.3.3",
+      "diagnostico": "Publicado nas versões 1.3.1/1.3.2 e complemento 1.3.3; escopo urgente antecipado, sem cobrança ou duplicação na Entrega 8.",
+      "roteiro": [
+        "Última data da série incluída; editar/dividir/inativar uma ocorrência, futuras ou série preserva as ocorrências e exceções aplicáveis.",
+        "Troca de sala de apenas um dia usa exceção nativa; cancelar a confirmação não salva. Séries que se sobrepõem internamente não podem ser reativadas."
+      ],
+      "passos": [
+        "Última data da série incluída; editar/dividir/inativar uma ocorrência, futuras ou série preserva as ocorrências e exceções aplicáveis.",
+        "Troca de sala de apenas um dia usa exceção nativa; cancelar a confirmação não salva. Séries que se sobrepõem internamente não podem ser reativadas."
+      ],
+      "dados": "Nenhuma migration nova. Esta atualização documental não executa aplicação, deploy nem comandos de banco.",
+      "casos": [],
+      "aceite": [],
+      "dep": [
+        "E3.5-01"
+      ],
+      "apos": "E3.5-01",
+      "entrada": "Entrega 3 publicada, regras e matriz aprovadas por Daniel.",
+      "saida": "Funcionalidade publicada e rastreada na Entrega 3.5.",
+      "limite": "Preservar dados legados que aguardam coordenação; complementos futuros reutilizam a proteção.",
+      "referenciasDetalhadas": [
+        {
+          "id": "ER04",
+          "pedido": "Editar um evento sem perder a sala e sem conflito indevido com a própria reserva.",
+          "situacao": "**Entrega 3.5 — produção**: edição preserva a sala e usa as mesmas datas na checagem e gravação."
+        },
+        {
+          "id": "ER05",
+          "pedido": "Editar eventos recorrentes corretamente.",
+          "situacao": "**Entrega 3.5 — produção**: edição/divisão/inativação de série ou ocorrência com preservação de exceções."
+        },
+        {
+          "id": "AG01",
+          "pedido": "A recorrência incluir e apresentar corretamente a última data prevista.",
+          "situacao": "**Entrega 3.5 — produção**: última data incluída e conferida nas recorrências."
+        },
+        {
+          "id": "AG03",
+          "pedido": "Excluir apenas um dia de uma reserva recorrente.",
+          "situacao": "**Entrega 3.5 — produção**: inativar uma ocorrência preserva as demais."
+        },
+        {
+          "id": "AG03.1",
+          "pedido": "Trocar a sala somente em um dia de uma reserva recorrente, preservando os demais.",
+          "situacao": "**Entrega 3.5 — produção**: troca de sala de uma ocorrência por exceção nativa."
+        }
+      ],
+      "referenciasQuadro": [
+        {
+          "chave": "WI-03:1",
+          "id": "WI-03",
+          "parte": 1,
+          "texto": "Editar uma ocorrência preservando sala, outras ocorrências e a validação dos conflitos.",
+          "situacao": "Entregue",
+          "entregaAtual": 3.5,
+          "papel": "execução",
+          "escopo": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3)."
+        },
+        {
+          "chave": "WI-03:2",
+          "id": "WI-03",
+          "parte": 2,
+          "texto": "Corrigir a diferença entre os campos de data usados na checagem de conflito e na gravação.",
+          "situacao": "Entregue",
+          "entregaAtual": 3.5,
+          "papel": "execução",
+          "escopo": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3)."
+        },
+        {
+          "chave": "WI-03:3",
+          "id": "WI-03",
+          "parte": 3,
+          "texto": "Alterações e inativações desta ocorrência, futuras ou série, preservando exceções e sem salvar ao cancelar.",
+          "situacao": "Entregue",
+          "entregaAtual": 3.5,
+          "papel": "execução",
+          "escopo": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3)."
+        },
+        {
+          "chave": "WI-18:3",
+          "id": "WI-18",
+          "parte": 3,
+          "texto": "Última data incluída, repetições protegidas e alteração de uma ocorrência preservando as demais.",
+          "situacao": "Entregue",
+          "entregaAtual": 3.5,
+          "papel": "execução",
+          "escopo": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3)."
+        },
+        {
+          "chave": "WI-18:4",
+          "id": "WI-18",
+          "parte": 4,
+          "texto": "Inativar apenas uma ocorrência ou alterar sua sala sem apagar as demais ocorrências da série.",
+          "situacao": "Entregue",
+          "entregaAtual": 3.5,
+          "papel": "execução",
+          "escopo": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3)."
+        }
+      ],
+      "originais": [
+        {
+          "id": "DI04",
+          "origem": "Documento inicial SINGLES — ERROS / AGENDA — parágrafo 15",
+          "texto": "Ao editar uma informação em um evento já cadastrado, o sistema altera o que queremos, mas a sala some, ou seja, não dá para alterar o evento, o sistema obriga a criar outro em outra sala. 25/03/2026 - agora nem conseguimos alterar, pois o sistema apresenta a mensagem que a sala já está reservada."
+        },
+        {
+          "id": "DI05",
+          "origem": "Documento inicial SINGLES — ERROS / AGENDA — parágrafo 17",
+          "texto": "26/03 - Sanada a questão de alteração do evento. Apenas para os eventos recorrentes não está sendo possível realizar alterações. Como não estava no escopo, ficará para depois. - URGENTE"
+        },
+        {
+          "id": "DI51",
+          "origem": "Documento inicial SINGLES — AGENDA / Calendário — parágrafo 130",
+          "texto": "Na função “novo evento” está com erro ao efetuar reserva com recorrência, não aparece a última data."
+        },
+        {
+          "id": "DI53",
+          "origem": "Documento inicial SINGLES — AGENDA / Calendário — parágrafo 132",
+          "texto": "Possibilidade de excluir ou alterar sala somente um dia na reserva com recorrência."
+        },
+        {
+          "id": "RV51",
+          "origem": "Relatório de visita, página 4 — Detalhamento técnico: 10-) alteração de agenda",
+          "texto": "As funcionalidades relacionadas às alterações de agenda também deverão ser revisadas."
+        }
+      ],
+      "fontesOriginais": [
+        "DI04",
+        "DI05",
+        "DI51",
+        "DI53",
+        "RV51"
+      ],
+      "arquivos": [],
+      "decisoes": [],
+      "decisoesIds": [
+        "D21"
+      ],
+      "evidencias": [
+        "PR #40 e complemento #46; produção pela PR #47.",
+        "94 testes unitários/174 asserções e 187 verificações de integração do complemento, registrados em 20/10.",
+        "Publicação v1.3.3: 80 verificações HTTP de reservas e 22 acadêmicas em homologação; tag final e regressões registradas no STATUS_DEPLOY.",
+        "Deploy produção: https://github.com/Dcadv789/sigles/actions/runs/39527259499"
+      ]
+    },
+    {
+      "id": "E3.5-03",
+      "entrega": 3.5,
+      "titulo": "Agenda e Relatório de reservas",
+      "status": "Entregue em produção — v1.3.3",
+      "diagnostico": "Publicado nas versões 1.3.1/1.3.2 e complemento 1.3.3; escopo urgente antecipado, sem cobrança ou duplicação na Entrega 8.",
+      "roteiro": [
+        "Título, Novo evento à esquerda, filtros, calendários em português e legendas padronizados; Relatório de reservas também reorganizado.",
+        "Salas ocupadas continuam visíveis em cinza, não selecionáveis, com o motivo do bloqueio ao passar o mouse.",
+        "Eventos exibem balão de detalhes; clique abre consulta e a edição só é liberada pela ação Editar, com permissão. Fechamento sem recarga ou piscada de opacidade."
+      ],
+      "passos": [
+        "Título, Novo evento à esquerda, filtros, calendários em português e legendas padronizados; Relatório de reservas também reorganizado.",
+        "Salas ocupadas continuam visíveis em cinza, não selecionáveis, com o motivo do bloqueio ao passar o mouse.",
+        "Eventos exibem balão de detalhes; clique abre consulta e a edição só é liberada pela ação Editar, com permissão. Fechamento sem recarga ou piscada de opacidade."
+      ],
+      "dados": "Nenhuma migration nova. Esta atualização documental não executa aplicação, deploy nem comandos de banco.",
+      "casos": [],
+      "aceite": [],
+      "dep": [
+        "E3.5-01"
+      ],
+      "apos": "E3.5-01",
+      "entrada": "Entrega 3 publicada, regras e matriz aprovadas por Daniel.",
+      "saida": "Funcionalidade publicada e rastreada na Entrega 3.5.",
+      "limite": "Preservar dados legados que aguardam coordenação; complementos futuros reutilizam a proteção.",
+      "referenciasDetalhadas": [
+        {
+          "id": "AG02.2",
+          "pedido": "Apresentação das salas ocupadas no seletor do evento.",
+          "situacao": "**Definido e aplicado na Entrega 3.5**: manter ocupadas em cinza, bloqueadas e com motivo, conforme Daniel."
+        }
+      ],
+      "referenciasQuadro": [],
+      "originais": [],
+      "fontesOriginais": [],
+      "arquivos": [],
+      "decisoes": [],
+      "decisoesIds": [
+        "D21"
+      ],
+      "evidencias": [
+        "PR #40 e complemento #46; produção pela PR #47.",
+        "94 testes unitários/174 asserções e 187 verificações de integração do complemento, registrados em 20/10.",
+        "Publicação v1.3.3: 80 verificações HTTP de reservas e 22 acadêmicas em homologação; tag final e regressões registradas no STATUS_DEPLOY.",
+        "Deploy produção: https://github.com/Dcadv789/sigles/actions/runs/39527259499"
+      ]
+    },
+    {
+      "id": "E3.5-04",
+      "entrega": 3.5,
+      "titulo": "Permissões da Agenda e configuração de perfis",
+      "status": "Entregue em produção — v1.3.3",
+      "diagnostico": "Publicado nas versões 1.3.1/1.3.2 e complemento 1.3.3; escopo urgente antecipado, sem cobrança ou duplicação na Entrega 8.",
+      "roteiro": [
+        "Edição de reservas respeita GDRA.alterar no servidor e na interface; padrão aprovado: somente Administrador.",
+        "Configuração das permissões de perfis restrita ao Administrador. Ajustes ficam em Gestão de acessos → Perfis → Módulos; novo login renova a sessão.",
+        "As demais permissões de visualizar/criar seguem a matriz existente; não declarar que todo perfil pode criar eventos."
+      ],
+      "passos": [
+        "Edição de reservas respeita GDRA.alterar no servidor e na interface; padrão aprovado: somente Administrador.",
+        "Configuração das permissões de perfis restrita ao Administrador. Ajustes ficam em Gestão de acessos → Perfis → Módulos; novo login renova a sessão.",
+        "As demais permissões de visualizar/criar seguem a matriz existente; não declarar que todo perfil pode criar eventos."
+      ],
+      "dados": "Nenhuma migration nova. Esta atualização documental não executa aplicação, deploy nem comandos de banco.",
+      "casos": [],
+      "aceite": [],
+      "dep": [
+        "E3.5-01"
+      ],
+      "apos": "E3.5-01",
+      "entrada": "Entrega 3 publicada, regras e matriz aprovadas por Daniel.",
+      "saida": "Funcionalidade publicada e rastreada na Entrega 3.5.",
+      "limite": "Preservar dados legados que aguardam coordenação; complementos futuros reutilizam a proteção.",
+      "referenciasDetalhadas": [],
+      "referenciasQuadro": [],
+      "originais": [],
+      "fontesOriginais": [],
+      "arquivos": [],
+      "decisoes": [],
+      "decisoesIds": [
+        "D21"
+      ],
+      "evidencias": [
+        "PR #40 e complemento #46; produção pela PR #47.",
+        "94 testes unitários/174 asserções e 187 verificações de integração do complemento, registrados em 20/10.",
+        "Publicação v1.3.3: 80 verificações HTTP de reservas e 22 acadêmicas em homologação; tag final e regressões registradas no STATUS_DEPLOY.",
+        "Deploy produção: https://github.com/Dcadv789/sigles/actions/runs/39527259499"
+      ]
+    },
+    {
+      "id": "E3.5-05",
+      "entrega": 3.5,
+      "titulo": "Bloqueio acadêmico: aulas, cópia e importação",
+      "status": "Entregue em produção — v1.3.3",
+      "diagnostico": "Publicado nas versões 1.3.1/1.3.2 e complemento 1.3.3; escopo urgente antecipado, sem cobrança ou duplicação na Entrega 8.",
+      "roteiro": [
+        "Cadastro, edição individual/em lote, importação, reativação e cópia de cronogramas validam aula × aula e aula × reserva, com proteção concorrente e rollback.",
+        "Compartilhamento só é reconhecido para a mesma disciplina do semestre, turma preenchida, tipo, sala, dia, período completo e horários, com docentes diferentes.",
+        "Cópias repetidas não duplicam os vínculos de docentes. Dados antigos com ocupação inalterada podem receber ajustes de metadados sem remanejamento automático.",
+        "Entrega 4 herdou a proteção e a conciliou com seu próprio fluxo XLSX/cópia antes do primeiro flush."
+      ],
+      "passos": [
+        "Cadastro, edição individual/em lote, importação, reativação e cópia de cronogramas validam aula × aula e aula × reserva, com proteção concorrente e rollback.",
+        "Compartilhamento só é reconhecido para a mesma disciplina do semestre, turma preenchida, tipo, sala, dia, período completo e horários, com docentes diferentes.",
+        "Cópias repetidas não duplicam os vínculos de docentes. Dados antigos com ocupação inalterada podem receber ajustes de metadados sem remanejamento automático.",
+        "Entrega 4 herdou a proteção e a conciliou com seu próprio fluxo XLSX/cópia antes do primeiro flush."
+      ],
+      "dados": "Nenhuma migration nova. Esta atualização documental não executa aplicação, deploy nem comandos de banco.",
+      "casos": [],
+      "aceite": [],
+      "dep": [
+        "E3.5-01"
+      ],
+      "apos": "E3.5-01",
+      "entrada": "Entrega 3 publicada, regras e matriz aprovadas por Daniel.",
+      "saida": "Funcionalidade publicada e rastreada na Entrega 3.5.",
+      "limite": "Preservar dados legados que aguardam coordenação; complementos futuros reutilizam a proteção.",
+      "referenciasDetalhadas": [],
+      "referenciasQuadro": [],
+      "originais": [],
+      "fontesOriginais": [],
+      "arquivos": [],
+      "decisoes": [],
+      "decisoesIds": [
+        "D21"
+      ],
+      "evidencias": [
+        "PR #40 e complemento #46; produção pela PR #47.",
+        "94 testes unitários/174 asserções e 187 verificações de integração do complemento, registrados em 20/10.",
+        "Publicação v1.3.3: 80 verificações HTTP de reservas e 22 acadêmicas em homologação; tag final e regressões registradas no STATUS_DEPLOY.",
+        "Deploy produção: https://github.com/Dcadv789/sigles/actions/runs/39527259499"
+      ]
+    },
+    {
+      "id": "E3.5-06",
+      "entrega": 3.5,
+      "titulo": "Diagnóstico e tratamento de conflitos antigos",
+      "status": "Entregue em produção — v1.3.3",
+      "diagnostico": "Publicado nas versões 1.3.1/1.3.2 e complemento 1.3.3; escopo urgente antecipado, sem cobrança ou duplicação na Entrega 8.",
+      "roteiro": [
+        "Aviso Conflitos de agenda identifica disciplinas, turmas, cronogramas e horários; distingue sobreposição entre atividades e confirmação de compartilhamento.",
+        "Dados legados: 25 cruzamentos reserva/aula foram resolvidos por 23 remanejamentos autorizados. Restam 172 pares de ocorrências acadêmicas preexistentes para a coordenação: 21 entre disciplinas diferentes e 151 para confirmar identificação/compartilhamento. São alertas de dados antigos, não 172 novos agendamentos. Não remanejar automaticamente.",
+        "Remanejamentos autorizados preservaram aulas, duração e dados das reservas; 22 exceções individuais mantiveram as demais datas das séries. Não confundir saneamento de reservas com saneamento de cadastros duplicados de salas (E8-03)."
+      ],
+      "passos": [
+        "Aviso Conflitos de agenda identifica disciplinas, turmas, cronogramas e horários; distingue sobreposição entre atividades e confirmação de compartilhamento.",
+        "Dados legados: 25 cruzamentos reserva/aula foram resolvidos por 23 remanejamentos autorizados. Restam 172 pares de ocorrências acadêmicas preexistentes para a coordenação: 21 entre disciplinas diferentes e 151 para confirmar identificação/compartilhamento. São alertas de dados antigos, não 172 novos agendamentos. Não remanejar automaticamente.",
+        "Remanejamentos autorizados preservaram aulas, duração e dados das reservas; 22 exceções individuais mantiveram as demais datas das séries. Não confundir saneamento de reservas com saneamento de cadastros duplicados de salas (E8-03)."
+      ],
+      "dados": "Nenhuma migration nova. Esta atualização documental não executa aplicação, deploy nem comandos de banco.",
+      "casos": [],
+      "aceite": [],
+      "dep": [
+        "E3.5-01"
+      ],
+      "apos": "E3.5-01",
+      "entrada": "Entrega 3 publicada, regras e matriz aprovadas por Daniel.",
+      "saida": "Funcionalidade publicada e rastreada na Entrega 3.5.",
+      "limite": "Preservar dados legados que aguardam coordenação; complementos futuros reutilizam a proteção.",
+      "referenciasDetalhadas": [],
+      "referenciasQuadro": [],
+      "originais": [],
+      "fontesOriginais": [],
+      "arquivos": [],
+      "decisoes": [],
+      "decisoesIds": [
+        "D21"
+      ],
+      "evidencias": [
+        "PR #40 e complemento #46; produção pela PR #47.",
+        "94 testes unitários/174 asserções e 187 verificações de integração do complemento, registrados em 20/10.",
+        "Publicação v1.3.3: 80 verificações HTTP de reservas e 22 acadêmicas em homologação; tag final e regressões registradas no STATUS_DEPLOY.",
+        "Deploy produção: https://github.com/Dcadv789/sigles/actions/runs/39527259499"
+      ]
+    },
+    {
+      "id": "E3.5-07",
+      "entrega": 3.5,
+      "titulo": "Login e estabilidade da sessão",
+      "status": "Entregue em produção — v1.3.3",
+      "diagnostico": "Publicado nas versões 1.3.1/1.3.2 e complemento 1.3.3; escopo urgente antecipado, sem cobrança ou duplicação na Entrega 8.",
+      "roteiro": [
+        "Login com ícone de perfil no cabeçalho, ícones nos campos, placeholders e rótulos acessíveis; cartão até 460 px, cantos de 8 px e campos/botão de 6 px.",
+        "Limpeza das sessões alinhada ao agendamento do servidor, evitando erro intermitente de permissão."
+      ],
+      "passos": [
+        "Login com ícone de perfil no cabeçalho, ícones nos campos, placeholders e rótulos acessíveis; cartão até 460 px, cantos de 8 px e campos/botão de 6 px.",
+        "Limpeza das sessões alinhada ao agendamento do servidor, evitando erro intermitente de permissão."
+      ],
+      "dados": "Nenhuma migration nova. Esta atualização documental não executa aplicação, deploy nem comandos de banco.",
+      "casos": [],
+      "aceite": [],
+      "dep": [
+        "E3.5-01"
+      ],
+      "apos": "E3.5-01",
+      "entrada": "Entrega 3 publicada, regras e matriz aprovadas por Daniel.",
+      "saida": "Funcionalidade publicada e rastreada na Entrega 3.5.",
+      "limite": "Preservar dados legados que aguardam coordenação; complementos futuros reutilizam a proteção.",
+      "referenciasDetalhadas": [],
+      "referenciasQuadro": [],
+      "originais": [],
+      "fontesOriginais": [],
+      "arquivos": [],
+      "decisoes": [],
+      "decisoesIds": [
+        "D21"
+      ],
+      "evidencias": [
+        "PR #40 e complemento #46; produção pela PR #47.",
+        "94 testes unitários/174 asserções e 187 verificações de integração do complemento, registrados em 20/10.",
+        "Publicação v1.3.3: 80 verificações HTTP de reservas e 22 acadêmicas em homologação; tag final e regressões registradas no STATUS_DEPLOY.",
+        "Deploy produção: https://github.com/Dcadv789/sigles/actions/runs/39527259499"
+      ]
     }
   ],
   "regras": [
@@ -6460,7 +6818,7 @@
     "Não alterar o bug conhecido de GAM/ROLE_ROOT por iniciativa própria. Conferir o código real GOÇ no módulo de orçamento e não copiar a ausência de ACL de PublicacaoController.",
     "Não commitar .env, .env.local, senhas, backups de ambiente, vendor/ ou uploads/. Referências de código deste plano apontam a commits fixos e podem exigir acesso ao GitHub.",
     "Criar migrations somente na implementação, após fechar a regra. Preservar migrations executadas e usar compensação seletiva de dados, não um down amplo que apague histórico.",
-    "Os comandos e testes abaixo são planejados. Não foram executados testes funcionais do sistema, migrations, merge da PR ou deploy do SIGLES nesta etapa.",
+    "Os roteiros futuros são previstos; as evidências concluídas são identificadas por entrega e versão. Esta atualização documental não reexecuta testes nem publica o SIGLES.",
     "Ordem de execução e dependência técnica são relações distintas. Todos os itens seguem a cadeia explícita e FECHO-1 a FECHO-8; dependências indicam os resultados de código/regra que são reutilizados."
   ],
   "verificacoes": [
@@ -6472,7 +6830,7 @@
     "Guardar evidência de homologação por item e só então atualizar o status funcional no quadro. Planejamento pronto não significa item implementado.",
     "Preparar commit e PR focados por lote; teste/homologação precede produção, e a etapa de produção continua sujeita à restrição atual de acesso ao banco."
   ],
-  "revisao": "02",
+  "revisao": "03",
   "decisoes": [
     {
       "id": "D01",
@@ -6546,13 +6904,13 @@
       "dono": "E3-02",
       "tema": "Responsável da OS e herança",
       "proposta": "Escolha explícita preservada; padrão serve à nova OS, sem atualizar OS antigas.",
-      "confirmar": "Solicitante versus categoria/subcategoria/configuração; independência e como distinguir herança de escolha específica.",
+      "confirmar": "Iraides definida nas categorias acordadas; preservar os demais responsáveis e a herança/vínculos existentes. Responsável independente novo na subcategoria requer definição específica.",
       "consumidores": [
         "E3-03",
         "E3-99",
         "E6-03"
       ],
-      "status": "Proposta para revisão — não homologada"
+      "status": "Configuração e correções publicadas na Entrega 3"
     },
     {
       "id": "D07",
@@ -6570,8 +6928,8 @@
       "id": "D08",
       "dono": "E4-06",
       "tema": "Sala de aula e sala reservável",
-      "proposta": "Não deduzir equivalência dos dois conceitos nem inferir sala de aula por qualquer reunião. Preservar flags legítimos e tratar origem desconhecida.",
-      "confirmar": "Critério real de elegibilidade e se é necessária uma marcação distinta de salaAula.",
+      "proposta": "Novas atribuições acadêmicas usam somente salas ativas marcadas “É sala de aula?”; vínculos históricos preservados.",
+      "confirmar": "Ensaiar efeitos da migration histórica e classificação antes de produção; sala reservável não equivale automaticamente a sala de aula.",
       "consumidores": [
         "E4-04",
         "E5-03",
@@ -6579,14 +6937,14 @@
         "E8-03",
         "E8-04"
       ],
-      "status": "Proposta para revisão — não homologada"
+      "status": "Regra definida por Daniel e aplicada na Entrega 4 em homologação"
     },
     {
       "id": "D09",
       "dono": "E4-02",
       "tema": "Identidade, cópia e importação de turmas",
-      "proposta": "Propor identidade por semestre/disciplina, código da turma, dia, intervalo e docente; confrontar com registros legítimos. Arquivo básico atômico, com repetição identificável.",
-      "confirmar": "Campos que realmente identificam aula/turma, criar versus atualizar, disciplina com tipo divergente, aceite docente e política de reimportação.",
+      "proposta": "Importação .xlsx com identidade de aula incluindo dia/horário/docente, repetição sem duplicação e rollback; preservar tipo existente e ajustes do destino.",
+      "confirmar": "Aceite do arquivo original e complementos específicos de E7-02; não reabrir o formato .xlsx já definido.",
       "consumidores": [
         "E4-05",
         "E4-99",
@@ -6594,7 +6952,7 @@
         "E7-02",
         "E8-07"
       ],
-      "status": "Proposta para revisão — não homologada"
+      "status": "Aplicado na Entrega 4; extensões futuras preservam o contrato"
     },
     {
       "id": "D10",
@@ -6616,7 +6974,7 @@
       "dono": "E5-04",
       "tema": "Permissões e recorte dos perfis",
       "proposta": "Matriz perfil×módulo×ação e recorte por departamento/propriedade, validada após novo login.",
-      "confirmar": "Perfis reais e ações permitidas; não alterar exceções conhecidas fora do escopo.",
+      "confirmar": "Renovar a sessão após mudanças. Preservar a restrição ao Administrador publicada na 3.5 para configuração de perfis e edição de reservas.",
       "consumidores": [
         "E5-01",
         "E5-02",
@@ -6630,18 +6988,18 @@
         "E8-06",
         "E8-07"
       ],
-      "status": "Proposta para revisão — não homologada"
+      "status": "Preservar matriz atual; correções de divergência na PR #36, sem homologação"
     },
     {
       "id": "D12",
       "dono": "E5-01",
       "tema": "Dashboard: abrangência, links e imagem",
       "proposta": "Usuário comum vê suas OS; ADM escolhe Minhas/Todas dentro do recorte aprovado; blocos mostram abertas/em andamento.",
-      "confirmar": "Significado departamental de Todas, destinos oficiais, perfis de colaboradores e imagem como fundo/conteúdo.",
+      "confirmar": "Todas as OS limitado ao departamento e setores vinculados. Revalidar atalhos e fundo ao atualizar a base da Entrega 5.",
       "consumidores": [
         "E5-02"
       ],
-      "status": "Proposta para revisão — não homologada"
+      "status": "Recorte definido por Daniel; implementado na PR #36, ainda sem homologação"
     },
     {
       "id": "D13",
@@ -6701,7 +7059,7 @@
       "dono": "E7-02",
       "tema": "Importação ampliada",
       "proposta": "Reutilizar D09 e manter atomicidade integral como padrão; ampliar diagnóstico por linha.",
-      "confirmar": "CSV/XLSX, Ambas, limites e eventual aceite parcial. Qualquer alteração de D09 exige revisão dos consumidores anteriores.",
+      "confirmar": "Somente XLSX já definido por Daniel e entregue na 4. Delimitar tipos mistos, limites, diagnóstico ampliado e eventual aceite parcial sem enfraquecer D09.",
       "consumidores": [
         "E8-07"
       ],
@@ -6729,25 +7087,25 @@
     },
     {
       "id": "D21",
-      "dono": "E8-01",
+      "dono": "E3.5-01",
       "tema": "Ocupação, datas, recorrência e concorrência",
-      "proposta": "Propor intervalos [início,fim), IDs de sala, leitura de reservas/aulas/exceções e revalidação na gravação protegida contra concorrência.",
-      "confirmar": "Fontes que bloqueiam a sala, limite inclusivo da série, esta/futuras/todas, proteção comum dos escritores e política para conflitos com aulas.",
+      "proposta": "Intervalos [início,fim), ocupação por ID da sala, reservas/repetições/exceções/aulas e bloqueio transacional comum aos gravadores internos.",
+      "confirmar": "Somente políticas futuras de bloqueio manual/externos em D22/D24 e saneamento legado pela coordenação.",
       "consumidores": [
         "E8-02",
         "E8-03",
         "E8-04",
         "E8-06"
       ],
-      "status": "Proposta para revisão — não homologada",
-      "antecipacaoEntrega35": "[início,fim), ID da sala, reservas/repetições/exceções/aulas existentes e bloqueio transacional dos gravadores de reservas. Outros escritores, bloqueios manuais e aprovação externa continuam na integração E8."
+      "status": "Aplicado e publicado — v1.3.3",
+      "antecipacaoEntrega35": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3)."
     },
     {
       "id": "D22",
       "dono": "E8-02",
       "tema": "Bloqueio manual e escolha de sala",
       "proposta": "Somente disponíveis na função de escolha e bloqueio manual com limites explícitos; feriados automáticos ficam fora.",
-      "confirmar": "Salas abrangidas, perfil administrador, conflito com evento existente e cancelamento.",
+      "confirmar": "Salas abrangidas, perfil administrador, conflito com evento existente e cancelamento. Decisão já aprovada: salas ocupadas visíveis em cinza e não selecionáveis, com motivo do bloqueio; não ocultá-las.",
       "consumidores": [
         "E8-03",
         "E8-04",
@@ -7066,7 +7424,7 @@
       "parte": 3,
       "origem": "Relatório de visita",
       "texto": "Ordens de serviço e aniversariantes.",
-      "status": "Homologação",
+      "status": "Entregue",
       "entregaAtual": 3,
       "planejamentos": [
         {
@@ -7083,7 +7441,7 @@
       "parte": 4,
       "origem": "Relatório de visita",
       "texto": "Evolução de cronogramas.",
-      "status": "Na PR",
+      "status": "Homologação",
       "entregaAtual": 4,
       "planejamentos": [
         {
@@ -7105,8 +7463,24 @@
       "planejamentos": [
         {
           "id": "roteiro",
-          "papel": "roteiro",
-          "escopo": "Sequência geral, sem segunda implementação"
+          "entrega": 0
+        }
+      ]
+    },
+    {
+      "chave": "VS-01:6",
+      "id": "VS-01",
+      "parte": 6,
+      "origem": "Relatório de visita",
+      "texto": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3).",
+      "status": "Entregue",
+      "entregaAtual": 3.5,
+      "planejamentos": [
+        {
+          "id": "E3.5-01",
+          "entrega": 3.5,
+          "papel": "execução",
+          "escopo": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3)."
         }
       ]
     },
@@ -7116,7 +7490,7 @@
       "parte": 1,
       "origem": "Relatório de visita",
       "texto": "Demais usuários continuam vendo os aniversariantes na lista do mês.",
-      "status": "Homologação",
+      "status": "Entregue",
       "entregaAtual": 3,
       "planejamentos": [
         {
@@ -7143,8 +7517,8 @@
       "parte": 2,
       "origem": "Relatório de visita",
       "texto": "Detalhar campos, busca e exportações desejados.",
-      "status": "Definir",
-      "entregaAtual": null,
+      "status": "Na PR",
+      "entregaAtual": 5,
       "planejamentos": [
         {
           "id": "E5-02",
@@ -7177,8 +7551,8 @@
       "parte": 2,
       "origem": "Relatório de visita",
       "texto": "Definir outras mudanças além do cadastro e dos avisos existentes.",
-      "status": "Definir",
-      "entregaAtual": null,
+      "status": "Na PR",
+      "entregaAtual": 5,
       "planejamentos": [
         {
           "id": "E5-02",
@@ -7194,8 +7568,8 @@
       "parte": 1,
       "origem": "Relatório de visita",
       "texto": "Especificar o que falta nas informações de usuários e colaboradores.",
-      "status": "Definir",
-      "entregaAtual": null,
+      "status": "Na PR",
+      "entregaAtual": 5,
       "planejamentos": [
         {
           "id": "E5-02",
@@ -7211,8 +7585,8 @@
       "parte": 1,
       "origem": "Relatório de visita",
       "texto": "Definir as mudanças pretendidas por perfil, módulo e ação.",
-      "status": "Definir",
-      "entregaAtual": null,
+      "status": "Na PR",
+      "entregaAtual": 5,
       "planejamentos": [
         {
           "id": "E5-04",
@@ -7306,7 +7680,7 @@
       "parte": 1,
       "origem": "Relatório de visita",
       "texto": "Responsável, orçamento na criação, anexos, filtros, estágios e histórico.",
-      "status": "Homologação",
+      "status": "Entregue",
       "entregaAtual": 3,
       "planejamentos": [
         {
@@ -7322,7 +7696,7 @@
       "id": "VS-10",
       "parte": 2,
       "origem": "Relatório de visita",
-      "texto": "Validar persistência dos seguidores e definir os relatórios gerenciais restantes.",
+      "texto": "Persistência de seguidores corrigida na Entrega 3; ordenação/resumo e relatórios gerenciais restantes continuam individualizados para revisão.",
       "status": "Validar",
       "entregaAtual": null,
       "planejamentos": [
@@ -7385,8 +7759,8 @@
       "id": "VS-13",
       "parte": 1,
       "origem": "Relatório de visita",
-      "texto": "Fluxo unificado de Novo cronograma e arquivo modelo CSV.",
-      "status": "Na PR",
+      "texto": "Novo cronograma reúne criação do zero, cópia e importação Excel (.xlsx), com modelo para download.",
+      "status": "Homologação",
       "entregaAtual": 4,
       "planejamentos": [
         {
@@ -7402,7 +7776,7 @@
       "id": "VS-13",
       "parte": 2,
       "origem": "Relatório de visita",
-      "texto": "Testar o arquivo original do cliente e o tratamento dos erros por linha.",
+      "texto": "Aceitar o arquivo original do cliente e definir os complementos de diagnóstico por linha além dos cenários já testados.",
       "status": "Validar",
       "entregaAtual": null,
       "planejamentos": [
@@ -7410,7 +7784,7 @@
           "id": "E4-05",
           "entrega": 4,
           "papel": "parcela",
-          "escopo": "CSV básico, integridade e arquivo original"
+          "escopo": "XLSX básico, integridade e aceite do arquivo original"
         },
         {
           "id": "E7-02",
@@ -7425,15 +7799,15 @@
       "id": "VS-13",
       "parte": 3,
       "origem": "Relatório de visita",
-      "texto": "Confirmar necessidade de XLSX; o formato implementado é CSV.",
-      "status": "Definir",
-      "entregaAtual": null,
+      "texto": "Formato definido por Daniel: somente Excel (.xlsx), com modelo organizado e aba de orientações.",
+      "status": "Homologação",
+      "entregaAtual": 4,
       "planejamentos": [
         {
-          "id": "E7-02",
-          "entrega": 7,
+          "id": "E4-05",
+          "entrega": 4,
           "papel": "execução",
-          "escopo": "Importação ampliada e erros por linha"
+          "escopo": "Formato XLSX entregue; não reimplementar na Entrega 7"
         }
       ]
     },
@@ -7459,8 +7833,8 @@
       "id": "VS-15",
       "parte": 1,
       "origem": "Relatório de visita",
-      "texto": "Implementado no PR 9; depende de integração e homologação.",
-      "status": "Na PR",
+      "texto": "PR #9 atualizada sobre a Entrega 3.5, integrada na candidata de homologação; aceite funcional e produção ainda pendentes.",
+      "status": "Homologação",
       "entregaAtual": 4,
       "planejamentos": [
         {
@@ -7606,7 +7980,7 @@
       "parte": 1,
       "origem": "Word inicial",
       "texto": "Criação com ano/semestre e modelo de importação.",
-      "status": "Na PR",
+      "status": "Homologação",
       "entregaAtual": 4,
       "planejamentos": [
         {
@@ -7622,7 +7996,7 @@
       "id": "WI-01",
       "parte": 2,
       "origem": "Word inicial",
-      "texto": "O arquivo que originou o erro ainda precisa de teste de aceite.",
+      "texto": "Testar o caso original do cliente no modelo .xlsx aprovado; os cenários sintéticos de importação, repetição e rollback já passaram.",
       "status": "Validar",
       "entregaAtual": null,
       "planejamentos": [
@@ -7630,7 +8004,7 @@
           "id": "E4-05",
           "entrega": 4,
           "papel": "execução",
-          "escopo": "Aceite da importação CSV da PR"
+          "escopo": "Planilha XLSX, repetição sem duplicação e rollback; arquivo original do cliente ainda sujeito a aceite"
         }
       ]
     },
@@ -7673,18 +8047,17 @@
       "id": "WI-03",
       "parte": 1,
       "origem": "Word inicial",
-      "texto": "Testar alteração da série e de uma ocorrência, preservação da sala e conflitos.",
-      "status": "Validar",
-      "entregaAtual": null,
+      "texto": "Editar uma ocorrência preservando sala, outras ocorrências e a validação dos conflitos.",
+      "status": "Entregue",
+      "entregaAtual": 3.5,
       "planejamentos": [
         {
-          "id": "E8-01",
-          "entrega": 8,
+          "id": "E3.5-02",
+          "entrega": 3.5,
           "papel": "execução",
-          "escopo": "Conflitos e alterações de reservas recorrentes"
+          "escopo": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3)."
         }
-      ],
-      "antecipacaoEntrega35": "20/10/2026 — a parcela urgente de bloqueio de ocupação de E8-01/D21 foi antecipada para a Entrega 3.5 (PR #40), publicada somente em homologação como v1.3.1-beta1 e aguardando aceite de Daniel. O restante de E8-01 continua na Entrega 8; não duplicar esta implementação."
+      ]
     },
     {
       "chave": "WI-03:2",
@@ -7692,26 +8065,42 @@
       "parte": 2,
       "origem": "Word inicial",
       "texto": "Corrigir a diferença entre os campos de data usados na checagem de conflito e na gravação.",
-      "status": "Pendente",
-      "entregaAtual": null,
+      "status": "Entregue",
+      "entregaAtual": 3.5,
       "planejamentos": [
         {
-          "id": "E8-01",
-          "entrega": 8,
+          "id": "E3.5-02",
+          "entrega": 3.5,
           "papel": "execução",
-          "escopo": "Conflitos e alterações de reservas recorrentes"
+          "escopo": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3)."
         }
-      ],
-      "antecipacaoEntrega35": "20/10/2026 — a parcela urgente de bloqueio de ocupação de E8-01/D21 foi antecipada para a Entrega 3.5 (PR #40), publicada somente em homologação como v1.3.1-beta1 e aguardando aceite de Daniel. O restante de E8-01 continua na Entrega 8; não duplicar esta implementação."
+      ]
+    },
+    {
+      "chave": "WI-03:3",
+      "id": "WI-03",
+      "parte": 3,
+      "origem": "Word inicial",
+      "texto": "Alterações e inativações desta ocorrência, futuras ou série, preservando exceções e sem salvar ao cancelar.",
+      "status": "Entregue",
+      "entregaAtual": 3.5,
+      "planejamentos": [
+        {
+          "id": "E3.5-02",
+          "entrega": 3.5,
+          "papel": "execução",
+          "escopo": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3)."
+        }
+      ]
     },
     {
       "chave": "WI-04:1",
       "id": "WI-04",
       "parte": 1,
       "origem": "Word inicial",
-      "texto": "Conferir o cadastro e os filtros com o docente do caso original.",
-      "status": "Validar",
-      "entregaAtual": null,
+      "texto": "Filtros de atividade do usuário e do docente aplicados às novas seleções; conferir também o caso real relatado.",
+      "status": "Homologação",
+      "entregaAtual": 4,
       "planejamentos": [
         {
           "id": "E4-04",
@@ -7754,8 +8143,8 @@
       "parte": 3,
       "origem": "Word inicial",
       "texto": "Acrescentar atalhos diretos para LES, MarteWeb e Júpiter Web.",
-      "status": "Pendente",
-      "entregaAtual": null,
+      "status": "Na PR",
+      "entregaAtual": 5,
       "planejamentos": [
         {
           "id": "E5-01",
@@ -7771,8 +8160,8 @@
       "parte": 4,
       "origem": "Word inicial",
       "texto": "Confirmar se a imagem deve ser plano de fundo ou imagem na página.",
-      "status": "Definir",
-      "entregaAtual": null,
+      "status": "Na PR",
+      "entregaAtual": 5,
       "planejamentos": [
         {
           "id": "E5-01",
@@ -7798,8 +8187,8 @@
       "parte": 2,
       "origem": "Word inicial",
       "texto": "Confirmar se a visão ampliada deve abranger todos os departamentos; hoje é departamental.",
-      "status": "Definir",
-      "entregaAtual": null,
+      "status": "Na PR",
+      "entregaAtual": 5,
       "planejamentos": [
         {
           "id": "E5-01",
@@ -7906,7 +8295,7 @@
       "parte": 1,
       "origem": "Word inicial",
       "texto": "Responsável sugerido pela categoria e possibilidade de troca antes de salvar.",
-      "status": "Homologação",
+      "status": "Entregue",
       "entregaAtual": 3,
       "planejamentos": [
         {
@@ -7922,9 +8311,9 @@
       "id": "WI-10",
       "parte": 2,
       "origem": "Word inicial",
-      "texto": "Verificar se os seguidores escolhidos permanecem após salvar e reabrir.",
-      "status": "Validar",
-      "entregaAtual": null,
+      "texto": "Seguidores escolhidos preservados; remoção integral e lista vazia corrigidas e testadas na publicação da Entrega 3.",
+      "status": "Entregue",
+      "entregaAtual": 3,
       "planejamentos": [
         {
           "id": "E3-01",
@@ -7939,9 +8328,9 @@
       "id": "WI-10",
       "parte": 3,
       "origem": "Word inicial",
-      "texto": "Confirmar a regra do responsável inicial solicitada pelo cliente.",
-      "status": "Definir",
-      "entregaAtual": null,
+      "texto": "Responsáveis por categoria definidos conforme Daniel na publicação, preservando os demais vínculos e a herança das subcategorias.",
+      "status": "Entregue",
+      "entregaAtual": 3,
       "planejamentos": [
         {
           "id": "E3-02",
@@ -7957,7 +8346,7 @@
       "parte": 1,
       "origem": "Word inicial",
       "texto": "Orçamento com anexo já na criação e lista ampliada de formatos suportados.",
-      "status": "Homologação",
+      "status": "Entregue",
       "entregaAtual": 3,
       "planejamentos": [
         {
@@ -7974,7 +8363,7 @@
       "parte": 1,
       "origem": "Word inicial",
       "texto": "Filtro Aberto por e responsável por categoria.",
-      "status": "Homologação",
+      "status": "Entregue",
       "entregaAtual": 3,
       "planejamentos": [
         {
@@ -8008,7 +8397,7 @@
       "parte": 1,
       "origem": "Word inicial",
       "texto": "Copiar entre semestres, com início/fim e seleção Graduação, Pós-graduação ou Ambas.",
-      "status": "Na PR",
+      "status": "Homologação",
       "entregaAtual": 4,
       "planejamentos": [
         {
@@ -8024,9 +8413,9 @@
       "id": "WI-13",
       "parte": 2,
       "origem": "Word inicial",
-      "texto": "Exportar todos os cursos da disciplina: o servidor ainda retorna só o curso da turma.",
-      "status": "Pendente",
-      "entregaAtual": null,
+      "texto": "Exibir e exportar todos os cursos ativos da disciplina, sem multiplicar as aulas.",
+      "status": "Homologação",
+      "entregaAtual": 4,
       "planejamentos": [
         {
           "id": "E4-03",
@@ -8041,9 +8430,9 @@
       "id": "WI-13",
       "parte": 3,
       "origem": "Word inicial",
-      "texto": "Aplicar no servidor o filtro das salas elegíveis.",
-      "status": "Pendente",
-      "entregaAtual": null,
+      "texto": "Novas atribuições usam somente salas ativas marcadas “É sala de aula?”; vínculos históricos continuam visíveis.",
+      "status": "Homologação",
+      "entregaAtual": 4,
       "planejamentos": [
         {
           "id": "E4-04",
@@ -8058,9 +8447,9 @@
       "id": "WI-13",
       "parte": 4,
       "origem": "Word inicial",
-      "texto": "Confirmar a seleção de docentes inativos no caso relatado.",
-      "status": "Validar",
-      "entregaAtual": null,
+      "texto": "Novas seleções exigem usuário e cadastro docente ativos; Docente Sênior elegível incluído.",
+      "status": "Homologação",
+      "entregaAtual": 4,
       "planejamentos": [
         {
           "id": "E4-04",
@@ -8212,8 +8601,8 @@
       "parte": 2,
       "origem": "Word inicial",
       "texto": "Usar o nome abreviado na apresentação da sala na agenda.",
-      "status": "Pendente",
-      "entregaAtual": null,
+      "status": "Na PR",
+      "entregaAtual": 5,
       "planejamentos": [
         {
           "id": "E5-03",
@@ -8231,8 +8620,7 @@
       "texto": "Consulta de salas disponíveis por intervalo.",
       "status": "Já existente",
       "entregaAtual": null,
-      "planejamentos": [],
-      "antecipacaoEntrega35": "20/10/2026 — a parcela urgente de bloqueio de ocupação de E8-01/D21 foi antecipada para a Entrega 3.5 (PR #40), publicada somente em homologação como v1.3.1-beta1 e aguardando aceite de Daniel. O restante de E8-01 continua na Entrega 8; não duplicar esta implementação."
+      "planejamentos": []
     },
     {
       "chave": "WI-18:2",
@@ -8249,26 +8637,41 @@
           "papel": "execução",
           "escopo": "Escolha de sala disponível e bloqueio manual"
         }
-      ],
-      "antecipacaoEntrega35": "20/10/2026 — a parcela urgente de bloqueio de ocupação de E8-01/D21 foi antecipada para a Entrega 3.5 (PR #40), publicada somente em homologação como v1.3.1-beta1 e aguardando aceite de Daniel. O restante de E8-01 continua na Entrega 8; não duplicar esta implementação."
+      ]
     },
     {
       "chave": "WI-18:3",
       "id": "WI-18",
       "parte": 3,
       "origem": "Word inicial",
-      "texto": "Validar última data, exclusão e troca de sala de uma ocorrência.",
-      "status": "Validar",
-      "entregaAtual": null,
+      "texto": "Última data incluída, repetições protegidas e alteração de uma ocorrência preservando as demais.",
+      "status": "Entregue",
+      "entregaAtual": 3.5,
       "planejamentos": [
         {
-          "id": "E8-01",
-          "entrega": 8,
+          "id": "E3.5-02",
+          "entrega": 3.5,
           "papel": "execução",
-          "escopo": "Conflitos e alterações de reservas recorrentes"
+          "escopo": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3)."
         }
-      ],
-      "antecipacaoEntrega35": "20/10/2026 — a parcela urgente de bloqueio de ocupação de E8-01/D21 foi antecipada para a Entrega 3.5 (PR #40), publicada somente em homologação como v1.3.1-beta1 e aguardando aceite de Daniel. O restante de E8-01 continua na Entrega 8; não duplicar esta implementação."
+      ]
+    },
+    {
+      "chave": "WI-18:4",
+      "id": "WI-18",
+      "parte": 4,
+      "origem": "Word inicial",
+      "texto": "Inativar apenas uma ocorrência ou alterar sua sala sem apagar as demais ocorrências da série.",
+      "status": "Entregue",
+      "entregaAtual": 3.5,
+      "planejamentos": [
+        {
+          "id": "E3.5-02",
+          "entrega": 3.5,
+          "papel": "execução",
+          "escopo": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3)."
+        }
+      ]
     },
     {
       "chave": "WI-19:1",
@@ -8276,8 +8679,8 @@
       "parte": 1,
       "origem": "Word inicial",
       "texto": "Exibir os campos em todos os tipos e exigir preenchimento somente em Grupo de extensão.",
-      "status": "Pendente",
-      "entregaAtual": null,
+      "status": "Na PR",
+      "entregaAtual": 5,
       "planejamentos": [
         {
           "id": "E5-03",
@@ -8332,8 +8735,8 @@
       "id": "WI-22",
       "parte": 1,
       "origem": "Word inicial",
-      "texto": "Criação e importação do cronograma implementadas no PR 9.",
-      "status": "Na PR",
+      "texto": "Criação, cópia e importação XLSX em homologação na v1.4.0-beta2; bloqueio manual continua separado.",
+      "status": "Homologação",
       "entregaAtual": 4,
       "planejamentos": [
         {
@@ -8696,6 +9099,50 @@
     }
   ],
   "auditoria": {
+    "data": "21/10/2026",
+    "revisao": "03",
+    "entregas": 9,
+    "itensTecnicos": 49,
+    "decisoes": 28,
+    "casosAceite": 79,
+    "partesIniciaisComPlano": 94,
+    "adicionaisExcluidos": 48,
+    "resultado": "Rastreio documental atualizado com evidências já registradas; não é uma nova execução dos testes do sistema."
+  },
+  "preparacao": [
+    "BASE-0: recalcular refs dev/main/PR e registrar o commit que será a base. Os hashes deste documento são evidência da leitura, não autorização para sobrescrever mudanças posteriores.",
+    "Preservar o trabalho local de Cronograma, a alteração já staged de .gitignore e documentos existentes. Preparar checkout limpo e branch codex/; nunca resetar arquivos para iniciar.",
+    "Confirmar ambiente e conexão esalq_sistema_des antes de comandos de aplicação/migrations. Se o acesso não estiver disponível, solicitar o túnel sem expor credenciais. Nenhuma consulta ao banco foi necessária nesta revisão documental.",
+    "Usar massa sintética com datas fixas, IDs identificáveis e e-mails de prova; mapear as migrations executadas e guardar reversão seletiva antes de qualquer saneamento.",
+    "Registrar um responsável funcional por decisão D01–D28. Definir uma decisão na sua tarefa dona antes de iniciar consumidores; não é necessário interromper o planejamento para isso.",
+    "Não definir versão de produção apenas pelo nome histórico da entrega. Cada fechamento produz um commit cumulativo de homologação, preservando todas as correções anteriores."
+  ],
+  "mudancasRevisao": [
+    "Atualização de 21/10/2026: Entregas 1, 2, 3 e 3.5 em produção; produção atual v1.3.3. Entrega 4 em homologação na v1.4.0-beta2, PR #9 aberta e sem merge. Entrega 5 implementada em rascunho na PR #36, ainda precisa incorporar a base atual e passar por homologação. Entregas 6 a 8: escopo restante planejado.",
+    "Entrega 3.5 incluída como etapa própria, com escopo e evidências publicados.",
+    "E8-01 transferido integralmente quanto às correções publicadas; E8 mantém complementos de disponibilidade, bloqueios manuais, saneamento de salas, externos, comunicação e estudos.",
+    "XLSX e modelo pertencem à Entrega 4, não a uma promessa futura da 7.",
+    "Dados antigos, aceite do arquivo original e preparação do banco para produção são pendências explícitas.",
+    "Nenhum teste, migration ou deploy do SIGLES executado nesta atualização documental."
+  ],
+  "antecipacaoEntrega35": {
+    "origem": "E8-01/D21 e apresentação da Agenda",
+    "destino": "Entrega 3.5",
+    "escopo": "Reservas, recorrências, disponibilidade, permissões de edição, bloqueio entre aulas e reservas, concorrência, consulta/edição da Agenda, Relatório de reservas e ajustes de login/sessão publicados na Entrega 3.5 (v1.3.1/v1.3.2/v1.3.3).",
+    "status": "Entregue em produção",
+    "pr": "https://github.com/Dcadv789/sigles/pull/40",
+    "prsComplementares": [
+      46,
+      47
+    ],
+    "tag": "v1.3.3",
+    "acao": "39527259499",
+    "semMigration": true,
+    "producao": "v1.3.3",
+    "homologacaoAtual": "v1.4.0-beta2, cumulativa com a 3.5",
+    "naoDuplicar": true
+  },
+  "auditoriaHistorica": {
     "data": "16/10/2026",
     "revisao": "02",
     "entregas": 8,
@@ -8717,36 +9164,5 @@
       "NM02",
       "NM03"
     ]
-  },
-  "preparacao": [
-    "BASE-0: recalcular refs dev/main/PR e registrar o commit que será a base. Os hashes deste documento são evidência da leitura, não autorização para sobrescrever mudanças posteriores.",
-    "Preservar o trabalho local de Cronograma, a alteração já staged de .gitignore e documentos existentes. Preparar checkout limpo e branch codex/; nunca resetar arquivos para iniciar.",
-    "Confirmar ambiente e conexão esalq_sistema_des antes de comandos de aplicação/migrations. Se o acesso não estiver disponível, solicitar o túnel sem expor credenciais. Nenhuma consulta ao banco foi necessária nesta revisão documental.",
-    "Usar massa sintética com datas fixas, IDs identificáveis e e-mails de prova; mapear as migrations executadas e guardar reversão seletiva antes de qualquer saneamento.",
-    "Registrar um responsável funcional por decisão D01–D28. Definir uma decisão na sua tarefa dona antes de iniciar consumidores; não é necessário interromper o planejamento para isso.",
-    "Não definir versão de produção apenas pelo nome histórico da entrega. Cada fechamento produz um commit cumulativo de homologação, preservando todas as correções anteriores."
-  ],
-  "mudancasRevisao": [
-    "20/10/2026 — a parcela urgente de bloqueio de ocupação de E8-01/D21 foi antecipada para a Entrega 3.5 (PR #40), publicada somente em homologação como v1.3.1-beta1 e aguardando aceite de Daniel. O restante de E8-01 continua na Entrega 8; não duplicar esta implementação.",
-    "E5-03 corrigido para nome_abreviado; criação e edição de nome/e-mail passam a ser verificadas no cliente, controller, repository e serialização.",
-    "E5-04 vem primeiro na entrega 5 para fechar o recorte antes de ajustar o Dashboard.",
-    "Crédito D05 é decidido uma vez na 2; se mudar de nível, só a 7 implementa o modelo e revalida as leituras anteriores.",
-    "D09 sobre identidade/atomicidade já entra na 4; a 7 amplia o mesmo importador, evitando sobrescrever outro dia/docente e repetir decisões.",
-    "Reservas E8-01 incluem data nula, sobreposição na janela, aulas, IDs, recorrência e concorrência; E8-04 só aprova usando esse contrato.",
-    "E8-03 precede a liberação de reservas externas e inclui simulação de colisões antes de juntar salas.",
-    "A comparação de árvores da PR foi qualificada: ela revela divergências, não prova exclusão automática por merge. A integração usa a base cumulativa do FECHO-3.",
-    "Os 42 itens agora têm entrada, saída, limite, roteiro, massa/ação/resultado de aceite, decisões e ligação ao fechamento da entrega.",
-    "Aditivos e status funcionais foram preservados. Estudos, equivalência e construção paga têm critérios distintos de encerramento."
-  ],
-  "antecipacaoEntrega35": {
-    "origem": "E8-01/D21",
-    "destino": "E3.5-01",
-    "escopo": "Bloquear criação, edição e reativação de reservas sobrepostas; conferir repetições, exceções e aulas existentes; serializar tentativas simultâneas de reserva por sala; alinhar datas e consulta de disponibilidade.",
-    "status": "Homologação — aguardando aceite de Daniel",
-    "pr": "https://github.com/Dcadv789/sigles/pull/40",
-    "tag": "v1.3.1-beta1",
-    "acao": "39460536898",
-    "semMigration": true,
-    "producao": "v1.3.0 — preservada"
   }
 }
