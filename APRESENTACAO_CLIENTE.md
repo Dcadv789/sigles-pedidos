@@ -30,7 +30,7 @@ Correções e melhorias previstas continuam no escopo original. Novos processos 
 
 **Trecho do pedido:** “Inserir relatórios das reuniões de cada uma das Comissões”
 
-[Consultar os trechos do documento](https://dcadv789.github.io/sigles-pedidos/referencias-comerciais.html#comissoes).
+[Consultar os trechos do documento](https://dcadv789.github.io/sigles-cliente/referencias.html#comissoes).
 
 **Por quê:** A solicitação reúne representantes, reuniões, relatórios e arquivos em uma área própria. Essa rotina não foi descrita no relatório de visita e será apresentada em proposta separada.
 
@@ -44,7 +44,7 @@ Correções e melhorias previstas continuam no escopo original. Novos processos 
 
 **Trecho do pedido:** “Seria possível que o plano de ensino fosse uma página editável do próprio sistema, no modelo do plano de ensino, em que o docente possa consultar, realizar a alterações e que possamos imprimir os formulários alterados […]”
 
-[Consultar os trechos do documento](https://dcadv789.github.io/sigles-pedidos/referencias-comerciais.html#planos).
+[Consultar os trechos do documento](https://dcadv789.github.io/sigles-cliente/referencias.html#planos).
 
 **Por quê:** O novo pedido permite preencher e alterar o plano dentro do SIGLES, criar uma versão para cada ano e controlar os períodos de atualização. É uma ampliação do cadastro de arquivos e do histórico já disponíveis.
 
@@ -58,7 +58,7 @@ Correções e melhorias previstas continuam no escopo original. Novos processos 
 
 **Trecho do pedido:** “- O aluno deverá acessar o sistema para cadastrar (já temos um link de acesso para externos, para solicitar publicações, verificar se pode ser este mesmo acesso para as solicitações de aproveitamento de estudos;”
 
-[Consultar os trechos do documento](https://dcadv789.github.io/sigles-pedidos/referencias-comerciais.html#aproveitamento).
+[Consultar os trechos do documento](https://dcadv789.github.io/sigles-cliente/referencias.html#aproveitamento).
 
 **Por quê:** O documento de adições descreve o atendimento completo da solicitação: envio pelo aluno, análise da secretaria, parecer do docente e encaminhamento ao Serviço de Graduação. A proposta será para essa implementação, além do estudo e detalhamento previstos inicialmente.
 
@@ -72,7 +72,7 @@ Correções e melhorias previstas continuam no escopo original. Novos processos 
 
 **Trecho do pedido:** “Nova Aba - Atas de defesas:  Se conseguir fazer novos itens com os formulários específicos para cada tipo de defesa: TCC, Monografia, Estágios, e depois salvar em PDF editável.”
 
-[Consultar os trechos do documento](https://dcadv789.github.io/sigles-pedidos/referencias-comerciais.html#atas).
+[Consultar os trechos do documento](https://dcadv789.github.io/sigles-cliente/referencias.html#atas).
 
 **Por quê:** O pedido acrescenta o registro de defesas, a composição da banca, os documentos e os relatórios correspondentes. É uma rotina nova, descrita no documento de adições.
 
@@ -86,7 +86,7 @@ Correções e melhorias previstas continuam no escopo original. Novos processos 
 
 **Trecho do pedido:** “- Criar a aba com base no formulário existente;”
 
-[Consultar os trechos do documento](https://dcadv789.github.io/sigles-pedidos/referencias-comerciais.html#viagens).
+[Consultar os trechos do documento](https://dcadv789.github.io/sigles-cliente/referencias.html#viagens).
 
 **Por quê:** A nova aba deverá receber solicitações em período definido, registrar docente e disciplina e permitir notificações, consultas e download. Esse fluxo foi solicitado no documento de adições e terá proposta própria.
 
@@ -102,7 +102,7 @@ Correções e melhorias previstas continuam no escopo original. Novos processos 
 
 aviso de vencimento de contrato com 45  dias de antecedência, para o ADM e estagiários, com uma mensagem do que precisa ser providenciado.”
 
-[Consultar os trechos do documento](https://dcadv789.github.io/sigles-pedidos/referencias-comerciais.html#avisos).
+[Consultar os trechos do documento](https://dcadv789.github.io/sigles-cliente/referencias.html#avisos).
 
 **Por quê:** O pedido inclui o envio de uma mensagem ao administrador e ao estagiário, com orientações sobre o vencimento. Essa automação será orçada separadamente se ainda não estiver contemplada nas aprovações anteriores.
 
@@ -116,7 +116,7 @@ aviso de vencimento de contrato com 45  dias de antecedência, para o ADM e esta
 
 **Trecho do pedido:** “NOVA FUNÇÃO: BLOQUEAR DIA - FEITO DE FORMA MANUAL PARA DATAS COMUNS E DE FORMA AUTOMÁTICA PARA FERIADOS.”
 
-[Consultar os trechos do documento](https://dcadv789.github.io/sigles-pedidos/referencias-comerciais.html#feriados).
+[Consultar os trechos do documento](https://dcadv789.github.io/sigles-cliente/referencias.html#feriados).
 
 **Por quê:** O calendário automático deverá impedir reservas nos feriados aplicáveis e tratar as recorrências nessas datas. Antes de uma proposta, será esclarecida a anotação “FEITO” que acompanha esse pedido.
 
